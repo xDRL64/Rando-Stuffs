@@ -426,17 +426,17 @@ window.RandoStuffs.OoT.viewModes.betaReqItemEnv.init = function(workspace){
 				elem.innerHTML += '</br>';
 			}
 
-			/* if(settingsList.displayRequestResultWithSanity){
-				elem.innerHTML += create_tileSPAN('Location "Sanity" :');
-				let sanitySet = settingsList.displayRequestResultSanitySet;
-				let sanity = location.sanity;
-				for(let k in sanitySet){
-					let sanityText = sanityList[k];
-					if( sanitySet[k] && sanity.includes(sanityText) )
-						elem.innerHTML += create_marginSPAN(sanityText);
+			if(settingsList.displayRequestResultWithEnvironment){
+				elem.innerHTML += create_tileSPAN('Location "Environment" :');
+				let environmentSet = settingsList.displayRequestResultEnvironmentSet;
+				let environment = location.environment;
+				for(let k in environmentSet){
+					let environmentText = environmentList[k];
+					if( environmentSet[k] && environment[k] )
+						elem.innerHTML += create_marginSPAN(environmentText);
 				}
 				elem.innerHTML += '</br>';
-			} */
+			}
 
 			return elem;
 		};
