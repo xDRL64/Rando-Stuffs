@@ -1,0 +1,175 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OoT Rabdo-Stuffs</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: stretch;
+            align-items: stretch;
+        }
+        #page {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows:    auto 1fr;
+            background-color: #b3b3b3;
+        }
+
+        #fileArea {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            background-color: rgb(110, 175, 250);
+            display: flex;
+            justify-content: space-evenly;
+            white-space: pre;
+        }
+        .file-slot {
+            border-radius: 8px;
+            border-style: dashed;
+            border-width: 2px;
+            margin: 16;
+            padding: 8;
+        }
+
+        #modeArea {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            background-color: rgb(197, 255, 236);
+            display: flex;
+            flex-direction: column;
+        }
+        #mainArea {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            background-color: rgb(208, 240, 255);
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <div id="fileArea"></div>
+        <div id="modeArea"></div>
+        <div id="mainArea"></div>
+    </div>
+</body>
+<script src="./main.js"></script>
+<script src="./viewModes/locEnvEdit.js"></script>
+<script src="./viewModes/betaReqItemEnv.js"></script>
+
+<script src="./core/core.js"></script>
+<script src="./core/areas/mapPos.js"></script>
+<script src="./core/areas/kind.js"></script>
+<script src="./core/areas/cardinal.js"></script>
+<script src="./core/areas/area.js"></script>
+<script src="./core/locations/area.js"></script>
+<script src="./core/locations/sanity.js"></script>
+<script src="./core/locations/environment.js"></script>
+<script src="./core/locations/location.js"></script>
+<script src="./core/items/itemGFX.js"></script>
+<script src="./core/items/item.js"></script>
+
+<script>
+    (()=>{
+        let slots = window.RandoStuffs.OoT.fileSlots;
+
+        // init file area
+        (()=>{
+            // file slots
+            /////////////
+            let enable_dropEffect = function(e){
+                e.stopPropagation();
+                e.preventDefault();
+                e.dataTransfer.dropEffect = 'copy';
+            };
+            let drop_file = function(e, slot, htmlElem){
+                e.stopPropagation();
+                e.preventDefault();
+                var reader = new FileReader();
+                reader.addEventListener("load", function(){
+                    try{
+                        // store raw data (in slot.data as "json/js" object)
+                        slot.data = JSON.parse(reader.result);
+                        htmlElem.textContent = `${slot.name} :\n${file.name}`;
+                        // refresh data (build all from raw data)
+                        if(slot.update_core){
+                            window.RandoStuffs.OoT.core.setFromFile(slot.data.core);
+                            window.RandoStuffs.OoT.core.buildAll();
+                        }
+                    }catch{
+                        htmlElem.textContent = `${slot.name} :\nError JSON parsing`;
+                    }
+                });
+                let file = e.dataTransfer.files[0];
+                if(file) reader.readAsText(file);
+            };
+            for(let k in slots){
+                let slot = slots[k];
+                let div = document.createElement('div');
+                div.classList.add('file-slot');
+                div.textContent = `${slot.name} :\nDrag and drop your file here`;
+                div.addEventListener("dragover", (function(e){enable_dropEffect(e);}) );
+                div.addEventListener("drop", (function(e){drop_file(e, slot, div);}) );
+                fileArea.appendChild(div);
+            }
+
+            // export button
+            ////////////////
+            let exportBtn_allSettings = document.createElement('a');
+            exportBtn_allSettings.textContent = 'Export All_Settings.json';
+            exportBtn_allSettings.href = '';
+            exportBtn_allSettings.style.margin = 16;
+            exportBtn_allSettings.style.padding = 4;
+            exportBtn_allSettings.style.border = '2px outset lightgrey';
+            exportBtn_allSettings.style.backgroundColor = '#aeaeae';
+
+            exportBtn_allSettings.onclick = function(){
+                let data = window.RandoStuffs.OoT.core.make_AllSettingsJson();
+                let json = JSON.stringify(data, null, '\t');
+                let txtFile = [];
+                for(let c of json) txtFile.push(c.charCodeAt(0));
+
+                this.href = URL.createObjectURL( new Blob([new Uint8Array( txtFile )], {type: 'application/octet-stream'}));
+                this.download = 'All_Settings.json';
+            };
+
+            fileArea.appendChild(exportBtn_allSettings);
+        })();
+    
+        // init mode area
+        (()=>{
+            let modes = window.RandoStuffs.OoT.viewModes;
+            for(let k in modes){
+                let mode  = modes[k];
+                let link = document.createElement('a');
+                link.textContent = mode.name;
+                link.href = '#';
+                link.style.margin = 16;
+                link.onclick = function(){
+                    mode.init(mainArea);
+                };
+                modeArea.appendChild(link);
+            }
+        })();
+    
+        // init main area
+        (()=>{
+            
+        })();
+
+        let disable_dropEffect = function(e){
+			e.stopPropagation();
+			e.preventDefault();
+		};
+        document.body.addEventListener("dragover", disable_dropEffect);
+		document.body.addEventListener("drop", disable_dropEffect);
+
+        // first build all (when app is initialisating)
+        window.RandoStuffs.OoT.core.buildAll();
+
+    })();
+</script>
+</html>

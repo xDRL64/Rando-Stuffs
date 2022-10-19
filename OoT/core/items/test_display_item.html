@@ -1,0 +1,31 @@
+<script src="./itemGFX.js"></script>
+<script src="./item.js"></script>
+
+<div></div>
+
+<script>
+
+    // display itemGFX
+    for(let k in itemGFX){
+        let div = document.createElement('div');
+        div.textContent = `[${k}]`;
+
+        let img = document.createElement('img');
+        img.src = itemGFX[k];
+
+        div.appendChild(img);
+    //    document.body.appendChild(div);
+    }
+
+    // display pool item
+    for(let k in item){
+        let div = document.createElement('div');
+        div.textContent = `[${k}]`;
+
+        let img = document.createElement('img');
+        img.src = item[k];
+
+        div.appendChild(img);
+        document.body.appendChild(div);
+    }
+</script>
