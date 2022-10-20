@@ -22,7 +22,7 @@ window.RandoStuffs.OoT.viewModes = {
 		init : null,
 	},
 	betaReqItemEnv : {
-		name : 'Beta Test : Request Item\s Environments',
+		name : 'Beta Test : Request Items',
 		init : null,
 	},
 };

@@ -5,7 +5,8 @@ window.RandoStuffs.OoT.core.Area ??= {};
 // kind of area
 window.RandoStuffs.OoT.core.Area.kind = {
 	overworld : 'Overworld',
-	dungeon   : 'Dungeon'
+	dungeon   : 'Dungeon',
+	other     : 'Other',
 };
 
 // kind to areas

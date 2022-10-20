@@ -48,9 +48,10 @@ window.RandoStuffs.OoT.core.Area.make = function(){
 
 	// init areas with name prop
 	let areaList = window.RandoStuffs.OoT.core.Area.list;
+	let defCrdnl = window.RandoStuffs.OoT.core.Area.defaultCardinalObject;
 	theObject = {};
 	for(let a in areaList)
-		theObject[a] = { name:areaList[a] };
+		theObject[a] = { name:areaList[a], map:'', kind:'', crdnl:{...defCrdnl} };
 
 	// link mapPos with areas
 	/////////////////////////
@@ -71,10 +72,10 @@ window.RandoStuffs.OoT.core.Area.make = function(){
 	// link cardinal with areas
 	///////////////////////////
 	let byCardinal = window.RandoStuffs.OoT.core.Area.byCardinal;
-	let cardinal   = window.RandoStuffs.OoT.core.Area.cardinal;
+	//let cardinal   = window.RandoStuffs.OoT.core.Area.cardinal;
 	for(let k in byCardinal)
 		for(let a of byCardinal[k])
-			theObject[a].crdnl = cardinal[k];
+			theObject[a].crdnl[k] = true;
 
 	window.RandoStuffs.OoT.core.Area.Data = theObject;
 

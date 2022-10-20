@@ -359,11 +359,29 @@ window.RandoStuffs.OoT.viewModes.betaReqItemEnv.init = function(workspace){
 				}
 
 				// display result
-				for(let loc of foundLocs){
-					resultPanel.appendChild( create_resultEntry(loc) );
-				}
 				console.log(foundLocs);
 				console.log(foundLocsByItem);
+				if(settingsList.displayRequestResultByItem){
+					for(let item of selectedItemList){
+						for(let loc of foundLocsByItem[item]){
+							let itemHeader = document.createElement('div');
+							itemHeader.style.display = 'flex';
+							itemHeader.style.alignItems = 'center';
+							itemHeader.style.backgroundColor = 'lightgrey';
+							itemHeader.style.border = '2px solid black';
+							itemHeader.style.marginTop = 16;
+
+							itemHeader.innerHTML = `<img src=${itemList[item]} style="margin:8px">`
+							                     + `<span style="margin-left:16px">${item}</span>`;
+							resultPanel.appendChild(itemHeader);
+							resultPanel.appendChild( create_resultEntry(loc) );
+						}
+					}
+				}else{
+					for(let loc of foundLocs){
+						resultPanel.appendChild( create_resultEntry(loc) );
+					}
+				}
 			};
 
 		let create_resultEntry = function(locName){
@@ -374,7 +392,7 @@ window.RandoStuffs.OoT.viewModes.betaReqItemEnv.init = function(workspace){
 			let areaName = area?.name  || 'Not Found';
 			let mapPos   = area?.map   || 'Not Found';
 			let kind     = area?.kind  || 'Not Found';
-			let cardinal = area?.crdnl || 'Not Found';
+			let cardinal = area?.crdnl || {/* implicite all prop at false */};
 
 			
 
@@ -395,16 +413,16 @@ window.RandoStuffs.OoT.viewModes.betaReqItemEnv.init = function(workspace){
 							   +  '</br>';
 
 			if(settingsList.displayRequestResultWithKind)
-				elem.innerHTML += '<span style="font-weight:bold;">Kind of Area :</span></br>'
-							   +  '<span style="margin-left:16px">'+kind+'</span></br>'
+				elem.innerHTML += create_tileSPAN('Kind of Area :')
+							   +  create_marginSPAN(kind)
 							   +  '</br>';
 			
 			if(settingsList.displayRequestResultWithCardinal){
 				elem.innerHTML += create_tileSPAN('Cardinal Direction :');
 				let cardinalSet = settingsList.displayRequestResultCardinalSet;
 				for(let k in cardinalSet){
-					if( cardinalSet[k] && cardinalList[k]===cardinal )
-						elem.innerHTML += create_marginSPAN(cardinal);
+					if( cardinalSet[k] && cardinal[k] )
+						elem.innerHTML += create_marginSPAN( cardinalList[k] );
 				}
 				elem.innerHTML += '</br>';
 			}
@@ -431,9 +449,8 @@ window.RandoStuffs.OoT.viewModes.betaReqItemEnv.init = function(workspace){
 				let environmentSet = settingsList.displayRequestResultEnvironmentSet;
 				let environment = location.environment;
 				for(let k in environmentSet){
-					let environmentText = environmentList[k];
 					if( environmentSet[k] && environment[k] )
-						elem.innerHTML += create_marginSPAN(environmentText);
+						elem.innerHTML += create_marginSPAN( environmentList[k] );
 				}
 				elem.innerHTML += '</br>';
 			}

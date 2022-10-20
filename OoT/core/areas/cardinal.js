@@ -3,7 +3,7 @@ window.RandoStuffs.OoT.core ??= {};
 window.RandoStuffs.OoT.core.Area ??= {};
 
 // arbitrary cardinal positions
-window.RandoStuffs.OoT.core.Area.cardinal = {
+window.RandoStuffs.OoT.core.Area.cardinal_OLD = {
 	N:'North',
 	S:'South',
 	W:'West',
@@ -20,11 +20,27 @@ window.RandoStuffs.OoT.core.Area.cardinal = {
 	CNW:'Center-North-West',
 	CNE:'Center-North-East',
 	CSW:'Center-South-West',
-	CSE:'Center-South-East'
+	CSE:'Center-South-East',
+};
+
+window.RandoStuffs.OoT.core.Area.cardinal = {
+	N:'North',
+	S:'South',
+	W:'West',
+	E:'East',
+	C:'Center',
+};
+
+window.RandoStuffs.OoT.core.Area.defaultCardinalObject = {
+	N:false,
+	S:false,
+	W:false,
+	E:false,
+	C:false,
 };
 
 // cardinal to areas
-window.RandoStuffs.OoT.core.Area.byCardinal = {
+window.RandoStuffs.OoT.core.Area.byCardinal_OLD = {
 	N : [
 		'Market',
 		'TempleTime',
@@ -75,4 +91,60 @@ window.RandoStuffs.OoT.core.Area.byCardinal = {
 		'JabuJabu',
 		'IceCavern',
 	],
+};
+
+window.RandoStuffs.OoT.core.Area.byCardinal = {
+	N : [
+		'Market',
+		'TempleTime',
+		'HyruleCastle',
+		'KakarikoVillage',
+		'Graveyard',
+		'DeathMountainTrail',
+		'GoronCity',
+		'DeathMountainCrater',
+		'ZoraRiver',
+		'ZoraDomain',
+		'ZoraFountain',
+
+		'JabuJabu',
+		'DodongoCavern',
+		'FireTemple',
+		'ShadowTemple',
+		'BottomWell',
+		'IceCavern',
+		'GanonCastle',
+	],
+	S : [
+		'LakeHylia',
+		'WaterTemple',
+	],
+	W : [
+		'GerudoValley',
+		'GerudoFortress',
+		'HauntedWasteland',
+		'DesertColossus',
+
+		'SpiritTemple',
+		'ThievesHideout',
+		'GerudoTrainingGround',
+	],
+	E : [
+		'KokiriForest',
+		'LostWoods',
+		'ScaredForestMeadow',
+		'ZoraRiver',
+		'ZoraDomain',
+		'ZoraFountain',
+
+		'DekuTree',
+		'JabuJabu',
+		'ForestTemple',
+		'IceCavern',
+	],
+	C : [
+		'HyruleField',
+		'LonLonRanch',
+	],
+
 };

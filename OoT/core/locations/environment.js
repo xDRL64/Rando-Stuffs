@@ -26,6 +26,14 @@ window.RandoStuffs.OoT.core.Location.environment = {
 	'song'        : 'Song',
 	'reward'      : 'Reward',
 	'enemy'       : 'Enemy',
+	// wet
+	// lava
+	// metal
+	// fromEnemy
+	// nearEnemy
+	// paving
+	// relief motif
+	// boulder
 };
 //let environmentList = window.RandoStuffs.OoT.core.Location.environment;
 
@@ -1814,28 +1822,83 @@ window.RandoStuffs.OoT.core.Location.ENVIRONMENT_SETS = [
 			
 		],
 		wood : [
-			
+			"Dodongos Cavern Bomb Bag Chest",
+			"Dodongos Cavern End of Bridge Chest",
+			"Dodongos Cavern GS Side Room Near Lower Lizalfos",
+			"Dodongos Cavern GS Alcove Above Stairs",
+			"Dodongos Cavern GS Vines Above Stairs",
 		],
 		rock : [
-			
+			"Dodongos Cavern Map Chest",
+			"Dodongos Cavern Bomb Flower Platform Chest",
+			"Dodongos Cavern Bomb Bag Chest",
+			"Dodongos Cavern End of Bridge Chest",
+			"Dodongos Cavern Deku Scrub Lobby",
+			"Dodongos Cavern GS Alcove Above Stairs",
+			"Dodongos Cavern GS Vines Above Stairs",
+			"Dodongos Cavern Boss Room Chest",
+			"Dodongos Cavern King Dodongo Heart",
 		],
 		mountain : [
-			
+			"Dodongos Cavern Map Chest",
+			"Dodongos Cavern Compass Chest",
+			"Dodongos Cavern Bomb Flower Platform Chest",
+			"Dodongos Cavern Bomb Bag Chest",
+			"Dodongos Cavern End of Bridge Chest",
+			"Dodongos Cavern Deku Scrub Side Room Near Dodongos",
+			"Dodongos Cavern Deku Scrub Lobby",
+			"Dodongos Cavern Deku Scrub Near Bomb Bag Left",
+			"Dodongos Cavern Deku Scrub Near Bomb Bag Right",
+			"Dodongos Cavern GS Side Room Near Lower Lizalfos",
+			"Dodongos Cavern GS Scarecrow",
+			"Dodongos Cavern GS Alcove Above Stairs",
+			"Dodongos Cavern GS Vines Above Stairs",
+			"Dodongos Cavern GS Back Room",
+			"Dodongos Cavern Boss Room Chest",
+			"Dodongos Cavern King Dodongo Heart",
 		],
 		underground : [
-			
+			"Dodongos Cavern King Dodongo Heart",
 		],
 		sandy : [
 			
 		],
 		earthy : [
-			
+			"Dodongos Cavern Map Chest",
+			"Dodongos Cavern Compass Chest",
+			"Dodongos Cavern Bomb Flower Platform Chest",
+			"Dodongos Cavern Bomb Bag Chest",
+			"Dodongos Cavern Deku Scrub Side Room Near Dodongos",
+			"Dodongos Cavern Deku Scrub Lobby",
+			"Dodongos Cavern Deku Scrub Near Bomb Bag Left",
+			"Dodongos Cavern Deku Scrub Near Bomb Bag Right",
+			"Dodongos Cavern GS Side Room Near Lower Lizalfos",
+			"Dodongos Cavern GS Scarecrow",
+			"Dodongos Cavern GS Vines Above Stairs",
+			"Dodongos Cavern GS Back Room",
+			"Dodongos Cavern Boss Room Chest",
+			"Dodongos Cavern King Dodongo Heart",
 		],
 		people : [
 			
 		],
 		building : [
-			
+			"Dodongos Cavern Map Chest",
+			"Dodongos Cavern Compass Chest",
+			"Dodongos Cavern Bomb Flower Platform Chest",
+			"Dodongos Cavern Bomb Bag Chest",
+			"Dodongos Cavern End of Bridge Chest",
+			"Dodongos Cavern Deku Scrub Side Room Near Dodongos",
+			"Dodongos Cavern Deku Scrub Lobby",
+			"Dodongos Cavern Deku Scrub Near Bomb Bag Left",
+			"Dodongos Cavern Deku Scrub Near Bomb Bag Right",
+			"Dodongos Cavern GS Side Room Near Lower Lizalfos",
+			"Dodongos Cavern GS Scarecrow",
+			"Dodongos Cavern GS Alcove Above Stairs",
+			"Dodongos Cavern GS Vines Above Stairs",
+			"Dodongos Cavern GS Back Room",
+			"Dodongos Cavern Boss Room Chest",
+			"Dodongos Cavern King Dodongo Heart",
 		],
 		town : [
 			
@@ -1844,10 +1907,14 @@ window.RandoStuffs.OoT.core.Location.ENVIRONMENT_SETS = [
 			
 		],
 		hot : [
-			
+			"Dodongos Cavern Map Chest",
+			"Dodongos Cavern End of Bridge Chest",
+			"Dodongos Cavern Deku Scrub Lobby",
+			"Dodongos Cavern Boss Room Chest",
+			"Dodongos Cavern King Dodongo Heart",
 		],
 		fire : [
-			
+			"Dodongos Cavern GS Side Room Near Lower Lizalfos",
 		],
 		cold : [
 			
@@ -1859,16 +1926,43 @@ window.RandoStuffs.OoT.core.Location.ENVIRONMENT_SETS = [
 			
 		],
 		explosive : [
-			
+			"Dodongos Cavern Map Chest",
+			"Dodongos Cavern Compass Chest",
+			"Dodongos Cavern Bomb Flower Platform Chest",
+			"Dodongos Cavern Bomb Bag Chest",
+			"Dodongos Cavern End of Bridge Chest",
+			"Dodongos Cavern Deku Scrub Side Room Near Dodongos",
+			"Dodongos Cavern Deku Scrub Lobby",
+			"Dodongos Cavern Deku Scrub Near Bomb Bag Left",
+			"Dodongos Cavern Deku Scrub Near Bomb Bag Right",
+			"Dodongos Cavern GS Side Room Near Lower Lizalfos",
+			"Dodongos Cavern GS Scarecrow",
+			"Dodongos Cavern GS Alcove Above Stairs",
+			"Dodongos Cavern GS Vines Above Stairs",
+			"Dodongos Cavern GS Back Room",
+			"Dodongos Cavern Boss Room Chest",
+			"Dodongos Cavern King Dodongo Heart",
 		],
 		song : [
 			
 		],
 		reward : [
-			
+			"Dodongos Cavern King Dodongo Heart",
 		],
 		enemy : [
-			
+			"Dodongos Cavern Map Chest",
+			"Dodongos Cavern Compass Chest",
+			"Dodongos Cavern Bomb Flower Platform Chest",
+			"Dodongos Cavern Deku Scrub Side Room Near Dodongos",
+			"Dodongos Cavern Deku Scrub Lobby",
+			"Dodongos Cavern Deku Scrub Near Bomb Bag Left",
+			"Dodongos Cavern Deku Scrub Near Bomb Bag Right",
+			"Dodongos Cavern GS Side Room Near Lower Lizalfos",
+			"Dodongos Cavern GS Scarecrow",
+			"Dodongos Cavern GS Alcove Above Stairs",
+			"Dodongos Cavern GS Vines Above Stairs",
+			"Dodongos Cavern GS Back Room",
+			"Dodongos Cavern King Dodongo Heart",
 		],
 	},
 
