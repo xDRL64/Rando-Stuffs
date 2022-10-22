@@ -713,7 +713,7 @@ window.RandoStuffs.OoT.core.Location.make = function(){
 	let locList = window.RandoStuffs.OoT.core.Location.list;
 	theObject = {};
 	for(let c of locList)
-		theObject[c] = { name:c, sanity:[], area:null, environment:null };
+		theObject[c] = { name:c, area:null, context:null };
 	
 	// make by area
 	///////////////
@@ -723,29 +723,21 @@ window.RandoStuffs.OoT.core.Location.make = function(){
 		for(let c of byArea[k])
 			theObject[c].area = area[k];
 
-	// make by sanity
-	/////////////////
-	let bySanity = window.RandoStuffs.OoT.core.Location.bySanity;
-	let sanity   = window.RandoStuffs.OoT.core.Location.sanity;
-	for(let k in bySanity)
-		for(let c of bySanity[k])
-			theObject[c].sanity.push( sanity[k] );
-	
-	// make by environment
+	// make by context
 	//////////////////////
-	let byEnv = window.RandoStuffs.OoT.core.Location.byEnvironment;
-	let env   = window.RandoStuffs.OoT.core.Location.environment;
-	let default_envObj = {};
+	let byCtx = window.RandoStuffs.OoT.core.Location.byContext;
+	let ctx   = window.RandoStuffs.OoT.core.Location.context;
+	let default_ctxObj = {};
 	// alloc mem space
-	for(let k in env)
-		default_envObj[k] = false;
+	for(let k in ctx)
+		default_ctxObj[k] = false;
 	for(let k in theObject)
-		theObject[k].environment = {...default_envObj};
+		theObject[k].context = {...default_ctxObj};
 	// fill mem space
-	for(let k in byEnv){ // k=envName
-		let a = byEnv[k]
+	for(let k in byCtx){ // k=ctxName
+		let a = byCtx[k]
 		for(let loc of a){
-			theObject[loc].environment[k] = true;
+			theObject[loc].context[k] = true;
 		}
 	}
 	

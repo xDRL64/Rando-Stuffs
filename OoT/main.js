@@ -7,7 +7,6 @@ window.RandoStuffs.OoT.settingsFromDefaultCore = true;
 
 window.RandoStuffs.OoT.fileSlots = {
 	spoilerLog  : { name:'Spoiler.json', data:null },
-//	locByEnv    : { name:'Locations_by_Environment.json', data:null },
 	allSettings : { name:'All_Settings.json', data:null, update_core:true },
 };
 
@@ -17,11 +16,11 @@ window.RandoStuffs.OoT.fileSlots = {
 
 
 window.RandoStuffs.OoT.viewModes = {
-	locEnvEdit : {
-		name : 'Edit environments of the locations',
+	locCtxEdit : {
+		name : 'Edit contexts of the locations',
 		init : null,
 	},
-	betaReqItemEnv : {
+	betaReqItem : {
 		name : 'Beta Test : Request Items',
 		init : null,
 	},
