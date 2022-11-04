@@ -20,7 +20,7 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 
 	let core = window.RandoStuffs.OoT.core;
 
-	let itemList = core.Item.list // { itemName:'item gfx data url', ... }
+	let itemList = core.Item.list; // { itemName:'item gfx data url', ... }
 
 	let areaCtxList = core.Area.context;
 

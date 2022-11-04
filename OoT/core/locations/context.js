@@ -49,6 +49,8 @@ window.RandoStuffs.OoT.core.Location.context = {
     token             : 'Token',
     tokenReward       : 'GS Token Reward',
     minigame          : 'Minigame',
+
+	//treslongetchiantnomaecrir2xtreslongetchiantnomaecrir2x : 'treslongetchiantnomaecrir2xtreslongetchiantnomaecrir2x',
 };
 
 
@@ -2874,7 +2876,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 
 window.RandoStuffs.OoT.core.Location.byContext = {};
 
-// make_ctxToLoc
+// make_ctxToLoc (convert CONTEXT_SETS to byContext)
 (()=>{
 	// short name
 	let Loc = window.RandoStuffs.OoT.core.Location;
@@ -2897,7 +2899,7 @@ window.RandoStuffs.OoT.core.Location.byContext = {};
 })();
 
 
-
+// sort location by context (follow location order)
 window.RandoStuffs.OoT.core.Location.sortUpdate_byContext = ()=>{
 	// short name
 	let Loc = window.RandoStuffs.OoT.core.Location;

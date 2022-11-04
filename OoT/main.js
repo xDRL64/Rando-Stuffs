@@ -16,8 +16,16 @@ window.RandoStuffs.OoT.fileSlots = {
 
 
 window.RandoStuffs.OoT.viewModes = {
+	areaCtxListEdit : {
+		name : 'Edit the list of area context',
+		init : null,
+	},
+	locCtxListEdit : {
+		name : 'Edit the list of location context',
+		init : null,
+	},
 	locCtxEdit : {
-		name : 'Edit contexts of the locations',
+		name : 'Edit context properties by the locations',
 		init : null,
 	},
 	betaReqItem : {

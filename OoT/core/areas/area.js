@@ -47,8 +47,12 @@ window.RandoStuffs.OoT.core.Area.make = function(){
 	let theObject = null; // output obj
 
 	// init areas with name prop
+	////////////////////////////
+	let ctx = window.RandoStuffs.OoT.core.Area.context;
+	let defCtxObj = {};
+	for(let k in ctx)
+		defCtxObj[k] = false;
 	let areaList = window.RandoStuffs.OoT.core.Area.list;
-	let defCtxObj = window.RandoStuffs.OoT.core.Area.defaultContextObject;
 	theObject = {};
 	for(let a in areaList)
 		theObject[a] = { name:areaList[a], map:'', context:{...defCtxObj} };

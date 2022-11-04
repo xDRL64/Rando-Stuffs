@@ -16,7 +16,7 @@ window.RandoStuffs.OoT.core.Area.context = {
 	center    : 'Center Direction',
 };
 
-window.RandoStuffs.OoT.core.Area.defaultContextObject = {
+/* window.RandoStuffs.OoT.core.Area.defaultContextObject = {
 	overworld : false,
 	dungeon   : false,
 
@@ -25,7 +25,7 @@ window.RandoStuffs.OoT.core.Area.defaultContextObject = {
 	west      : false,
 	east      : false,
 	center    : false,
-};
+}; */
 
 // context to areas
 window.RandoStuffs.OoT.core.Area.byContext = {
