@@ -712,8 +712,12 @@ window.RandoStuffs.OoT.core.Location.make = function(){
 	////////////////////////////////
 	let locList = window.RandoStuffs.OoT.core.Location.list;
 	theObject = {};
-	for(let c of locList)
-		theObject[c] = { name:c, area:null, context:null };
+	/* for(let c of locList)
+		theObject[c] = { name:c, nameID:c, area:null, context:null }; */
+	for(let index in locList){
+		let loc = locList[index];
+		theObject[loc] = { name:loc, nameID:index, area:null, context:null };
+	}
 	
 	// make by area
 	///////////////

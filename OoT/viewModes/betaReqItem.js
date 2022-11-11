@@ -14,21 +14,38 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 	mode.style.flexWrap = 'wrap';
 	mode.style.overflowX = 'scroll';
 
+	// mode.theApp.shiftKey
+	(()=>{
+		mode.theApp = {};
+		mode.theApp.shiftKey = false;
+		let update_shiftKey = (e)=>{mode.theApp.shiftKey=e.shiftKey};
+		mode.onkeydown = (e)=>{update_shiftKey(e)};
+		mode.onkeyup= (e)=>{update_shiftKey(e)};
+	})();
+
 	//
 
-	let spoilerFile = window.RandoStuffs.OoT.fileSlots.spoilerLog;
+	let OoT = window.RandoStuffs.OoT;
 
-	let core = window.RandoStuffs.OoT.core;
+	let spoilerFile = OoT.fileSlots.spoilerLog;
+
+	let core = OoT.core;
 
 	let itemList = core.Item.list; // { itemName:'item gfx data url', ... }
 
+	let areaList = core.Area.list;
+
+	let mapPosList = core.Area.mapPos;
+
 	let areaCtxList = core.Area.context;
+
+	let locList = core.Location.list;
 
 	let locCtxList = core.Location.context;
 	
 	let appLocs = core.Location.Data;
 
-	// item selection (input panel)
+	// OoT item selection (input panel)
 	///////////////////////////////
 	let selectedItemList = new Set();
 	(()=>{
@@ -83,23 +100,30 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 
 	let get_defaultCheckList = (baseList/*string array*/, defaultValue)=>{
 		let o = {};
-		for(let c of baseList) o[c] = defaultValue;
+		for(let c of baseList) o[c] = {checked:defaultValue, conditionID:null};
 		return o;
 	};
 	let settingsList = {
-		displayRequestResultByItem : true,
-		displayRequestResultWithArea : true,
-		displayRequestResultWithMapPos : true,
-		displayRequestResultWithAreaCtx : true,
-		displayRequestResultWithLocation : true,
-		displayRequestResultWithLocCtx : true,
+		displayRequestResultByItem       : true,
+		displayRequestResultWithArea     : {checked:true, conditionID:null},
+		displayRequestResultWithMapPos   : {checked:true, conditionID:null},
+		displayRequestResultWithAreaCtx  : {checked:true, conditionID:null},
+		displayRequestResultWithLocation : {checked:true, conditionID:null},
+		displayRequestResultWithLocCtx   : {checked:true, conditionID:null},
 
+		displayRequestResultAreaSet : get_defaultCheckList(Object.keys(areaList), true),
+		displayRequestResultMapPosSet : get_defaultCheckList(Object.keys(mapPosList), true),
 		displayRequestResultAreaCtxSet : get_defaultCheckList(Object.keys(areaCtxList), true),
+
+		displayRequestResultLocSet : get_defaultCheckList(Object.keys(locList), true),
 		displayRequestResultLocCtxSet : get_defaultCheckList(Object.keys(locCtxList), true),
 	};
 	DEBUG_EXPORT__settingsList = settingsList; // debug
 	
 
+	let _conditionGroupsBoard = null;
+
+	
 	// settings selection (input panel)
 	///////////////////////////////////
 	(()=>{
@@ -140,16 +164,61 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 		panel.style.overflowY = 'scroll';
 		panel.style.height = '75%';
 
-		let boardLen = Object.keys(settingsList).length;
 		let board = document.createElement('div');
 		board.style.display = 'grid';
 		board.style.gridTemplateColumns = 'auto';
-	//    board.style.gridTemplateRows = `repeat(${boardLen}, 1fr)`;
+
 		
 
 
 		// fill settings board
 		//////////////////////
+
+
+			// display (beta test condition req)
+			((elem=null)=>{
+
+				let create_conditionGroup = OoT.viewModes.mainLib.editCondition.create_conditionGroup;
+
+				let pan_condition = document.createElement('div');
+				elem = pan_condition;
+				elem.style.display = 'flex';
+				elem.style.alignItems = 'center';
+				elem.style.flexDirection = 'column';
+				elem.style.border = '1px solid black';
+
+				// make all properties ref pack
+				let allRef = {
+					'Area Name'        : core.Area.list,
+					'Map Position'     : core.Area.mapPos,
+					'Area Context'     : core.Area.context,
+					'Exact Location'   : core.Location.list,
+					'Location Context' : core.Location.context,
+				};
+
+				// condition groups [board]
+				let conditionGroupsBoard = document.createElement('div');
+				
+				// add new [button]
+				let addNew = document.createElement('input');
+				addNew.type = 'button';
+				addNew.value = 'Add New Condition Group';
+				addNew.style.margin = 4;
+				addNew.onclick = ()=>{
+					let newGroup = create_conditionGroup(conditionGroupsBoard, allRef, true);
+					conditionGroupsBoard.appendChild( newGroup );				
+				};
+				
+				
+				pan_condition.appendChild( conditionGroupsBoard );
+				pan_condition.appendChild( addNew );
+				board.appendChild(pan_condition);
+
+				// export
+				_conditionGroupsBoard = conditionGroupsBoard;
+			})();
+
+			
 
 			// display mode option section
 			((elem=null)=>{
@@ -181,18 +250,76 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 			// display category option section
 			((elem=null, subElem=null)=>{
 
+				//
+				let attach_conditionHook = function(elem, obj, prop){
+					elem.style.display = 'flex';
+					elem.style.alignItems = 'center';
+
+						let conditionHook = document.createElement('input');
+						conditionHook.type = 'text';
+						conditionHook.style.marginLeft = 'auto';
+						conditionHook.placeholder = 'Condition ID';
+						conditionHook.oninput = function(){ obj[prop].conditionID=this.value; };
+
+					elem.appendChild(conditionHook);
+				};
+
+				let make_foldable = (category, subElem, defaultState='open')=>{
+					
+					// make the fold button
+					let foldBtn = document.createElement('span');
+					let openChar = '▼';  // it is open
+					let closeChar = '►'; // it is close
+					foldBtn.style.fontWeight = 'bold';
+					//foldBtn.style.border = '1px solid black';
+					foldBtn.style.margin = 16;
+					// insert the fold button
+					category.firstChild.after( foldBtn );
+					// set the default state
+					let subElemDisplay = subElem.style.display;
+					if(defaultState === 'open'){
+						// default open state
+						foldBtn.textContent = openChar;
+					}else{
+						// default close state
+						foldBtn.textContent = closeChar;
+						subElem.style.display = 'none';
+					}
+					// fold action
+					let currentState = defaultState;
+					foldBtn.onclick = (e)=>{
+						e.preventDefault(); // cancel the click on the checkbox label
+						if(currentState === 'open'){
+							foldBtn.textContent = closeChar;
+							subElem.style.display = 'none';
+							currentState = 'close';
+						}else{
+							foldBtn.textContent = openChar;
+							subElem.style.display = subElemDisplay;
+							currentState = 'open';
+						}
+					};
+				};
+
+				//
 				let make_categoryWithSubPanel = function(mainLabel, mainSetName, subList, subLabelEnd, subSetName, parent){
 					let checkboxes = [];
+
 					// main checkbox
 					let category = create_checkbox(
 						mainLabel,
 						function(){
-							settingsList[mainSetName]=this.checked;
-							checkboxes.forEach(e=>e.disabled=!this.checked);
+							settingsList[mainSetName].checked=this.checked;
+							checkboxes.forEach(e=>e.style.opacity=(this.checked?1.0:0.5));
+							if(mode.theApp.shiftKey)
+								checkboxes.forEach(e=>e.checked=this.checked);
 						},
 						true,
 					);
+					
+					attach_conditionHook(category, settingsList, mainSetName);
 					parent.appendChild(category);
+
 					// sub checkboxes
 					let subElem = document.createElement('div');
 						subElem.style.marginLeft = 24;
@@ -203,14 +330,22 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 							subElem.appendChild(
 								create_checkbox(
 									`Display ${subList[k]} ${subLabelEnd}`,
-									function(){settingsList[subSetName][k]=this.checked},
+									function(){settingsList[subSetName][k].checked=this.checked},
 									true,
 								)
 							);           // pan    .label           .checkbox
 							checkboxes.push(subElem.lastElementChild.firstElementChild);
+							                  // pan    .label
+							attach_conditionHook(subElem.lastElementChild, settingsList[subSetName], k);
 						}
+
+					make_foldable(category, subElem, 'close');
+
 					parent.appendChild(subElem);
 				};
+
+				//
+				//
 
 				let pan_displayCat = document.createElement('div');
 					elem = pan_displayCat;
@@ -218,21 +353,26 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 					elem.style.flexDirection = 'column';
 					elem.style.border = '1px solid black';
 
-				// Area Category
-				let areaCat = create_checkbox(
-					'Display Hyrule Area',
-					function(){settingsList.displayRequestResultWithArea=this.checked},
-					true,
-				);
-				elem.appendChild(areaCat);
 
-				// Map Postion Category
-				let mapPosCat = create_checkbox(
-					'Display Hyrule Map Position',
-					function(){settingsList.displayRequestResultWithMapPos=this.checked},
-					true,
+				// Area Category
+				make_categoryWithSubPanel(
+					'Display Hyrule Area',
+					'displayRequestResultWithArea',
+					areaList,
+					'',
+					'displayRequestResultAreaSet',
+					elem,
 				);
-				elem.appendChild(mapPosCat);
+				
+				// Map Postion Category
+				make_categoryWithSubPanel(
+					'Display Hyrule Map Position',
+					'displayRequestResultWithMapPos',
+					mapPosList,
+					'',
+					'displayRequestResultMapPosSet',
+					elem
+				);
 
 				// Area Context Category
 				make_categoryWithSubPanel(
@@ -245,12 +385,14 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 				);
 
 				// Location Category
-				let locationCat = create_checkbox(
+				make_categoryWithSubPanel(
 					'Display Exact Hyrule Check Location (OoTR label)',
-					function(){settingsList.displayRequestResultWithLocation=this.checked},
-					true,
+					'displayRequestResultWithLocation',
+					locList,
+					'',
+					'displayRequestResultLocSet',
+					elem
 				);
-				elem.appendChild(locationCat);
 
 				// Location Context Category
 				make_categoryWithSubPanel(
@@ -262,11 +404,8 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 					elem
 				);
 
-
 				board.appendChild(pan_displayCat);
 			})();
-
-
 
 		panel.appendChild(board);
 		mode.appendChild(panel);
@@ -276,6 +415,8 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 	// display request result (output panel)
 	////////////////////////////////////////
 	(()=>{
+
+		let getObject_conditionGroups = OoT.viewModes.mainLib.editCondition.getObject_conditionGroups;
 
 		// make panel's viewport sys
 		////////////////////////////
@@ -320,6 +461,7 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 					resultPanel.appendChild(error);
 					return; // cancel process
 				}
+
 				// process
 				for(let item of selectedItemList){
 					for(let locName in OoTR_locs){
@@ -331,6 +473,10 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 						}
 					}
 				}
+
+				// get condition group from condition panel
+				let displayConditions = getObject_conditionGroups(_conditionGroupsBoard)
+				DEBUG_EXPORT__getObject_conditionGroups = displayConditions;	
 
 				// display result
 				console.log(foundLocs);
@@ -348,26 +494,28 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 							itemHeader.innerHTML = `<img src=${itemList[item]} style="margin:8px">`
 							                     + `<span style="margin-left:16px">${item}</span>`;
 							resultPanel.appendChild(itemHeader);
-							resultPanel.appendChild( create_resultEntry(loc) );
+							resultPanel.appendChild( create_resultEntry(loc, displayConditions) );
 						}
 					}
 				}else{
 					for(let loc of foundLocs){
-						resultPanel.appendChild( create_resultEntry(loc) );
+						resultPanel.appendChild( create_resultEntry(loc, displayConditions) );
 					}
 				}
 			};
 
-		let create_resultEntry = function(locName){
+		let create_resultEntry = function(locName, conditions){
 
 			let location = appLocs[locName];
+			let locNameID = location.nameID;
+			let locCtx    = location.context;
 
 			let area = location.area;
-			let areaName = area?.name  || 'Not Found';
-			let mapPos   = area?.map   || 'Not Found';
-			let areaCtx = area?.context || {/* implicite all prop at false */};
-
-			
+			let areaName   = area?.name  || 'Not Found';
+			let areaNameID = area?.nameID;
+			let mapPos     = area?.map   || 'Not Found';
+			let mapPosID   = area?.mapID;
+			let areaCtx    = area?.context || {/* implicite all prop at false */};
 
 			let elem = document.createElement('div');
 				elem.style.border = '1px solid black';
@@ -375,41 +523,154 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 			let create_tileSPAN = (titleText)=>{ return '<span style="font-weight:bold;">'+titleText+'</span></br>' };
 			let create_marginSPAN = (marginText)=>{ return '<span style="margin-left:16px">'+marginText+'</span></br>' };
 
-			if(settingsList.displayRequestResultWithArea)
-				elem.innerHTML += create_tileSPAN('Area Name :')
-				               +  create_marginSPAN(areaName)
-							   +  '</br>';
+			let general = true;
+			let test_allConditions = ()=>{
+				// loop on all group of condition
+				Object.keys(conditions).forEach((groupName)=>{
+					let cndtn = conditions[groupName];
+					let test = true;
+					// loop on all conditions in the current group
+					cndtn.forEach((c, index)=>{
+						let res = false;
 
-			if(settingsList.displayRequestResultWithMapPos)
-				elem.innerHTML += create_tileSPAN('Map Position :')
-				               +  create_marginSPAN(mapPos)
-							   +  '</br>';
+						if(c.property==='Area Name'){
+							if(c.comparator === 'is')
+								res = (areaNameID===c.value) ? true : false;
+							if(c.comparator === 'is not')
+								res = (areaNameID!==c.value) ? true : false;
+						}
 
-			if(settingsList.displayRequestResultWithAreaCtx){
-				elem.innerHTML += create_tileSPAN('Area Context :');
-				let areaCtxSet = settingsList.displayRequestResultAreaCtxSet;
-				for(let k in areaCtxSet){
-					if( areaCtxSet[k] && areaCtx[k] )
-						elem.innerHTML += create_marginSPAN( areaCtxList[k] );
+						if(c.property==='Map Position'){
+							if(c.comparator === 'is')
+								res = (mapPosID===c.value) ? true : false;
+							if(c.comparator === 'is not')
+								res = (mapPosID!==c.value) ? true : false;
+						}
+
+						if(c.property==='Area Context'){
+							if(c.comparator === 'is')
+								res = areaCtx[c.value] ? true : false;
+							if(c.comparator === 'is not')
+								res = !areaCtx[c.value] ? true : false;
+						}
+
+						if(c.property==='Exact Location'){
+							if(c.comparator === 'is')
+								res = (locNameID===c.value) ? true : false;
+							if(c.comparator === 'is not')
+								res = (locNameID!==c.value) ? true : false;
+						}
+
+						if(c.property==='Location Context'){
+							if(c.comparator === 'is')
+								res = locCtx[c.value] ? true : false;
+							if(c.comparator === 'is not')
+								res = !locCtx[c.value] ? true : false;
+						}
+
+						if(index === 0){
+							test = res;
+						}else{
+							if(c.operator === 'AND')
+								test = test && res;
+							if(c.operator === 'OR'){
+								if(test===false)
+									test = res;
+								else
+									return;
+							}
+						}
+					});
+					cndtn.result = test;
+
+					if(cndtn.general)
+						general = general && test;
+				});
+			};
+			test_allConditions();
+			if( !general ) return elem;
+			
+
+
+			let make_entryPartWithOneResultByProp = (settingsListProp, labelText, settingsListPropSet, propNameID, propValue)=>{
+				let mainChecked = settingsList[settingsListProp].checked;
+				let cndtnCat = conditions[ settingsList[settingsListProp].conditionID ];
+				let cndtn = cndtnCat?.result ?? true;
+				if(mainChecked && cndtn || !mainChecked && !cndtn){
+					elem.innerHTML += create_tileSPAN(labelText);
+					let propSet = settingsList[settingsListPropSet];
+					let subCndtn = conditions[propSet[propNameID].conditionID]?.result ?? true;
+					let subChecked = propSet[propNameID].checked;
+					if( subChecked && subCndtn || !subChecked && !subCndtn )
+						elem.innerHTML += create_marginSPAN(propValue);
+					elem.innerHTML += '</br>';
 				}
-				elem.innerHTML += '</br>';
-			}
+			};
 
-			if(settingsList.displayRequestResultWithLocation)
-				elem.innerHTML += create_tileSPAN('Exact OoTR Location :')
-				               +  create_marginSPAN(locName)
-							   +  '</br>';
-
-			if(settingsList.displayRequestResultWithLocCtx){
-				elem.innerHTML += create_tileSPAN('Location "Context" :');
-				let contextSet = settingsList.displayRequestResultLocCtxSet;
-				let context = location.context;
-				for(let k in contextSet){
-					if( contextSet[k] && context[k] )
-						elem.innerHTML += create_marginSPAN( locCtxList[k] );
+			let make_entryPartWithSomeResultsByProp = (settingsListProp, labelText, settingsListPropSet, assignedProps, propNames)=>{
+				let mainChecked = settingsList[settingsListProp].checked;
+				let cndtnCat = conditions[ settingsList[settingsListProp].conditionID ];
+				let cndtn = cndtnCat?.result ?? true;
+				if(mainChecked && cndtn || !mainChecked && !cndtn){
+					elem.innerHTML += create_tileSPAN(labelText);
+					let propSet = settingsList[settingsListPropSet];
+					for(let k in propSet){
+						let subCndtn = conditions[propSet[k].conditionID]?.result ?? true;
+						let subChecked = propSet[k].checked;
+						if(assignedProps[k])
+							if( subChecked && subCndtn || !subChecked && !subCndtn )
+								elem.innerHTML += create_marginSPAN( propNames[k] );
+					}
+					elem.innerHTML += '</br>';
 				}
-				elem.innerHTML += '</br>';
-			}
+			};
+
+
+			
+			// Area Name
+			make_entryPartWithOneResultByProp(
+				'displayRequestResultWithArea',
+				'Area Name :',
+				'displayRequestResultAreaSet',
+				areaNameID,
+				areaName
+			);
+
+			// Area Map Position
+			make_entryPartWithOneResultByProp(
+				'displayRequestResultWithMapPos',
+				'Map Position :',
+				'displayRequestResultMapPosSet',
+				mapPosID,
+				mapPos
+			);
+			
+			// Area Context
+			make_entryPartWithSomeResultsByProp(
+				'displayRequestResultWithAreaCtx',
+				'Area Context :',
+				'displayRequestResultAreaCtxSet',
+				areaCtx,
+				areaCtxList
+			);
+
+			// Exact OoTR Location
+			make_entryPartWithOneResultByProp(
+				'displayRequestResultWithLocation',
+				'Exact OoTR Location :',
+				'displayRequestResultLocSet',
+				locNameID,
+				locName
+			);
+			
+			// Location Context
+			make_entryPartWithSomeResultsByProp(
+				'displayRequestResultWithLocCtx',
+				'Location Context :',
+				'displayRequestResultLocCtxSet',
+				locCtx,
+				locCtxList
+			);
 
 			return elem;
 		};

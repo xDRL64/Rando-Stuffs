@@ -55,15 +55,17 @@ window.RandoStuffs.OoT.core.Area.make = function(){
 	let areaList = window.RandoStuffs.OoT.core.Area.list;
 	theObject = {};
 	for(let a in areaList)
-		theObject[a] = { name:areaList[a], map:'', context:{...defCtxObj} };
+		theObject[a] = { name:areaList[a], nameID:a, map:'', mapID:'', context:{...defCtxObj} };
 
 	// link mapPos with areas
 	/////////////////////////
 	let byMapPos = window.RandoStuffs.OoT.core.Area.byMapPos;
 	let mapPos   = window.RandoStuffs.OoT.core.Area.mapPos;
 	for(let k in byMapPos)
-		for(let a of byMapPos[k])
+		for(let a of byMapPos[k]){
 			theObject[a].map = mapPos[k];
+			theObject[a].mapID = k;
+		}
 
 	// link context with areas
 	///////////////////////////
