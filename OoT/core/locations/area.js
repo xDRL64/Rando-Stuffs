@@ -62,6 +62,10 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // SFM GS
         "SFM GS",
+
+        // SFM main quest
+        "Song from Saria",
+        "Sheik in Forest",
     ],
     HyruleField : [
         // HF
@@ -80,6 +84,9 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         // HF GS
         "HF GS Cow Grotto",
         "HF GS Near Kak Grotto",
+
+        // HF main quest
+        "Song from Ocarina of Time",
     ],
     LonLonRanch : [
         // LLR
@@ -102,6 +109,9 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "LLR GS Tree",
         "LLR GS Rain Shed",
         "LLR GS Back Wall",
+
+        // LLR main quest
+        "Song from Malon",
     ],
     Market : [
         // Market
@@ -146,7 +156,8 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "Market Bombchu Shop Item 8",
     ],
     TempleTime : [
-        // ToT
+        // ToT main quest
+        "Sheik at Temple",
 	    "ToT Light Arrows Cutscene",
     ],
     HyruleCastle : [
@@ -157,6 +168,9 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         // HC GS
         "HC GS Tree",
         "HC GS Storms Grotto",
+
+        // HC main quest
+        "Song from Impa",
 
         // OGC
         "OGC Great Fairy Reward",
@@ -212,6 +226,10 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "Kak Potion Shop Item 6",
         "Kak Potion Shop Item 7",
         "Kak Potion Shop Item 8",
+
+        // Kak main quest
+        "Song from Windmill",
+        "Sheik in Kakariko",
     ],
     Graveyard : [
         // Graveyard
@@ -226,6 +244,9 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         // Graveyard GS
         "Graveyard GS Bean Patch",
         "Graveyard GS Wall",
+
+        // Graveyard main quest
+        "Song from Composers Grave",
     ],
     DeathMountainTrail : [
         // DMT
@@ -290,6 +311,9 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         // DMC GS
         "DMC GS Crate",
         "DMC GS Bean Patch",
+
+        // DMC main quest
+        "Sheik in Crater",
     ],
     ZoraRiver : [
         // ZR
@@ -411,6 +435,9 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "Colossus GS Bean Patch",
         "Colossus GS Tree",
         "Colossus GS Hill",
+
+        // Colossus main quest
+        "Sheik at Colossus",
     ],
     DekuTree : [
         // Deku Tree
@@ -670,6 +697,9 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "Ice Cavern GS Spinning Scythe Room",
         "Ice Cavern GS Heart Piece Room",
         "Ice Cavern GS Push Block Room",
+
+        // Ice Cavern main quest
+        "Sheik in Ice Cavern",
     ],
     ThievesHideout : [
         // GF ThievesHideout

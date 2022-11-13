@@ -1,6 +1,6 @@
 
 
-window.RandoStuffs.OoT.viewModes.locCtxEdit.init = function(workspace){
+window.RandoStuffs.OoT.viewModes.locCtxEdit.init_OLD = function(workspace){
 
 
     workspace.textContent = '';
@@ -124,6 +124,12 @@ window.RandoStuffs.OoT.viewModes.locCtxEdit.init = function(workspace){
 	///////////////////////
 	let create_gridPointer = function(className){
 
+		/* External :
+			board
+			panel
+			cornerCell
+		*/
+
 		// INIT
 		///////
 		let brd = 2; // pointer border size
@@ -231,3 +237,31 @@ window.RandoStuffs.OoT.viewModes.locCtxEdit.init = function(workspace){
 
 
 };
+
+window.RandoStuffs.OoT.viewModes.locCtxEdit.init = function(workspace){
+	workspace.textContent = '';
+    let mode = document.createElement('div');
+    workspace.appendChild(mode);
+
+    mode.style.position = 'absolute';
+    mode.style.inset = 0;
+    mode.style.display = 'flex';
+    mode.style.flexDirection = 'column';
+	mode.style.justifyContent = 'center';
+	mode.style.alignItems = 'center';
+
+	//
+	let core = window.RandoStuffs.OoT.core;
+	let Location = core.Location;
+	let Data = Location.Data;
+	let keyList = Location.list;
+	let valList = {};
+	keyList.forEach(e=>valList[e]=e);
+	let contextList = Location.context;
+	let databyContext = Location.byContext;
+
+	let htmlElems = window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.create_editorView(Data, keyList, valList, contextList, databyContext);
+	window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.create_gridPointer('grid-cell', htmlElems);
+	mode.appendChild(htmlElems.handle);
+};
+

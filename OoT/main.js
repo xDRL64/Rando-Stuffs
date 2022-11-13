@@ -24,6 +24,10 @@ window.RandoStuffs.OoT.viewModes = {
 		name : 'Edit the list of location context',
 		init : null,
 	},
+	areaCtxEdit : {
+		name : 'Edit context properties by the areas',
+		init : null,
+	},
 	locCtxEdit : {
 		name : 'Edit context properties by the locations',
 		init : null,

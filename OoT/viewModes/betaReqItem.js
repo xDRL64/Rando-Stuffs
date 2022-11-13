@@ -107,9 +107,9 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 		displayRequestResultByItem       : true,
 		displayRequestResultWithArea     : {checked:true, conditionID:null},
 		displayRequestResultWithMapPos   : {checked:true, conditionID:null},
-		displayRequestResultWithAreaCtx  : {checked:true, conditionID:null},
+		displayRequestResultWithAreaCtx  : {checked:true, conditionID:null, quantity:null},
 		displayRequestResultWithLocation : {checked:true, conditionID:null},
-		displayRequestResultWithLocCtx   : {checked:true, conditionID:null},
+		displayRequestResultWithLocCtx   : {checked:true, conditionID:null, quantity:null},
 
 		displayRequestResultAreaSet : get_defaultCheckList(Object.keys(areaList), true),
 		displayRequestResultMapPosSet : get_defaultCheckList(Object.keys(mapPosList), true),
@@ -250,20 +250,48 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 			// display category option section
 			((elem=null, subElem=null)=>{
 
-				//
-				let attach_conditionHook = function(elem, obj, prop){
+				let apply_cssStyle = (elem)=>{
 					elem.style.display = 'flex';
 					elem.style.alignItems = 'center';
+					elem.children[1].style.marginRight = 16; // add margin at right of label text
+				};
 
-						let conditionHook = document.createElement('input');
-						conditionHook.type = 'text';
-						conditionHook.style.marginLeft = 'auto';
-						conditionHook.placeholder = 'Condition ID';
-						conditionHook.oninput = function(){ obj[prop].conditionID=this.value; };
+				// (insert as last child)
+				let attach_quantityInputs = (elem, obj, prop, propSet)=>{
+					let newElem = null;
+					if(obj[prop].quantity === null){
+						let max = Object.keys(obj[propSet]).length;
+						let quantityInput = document.createElement('input');
+						quantityInput.type = 'number';
+						quantityInput.max = max;
+						quantityInput.min = 1;
+						quantityInput.placeholder = 'max';
+						quantityInput.oninput = function(){ obj[prop].quantity=this.value; };
+						//elem.insertBefore(quantityInput, elem.lastElementChild);
+						
+						obj[prop].quantity = max;
+						newElem = quantityInput;
+					}else{
+						let whiteSpaceDiv = document.createElement('div');
+						newElem = whiteSpaceDiv;
+					}
+					newElem.style.width = 64;
+					newElem.style.marginLeft = 'auto';
+					newElem.style.marginRight = 16;
+					elem.appendChild(newElem);
+				};
 
+				// (insert as last child)
+				let attach_conditionHook = (elem, obj, prop)=>{
+					let conditionHook = document.createElement('input');
+					conditionHook.type = 'text';
+					conditionHook.style.marginRight = 16;
+					conditionHook.placeholder = 'Condition ID';
+					conditionHook.oninput = function(){ obj[prop].conditionID=this.value; };
 					elem.appendChild(conditionHook);
 				};
 
+				// (insert after first child)
 				let make_foldable = (category, subElem, defaultState='open')=>{
 					
 					// make the fold button
@@ -317,6 +345,8 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 						true,
 					);
 					
+					apply_cssStyle(category);
+					attach_quantityInputs(category, settingsList, mainSetName, subSetName);
 					attach_conditionHook(category, settingsList, mainSetName);
 					parent.appendChild(category);
 
@@ -335,8 +365,11 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 								)
 							);           // pan    .label           .checkbox
 							checkboxes.push(subElem.lastElementChild.firstElementChild);
-							                  // pan    .label
-							attach_conditionHook(subElem.lastElementChild, settingsList[subSetName], k);
+							                   // pan    .label
+							apply_cssStyle(       subElem.lastElementChild);
+							attach_conditionHook( subElem.lastElementChild, settingsList[subSetName], k);
+							    // .label           .conditionInput 
+							subElem.lastElementChild.lastElementChild.style.marginLeft = 'auto';
 						}
 
 					make_foldable(category, subElem, 'close');
@@ -482,17 +515,19 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 				console.log(foundLocs);
 				console.log(foundLocsByItem);
 				if(settingsList.displayRequestResultByItem){
+					let imgSlotSize = 32 + (8*2); // maxImgHeight + verticalMargin
 					for(let item of selectedItemList){
 						for(let loc of foundLocsByItem[item]){
 							let itemHeader = document.createElement('div');
-							itemHeader.style.display = 'flex';
+							itemHeader.style.display = 'grid';
 							itemHeader.style.alignItems = 'center';
+							itemHeader.style.gridTemplateColumns = imgSlotSize+'px auto';
+							itemHeader.style.gridTemplateRows = imgSlotSize+'px';
 							itemHeader.style.backgroundColor = 'lightgrey';
 							itemHeader.style.border = '2px solid black';
 							itemHeader.style.marginTop = 16;
-
-							itemHeader.innerHTML = `<img src=${itemList[item]} style="margin:8px">`
-							                     + `<span style="margin-left:16px">${item}</span>`;
+							itemHeader.innerHTML = `<img src=${itemList[item]} style="margin:8px;justify-self:center;">`
+							                     + `<span style="margin:8px 16px;">${item}</span>`;
 							resultPanel.appendChild(itemHeader);
 							resultPanel.appendChild( create_resultEntry(loc, displayConditions) );
 						}
@@ -507,21 +542,24 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 		let create_resultEntry = function(locName, conditions){
 
 			let location = appLocs[locName];
-			let locNameID = location.nameID;
-			let locCtx    = location.context;
+			let locNameID = location?.nameID;
+			let locCtx    = location?.context || {/* implicite all prop at false */};
 
 			let area = location.area;
-			let areaName   = area?.name  || 'Not Found';
+			let areaName   = area?.name    || 'Not Found';
 			let areaNameID = area?.nameID;
-			let mapPos     = area?.map   || 'Not Found';
+			let mapPos     = area?.map     || 'Not Found';
 			let mapPosID   = area?.mapID;
 			let areaCtx    = area?.context || {/* implicite all prop at false */};
 
 			let elem = document.createElement('div');
 				elem.style.border = '1px solid black';
 
-			let create_tileSPAN = (titleText)=>{ return '<span style="font-weight:bold;">'+titleText+'</span></br>' };
-			let create_marginSPAN = (marginText)=>{ return '<span style="margin-left:16px">'+marginText+'</span></br>' };
+			//let create_tileSPAN = (titleText)=>{ return '<span style="font-weight:bold;">'+titleText+'</span></br>' };
+			let create_titleDIV = (titleText)=>{ return '<div style="font-weight:bold;margin:4px 8px;">'+titleText+'</div>' };
+
+			//let create_marginSPAN = (marginText)=>{ return '<span style="margin-left:16px">'+marginText+'</span></br>' };
+			let create_marginDIV = (marginText)=>{ return '<div style="margin-left:24px;margin-right:8px;">'+marginText+'</div>' };
 
 			let general = true;
 			let test_allConditions = ()=>{
@@ -597,13 +635,33 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 				let cndtnCat = conditions[ settingsList[settingsListProp].conditionID ];
 				let cndtn = cndtnCat?.result ?? true;
 				if(mainChecked && cndtn || !mainChecked && !cndtn){
-					elem.innerHTML += create_tileSPAN(labelText);
+					elem.innerHTML += create_titleDIV(labelText);
 					let propSet = settingsList[settingsListPropSet];
-					let subCndtn = conditions[propSet[propNameID].conditionID]?.result ?? true;
-					let subChecked = propSet[propNameID].checked;
+					let subCndtn = conditions[ propSet[propNameID]?.conditionID ]?.result ?? true;
+					let subChecked = propSet[propNameID]?.checked ?? true;
 					if( subChecked && subCndtn || !subChecked && !subCndtn )
-						elem.innerHTML += create_marginSPAN(propValue);
+						elem.innerHTML += create_marginDIV(propValue);
 					elem.innerHTML += '</br>';
+				}
+			};
+
+			let update_ByAccordingQuantity = (elem, settingsListProp, instanceCount)=>{
+				// TAKE THE LAST ELEMENTS CREATED BY create_marginDIV()
+				// BLEND RANDOMLY THEM AND CONSERVE ONLY THE CORRECT QUANTITY OF THEM
+				let quantity = settingsList[settingsListProp].quantity;
+				if(quantity < instanceCount){
+					let surplus = instanceCount - quantity;
+					let firstIndex = elem.children.length - instanceCount;
+					let blendLoopCount = (instanceCount*2) + Math.round(Math.random()); // arbitrary random loop count : instanceCount*2 + randomOdd
+					// blending instances
+					for(let i=0; i<blendLoopCount; i++){ 
+						let randOffset = (Math.floor(Math.random()*instanceCount)); // rand = (min:0, max:instanceCount-1)
+						let randIndex = firstIndex + (randOffset===0 ? instanceCount>>1 : randOffset); // change min:0 to instanceCount/2
+						elem.children[firstIndex].insertAdjacentElement('beforebegin', elem.children[randIndex]);
+					}
+					// removing surplus
+					for(let i=0; i<surplus; i++)
+						elem.lastElementChild.remove();
 				}
 			};
 
@@ -612,15 +670,19 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 				let cndtnCat = conditions[ settingsList[settingsListProp].conditionID ];
 				let cndtn = cndtnCat?.result ?? true;
 				if(mainChecked && cndtn || !mainChecked && !cndtn){
-					elem.innerHTML += create_tileSPAN(labelText);
+					elem.innerHTML += create_titleDIV(labelText);
 					let propSet = settingsList[settingsListPropSet];
+					let instanceCount = 0;
 					for(let k in propSet){
 						let subCndtn = conditions[propSet[k].conditionID]?.result ?? true;
 						let subChecked = propSet[k].checked;
 						if(assignedProps[k])
-							if( subChecked && subCndtn || !subChecked && !subCndtn )
-								elem.innerHTML += create_marginSPAN( propNames[k] );
+							if( subChecked && subCndtn || !subChecked && !subCndtn ){
+								elem.innerHTML += create_marginDIV( propNames[k] );
+								instanceCount++;
+							}
 					}
+					update_ByAccordingQuantity(elem, settingsListProp, instanceCount);
 					elem.innerHTML += '</br>';
 				}
 			};

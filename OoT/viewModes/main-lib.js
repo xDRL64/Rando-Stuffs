@@ -83,6 +83,210 @@ if(!window.RandoStuffs.OoT.viewModes){
 		return boardItem;
 	};
 
+	window.RandoStuffs.OoT.viewModes.mainLib.editContextBy = {};
+	window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.reservedCssClassName = 'grid-cell';
+	window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.create_editorView = (Data, keyList, valList, contextList, dataByContext)=>{
+
+		let cssClassName = window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.reservedCssClassName;
+		let buildData = Data;
+	
+		// CREATE DISPLAYER
+		///////////////////
+		let context_count = Object.keys(contextList).length;
+		let location_count = keyList.length;
+	
+		// handle & container (use shadow DOM)
+		let handle = document.createElement('div');
+		handle.style.width = '75%';
+		handle.style.height = '75%';
+		//handle.style.position = 'relative';
+		let container = handle.attachShadow({mode:'closed'});
+
+		// viewport
+		let panel = document.createElement('div');
+		panel.style.width = '100%';
+		panel.style.height = '100%';
+		panel.style.whiteSpace = 'nowrap';
+		panel.style.overflow = 'auto';
+		panel.style.position = 'relative';
+	
+		// whole grid
+		let board = document.createElement('div');
+		//let board = _board.attachShadow({mode:'closed'});
+
+		board.style.display = 'grid';
+		board.style.gap = '4px';
+		board.style.gridTemplateColumns = 'auto repeat('+context_count+', 1fr)';
+		board.style.gridTemplateRows = 'auto repeat('+location_count+', 1fr)';
+	
+	
+		// top left corner cell
+		let cornerCell;
+			cornerCell = document.createElement('div');
+			cornerCell.style.position = 'sticky';
+			cornerCell.style.top = 0;
+			cornerCell.style.left = 0;
+			cornerCell.style.zIndex = 2;
+			cornerCell.style.backgroundColor = '#777';
+		board.appendChild(cornerCell);
+	
+		// context labels (top axis header)
+		let ctxLabels = {};
+		for(let ctx in contextList){
+			let ctxLabel = document.createElement('div');
+			ctxLabel.textContent = contextList[ctx];
+			ctxLabel.style.writingMode = 'vertical-lr';
+			ctxLabel.style.whiteSpace = 'pre';
+			ctxLabel.style.display = 'flex';
+			ctxLabel.style.alignItems = 'center';
+	
+			ctxLabel.style.position = 'sticky';
+			ctxLabel.style.top = 0;
+			ctxLabel.style.backgroundColor = 'white';
+			ctxLabel.style.zIndex = 1;
+	
+			ctxLabel.classList.add(cssClassName);
+			ctxLabel.app = {verticalParent:ctxLabel};
+	
+			board.appendChild(ctxLabel);
+	
+			ctxLabels[ctx] = ctxLabel;
+		}
+	
+		// location labels (left axis header)
+		for(let dataKey of keyList){
+			let rowLabel = document.createElement('div');
+			rowLabel.textContent = valList[dataKey];
+	
+			rowLabel.style.position = 'sticky';
+			rowLabel.style.left = 0;
+			rowLabel.style.backgroundColor = 'white';
+			rowLabel.style.zIndex = 1;
+	
+			rowLabel.classList.add(cssClassName);
+			rowLabel.app = {horizontalParent:rowLabel};
+			board.appendChild(rowLabel);
+	
+			// context flag checkbox by location (main data grid)
+			for(let ctx in contextList){
+				let ctxCell = document.createElement('input');
+				ctxCell.type = 'checkbox';
+				ctxCell.checked = buildData[dataKey].context[ctx];
+				ctxCell.classList.add(cssClassName);
+				ctxCell.app = {horizontalParent:rowLabel, verticalParent:ctxLabels[ctx]};
+	
+				ctxCell.oninput = ()=>{
+					// update core.Location.Data
+					buildData[dataKey].context[ctx] = ctxCell.checked;
+					// update core.Location.byContext
+					dataByContext[ctx].push(dataKey);
+				};
+	
+				board.appendChild(ctxCell);
+			}
+		}
+
+		panel.appendChild( board );
+		container.appendChild( panel );
+
+		return {board,panel,cornerCell, handle};
+	};
+
+	window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.create_gridPointer = (className, htmlElems)=>{
+
+		/* External :
+			board
+			panel
+			cornerCell
+		*/
+		let {board,panel,cornerCell} = htmlElems;
+
+		// INIT
+		///////
+		let brd = 2; // pointer border size
+		let scrlbarwidth = 16; // estimated scrollbar pixel size
+
+		let hPointer = document.createElement("div");
+		hPointer.style.position = "absolute";
+		hPointer.style.pointerEvents = "none";
+		hPointer.style.border = brd+"px solid red";
+		hPointer.style.boxSizing = 'border-box';
+		hPointer.style.zIndex = 3;
+		hPointer.style.display = 'none';
+        panel.appendChild(hPointer);
+
+		let vPointer = document.createElement("div");
+		vPointer.style.position = "absolute";
+		vPointer.style.pointerEvents = "none";
+		vPointer.style.border = "2px solid blue";
+		vPointer.style.boxSizing = 'border-box';
+		vPointer.style.zIndex = 3;
+		vPointer.style.display = 'none';
+        panel.appendChild(vPointer);
+
+		// UPDATE AND DISPLAY POSITION
+		//////////////////////////////
+		board.onmouseover = function(e){
+			if(e.target.className === className){
+
+				// get scrollbar presence
+				let Hscrl = panel.scrollWidth  > panel.offsetWidth  ? 1 : 0;
+				let Vscrl = panel.scrollHeight > panel.offsetHeight ? 1 : 0;
+
+				// update horizontal pointer
+				if(e.target.app.horizontalParent){
+					let block = e.target.app.horizontalParent;
+					
+					hPointer.style.left = panel.scrollLeft;
+					hPointer.style.width = panel.offsetWidth - (scrlbarwidth*Vscrl) - brd;
+
+					hPointer.style.top = block.offsetTop ;
+					hPointer.style.height = block.offsetHeight;
+					hPointer.style.display = '';
+				}else
+					hPointer.style.display = 'none';
+
+				// update vertical pointer
+				if(e.target.app.verticalParent){
+					let block = e.target.app.verticalParent;
+					
+					vPointer.style.top = panel.scrollTop;
+					vPointer.style.height = panel.offsetHeight - (scrlbarwidth*Hscrl) - brd;
+					
+					vPointer.style.left = block.offsetLeft;
+					vPointer.style.width = block.offsetWidth;
+					vPointer.style.display = '';
+				}else
+					vPointer.style.display = 'none';
+			}
+		};
+
+		// UPDATE AND HIDE POSITION
+		//////////////////////////////
+		
+		let hide_gridPointers= function(){
+			hPointer.style.display = 'none';
+			vPointer.style.display = 'none';
+		};
+
+		board.onmouseleave = hide_gridPointers;
+		panel.onscroll = hide_gridPointers;
+		cornerCell.onmouseenter = hide_gridPointers;
+		
+		
+	};
+
+
+
+
+
+
+
+
+
+
+
+
 
 	window.RandoStuffs.OoT.viewModes.mainLib.editCondition = {};
 
