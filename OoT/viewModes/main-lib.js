@@ -6,6 +6,7 @@ if(!window.RandoStuffs.OoT.viewModes){
 	window.RandoStuffs.OoT.viewModes.mainLib = {};
 
 
+	
 	window.RandoStuffs.OoT.viewModes.mainLib.editContext = {};
 
 	window.RandoStuffs.OoT.viewModes.mainLib.editContext.create_boardItem = (board, ctxID, ctxTxt)=>{
@@ -112,13 +113,10 @@ if(!window.RandoStuffs.OoT.viewModes){
 	
 		// whole grid
 		let board = document.createElement('div');
-		//let board = _board.attachShadow({mode:'closed'});
-
 		board.style.display = 'grid';
 		board.style.gap = '4px';
 		board.style.gridTemplateColumns = 'auto repeat('+context_count+', 1fr)';
 		board.style.gridTemplateRows = 'auto repeat('+location_count+', 1fr)';
-	
 	
 		// top left corner cell
 		let cornerCell;
@@ -192,7 +190,7 @@ if(!window.RandoStuffs.OoT.viewModes){
 		return {board,panel,cornerCell, handle};
 	};
 
-	window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.create_gridPointer = (className, htmlElems)=>{
+	window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.create_gridPointer = (htmlElems)=>{
 
 		/* External :
 			board
@@ -200,6 +198,8 @@ if(!window.RandoStuffs.OoT.viewModes){
 			cornerCell
 		*/
 		let {board,panel,cornerCell} = htmlElems;
+
+		let cssClassName = window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.reservedCssClassName;
 
 		// INIT
 		///////
@@ -227,7 +227,7 @@ if(!window.RandoStuffs.OoT.viewModes){
 		// UPDATE AND DISPLAY POSITION
 		//////////////////////////////
 		board.onmouseover = function(e){
-			if(e.target.className === className){
+			if(e.target.className === cssClassName){
 
 				// get scrollbar presence
 				let Hscrl = panel.scrollWidth  > panel.offsetWidth  ? 1 : 0;
@@ -275,16 +275,6 @@ if(!window.RandoStuffs.OoT.viewModes){
 		
 		
 	};
-
-
-
-
-
-
-
-
-
-
 
 
 

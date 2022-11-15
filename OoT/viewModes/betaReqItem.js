@@ -48,6 +48,8 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 	// OoT item selection (input panel)
 	///////////////////////////////
 	let selectedItemList = new Set();
+	let itemQuantities = {};
+	Object.keys(itemList).forEach(e=>itemQuantities[e]=Number.POSITIVE_INFINITY);
 	(()=>{
 		// make panel's viewport sys
 		////////////////////////////
@@ -57,7 +59,8 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 
 		let board = document.createElement('div');
 		board.style.display = 'grid';
-		board.style.gridTemplateColumns = 'auto auto auto';
+		board.style.alignItems = 'center';
+		board.style.gridTemplateColumns = 'auto auto auto auto';
 		board.style.gridTemplateRows = `repeat(${itemList.length}, 1fr)`;
 		
 		// fill item board
@@ -79,7 +82,7 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 			itemSelectState.style.margin = 4;
 			itemSelectState.oninput = function(){
 				if(this.checked) selectedItemList.add(name);
-				else             selectedItemList.delete(name); console.log(selectedItemList);
+				else             selectedItemList.delete(name);
 			};
 			board.appendChild(itemSelectState);
 	
@@ -91,6 +94,15 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 			itemNameLabel.style.margin = 4;
 			itemNameLabel.onclick = ()=>itemSelectState.click();
 			board.appendChild(itemNameLabel);
+
+			// item max display quantity input
+			let quantityInput = document.createElement('input');
+			quantityInput.type = 'number';
+			quantityInput.min = 1;
+			quantityInput.placeholder = 'max';
+			quantityInput.style.width = 48;
+			quantityInput.oninput = function(){ itemQuantities[name]=this.value||Number.POSITIVE_INFINITY; };
+			board.appendChild(quantityInput);
 	
 		}
 
@@ -198,6 +210,7 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 
 				// condition groups [board]
 				let conditionGroupsBoard = document.createElement('div');
+				conditionGroupsBoard.style.width = '100%';
 				
 				// add new [button]
 				let addNew = document.createElement('input');
@@ -266,7 +279,7 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 						quantityInput.max = max;
 						quantityInput.min = 1;
 						quantityInput.placeholder = 'max';
-						quantityInput.oninput = function(){ obj[prop].quantity=this.value; };
+						quantityInput.oninput = function(){ obj[prop].quantity=this.value||max; };
 						//elem.insertBefore(quantityInput, elem.lastElementChild);
 						
 						obj[prop].quantity = max;
@@ -460,14 +473,14 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 		let board = document.createElement('div');
 			board.style.display = 'grid';
 			board.style.gridTemplateColumns = 'auto';
-
 			board.style.minHeight = '100%';
 			board.style.justifyItems = 'center';
 			board.style.alignItems = 'center';
-
+			board.style.gap = '16px';
 
 		let resultPanel = document.createElement('div');
 			resultPanel.style.display = 'grid';
+			resultPanel.style.gap = '16px';
 			resultPanel.style.gridTemplateColumns = 'auto';
 
 		let reqButton = document.createElement('input');
@@ -495,8 +508,11 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 					return; // cancel process
 				}
 
-				// process
+				// process (look for locs by item)
+				//
+				// loop on all selected item
 				for(let item of selectedItemList){
+					// get all loc for the current item
 					for(let locName in OoTR_locs){
 						let locItem = OoTR_locs[locName];
 						if(typeof locItem !== 'string') locItem = locItem.item;
@@ -504,6 +520,16 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 							foundLocs.push(locName);
 							foundLocsByItem[locItem].push(locName);
 						}
+					}
+					// rebalance quantity for the current item
+					if(itemQuantities[item] < foundLocsByItem[item].length){
+						// randomize
+						foundLocsByItem[item] = foundLocsByItem[item].sort(
+							()=>{ return (Math.random()-.5)>=0 ? 1 : -1; }
+						);
+						// remove surplus
+						let surplus = foundLocsByItem[item].length - itemQuantities[item];
+						for(let i=0; i<surplus; i++) foundLocsByItem[item].pop();
 					}
 				}
 
@@ -514,6 +540,7 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 				// display result
 				console.log(foundLocs);
 				console.log(foundLocsByItem);
+				// display with telling which item
 				if(settingsList.displayRequestResultByItem){
 					let imgSlotSize = 32 + (8*2); // maxImgHeight + verticalMargin
 					for(let item of selectedItemList){
@@ -525,19 +552,114 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 							itemHeader.style.gridTemplateRows = imgSlotSize+'px';
 							itemHeader.style.backgroundColor = 'lightgrey';
 							itemHeader.style.border = '2px solid black';
-							itemHeader.style.marginTop = 16;
+							//itemHeader.style.marginTop = 16;
 							itemHeader.innerHTML = `<img src=${itemList[item]} style="margin:8px;justify-self:center;">`
 							                     + `<span style="margin:8px 16px;">${item}</span>`;
-							resultPanel.appendChild(itemHeader);
-							resultPanel.appendChild( create_resultEntry(loc, displayConditions) );
+
+							//resultPanel.appendChild(itemHeader);
+							//resultPanel.appendChild( create_resultEntry(loc, displayConditions) );
+							let resEntry = create_resultEntry(loc, displayConditions);
+							resEntry.prepend(itemHeader);
+							resultPanel.appendChild(resEntry);
 						}
 					}
+				// display without telling which item
 				}else{
+					// make results
 					for(let loc of foundLocs){
 						resultPanel.appendChild( create_resultEntry(loc, displayConditions) );
 					}
+					// blend results
+					let instanceCount = resultPanel.children.length;
+					let blendLoopCount = (instanceCount*2) + Math.round(Math.random()); // arbitrary random loop count : instanceCount*2 + randomOdd
+					for(let i=0; i<blendLoopCount; i++){ 
+						let randOffset = (Math.floor(Math.random()*instanceCount)); // rand = (min:0, max:instanceCount-1)
+						let randIndex = (randOffset===0 ? instanceCount>>1 : randOffset); // change min:0 to instanceCount/2
+						resultPanel.firstElementChild.insertAdjacentElement('beforebegin', resultPanel.children[randIndex]);
+					}
 				}
+
+				// add button [export result (in new window/tab)]
+				let exportResultButton = document.createElement('input');
+					exportResultButton.type = 'button';
+					exportResultButton.style.margin = 16;
+					exportResultButton.value = 'Export this request result in\n a new web browser window/tab';
+					exportResultButton.onclick2 = ()=>{
+						// create page title
+						let title = [...selectedItemList].join(' - ');
+
+						// create result node
+						let mainWidth = board.offsetWidth;
+						let cleanClone = resultPanel.cloneNode(true);
+							cleanClone.lastElementChild.remove();
+							cleanClone.style.gridTemplateColumns = `repeat(auto-fill, minmax(${mainWidth}px,1fr))`;
+							cleanClone.style.gap = '16px';
+
+						// create the blob data object to download
+						const htmlDoc = document.implementation.createHTMLDocument(title);
+							htmlDoc.body.appendChild(cleanClone);
+							const blob = new Blob([htmlDoc.documentElement.innerHTML], { type: 'text/html' });
+							const blobURL = window.URL.createObjectURL(blob); 
+							
+						// create download result link
+						const htmlLink = document.createElement('a');
+							htmlLink.href = blobURL;
+							htmlLink.textContent = 'Download this result page as :\n"'+title+'.html"';
+							htmlLink.download = title+'.html';
+							htmlLink.style.alignSelf = 'center';
+							htmlLink.style.justifySelf = 'center';
+							htmlLink.style.whiteSpace = 'pre-wrap';
+							cleanClone.appendChild(htmlLink);
+
+						// open new browser window/tab
+						let resultWindow = window.open('', '_blank');
+							resultWindow.document.body.appendChild(cleanClone);
+							resultWindow.document.title = title;
+					};
+					exportResultButton.onclick = ()=>{
+						// create page title
+						let title = [...selectedItemList].join(' - ');
+
+						// create result node
+						let mainWidth = board.offsetWidth;
+						let cleanClone = resultPanel.cloneNode(true);
+							cleanClone.lastElementChild.remove();
+							cleanClone.style.gridTemplateColumns = `repeat(auto-fill, minmax(${mainWidth}px,1fr))`;
+							cleanClone.style.gap = '16px';
+
+						// create new url address
+						let url = (()=>{
+							const len = ('main.html').length;
+							const str = 'address/main.html#';
+							const reg = /main\.html/g;
+							const all = [...str.matchAll(reg)];
+							const cnt = all.length;
+							const res = all.pop();
+							return str.slice(0,res.index) + 'p.html?transferDATA=' + btoa(cleanClone.outerHTML);
+						})();
+
+						url = 'p.html?transferDATA=' + encodeURIComponent(btoa(cleanClone.outerHTML))
+						    + '&transferTITLE='      + encodeURIComponent(btoa(title));
+
+						// open new browser window/tab
+						let resultWindow = window.open(url, '_blank');
+						//	resultWindow.document.body.appendChild(cleanClone);
+						//	resultWindow.document.title = title;
+					};
+				resultPanel.appendChild(exportResultButton);
+
 			};
+
+		let reqBtnStickyRect = document.createElement('div');
+			reqBtnStickyRect.style.position = 'sticky';
+			reqBtnStickyRect.style.top = 0;
+			reqBtnStickyRect.style.border = '1px solid black';
+			reqBtnStickyRect.style.justifySelf = 'stretch';
+			reqBtnStickyRect.style.display = 'flex';
+			reqBtnStickyRect.style.justifyContent = 'center';
+			reqBtnStickyRect.style.backgroundColor = getComputedStyle(workspace).backgroundColor;
+
+			reqBtnStickyRect.appendChild(reqButton);
 
 		let create_resultEntry = function(locName, conditions){
 
@@ -737,7 +859,7 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 			return elem;
 		};
 
-		board.appendChild(reqButton);
+		board.appendChild(reqBtnStickyRect);
 		board.appendChild(resultPanel);
 		panel.appendChild(board);
 

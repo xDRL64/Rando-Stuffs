@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    P_HTML
+</body>
+<script defer>
+    // get data and title from url
+    let data = '';
+    let title = '';
+    let p = new URLSearchParams(location.search);
+    if( p.has('transferTITLE') ){
+        title = atob( decodeURIComponent(p.get('transferTITLE')) );
+        document.title = title;
+    }
+    if( p.has('transferDATA') ){
+        data = atob( decodeURIComponent(p.get('transferDATA')) );
+        document.body.innerHTML = data;
+    }
+
+    // create the blob data object to download
+    const htmlDoc = document.implementation.createHTMLDocument(title);
+        htmlDoc.body.innerHTML = data;
+        const blob = new Blob([htmlDoc.documentElement.innerHTML], { type: 'text/html' });
+        const blobURL = window.URL.createObjectURL(blob); 
+        
+    // create download result link
+    const htmlLink = document.createElement('a');
+        htmlLink.href = blobURL;
+        htmlLink.textContent = 'Download this result page as :\n"'+title+'.html"';
+        htmlLink.download = title+'.html';
+        htmlLink.style.alignSelf = 'center';
+        htmlLink.style.justifySelf = 'center';
+        htmlLink.style.whiteSpace = 'pre-wrap';
+        document.body.prepend(htmlLink);
+</script>
+</html>
