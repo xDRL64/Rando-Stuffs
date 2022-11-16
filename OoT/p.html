@@ -24,7 +24,7 @@
     const htmlDoc = document.implementation.createHTMLDocument(title);
         htmlDoc.body.innerHTML = data;
         const blob = new Blob([htmlDoc.documentElement.innerHTML], { type: 'text/html' });
-        const blobURL = window.URL.createObjectURL(blob); 
+        const blobURL = window.URL.createObjectURL(blob);
         
     // create download result link
     const htmlLink = document.createElement('a');

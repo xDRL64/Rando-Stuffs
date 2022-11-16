@@ -584,7 +584,11 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 					exportResultButton.type = 'button';
 					exportResultButton.style.margin = 16;
 					exportResultButton.value = 'Export this request result in\n a new web browser window/tab';
-					exportResultButton.onclick2 = ()=>{
+
+					// file:/// PROTOCOLE [YES]
+					// http(s):// PROTOCOLE [YES]
+					// but does not prevent page reloading
+					exportResultButton.onclickV1 = ()=>{
 						// create page title
 						let title = [...selectedItemList].join(' - ');
 
@@ -599,7 +603,7 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 						const htmlDoc = document.implementation.createHTMLDocument(title);
 							htmlDoc.body.appendChild(cleanClone);
 							const blob = new Blob([htmlDoc.documentElement.innerHTML], { type: 'text/html' });
-							const blobURL = window.URL.createObjectURL(blob); 
+							const blobURL = window.URL.createObjectURL(blob);
 							
 						// create download result link
 						const htmlLink = document.createElement('a');
@@ -616,7 +620,11 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 							resultWindow.document.body.appendChild(cleanClone);
 							resultWindow.document.title = title;
 					};
-					exportResultButton.onclick = ()=>{
+
+					// file:/// PROTOCOLE [YES]
+					// http(s):// PROTOCOLE [NO]
+					// prevent page reloading
+					exportResultButton.onclickV2 = ()=>{
 						// create page title
 						let title = [...selectedItemList].join(' - ');
 
@@ -628,24 +636,51 @@ window.RandoStuffs.OoT.viewModes.betaReqItem.init = function(workspace){
 							cleanClone.style.gap = '16px';
 
 						// create new url address
-						let url = (()=>{
-							const len = ('main.html').length;
-							const str = 'address/main.html#';
-							const reg = /main\.html/g;
-							const all = [...str.matchAll(reg)];
-							const cnt = all.length;
-							const res = all.pop();
-							return str.slice(0,res.index) + 'p.html?transferDATA=' + btoa(cleanClone.outerHTML);
-						})();
-
-						url = 'p.html?transferDATA=' + encodeURIComponent(btoa(cleanClone.outerHTML))
-						    + '&transferTITLE='      + encodeURIComponent(btoa(title));
+						let url = 'p.html?transferDATA=' + encodeURIComponent(btoa(cleanClone.outerHTML))
+						        + '&transferTITLE='      + encodeURIComponent(btoa(title));
 
 						// open new browser window/tab
 						let resultWindow = window.open(url, '_blank');
-						//	resultWindow.document.body.appendChild(cleanClone);
-						//	resultWindow.document.title = title;
 					};
+
+					// V3
+					// file:/// PROTOCOLE [YES]
+					// prevent page reloading
+					exportResultButton.onclick = ()=>{
+						// create page title
+						let title = [...selectedItemList].join(' - ');
+
+						// create result node
+						let mainWidth = board.offsetWidth;
+						let cleanClone = resultPanel.cloneNode(true);
+							cleanClone.lastElementChild.remove();
+							cleanClone.style.gridTemplateColumns = `repeat(auto-fill, minmax(${mainWidth}px,1fr))`;
+							cleanClone.style.gap = '16px';
+
+						// create window data
+						const htmlDoc = document.implementation.createHTMLDocument(title);
+						htmlDoc.body.appendChild(cleanClone);
+
+							// create download link
+							//const blobToDownload = new Blob([htmlDoc.documentElement.innerHTML], { type: 'text/html' });
+							const downloadURL = 'data:text/html;charset=utf-8,'+htmlDoc.documentElement.innerHTML;
+							const htmlLink = document.createElement('a');
+								htmlLink.href = downloadURL;
+								htmlLink.textContent = 'Download this result page as :\n"'+title+'.html"';
+								htmlLink.download = title+'.html';
+								htmlLink.style.alignSelf = 'center';
+								htmlLink.style.justifySelf = 'center';
+								htmlLink.style.whiteSpace = 'pre-wrap';
+							htmlDoc.body.prepend(htmlLink);
+
+							// create main blob url
+							const blobNewData = new Blob([htmlDoc.documentElement.innerHTML], { type: 'text/html' });
+							const blobURL = window.URL.createObjectURL(blobNewData);
+						
+						// open new browser window/tab
+						let resultWindow = window.open(blobURL);
+					}
+
 				resultPanel.appendChild(exportResultButton);
 
 			};
