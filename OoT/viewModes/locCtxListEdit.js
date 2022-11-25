@@ -1,3 +1,7 @@
+window.RandoStuffs.OoT.viewModes.locCtxListEdit.reset = function(workspace){
+	window.RandoStuffs.OoT.viewModes.locCtxListEdit.init(workspace);
+};
+
 window.RandoStuffs.OoT.viewModes.locCtxListEdit.init = function(workspace){
 
 	workspace.textContent = '';
@@ -26,6 +30,7 @@ window.RandoStuffs.OoT.viewModes.locCtxListEdit.init = function(workspace){
 	
 	let create_boardItem = window.RandoStuffs.OoT.viewModes.mainLib.editContext.create_boardItem;
 
+	let clean_itemBoard = window.RandoStuffs.OoT.viewModes.mainLib.editContext.clean_itemBoard;
 
 	(()=>{
 
@@ -57,6 +62,10 @@ window.RandoStuffs.OoT.viewModes.locCtxListEdit.init = function(workspace){
 		applyChangesBtn.value = 'Apply Changes';
 		applyChangesBtn.style.margin = 16;
 		applyChangesBtn.onclick = ()=>{
+
+			// clean location context board items
+			/////////////////////////////////////
+			clean_itemBoard(mainBoard);
 
 			// rebuild location context list
 			////////////////////////////////

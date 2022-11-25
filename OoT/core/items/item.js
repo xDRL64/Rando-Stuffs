@@ -235,7 +235,44 @@ window.RandoStuffs.OoT.core.Item.list = (function(GFX=window.RandoStuffs.OoT.cor
     };
 })();
 
+window.RandoStuffs.OoT.core.Item.hashIcons = ((GFX=window.RandoStuffs.OoT.core.Item.gfx||{})=>{
 
+    return {
+        'Deku Stick'       : GFX.dekuStick,
+        'Deku Nut'         : GFX.dekuNut,
+        'Bow'              : GFX.fairyBow,
+        'Slingshot'        : GFX.fairySlingshot,
+        'Fairy Ocarina'    : GFX.fairyOcarina,
+        'Bombchu'          : GFX.bombchu,
+        'Longshot'         : GFX.longshot,
+        'Boomerang'        : GFX.boomerang,
+        'Lens of Truth'    : GFX.lensTruth,
+        'Beans'            : GFX.magicBeans,
+        'Megaton Hammer'   : GFX.megatonHammer,
+        'Bottled Fish'     : GFX.bottleFish,
+        'Bottled Milk'     : GFX.bottleMilk,
+        'Mask of Truth'    : GFX.TruthMask,
+        'SOLD OUT'         : GFX.soldOut,
+        'Cucco'            : GFX.chicken, // need a check (GZ ROM : compare child/adult)
+        'Mushroom'         : GFX.oddMushroom,
+        'Saw'              : GFX.poacherSaw,
+        'Frog'             : GFX.eyeballFrog,
+        'Master Sword'     : GFX.masterSword,
+        'Mirror Shield'    : GFX.mirrorShield,
+        'Kokiri Tunic'     : GFX.kokiriTunic,
+        'Hover Boots'      : GFX.hoverBoots,
+        'Silver Gauntlets' : GFX.silverGauntlets,
+        'Gold Scale'       : GFX.goldenScale,
+        'Stone of Agony'   : GFX.stoneAgony,
+        'Skull Token'      : GFX.goldSkullToken,
+        'Heart Container'  : GFX.heartContainer,
+        'Boss Key'         : GFX.bossKey,
+        'Compass'          : GFX.compass,
+        'Map'              : GFX.map,
+        'Big Magic'        : GFX.bigMagicJarDrop, // need a check (OoTR ROM : choose file screen)
+    };
+
+})();
 
 
 

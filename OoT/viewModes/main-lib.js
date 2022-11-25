@@ -19,15 +19,32 @@ if(!window.RandoStuffs.OoT.viewModes){
 		boardItem.style.display = 'flex';
 		boardItem.style.margin = 4;
 
-			// location context name KEY_ID [input]
+			// context name KEY_ID [input]
 			let ctxNameInput = document.createElement('input');
 				ctxNameInput.type = 'text';
 				ctxNameInput.value = ctxID;
 				ctxNameInput.title = 'ID name as unique key';
 				ctxNameInput.placeholder = 'ID name as unique key';
 				ctxNameInput.style.flexGrow = 1;
+				ctxNameInput.onchange = ()=>{
+					let c = false;
+					let allContexts = [...board.children];
+					allContexts.forEach(e=>{
+						let elem = e.firstElementChild;
+						if(elem !== ctxNameInput) c |= (elem.value===ctxNameInput.value);
+					});
+					let fix = 0;
+					let uniqueName = ctxNameInput.value;
+					while(c){
+						c = false;
+						uniqueName = ctxNameInput.value+'..'+fix;
+						allContexts.forEach(e=>{c|=(e.firstElementChild.value===uniqueName)});
+						fix++;
+					}
+					ctxNameInput.value = uniqueName;
+				};
 
-			// location context name as text [input]
+			// context name as text [input]
 			let ctxTextInput = document.createElement('input');
 				ctxTextInput.type = 'text';
 				ctxTextInput.value = ctxTxt || '';
@@ -72,7 +89,10 @@ if(!window.RandoStuffs.OoT.viewModes){
 				ctxDeleteBtn.type = 'button';
 				ctxDeleteBtn.value = '❌';
 				ctxDeleteBtn.title = 'Delete this context';
-				ctxDeleteBtn.onclick = ()=>{ board.removeChild(boardItem) };
+				ctxDeleteBtn.onclick = ()=>{
+					if(board.children.length > 1)
+						board.removeChild(boardItem);
+				};
 
 		boardItem.appendChild(ctxNameInput);
 		boardItem.appendChild(ctxTextInput);
@@ -82,6 +102,27 @@ if(!window.RandoStuffs.OoT.viewModes){
 		boardItem.appendChild(ctxDeleteBtn);
 
 		return boardItem;
+	};
+
+	window.RandoStuffs.OoT.viewModes.mainLib.editContext.clean_itemBoard = (board)=>{
+		// remove board item without label name (But before try to use its ID name field)
+		([...board.children]).forEach(e=>{
+			if(e.children[1].value===''){
+				if(e.firstElementChild.value!=='')
+					e.children[1].value = e.firstElementChild.value;
+				else
+					if(board.children.length > 1) board.removeChild(e);
+			}
+		});
+
+		// fix missing unique ID name by using label name
+		([...board.children]).forEach(e=>{
+			if(e.firstElementChild.value==='')
+				e.firstElementChild.value = e.children[1].value;
+		});
+
+		// fix same unique ID name (by adding automatic unique number ID)
+		([...board.children]).forEach(e=>{ e.firstElementChild.onchange(); });
 	};
 
 	window.RandoStuffs.OoT.viewModes.mainLib.editContextBy = {};
@@ -414,6 +455,23 @@ if(!window.RandoStuffs.OoT.viewModes){
 				name.placeholder = 'Condition Group Name as unique ID';
 				name.style.margin = 4;
 				name.style.flexGrow = 1;
+				name.onchange = ()=>{
+					let c = false;
+					let allGroups = [...board.children];
+					allGroups.forEach(e=>{
+						let elem = e.firstElementChild.firstElementChild;
+						if(elem !== name) c |= (elem.value===name.value);
+					});
+					let fix = 0;
+					let uniqueName = name.value;
+					while(c){
+						c = false;
+						uniqueName = name.value+'..'+fix;
+						allGroups.forEach(e=>{c|=(e.firstElementChild.firstElementChild.value===uniqueName)});
+						fix++;
+					}
+					name.value = uniqueName;
+				};
 
 				// delete itself [button]
 				let deleteItself = document.createElement('input');
@@ -478,14 +536,58 @@ if(!window.RandoStuffs.OoT.viewModes){
 			let conditionItemContainer = [...group.children[2].children];
 			conditionItemContainer.forEach((item)=>{
 				let condition = {};
+				// to eval condition
 				condition.operator   = item.children[0].value;
 				condition.property   = item.children[1].value;
 				condition.comparator = item.children[2].value;
 				condition.value      = item.children[3].value;
+				// to recreate view mode
+				condition.selectedIndex = {
+					operator   : item.children[0].selectedIndex,
+					property   : item.children[1].selectedIndex,
+					comparator : item.children[2].selectedIndex,
+					value      : item.children[3].selectedIndex,
+				}
 				output[groupNameID].push( condition );
 			});
 		});
 
 		return output;
+	};
+
+	window.RandoStuffs.OoT.viewModes.mainLib.editCondition.makeConditionBoard_fromObject = (board, groups, allPropRef)=>{
+
+		let create_conditionItem = window.RandoStuffs.OoT.viewModes.mainLib.editCondition.create_conditionItem;
+		let create_conditionGroup = window.RandoStuffs.OoT.viewModes.mainLib.editCondition.create_conditionGroup;
+
+		// group loop
+		Object.keys(groups).forEach(nameID=>{
+			let groupObj = groups[nameID];
+			let groupElem = create_conditionGroup(board, allPropRef);
+			// name ID [field]
+			groupElem.firstElementChild.firstElementChild.value = nameID;
+			groupElem.firstElementChild.firstElementChild.disabled = groupObj.general;
+			// general [checkbox]
+			groupElem.children[1].firstElementChild.checked = groupObj.general;
+
+				let conditionsDiv = groupElem.children[2]
+				// group conditions loop
+				groupObj.forEach( ({selectedIndex:{operator, property, comparator, value}}, index)=>{
+					let conditionElem = null;
+					if(index === 0)
+						conditionElem = conditionsDiv.firstElementChild;
+					else{
+						conditionElem = create_conditionItem(conditionsDiv, allPropRef, false)
+						conditionsDiv.appendChild(conditionElem);
+					}
+					conditionElem.children[0].selectedIndex = operator;
+					conditionElem.children[1].selectedIndex = property;
+					conditionElem.children[1].onchange();
+					conditionElem.children[2].selectedIndex = comparator;
+					conditionElem.children[3].selectedIndex = value;
+				} );
+
+			board.appendChild(groupElem);
+		});
 	};
 }

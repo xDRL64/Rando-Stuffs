@@ -1,5 +1,10 @@
 window.RandoStuffs.OoT.core ??= {};
 
+window.RandoStuffs.OoT.core.release = {
+	key   : "DaReal's Rando-Stuffs OoT",
+	value : 'Version : alpha 0.0.1'
+};
+
 window.RandoStuffs.OoT.core.buildAll = function(){
 
     let core = window.RandoStuffs.OoT.core;
@@ -27,6 +32,8 @@ window.RandoStuffs.OoT.core.setFromFile = function(coreFile){
 
 window.RandoStuffs.OoT.core.make_AllSettingsJson = function(){
 	
+	let release = window.RandoStuffs.OoT.core.release;
+
     window.RandoStuffs.OoT.core.Location.sortUpdate_byContext();
     
     // All_Settings.json patern :
@@ -34,6 +41,8 @@ window.RandoStuffs.OoT.core.make_AllSettingsJson = function(){
 	return {
 
 		from : 'custom_file',
+
+		[release.key] : release.value,
 
 		core : {
 			
@@ -57,6 +66,10 @@ window.RandoStuffs.OoT.core.make_AllSettingsJson = function(){
 			}
 
 		},
+
+		viewModes : {
+			itemReqView : window.RandoStuffs.OoT.viewModes.itemReqView?.sessionInstance?.get_objForJSON() || null,
+		}
 
 	};
 };

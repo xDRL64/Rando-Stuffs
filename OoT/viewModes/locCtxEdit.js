@@ -238,6 +238,10 @@ window.RandoStuffs.OoT.viewModes.locCtxEdit.init_OLD = function(workspace){
 
 };
 
+window.RandoStuffs.OoT.viewModes.locCtxEdit.reset = function(workspace){
+	window.RandoStuffs.OoT.viewModes.locCtxEdit.init(workspace);
+};
+
 window.RandoStuffs.OoT.viewModes.locCtxEdit.init = function(workspace){
 	workspace.textContent = '';
     let mode = document.createElement('div');

@@ -15,6 +15,7 @@
             /* FIREFOX IS SHIT (END) */
         }
         #page {
+            position: relative;
             flex-grow: 1;
             display: grid;
             grid-template-columns: auto 1fr;
@@ -36,6 +37,7 @@
             border-width: 2px;
             margin: 16;
             padding: 8;
+            user-select: none;
         }
 
         #modeArea {
@@ -67,11 +69,12 @@
 <script src="./main.js"></script>
 
 <script src="./viewModes/main-lib.js"></script>
+<script src="./viewModes/helpDocs.js"></script>
 <script src="./viewModes/areaCtxListEdit.js"></script>
 <script src="./viewModes/locCtxListEdit.js"></script>
 <script src="./viewModes/areaCtxEdit.js"></script>
 <script src="./viewModes/locCtxEdit.js"></script>
-<script src="./viewModes/betaReqItem.js"></script>
+<script src="./viewModes/itemReqView.js"></script>
 
 <script src="./core/core.js"></script>
 <script src="./core/areas/mapPos.js"></script>
@@ -89,6 +92,7 @@
 
         // init file area
         (()=>{
+
             // file slots
             /////////////
             let enable_dropEffect = function(e){
@@ -104,24 +108,40 @@
                     try{
                         // store raw data (in slot.data as "json/js" object)
                         slot.data = JSON.parse(reader.result);
-                        htmlElem.textContent = `${slot.name} :\n${file.name}`;
+                        slot.check_data(); // throw error if something goes wrong
+                        // (prepare) OoTR file hash (item icons)
+                        let fileHash = slot.display_fileHash ? getHtmlTxt_fileHashDisplay(slot.data.file_hash) : '';
+                        // display (file hash) + file name
+                        htmlElem.innerHTML = `${slot.name} : ${fileHash}\n${file.name}`;
+                        slot.originalFileName = file.name;
                         // refresh data (build all from raw data)
                         if(slot.update_core){
                             window.RandoStuffs.OoT.core.setFromFile(slot.data.core);
                             window.RandoStuffs.OoT.core.buildAll();
                         }
+                        if(slot.update_view){
+                            window.RandoStuffs.OoT.viewModes.resetViews(mainArea);
+                        }
                     }catch{
-                        htmlElem.textContent = `${slot.name} :\nError JSON parsing`;
+                        slot.data = null;
+                        htmlElem.innerHTML = `${slot.name} :\nError JSON parsing`;
                     }
                 });
                 let file = e.dataTransfer.files[0];
                 if(file) reader.readAsText(file);
             };
+            let getHtmlTxt_fileHashDisplay = (fileHash)=>{
+                let output = '';
+                let imgStyle = 'width:16px; height:16px; pointer-events:none;';
+                let icons = window.RandoStuffs.OoT.core.Item.hashIcons;
+                fileHash.forEach(e=>{output+=`<img src="${icons[e]}" style="${imgStyle}"/>`});
+                return output;
+            };
             for(let k in slots){
                 let slot = slots[k];
                 let div = document.createElement('div');
                 div.classList.add('file-slot');
-                div.textContent = `${slot.name} :\nDrag and drop your file here`;
+                div.innerHTML = `${slot.name} :\nDrag and drop your file here`;
                 div.addEventListener("dragover", (function(e){enable_dropEffect(e);}) );
                 div.addEventListener("drop", (function(e){drop_file(e, slot, div);}) );
                 fileArea.appendChild(div);
@@ -129,38 +149,149 @@
 
             // export button
             ////////////////
-            let exportBtn_allSettings = document.createElement('a');
+            /* let exportBtn_allSettings = document.createElement('a');
             exportBtn_allSettings.textContent = 'Export All_Settings.json';
             exportBtn_allSettings.href = '';
             exportBtn_allSettings.style.margin = 16;
             exportBtn_allSettings.style.padding = 4;
             exportBtn_allSettings.style.border = '2px outset lightgrey';
-            exportBtn_allSettings.style.backgroundColor = '#aeaeae';
+            exportBtn_allSettings.style.backgroundColor = '#aeaeae'; */
+            let exportBtn_allSettings = document.createElement('input');
+            exportBtn_allSettings.type = 'button';
+            exportBtn_allSettings.value = 'Export All_Settings.json';
+            exportBtn_allSettings.style.alignSelf = 'center';
+            exportBtn_allSettings.style.padding = 8;
 
-            exportBtn_allSettings.onclick = function(){
-                let data = window.RandoStuffs.OoT.core.make_AllSettingsJson();
-                let json = JSON.stringify(data, null, '\t');
-                let txtFile = [];
-                for(let c of json) txtFile.push(c.charCodeAt(0));
-
-                this.href = URL.createObjectURL( new Blob([new Uint8Array( txtFile )], {type: 'application/octet-stream'}));
-                this.download = 'All_Settings.json';
+            exportBtn_allSettings.onclick = function(e){
+                e.preventDefault();
+                open_savePrompt();
             };
 
             fileArea.appendChild(exportBtn_allSettings);
+
+            // 'save as' prompt
+            ///////////////////
+            let open_savePrompt = (parent=page)=>{
+                let zIndexLevel = 1;
+
+                let lockAppPanel = document.createElement('div');
+                lockAppPanel.style.opacity = 0.5;
+                lockAppPanel.style.backgroundColor = 'black';
+                lockAppPanel.style.position = 'absolute';
+                lockAppPanel.style.inset = 0;
+                lockAppPanel.style.zIndex = zIndexLevel;
+
+                let savePromptPanel = document.createElement('div');
+                savePromptPanel.style.backgroundColor = 'antiquewhite';
+                savePromptPanel.style.border = '1px solid black';
+                savePromptPanel.style.position = 'absolute';
+                savePromptPanel.style.inset = '40% 25%';
+                savePromptPanel.style.zIndex = zIndexLevel;
+                savePromptPanel.style.display = 'flex';
+                savePromptPanel.style.flexDirection = 'column';
+                savePromptPanel.style.justifyContent = 'space-evenly';
+                savePromptPanel.style.alignItems = 'center';
+                savePromptPanel.addEventListener('keypress',
+                    (e)=>{if(e.code==='Enter')saveFileButton.focus();},
+                {capture:true});
+
+                    let nameFileInput = document.createElement('input');
+                    nameFileInput.type = 'text';
+                    nameFileInput.placeholder = 'default file name : '+slots.allSettings.originalFileName;
+                    nameFileInput.style.width = '80%';
+                    
+                    let saveFileButton = document.createElement('input');
+                    saveFileButton.type = 'button';
+                    saveFileButton.value = 'Save File (download)';
+                    saveFileButton.onclick = ()=>{
+                        try{
+                            // make file to download
+                            let data = window.RandoStuffs.OoT.core.make_AllSettingsJson();
+                            let json = JSON.stringify(data, null, '\t');
+                            let binData = [];
+                            for(let c of json) binData.push(c.charCodeAt(0));
+                            let fileUrl = URL.createObjectURL( new Blob([new Uint8Array( binData )], {type: 'application/json'}));
+                            // make tmp hidden html link to trigger download with custom file name
+                            let htmlLink = document.createElement('a');
+                            htmlLink.href = fileUrl;
+                            htmlLink.download = nameFileInput.value || slots.allSettings.originalFileName;
+                            htmlLink.onclick = (e)=>{e.preventDefault};
+                            htmlLink.click();
+                            // free mem
+                            window.URL.revokeObjectURL(fileUrl);
+                        }
+                        catch{
+                            console.warn('RandoStuffs.OoT : something happened wrong during last download file');
+                        }
+                        // unlock app normal using
+                        close_savePromt();
+                    };
+
+                    let cancelButton = document.createElement('input');
+                    cancelButton.type = 'button';
+                    cancelButton.value = 'X';
+                    cancelButton.style.position = 'absolute';
+                    cancelButton.style.top = 8;
+                    cancelButton.style.right = 8;
+                    cancelButton.onclick = ()=>{close_savePromt();};
+                    
+                let close_savePromt = ()=>{
+                    parent.removeChild(lockAppPanel);
+                    parent.removeChild(savePromptPanel);
+                };
+
+                savePromptPanel.appendChild(nameFileInput);
+                savePromptPanel.appendChild(saveFileButton);
+                savePromptPanel.appendChild(cancelButton);
+
+                parent.appendChild(lockAppPanel);
+                parent.appendChild(savePromptPanel);
+
+                nameFileInput.focus();
+            };
         })();
     
         // init mode area
         (()=>{
+            /* let ctrlKey = false;
+            let shiftKey = false;
+            let update_keys = (e)=>{ shiftKey=e.shiftKey; ctrlKey=e.ctrlKey; };
+            modeArea.onkeydown = (e)=>{update_keys(e)};
+		    modeArea.onkeyup = (e)=>{update_keys(e)}; */
+
             let modes = window.RandoStuffs.OoT.viewModes;
-            for(let k in modes){
-                let mode  = modes[k];
+            let list = modes.displayLinkList;
+            for(let c of list){
+                let mode  = modes[c];
                 let link = document.createElement('a');
                 link.textContent = mode.name;
                 link.href = '#';
                 link.style.margin = 16;
-                link.onclick = function(){
+                link.style.padding = 16;
+                link.style.backgroundColor = '#8ef8b6';
+                link.style.borderRadius = '5px';
+                link.style.border = '2px solid white'
+                link.style.textDecoration = 'none';
+                link.style.color = 'black';
+                link.style.fontSize = 19;
+                link.style.boxShadow = 'blue 2px 2px 6px 0px';
+                link.onpointerover = ()=>{
+                    link.style.backgroundColor = '#9ed8f6';
+                    link.style.borderColor = 'black';
+                    link.style.boxShadow = 'white 2px 2px 12px 0px';
+                };
+                link.onpointerleave = ()=>{
+                    link.style.backgroundColor = '#8ef8b6';
+                    link.style.borderColor = 'white';
+                    link.style.boxShadow = 'blue 2px 2px 6px 0px';
+                };
+                link.onclick = function(e){
+                    e.preventDefault(); // cancel : ctrl+click || shift+click
                     mode.init(mainArea);
+                    modes.current = c;
+                };
+                link.oncontextmenu = function(e){
+                    e.preventDefault();
                 };
                 modeArea.appendChild(link);
             }
@@ -168,15 +299,18 @@
     
         // init main area
         (()=>{
-            
+            let divStyle = 'white-space:pre-wrap; font-size:24px; display:flex; justify-content:center; align-items:center;'
+                         + 'position:absolute; inset:0px; padding:64px;';
+            let devMessage = 'Use this app with Google Chrome, to enjoy user experience as designed by its creator.'
+            mainArea.innerHTML = `<div style="${divStyle}">${devMessage}</div>`;
         })();
 
         let disable_dropEffect = function(e){
 			e.stopPropagation();
 			e.preventDefault();
 		};
-        document.body.addEventListener("dragover", disable_dropEffect);
-		document.body.addEventListener("drop", disable_dropEffect);
+        document.addEventListener("dragover", disable_dropEffect);
+		document.addEventListener("drop", disable_dropEffect);
 
         // first build all (when app is initialisating)
         window.RandoStuffs.OoT.core.buildAll();

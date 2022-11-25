@@ -1,3 +1,6 @@
+window.RandoStuffs.OoT.viewModes.areaCtxEdit.reset = function(workspace){
+	window.RandoStuffs.OoT.viewModes.areaCtxEdit.init(workspace);
+};
 
 window.RandoStuffs.OoT.viewModes.areaCtxEdit.init = function(workspace){
 	workspace.textContent = '';

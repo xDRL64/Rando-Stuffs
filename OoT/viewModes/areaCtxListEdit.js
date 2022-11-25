@@ -1,3 +1,7 @@
+window.RandoStuffs.OoT.viewModes.areaCtxListEdit.reset = function(workspace){
+	window.RandoStuffs.OoT.viewModes.areaCtxListEdit.init(workspace);
+};
+
 window.RandoStuffs.OoT.viewModes.areaCtxListEdit.init = function(workspace){
 
 	workspace.textContent = '';
@@ -26,6 +30,7 @@ window.RandoStuffs.OoT.viewModes.areaCtxListEdit.init = function(workspace){
 	
 	let create_boardItem = window.RandoStuffs.OoT.viewModes.mainLib.editContext.create_boardItem;
 
+	let clean_itemBoard = window.RandoStuffs.OoT.viewModes.mainLib.editContext.clean_itemBoard;
 
 	(()=>{
 
@@ -58,8 +63,12 @@ window.RandoStuffs.OoT.viewModes.areaCtxListEdit.init = function(workspace){
 		applyChangesBtn.style.margin = 16;
 		applyChangesBtn.onclick = ()=>{
 
-			// rebuild location context list
-			////////////////////////////////
+			// clean area context board items
+			/////////////////////////////////
+			clean_itemBoard(mainBoard);
+			
+			// rebuild area context list
+			////////////////////////////
 
 			// make empty internal area context list
 			Object.keys(areaCtxList).forEach(key => delete areaCtxList[key]);
@@ -71,7 +80,7 @@ window.RandoStuffs.OoT.viewModes.areaCtxListEdit.init = function(workspace){
 			}
 
 			// rebuild internal area byContext
-			//////////////////////////////////////
+			//////////////////////////////////
 
 			// keep a tmp soft copy of internal area byContext
 			let tmp_areaByCtx = {...areaByCtx};
