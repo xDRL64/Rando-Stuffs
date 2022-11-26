@@ -7,7 +7,7 @@ window.RandoStuffs.OoT.settingsFromDefaultCore = true;
 
 window.RandoStuffs.OoT.fileSlots = {
 	spoilerLog  : {
-		name:'Spoiler.json', data:null, originalFileName:'', display_fileHash : true,
+		name:'Spoiler.json', data:null, originalFileName:'', display_fileHash : true, //update_view:true,
 		check_data(){
 			if(!this.data[':version']){
 				let errorTxt = `The App RandoStuffs.OoT expected a JSON file with an entry :\n\t":version"`;

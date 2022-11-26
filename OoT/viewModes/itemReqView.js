@@ -140,6 +140,7 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 	mode.style.alignItems = 'center';
 	mode.style.flexWrap = 'wrap';
 	mode.style.overflowX = 'scroll';
+	mode.style.userSelect = 'none';
 
 	// mode.theApp.shiftKey
 	(()=>{
@@ -211,15 +212,249 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 		panel.style.height = '75%';
 		panel.style.backgroundColor = '#c5e4ff';
 
+		// make filter options panel
+		////////////////////////////
+		let filterOptionPan = document.createElement('div');
+		//filterOptionPan.style.height = 200;
+		filterOptionPan.style.backgroundColor = 'rgb(208, 240, 255)';
+		filterOptionPan.style.position = 'sticky';
+		filterOptionPan.style.top = 0;
+		filterOptionPan.style.border = '1px solid black';
+		(()=>{
+
+			// LIB
+			//
+
+			let filterListSet = window.RandoStuffs.OoT.core.Item.filterListSet;
+			let create_checkbox = window.RandoStuffs.OoT.viewModes.mainLib.createElems.create_checkbox;
+
+			let itemPool = null;
+			let set_itemPool = ()=>{
+				// Set itemPool with spoilerFile.data.locations parsing instead just
+				// to use spoilerFile.data.item_pool, because item_pool does not contain
+				// "dungeon stuffs" such small keys, boss keys, map & compass
+				let OoTR_locs = spoilerFile.data?.locations;
+				if( !OoTR_locs ){
+					itemPool = null;
+					return;
+				}
+				let pool = new Set();
+				Object.keys(OoTR_locs).forEach((e)=>{
+					let item = OoTR_locs[e];
+					item = (typeof item === 'string') ? item : item.item;
+					pool.add(item);
+				});
+				itemPool = pool;
+			};
+			let filter_itemPool = ()=>{
+				// hide all OoT items of the [selection item board] that are not in the itemPool
+				if(itemPool)
+					Object.keys(showItemControl).forEach((e)=>{
+						if(!itemPool.has(e)) showItemControl[e].toggle(false);
+					});
+			};
+
+			let showItemList = new Set();
+			let filterLists = new Set();
+
+			let apply_filterLists = ()=>{
+				// use some filters
+				if(filterLists.size > 0){
+					// hide all
+					Object.keys(showItemControl).forEach((e)=>{showItemControl[e].toggle(false);});
+					// add the filtered items to the show list
+					showItemList.clear();
+					([...filterLists]).forEach((e)=>{
+						filterListSet[e].itemList.forEach((e)=>{showItemList.add(e);});
+					});
+					// show by according selected filter
+					([...showItemList]).forEach((e)=>{showItemControl[e].toggle(true);});
+				// use no filter
+				}else
+					Object.keys(showItemControl).forEach((e)=>{showItemControl[e].toggle(true);});
+			};
+
+			// HTML ELEMENTS
+			//
+
+			let header = document.createElement('div');
+				header.style.padding = 8;
+				header.style.cursor = 'pointer';
+				header.title = 'Click to Unfold/Fold [Item Filter Options] Menu';
+				let openChar = '▼';  // it is open
+				let closeChar = '►'; // it is close
+				header.innerText = closeChar+' Item Filter Options';
+				let open = false;
+				header.onclick = ()=>{
+					open = (!open);
+					let stateChar;
+					if(open){
+						stateChar = openChar;
+						body.style.display = '';
+						mode.prepend(filterOptionPan);
+					}else{
+						stateChar = closeChar;
+						body.style.display = 'none';
+						panel.prepend(filterOptionPan);
+					}
+					header.innerText = stateChar+' Item Filter Options';
+				};
+			filterOptionPan.appendChild(header);
+
+			let body = document.createElement('div');
+				body.style.display = 'none';
+				body.style.margin = 8;
+				body.style.backgroundColor = '#c5e4ff';
+				body.style.border = '1px solid black';
+				body.style.padding = 8;
+			filterOptionPan.appendChild(body);
+
+			// create spoiler.json item pool filter [checkbox]
+			(()=>{
+				let container = document.createElement('div');
+				container.style.border = '1px solid black';
+				let message = document.createElement('div');
+				message.style.color = 'red';
+				message.style.paddingLeft = 16;
+				message.style.paddingBottom = 16;
+				let elem = create_checkbox(
+					'Spoiler.json Item Pool Filter',
+					function(){
+						message.innerText = '';
+						if(this.checked){
+							if(spoilerFile.data){ // use if spoiler is loaded
+								set_itemPool();
+								filter_itemPool();
+							}else{
+								message.innerText = 'Error : Missing "Spoiler.json"';
+								this.checked = false;
+							}
+						}else{
+							if(itemPool)
+								apply_filterLists();
+							itemPool = null;
+						}
+					},
+					false
+				);
+				container.appendChild(elem);
+				container.appendChild(message);
+				body.appendChild(container);
+			})();
+
+			// create item default filter [checkboxes]
+			let defaultFilterPanel = document.createElement('div');
+				defaultFilterPanel.style.display = 'grid';
+				defaultFilterPanel.style.gridTemplateColumns = 'auto auto';
+				Object.keys(filterListSet).forEach((e)=>{
+					let obj = filterListSet[e];
+					let elem = create_checkbox(
+						obj.labelTxt,
+						function(){
+							// update filter lists
+							if(this.checked) filterLists.add(e);
+							else             filterLists.delete(e);
+							
+							// use filter lists
+							apply_filterLists();
+							
+							// use spoiler.json item pool filter
+							filter_itemPool();
+						},
+						false
+					);
+
+					defaultFilterPanel.appendChild(elem);
+				});
+			body.appendChild(defaultFilterPanel);
+
+			// create selection buttons panel
+			let buttonsPan = document.createElement('div');
+				buttonsPan.style.border = '1px solid black';
+				buttonsPan.style.padding = 8;
+				buttonsPan.style.display = 'flex';
+				buttonsPan.style.flexDirection = 'column';
+				buttonsPan.style.gap = '8px';
+				(()=>{
+					// select all [button]
+					let selectAllButton = document.createElement('input');
+						selectAllButton.type = 'button';
+						selectAllButton.value = 'Select All Visible Items';
+						selectAllButton.onclick = ()=>{
+							board.querySelectorAll('input[type=checkbox]').forEach(
+								e=>{if(e.style.display!=='none'){e.checked=false; e.click();}}
+							);
+						};
+					buttonsPan.appendChild(selectAllButton);
+					// unselect all [button]
+					let unselectAllButton = document.createElement('input');
+						unselectAllButton.type = 'button';
+						unselectAllButton.value = 'Unselect All Visible Items';
+						unselectAllButton.onclick = ()=>{
+							board.querySelectorAll('input[type=checkbox]').forEach(
+								e=>{if(e.style.display!=='none'){e.checked=true; e.click();}}
+							);
+						};
+					buttonsPan.appendChild(unselectAllButton);
+					// invert all selection [button]
+					let invertAllButton = document.createElement('input');
+						invertAllButton.type = 'button';
+						invertAllButton.value = 'Invert Selection of All Visible Items';
+						invertAllButton.onclick = ()=>{
+							board.querySelectorAll('input[type=checkbox]').forEach(
+								e=>{if(e.style.display!=='none')e.click();}
+							);
+						};
+					buttonsPan.appendChild(invertAllButton);
+					// set all max quantity [number input]
+					let setAllMaxQuantity = document.createElement('input');
+						setAllMaxQuantity.type = 'number';
+						setAllMaxQuantity.min = 1;
+						setAllMaxQuantity.max = Number.POSITIVE_INFINITY;
+						setAllMaxQuantity.placeholder = 'Set Quantity for All Visible Items (press [Enter]) ';
+						setAllMaxQuantity.value = '';
+						setAllMaxQuantity.title = 'Press [Enter] key to valid';
+						setAllMaxQuantity.onkeypress = function(event){
+							if(event.code === 'Enter'){
+								board.querySelectorAll('input[type=number]').forEach(
+									e=>{if(e.style.display!=='none'){e.value=this.value; e.oninput();}}
+								);
+								this.value = '';
+							}
+						};
+					buttonsPan.appendChild(setAllMaxQuantity);
+				})();
+			body.appendChild(buttonsPan);
+
+		})();
+		panel.appendChild(filterOptionPan);
+
+		// make and fill item selection board
+		/////////////////////////////////////
 		let board = document.createElement('div');
 		board.style.display = 'grid';
 		board.style.alignItems = 'center';
 		board.style.gridTemplateColumns = 'auto auto auto auto';
 		board.style.gridTemplateRows = `repeat(${itemList.length}, 1fr)`;
 		
-		// fill item board
-		//////////////////
+		// allows display control : show/hide {img, checkbox, label, quantity} in once for each row item
+		let showItemControl = {};
+		let _toggle = function(val){
+			this.show = val ?? (!this.show);
+			let displayValue = this.show ? '' : 'none';
+			this.elems.forEach((e)=>{e.style.display=displayValue;});
+		};
+
 		for(let name in itemList){
+
+			// internal data
+			//
+
+			showItemControl[name] = { show:true, elems:[], toggle:_toggle };
+
+			// html elements
+			//
+
 			// item gfx [icon]
 			let itemGFX = itemList[name];
 			let itemIcon = document.createElement('img');
@@ -244,8 +479,8 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 			// item name [label]
 			let itemNameLabel = document.createElement('label');
 			itemNameLabel.textContent = name;
-			itemNameLabel.style.display = 'flex';
-			itemNameLabel.style.alignItems = 'center';
+			//itemNameLabel.style.display = 'flex';
+			//itemNameLabel.style.alignItems = 'center';
 			itemNameLabel.style.margin = 4;
 			itemNameLabel.onclick = ()=>itemSelectState.click();
 			board.appendChild(itemNameLabel);
@@ -263,6 +498,7 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 			};
 			board.appendChild(quantityInput);
 	
+			showItemControl[name].elems.push(itemIcon, itemSelectState, itemNameLabel, quantityInput);
 		}
 
 		panel.appendChild(board);
@@ -369,18 +605,7 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 			return _label;
 		};
 
-		let create_checkbox = function(label, oninput, checked=false){
-			let elem = document.createElement('input');
-				elem.type = 'checkbox';
-				elem.style.margin = 16;
-				elem.oninput = oninput;
-				elem.checked = checked;
-
-			let _label = document.createElement('label');
-				_label.innerHTML = '<span>'+label+'</span>';
-				_label.prepend(elem);
-			return _label;
-		};
+		let create_checkbox = window.RandoStuffs.OoT.viewModes.mainLib.createElems.create_checkbox;
 
 		// make panel's viewport sys
 		////////////////////////////
@@ -656,6 +881,8 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 						settingsList[mainSetName].checked,
 					);
 					
+					category.title = 'SHIFT + Click : to Select/Unselect all sub checkboxes\n'
+					               + 'CTRL  + Click : to invert all sub checkboxes';
 					apply_cssStyle(category);
 					attach_quantityInputs(category, settingsList, mainSetName, subSetName);
 					attach_conditionHook(category, settingsList, mainSetName);

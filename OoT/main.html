@@ -265,13 +265,14 @@
                 let mode  = modes[c];
                 let link = document.createElement('a');
                 link.textContent = mode.name;
-                link.href = '#';
                 link.style.margin = 16;
                 link.style.padding = 16;
                 link.style.backgroundColor = '#8ef8b6';
                 link.style.borderRadius = '5px';
                 link.style.border = '2px solid white'
                 link.style.textDecoration = 'none';
+                link.style.cursor = 'pointer';
+                link.style.userSelect = 'none';
                 link.style.color = 'black';
                 link.style.fontSize = 19;
                 link.style.boxShadow = 'blue 2px 2px 6px 0px';

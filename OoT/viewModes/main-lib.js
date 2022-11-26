@@ -590,4 +590,18 @@ if(!window.RandoStuffs.OoT.viewModes){
 			board.appendChild(groupElem);
 		});
 	};
+
+	window.RandoStuffs.OoT.viewModes.mainLib.createElems = {};
+	window.RandoStuffs.OoT.viewModes.mainLib.createElems.create_checkbox = (label, oninput, checked=false)=>{
+		let elem = document.createElement('input');
+			elem.type = 'checkbox';
+			elem.style.margin = 16;
+			elem.oninput = oninput;
+			elem.checked = checked;
+
+		let _label = document.createElement('label');
+			_label.innerHTML = '<span>'+label+'</span>';
+			_label.prepend(elem);
+		return _label;
+	};
 }
