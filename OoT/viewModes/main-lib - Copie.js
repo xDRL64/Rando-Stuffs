@@ -159,8 +159,8 @@ if(!window.RandoStuffs.OoT.viewModes){
 		let board = document.createElement('div');
 		board.style.display = 'grid';
 		board.style.gap = '64px'; // use always even number (never odd number)
-		board.style.gridTemplateColumns = 'auto repeat('+context_count+', minmax(32px,1fr))';
-		board.style.gridTemplateRows = 'auto repeat('+location_count+', minmax(32px,1fr))';
+		board.style.gridTemplateColumns = 'auto repeat('+context_count+', 1fr)';
+		board.style.gridTemplateRows = 'auto repeat('+location_count+', 1fr)';
 
 		board.style.width = '100%';
 		board.style.height = '100%';
@@ -186,7 +186,6 @@ if(!window.RandoStuffs.OoT.viewModes){
 			ctxLabel.style.whiteSpace = 'pre';
 			ctxLabel.style.display = 'flex';
 			ctxLabel.style.alignItems = 'center';
-			ctxLabel.style.padding = '8px 0px';
 	
 			ctxLabel.style.position = 'sticky';
 			ctxLabel.style.top = 0;
@@ -210,9 +209,6 @@ if(!window.RandoStuffs.OoT.viewModes){
 			rowLabel.style.left = 0;
 			rowLabel.style.backgroundColor = 'white';
 			rowLabel.style.zIndex = 1;
-			rowLabel.style.display = 'flex';
-			rowLabel.style.alignItems = 'center';
-			rowLabel.style.padding = '0px 8px';
 	
 			rowLabel.classList.add(cssClassName);
 			rowLabel.app = {horizontalParent:rowLabel};
@@ -224,7 +220,6 @@ if(!window.RandoStuffs.OoT.viewModes){
 				ctxCell.type = 'checkbox';
 				ctxCell.checked = buildData[dataKey].context[ctx];
 				ctxCell.classList.add(cssClassName);
-				ctxCell.style.alignSelf = 'center';
 				ctxCell.app = {horizontalParent:rowLabel, verticalParent:ctxLabels[ctx]};
 	
 				ctxCell.oninput = ()=>{
@@ -255,9 +250,9 @@ if(!window.RandoStuffs.OoT.viewModes){
 		/* External :
 			board
 			panel
-			mode
+			cornerCell
 		*/
-		let {board, panel, mode} = htmlElems;
+		let {board,panel,cornerCell, handle:view} = htmlElems;
 
 		let cssClassName = window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.reservedCssClassName;
 
@@ -268,106 +263,232 @@ if(!window.RandoStuffs.OoT.viewModes){
 
 		// pointing rect cursor [frame]
 		let rectCursorFrame = document.createElement('div');
-			rectCursorFrame.style.position = 'absolute';
-			rectCursorFrame.style.inset = 0;
-			rectCursorFrame.style.overflow = 'hidden';
-			rectCursorFrame.style.pointerEvents = 'none';
-			rectCursorFrame.style.opacity = 0.15
-			rectCursorFrame.style.zIndex = 2;
+		rectCursorFrame.style.position = 'absolute';
+		//rectCursorFrame.style.width = 'auto';
+		//rectCursorFrame.style.height = 'auto';
+		rectCursorFrame.style.left = 0;
+		rectCursorFrame.style.top = 0;
+		rectCursorFrame.style.overflow = 'hidden';
+		rectCursorFrame.style.pointerEvents = 'none';
+		//rectCursorFrame.style.background = 'bisque'
+		rectCursorFrame.style.opacity = 0.4
+		rectCursorFrame.style.zIndex = 2;
 		panel.appendChild(rectCursorFrame);
 
-			//
-
-			// pointing vertical frame rect (border only)
-			let vFrameRect_brdOnly = document.createElement('div');
-				vFrameRect_brdOnly.style.position = 'absolute';
-				vFrameRect_brdOnly.style.inset = '0 0 0 auto'; // u r b l
-				vFrameRect_brdOnly.style.overflow = 'hidden';
-			rectCursorFrame.appendChild(vFrameRect_brdOnly);
-
-				// vertical pointer (border only)
-				let vPointer_ = document.createElement("div");
-					vPointer_.style.position = "absolute";
-					vPointer_.style.border = brd+"px solid #a0a0a0";
-					vPointer_.style.display = 'none';
-					vPointer_.style.backgroundColor = '';
-				vFrameRect_brdOnly.appendChild(vPointer_);
-
-			//
-
-			// pointing horizontal frame rect
 			let hFrameRect = document.createElement('div');
-				hFrameRect.style.position = 'absolute';
-				hFrameRect.style.inset = 'auto 0 0 0'; // u r b l
-				hFrameRect.style.overflow = 'hidden';
+			hFrameRect.style.position = 'absolute';
+			hFrameRect.style.inset = 'auto 0 0 0'; // u r b l
+			hFrameRect.style.overflow = 'hidden';
+
+			let hPointer = document.createElement("div");
+			hPointer.style.position = "absolute";
+			hPointer.style.pointerEvents = "none";
+			hPointer.style.border = brd+"px solid crimson";
+			//hPointer.style.boxSizing = 'border-box';
+			//hPointer.style.zIndex = 3;
+			hPointer.style.display = 'none';
+			hPointer.style.backgroundColor = 'red';
+			//hPointer.style.opacity = 0.4;
+
+			hFrameRect.appendChild(hPointer);
 			rectCursorFrame.appendChild(hFrameRect);
 
-				// horizontal pointer
-				let hPointer = document.createElement("div");
-					hPointer.style.position = "absolute";
-					hPointer.style.border = brd+"px solid #a0a0a0";
-					hPointer.style.display = 'none';
-					hPointer.style.backgroundColor = 'red';
-				hFrameRect.appendChild(hPointer);
-			
-			//
-
-			// pointing vertical frame rect
-			let vFrameRect = document.createElement('div');
-				vFrameRect.style.position = 'absolute';
-				vFrameRect.style.inset = '0 0 0 auto'; // u r b l
-				vFrameRect.style.overflow = 'hidden';
-			rectCursorFrame.appendChild(vFrameRect);
-
-				// vertical pointer
-				let vPointer = document.createElement("div");
-					vPointer.style.position = "absolute";
-					//vPointer.style.border = brd+"px solid #a0a0a0";
-					vPointer.style.display = 'none';
-					vPointer.style.backgroundColor = 'red';
-				vFrameRect.appendChild(vPointer);
-
+			let vPointer = document.createElement("div");
+			vPointer.style.position = "absolute";
+			vPointer.style.pointerEvents = "none";
+			vPointer.style.border = "2px solid blue";
+			vPointer.style.boxSizing = 'border-box';
+			vPointer.style.zIndex = 3;
+			vPointer.style.display = 'none';
+			rectCursorFrame.appendChild(vPointer);
 
 
 
 		// UPDATE AND DISPLAY POSITION
 		//////////////////////////////
+		/* board.onmouseover = function(e){
+			if(e.target.className === cssClassName){
+
+				// get scrollbar presence
+				let Hscrl = panel.scrollWidth  > panel.offsetWidth  ? 1 : 0;
+				let Vscrl = panel.scrollHeight > panel.offsetHeight ? 1 : 0;
+
+				// update horizontal pointer
+				if(e.target.app.horizontalParent){
+					let block = e.target.app.horizontalParent;
+					
+					hPointer.style.left = panel.scrollLeft;
+					hPointer.style.width = panel.offsetWidth - (scrlbarwidth*Vscrl) - brd;
+
+					hPointer.style.top = block.offsetTop ;
+					hPointer.style.height = block.offsetHeight;
+					hPointer.style.display = '';
+				}else
+					hPointer.style.display = 'none';
+
+				// update vertical pointer
+				if(e.target.app.verticalParent){
+					let block = e.target.app.verticalParent;
+					
+					vPointer.style.top = panel.scrollTop;
+					vPointer.style.height = panel.offsetHeight - (scrlbarwidth*Hscrl) - brd;
+					
+					vPointer.style.left = block.offsetLeft;
+					vPointer.style.width = block.offsetWidth;
+					vPointer.style.display = '';
+				}else
+					vPointer.style.display = 'none';
+			}
+		}; */
+
+		/* board.addEventListener('mouseover',
+			function(e){
+				e.stopPropagation();
+				if(e.target.className === cssClassName){
+
+					// get scrollbar presence
+					let Hscrl = panel.scrollWidth  > panel.offsetWidth  ? 1 : 0;
+					let Vscrl = panel.scrollHeight > panel.offsetHeight ? 1 : 0;
+
+					// update horizontal pointer
+					if(e.target.app.horizontalParent){
+						let block = e.target.app.horizontalParent;
+						
+						hPointer.style.left = panel.scrollLeft;
+						hPointer.style.width = panel.offsetWidth - (scrlbarwidth*Vscrl) - brd;
+
+						hPointer.style.top = block.offsetTop ;
+						hPointer.style.height = block.offsetHeight;
+						hPointer.style.display = '';
+					}else
+						hPointer.style.display = 'none';
+
+					// update vertical pointer
+					if(e.target.app.verticalParent){
+						let block = e.target.app.verticalParent;
+						
+						vPointer.style.top = panel.scrollTop;
+						vPointer.style.height = panel.offsetHeight - (scrlbarwidth*Hscrl) - brd;
+						
+						vPointer.style.left = block.offsetLeft;
+						vPointer.style.width = block.offsetWidth;
+						vPointer.style.display = '';
+					}else
+						vPointer.style.display = 'none';
+				}
+			},
+		{capture:true, passive:true}); */
 
 		(()=>{
 
-			// INIT
-			//
+			return;
 
 			let _1stCheckbox = board.querySelector('input.'+cssClassName);
-			let hElem = _1stCheckbox.app.horizontalParent.getBoundingClientRect();
-			let vElem = _1stCheckbox.app.verticalParent.getBoundingClientRect();
+			let hElem = _1stCheckbox.app.horizontalParent;
+			let vElem = _1stCheckbox.app.verticalParent;
+			board.style.gap = '64px';
+			//let gap = parseInt(getComputedStyle(board).gap) || 0;
+			let gap = parseInt(board.style.gap) || 0;
+
+			brd = gap>>1;
+			hPointer.style.borderWidth = `${brd}px 0px`;
+			hPointer.style.transform = `translateY(-${(brd+vElem.offsetHeight)}px)`;
+
+			let px=0, py=0; // mouse pos on the window
+			window.onmousemove = (e)=>{
+
+				//gap = parseInt(getComputedStyle(board).gap) || 0;
+
+				let viewRect = panel.getBoundingClientRect();
+				let vx = Math.round(viewRect.x);
+				let vy = Math.round(viewRect.y);
+				let mx = Math.round(viewRect.width);
+				let my = Math.round(viewRect.height);
+
+				px = e.clientX - vx;
+				py = e.clientY - vy;
+
+				if(px<0 || py<0 || px>mx || py>my) {px=0; py=0;}
+
+
+				routine();
+			};
+
+
+			let routine2 = ()=>{
+				// get scrollbar presence
+				let Hscrl = panel.scrollWidth  > panel.offsetWidth  ? 1 : 0;
+				let Vscrl = panel.scrollHeight > panel.offsetHeight ? 1 : 0;
+
+				// horizontal Pointer
+				let H_hPointer = hElem.offsetHeight;
+				let W_hPointer = panel.offsetWidth - (scrlbarwidth*Vscrl) - brd;
+				
+				let baseY = vElem.offsetHeight;
+				let H_space = H_hPointer + (gap);
+				let H_space2gap = H_hPointer + (gap*1);
+				let bYofst = baseY % H_space;
+				let hScrollOfst = (panel.scrollTop%H_space);
+
+				let _py = py + Math.floor(H_space2gap/2) + hScrollOfst + bYofst;
+				let yIndex = Math.round(_py/H_space) - 1;
+				let Y_hPointer = (yIndex*H_space) - hScrollOfst + bYofst - H_hPointer;
+				let X_hPointer = 0;
+
+				hPointer.style.left   = X_hPointer;
+				hPointer.style.width  = W_hPointer;
+				hPointer.style.top    = Y_hPointer;
+				hPointer.style.height = H_hPointer;
+				hPointer.style.display = '';
+			};
+			let routine = ()=>{
+				// get scrollbar presence
+				let Hscrl = panel.scrollWidth  > panel.offsetWidth  ? 1 : 0;
+				let Vscrl = panel.scrollHeight > panel.offsetHeight ? 1 : 0;
+
+				// horizontal Pointer
+				let H_hPointer = hElem.offsetHeight;
+				let W_hPointer = panel.offsetWidth - (scrlbarwidth*Vscrl) - brd;
+				
+				let baseY = vElem.offsetHeight;
+				let H_space = H_hPointer + (gap);
+				let bYofst = baseY % H_space;
+				let hScrollOfst = (panel.scrollTop%H_space);
+
+				let _py = (py-baseY-(gap>>1)) /* + (H_space>>1) */ + hScrollOfst //+ bYofst;
+				let yIndex = Math.floor(_py/H_space) + (Math.ceil(baseY/H_space));
+				let Y_hPointer = (yIndex*H_space) - hScrollOfst + bYofst - H_hPointer;
+				let X_hPointer = 0;
+
+				hPointer.style.left   = X_hPointer;
+				hPointer.style.width  = W_hPointer;
+				hPointer.style.top    = Y_hPointer;
+				hPointer.style.height = H_hPointer;
+				hPointer.style.display = 'flex';
+				hPointer.style.justifyContent = 'end'
+				hPointer.textContent = _py+' : '+yIndex;
+			};
+
+
+
+		})();
+
+		(()=>{
+			let _1stCheckbox = board.querySelector('input.'+cssClassName);
+			let hElem = _1stCheckbox.app.horizontalParent;
+			let vElem = _1stCheckbox.app.verticalParent;
 
 
 			let gap = parseInt(board.style.gap) || 0;
 
-			let _brd = gap>>1;
-
-			brd = _brd;
-			vPointer_.style.borderWidth = `0px ${brd}px`;
-			vPointer_.style.transform = `translateX(-${(brd+hElem.width)}px)`;
-			
-			brd = _brd;
+			brd = gap>>1;
 			hPointer.style.borderWidth = `${brd}px 0px`;
-			hPointer.style.transform = `translateY(-${(brd+vElem.height)}px)`;
-
-			brd = 0;
-			vPointer.style.borderWidth = `0px ${brd}px`;
-			vPointer.style.transform = `translateX(-${(brd+hElem.width)}px)`;
-
-			
-			
+			hPointer.style.transform = `translateY(-${(brd+vElem.offsetHeight)}px)`;
 
 			let px=0, py=0; // mouse pos on the window
+			window.onmousemove = (e)=>{
 
-			// UPDATE
-			//
-
-			mode.onmousemove = (e)=>{
+				//gap = parseInt(getComputedStyle(board).gap) || 0;
 
 				// compute mouse position relative to the panel rect
 				//
@@ -383,20 +504,40 @@ if(!window.RandoStuffs.OoT.viewModes){
 
 				if(px<0 || py<0 || px>mx || py>my) {px=0; py=0;}
 
-				update_pointers();
+
+				update_hPointer();
 			};
 
 
+			let routine2 = ()=>{
+				// get scrollbar presence
+				let Hscrl = panel.scrollWidth  > panel.offsetWidth  ? 1 : 0;
+				let Vscrl = panel.scrollHeight > panel.offsetHeight ? 1 : 0;
 
-			board.onscroll = (e)=>{ update_pointers(); };
+				// horizontal Pointer
+				let H_hPointer = hElem.offsetHeight;
+				let W_hPointer = panel.offsetWidth - (scrlbarwidth*Vscrl) - brd;
+				
+				let baseY = vElem.offsetHeight;
+				let H_space = H_hPointer + (gap);
+				let H_space2gap = H_hPointer + (gap*1);
+				let bYofst = baseY % H_space;
+				let hScrollOfst = (panel.scrollTop%H_space);
+
+				let _py = py + Math.floor(H_space2gap/2) + hScrollOfst + bYofst;
+				let yIndex = Math.round(_py/H_space) - 1;
+				let Y_hPointer = (yIndex*H_space) - hScrollOfst + bYofst - H_hPointer;
+				let X_hPointer = 0;
+
+				hPointer.style.left   = X_hPointer;
+				hPointer.style.width  = W_hPointer;
+				hPointer.style.top    = Y_hPointer;
+				hPointer.style.height = H_hPointer;
+				hPointer.style.display = '';
+			};
+			let update_hPointer = ()=>{
 
 
-			let update_pointers = ()=>{
-
-				hElem = _1stCheckbox.app.horizontalParent.getBoundingClientRect();
-				vElem = _1stCheckbox.app.verticalParent.getBoundingClientRect();
-
-				let boardRect = board.getBoundingClientRect();
 
 				// get scrollbar presence
 				let Hscrl = board.scrollWidth  > board.offsetWidth  ? 1 : 0;
@@ -405,74 +546,50 @@ if(!window.RandoStuffs.OoT.viewModes){
 				// horizontal Pointer
 				//
 
-				let H_hPointer = hElem.height;
-				let W_hPointer = boardRect.width - (scrlbarwidth*Vscrl);
+				let H_hPointer = hElem.offsetHeight;
+				let W_hPointer = board.offsetWidth - (scrlbarwidth*Vscrl) //- brd;
 				
-				let baseY = vElem.height;
+				let baseY = vElem.offsetHeight;
 				let H_space = H_hPointer + gap;
 				let hScrollOfst = board.scrollTop % H_space;
 
-				let _py = (py-baseY-_brd) + hScrollOfst;
+				let _py = (py-baseY-brd) + hScrollOfst;
 				let yIndex = Math.ceil(_py / H_space);
 				let Y_hPointer = (yIndex*H_space) - hScrollOfst - H_hPointer;
 				let X_hPointer = 0;
 
+				hFrameRect.style.inset = `${baseY}px 0px 0px 0px`; // u r b l
+				
 				hPointer.style.left   = X_hPointer;
 				hPointer.style.width  = W_hPointer;
 				hPointer.style.top    = Y_hPointer;
 				hPointer.style.height = H_hPointer;
-
-				if(py>=baseY && (yIndex>0 || yIndex===0 && board.scrollTop>=_brd))
-					hPointer.style.display = '';
-				else
-					hPointer.style.display = 'none';
 				
 				// horizontal Pointer frame rect
-				hFrameRect.style.inset = `${baseY}px ${(scrlbarwidth*Vscrl)}px ${(scrlbarwidth*Hscrl)}px 0px`; // u r b l
-
-				// vertical Pointer
 				//
-
-				let W_vPointer = vElem.width;
-				let H_vPointer = boardRect.height - (scrlbarwidth*Hscrl);
-
-				let baseX = hElem.width;
-				let W_space = W_vPointer + gap;
-				let wScrollOfst = board.scrollLeft % W_space;
-
-				let _px = (px-baseX-_brd) + wScrollOfst;
-				let xIndex = Math.ceil(_px / W_space);
-				let X_vPointer = (xIndex*W_space) - wScrollOfst - W_vPointer;
-				let Y_vPointer = 0;
-
-				vPointer.style.left   = X_vPointer;
-				vPointer.style.width  = W_vPointer;
-				vPointer.style.top    = Y_vPointer;
-				vPointer.style.height = H_vPointer;
 				
-				// vertical pointer (border only)
-				vPointer_.style.left   = X_vPointer;
-				vPointer_.style.width  = W_vPointer;
-				vPointer_.style.top    = Y_vPointer;
-				vPointer_.style.height = H_vPointer;
-				
-				// vertical Pointer frame rect
-				vFrameRect.style.inset = `0px ${(scrlbarwidth*Vscrl)}px ${(scrlbarwidth*Hscrl)}px ${baseX}px`; // u r b l
-				// vertical Pointer frame rect (border only)
-				vFrameRect_brdOnly.style.inset = `0px ${(scrlbarwidth*Vscrl)}px ${(scrlbarwidth*Hscrl)}px ${baseX}px`; // u r b l
-				
-				if(px>=baseX && (xIndex>0 || xIndex===0 && board.scrollLeft>=_brd)){
-					vPointer.style.display = '';
-					vPointer_.style.display = ''; // border only
-				}else{
-					vPointer.style.display = 'none';
-					vPointer_.style.display = 'none'; // border only
-				}
 
+				rectCursorFrame.style.width  = Math.floor(panel.getBoundingClientRect().width)  - (scrlbarwidth*Vscrl);
+				rectCursorFrame.style.height = Math.floor(panel.getBoundingClientRect().height) - (scrlbarwidth*Hscrl);
 			};
+
+
 
 		})();
 
+		// UPDATE AND HIDE POSITION
+		//////////////////////////////
+		
+		let hide_gridPointers= function(){
+			hPointer.style.display = 'none';
+			vPointer.style.display = 'none';
+		};
+
+		//board.onmouseleave = hide_gridPointers;
+		//panel.onscroll = hide_gridPointers;
+		//cornerCell.onmouseenter = hide_gridPointers;
+		
+		
 	};
 
 

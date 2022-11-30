@@ -24,6 +24,7 @@ window.RandoStuffs.OoT.viewModes.areaCtxEdit.init = function(workspace){
 	let databyContext = Area.byContext;
 
 	let htmlElems = window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.create_editorView(Data, keyList, valList, contextList, databyContext);
+	htmlElems.mode = mode;
 	window.RandoStuffs.OoT.viewModes.mainLib.editContextBy.create_gridPointer(htmlElems);
 	mode.appendChild(htmlElems.handle);
 };
