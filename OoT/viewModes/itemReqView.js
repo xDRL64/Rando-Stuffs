@@ -139,7 +139,7 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 	mode.style.justifyContent = 'center';
 	mode.style.alignItems = 'center';
 	mode.style.flexWrap = 'wrap';
-	mode.style.overflowX = 'scroll';
+	mode.style.overflowX = 'auto';
 	mode.style.userSelect = 'none';
 
 	// mode.theApp.shiftKey
@@ -610,6 +610,7 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 		// make panel's viewport sys
 		////////////////////////////
 		let panel = document.createElement('div');
+		panel.style.overflowX = 'hidden';
 		panel.style.overflowY = 'scroll';
 		panel.style.height = '75%';
 		panel.style.backgroundColor = '#c5e4ff';
@@ -842,6 +843,200 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 					};
 				};
 
+				// (inject in itself)
+				let make_selectableInputElem = (subElem)=>{
+					let selectionRectElem = document.createElement('div');
+					selectionRectElem.style.display = 'none';
+					selectionRectElem.style.position = 'absolute';
+					selectionRectElem.style.width = 0;
+					selectionRectElem.style.height = 0;
+					selectionRectElem.style.border = '2px dashed grey';
+					selectionRectElem.style.pointerEvents = 'none';
+					selectionRectElem.style.transformOrigin = 'top left';
+					let isInSelection = false;
+					let selRectStartX = 0;
+					let selRectStartY = 0;
+					let selRectEndX = 0;
+					let selRectEndY = 0;
+					// fix : onmouseenter event while scrolling
+					let pointerInBound = false;
+					let scrollFixWinX = 0;
+					let scrollFixWinY = 0;
+					subElem.appendChild(selectionRectElem);
+
+					subElem.addEventListener('mousedown', (e)=>{
+						//e.stopPropagation();
+
+						if(e.target.tagName !== 'INPUT'){
+							let { x, y } = get_mousePosRelToElem(e, subElem);
+							selRectStartX = x;
+							selRectStartY = y;
+							selectionRectElem.style.left = selRectStartX;
+							selectionRectElem.style.top  = selRectStartY;
+							selectionRectElem.style.width = 0;
+							selectionRectElem.style.height = 0;
+							selectionRectElem.style.display = '';
+	
+							// add tmp event to window
+							//
+	
+							// mouse up event to valid selection rect with pointer out of area
+							window.addEventListener('mouseup', (e)=>{
+								//e.stopPropagation();
+								apply_selectionProcess(e);
+								clear_tmpScrollEvent();
+								isInSelection = false;
+							}, {once:true});
+	
+							// scroll event to update selection rect while scrolling
+							set_tmpScrollEvent();
+
+							isInSelection = true;
+							pointerInBound = true;
+						}
+
+					} /* ,{capture:true} */);
+
+					let subElem_onmousemove = (e)=>{
+						if(isInSelection){
+							let { x, y } = get_mousePosRelToElem(e, subElem);
+							// clamping
+							if(x < 0) x = 0;
+							if(x >= subElem.offsetwidth) x = subElem.offsetwidth;
+							if(y < 0) y = 0;
+							if(y >= subElem.offsetHeight) y = subElem.offsetHeight;
+							//
+
+							selRectEndX = x;
+							selRectEndY = y;
+							x -= selRectStartX;
+							y -= selRectStartY;
+							update_selectionRectDrawSize(x, y);
+						}
+					};
+					subElem.addEventListener('mousemove', subElem_onmousemove);
+
+
+
+
+
+					let tmpScrollEvent = (e)=>{ onScroll(e); };
+					let tmpMousemoveEvent = (e)=>{ onMousemove(e); };
+					let set_tmpScrollEvent = ()=>{
+						// (capture mode really increases reactivity)
+						window.addEventListener('wheel',tmpScrollEvent,{capture:true});
+						window.addEventListener('scroll',tmpScrollEvent,{capture:true});
+						window.addEventListener('mousemove',tmpMousemoveEvent,{capture:true});
+					};
+					let clear_tmpScrollEvent = ()=>{
+						window.removeEventListener('wheel',tmpScrollEvent,{capture:true});
+						window.removeEventListener('scroll',tmpScrollEvent,{capture:true});
+						window.removeEventListener('mousemove',tmpMousemoveEvent,{capture:true});
+					};
+					let onMousemove = (e, x, y)=>{
+						// update scrollFixWin XY
+						x = scrollFixWinX = e?.clientX ?? x;
+						y = scrollFixWinY = e?.clientY ?? y;
+						// update pointerInBound
+						let rect = subElem.getBoundingClientRect();
+						if(x>=rect.left && x<=rect.right && y>=rect.top && y<=rect.bottom)
+							pointerInBound = true;
+						else
+							pointerInBound = false;
+					};
+					
+					let onScroll = (e)=>{
+						onMousemove(null, scrollFixWinX, scrollFixWinY); // simule window.onmousemove
+						if(pointerInBound)
+							subElem_onmousemove({clientX:scrollFixWinX, clientY:scrollFixWinY});
+						else{
+							let rect = subElem.getBoundingClientRect();
+							subElem_onmousemove({clientX:selRectEndX+rect.x, clientY:selRectEndY+rect.y});
+						}
+					};
+
+					let get_mousePosRelToElem = (event, targetElem)=>{
+						let targetRect = targetElem.getBoundingClientRect();
+						let rx = event.clientX - targetRect.x;
+						let ry = event.clientY - targetRect.y;
+						return {x:rx, y:ry, ox:targetRect.x, oy:targetRect.y};
+					};
+
+					let update_selectionRectDrawSize = (x, y)=>{
+						let absX = Math.abs(x);
+						let absY = Math.abs(y);
+						selectionRectElem.style.width  = absX;
+						selectionRectElem.style.height = absY;
+						selectionRectElem.style.transform = `scale(${x/absX},${y/absY})`;
+					};
+
+					let apply_selectionProcess = (e)=>{
+						
+						let { ox, oy } = get_mousePosRelToElem(e, subElem);
+						let x = selRectEndX;
+						let y = selRectEndY;
+						selectionRectElem.style.display = 'none';
+
+						let checkboxes = [...subElem.querySelectorAll('input[type=checkbox]')];
+						let conditions = [...subElem.querySelectorAll('input[type=text]')];
+
+						let isInSelRect = (elem)=>{
+							// get x0,y0 at top left
+							let x0 = Math.min(selRectStartX, x) + ox;
+							let y0 = Math.min(selRectStartY, y) + oy;
+							// get x0,y1 at bottom right
+							let x1 = Math.max(selRectStartX, x) + ox;
+							let y1 = Math.max(selRectStartY, y) + oy;
+							// 
+							let elemRect = elem.getBoundingClientRect();
+							if(elemRect.left>=x0 && elemRect.right<=x1
+							&& elemRect.top>=y0 && elemRect.bottom<=y1)
+								return true;
+							else
+								return false;
+
+						};
+
+						let cbxSel = checkboxes.filter((e)=>{return isInSelRect(e);});
+						let cndSel = conditions.filter((e)=>{return isInSelRect(e);});
+						let cbxInSel = cbxSel.length > 0;
+						let cndInSel = cndSel.length > 0;
+
+						// Eighter checkboxes are selected Or condition ID input are selected
+						if(cbxInSel ^ cndInSel){
+
+							// if only checkboxes are selected
+							if(cbxInSel){
+								// then invert .checked state
+								cbxSel.forEach((e)=>{e.click();});
+							}
+							// if only condition input are selected
+							if(cndInSel){
+								// Then use .value of the highest visible condition input field,
+								// to set .value of all selected condition input field
+								let value = cndSel[0].value;
+								cndSel.forEach((e)=>{e.value=value; e.oninput();});
+							}
+						}
+
+						// Checkboxes are selected And Condition ID input are selected
+						if(cbxInSel && cndInSel){
+							// Use .value of the highest visible condition input field,
+							// to set .value of all selected condition input field only if
+							// their corresponding checkbox is checked
+							let value = cndSel[0].value;
+							cbxSel.forEach((e,index)=>{
+								if(e.checked){
+									cndSel[index].value = value;
+									cndSel[index].oninput();
+								}
+							});
+						}
+					};
+
+				};
+
+
 				//
 				let make_categoryWithSubPanel = function(mainLabel, mainSetName, subList, subLabelEnd, subSetName, parent){
 					let checkboxes = [];
@@ -880,7 +1075,7 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 						},
 						settingsList[mainSetName].checked,
 					);
-					
+
 					category.title = 'SHIFT + Click : to Select/Unselect all sub checkboxes\n'
 					               + 'CTRL  + Click : to invert all sub checkboxes';
 					apply_cssStyle(category);
@@ -894,6 +1089,7 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 						subElem.style.borderLeft = '1px solid black';
 						subElem.style.display = 'flex';
 						subElem.style.flexDirection = 'column';
+						subElem.style.position = 'relative';
 						for(let k in subList){
 							subElem.appendChild(
 								create_checkbox(
@@ -909,6 +1105,8 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 							    // .label           .conditionInput 
 							subElem.lastElementChild.lastElementChild.style.marginLeft = 'auto';
 						}
+
+					make_selectableInputElem(subElem);
 
 					make_foldable(category, subElem, 'close');
 

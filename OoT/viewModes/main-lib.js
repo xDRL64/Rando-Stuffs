@@ -158,7 +158,7 @@ if(!window.RandoStuffs.OoT.viewModes){
 		// whole grid
 		let board = document.createElement('div');
 		board.style.display = 'grid';
-		board.style.gap = '64px'; // use always even number (never odd number)
+		board.style.gap = '4px'; // use always even number (never odd number)
 		board.style.gridTemplateColumns = 'auto repeat('+context_count+', minmax(32px,1fr))';
 		board.style.gridTemplateRows = 'auto repeat('+location_count+', minmax(32px,1fr))';
 
