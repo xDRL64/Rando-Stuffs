@@ -109,22 +109,26 @@
                         // store raw data (in slot.data as "json/js" object)
                         slot.data = JSON.parse(reader.result);
                         slot.check_data(); // throw error if something goes wrong
+                        // get warning message
+                        let warnMsg = slot.warning ?? '';
+                        slot.warning = null;
                         // (prepare) OoTR file hash (item icons)
                         let fileHash = slot.display_fileHash ? getHtmlTxt_fileHashDisplay(slot.data.file_hash) : '';
                         // display (file hash) + file name
-                        htmlElem.innerHTML = `${slot.name} : ${fileHash}\n${file.name}`;
+                        htmlElem.innerHTML = `${slot.name} : ${fileHash}\n${file.name}\n${warnMsg}`;
                         slot.originalFileName = file.name;
                         // refresh data (build all from raw data)
                         if(slot.update_core){
-                            window.RandoStuffs.OoT.core.setFromFile(slot.data.core);
-                            window.RandoStuffs.OoT.core.buildAll();
+                            //window.RandoStuffs.OoT.core.setFromFile(slot.data.core);
+                            //window.RandoStuffs.OoT.core.buildAll();
                         }
                         if(slot.update_view){
                             window.RandoStuffs.OoT.viewModes.resetViews(mainArea);
                         }
                     }catch{
                         slot.data = null;
-                        htmlElem.innerHTML = `${slot.name} :\nError JSON parsing`;
+                        htmlElem.innerHTML = `${slot.name} :\nError JSON parsing\n${slot.errMsg||''}`;
+                        slot.errMsg = null;
                     }
                 });
                 let file = e.dataTransfer.files[0];
@@ -145,6 +149,7 @@
                 div.addEventListener("dragover", (function(e){enable_dropEffect(e);}) );
                 div.addEventListener("drop", (function(e){drop_file(e, slot, div);}) );
                 fileArea.appendChild(div);
+                slot.htmlElem = div;
             }
 
             // export button

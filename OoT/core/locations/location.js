@@ -21,7 +21,7 @@ window.RandoStuffs.OoT.core.Location.list = [
 	"Song from Impa",
 	"Song from Malon",
 	"Song from Saria",
-	"Song from Composers Grave",
+	"Song from Royal Familys Tomb",
 	"Song from Ocarina of Time",
 	"Song from Windmill",
 
@@ -202,7 +202,7 @@ window.RandoStuffs.OoT.core.Location.list = [
 
 	// Kak GS
 	"Kak GS Tree",
-	"Kak GS Guards House",
+	"Kak GS Near Gate Guard",
 	"Kak GS Watchtower",
 	"Kak GS Skulltula House",
 	"Kak GS House Under Construction",
@@ -231,10 +231,10 @@ window.RandoStuffs.OoT.core.Location.list = [
 	// Graveyard
 	"Graveyard Shield Grave Chest",
 	"Graveyard Heart Piece Grave Chest",
-	"Graveyard Composers Grave Chest",
+	"Graveyard Royal Familys Tomb Chest",
 	"Graveyard Freestanding PoH",
 	"Graveyard Dampe Gravedigging Tour", // minigame
-	"Graveyard Hookshot Chest",
+	"Graveyard Dampe Race Hookshot Chest",
 	"Graveyard Dampe Race Freestanding PoH",
 	
 	// Graveyard GS
@@ -387,11 +387,6 @@ window.RandoStuffs.OoT.core.Location.list = [
 	"GV GS Pillar",
 
 	// GF
-	"GF North F1 Carpenter", // (RED)
-	"GF North F2 Carpenter", // (GREEN)
-	"GF South F1 Carpenter", // (YELLOW)
-	"GF South F2 Carpenter", // (BLUE)
-	"GF Gerudo Membership Card",
 	"GF Chest",
 	"GF HBA 1000 Points", // minigame
 	"GF HBA 1500 Points", // minigame
@@ -399,6 +394,13 @@ window.RandoStuffs.OoT.core.Location.list = [
 	// GF GS
 	"GF GS Top Floor",
 	"GF GS Archery Range",
+
+	// Hideout
+	"Hideout 1 Torch Jail Gerudo Key",   // (RED)    (1trch)
+	"Hideout 2 Torches Jail Gerudo Key", // (BLUE)   (2trch)
+	"Hideout 3 Torches Jail Gerudo Key", // (GREEN)  (3trch)
+	"Hideout 4 Torches Jail Gerudo Key", // (YELLOW) (4trch)
+	"Hideout Gerudo Membership Card",
 
 	// Wasteland
 	"Wasteland Bombchu Salesman",
@@ -600,7 +602,7 @@ window.RandoStuffs.OoT.core.Location.list = [
 	"Shadow Temple Invisible Floormaster Chest",
 
 	// Shadow Temple GS
-	"Shadow Temple GS Like Like Room",
+	"Shadow Temple GS Invisible Blades Room",
 	"Shadow Temple GS Falling Spikes Room",
 	"Shadow Temple GS Single Giant Pot",
 	"Shadow Temple GS Near Ship",
@@ -651,29 +653,29 @@ window.RandoStuffs.OoT.core.Location.list = [
 	"Ice Cavern GS Heart Piece Room",
 	"Ice Cavern GS Push Block Room",
 
-	// Gerudo Training Grounds
-	"Gerudo Training Grounds Lobby Left Chest",
-	"Gerudo Training Grounds Lobby Right Chest",
-	"Gerudo Training Grounds Stalfos Chest",
-	"Gerudo Training Grounds Before Heavy Block Chest",
-	"Gerudo Training Grounds Heavy Block First Chest",  // near
-	"Gerudo Training Grounds Heavy Block Second Chest", // left
-	"Gerudo Training Grounds Heavy Block Third Chest",  // right (invisible)
-	"Gerudo Training Grounds Heavy Block Fourth Chest", // far
-	"Gerudo Training Grounds Eye Statue Chest",
-	"Gerudo Training Grounds Near Scarecrow Chest",
-	"Gerudo Training Grounds Hammer Room Clear Chest",
-	"Gerudo Training Grounds Hammer Room Switch Chest",
-	"Gerudo Training Grounds Freestanding Key",
-	"Gerudo Training Grounds Maze Right Central Chest",
-	"Gerudo Training Grounds Maze Right Side Chest",
-	"Gerudo Training Grounds Underwater Silver Rupee Chest",
-	"Gerudo Training Grounds Beamos Chest",
-	"Gerudo Training Grounds Hidden Ceiling Chest",
-	"Gerudo Training Grounds Maze Path First Chest",
-	"Gerudo Training Grounds Maze Path Second Chest",
-	"Gerudo Training Grounds Maze Path Third Chest",
-	"Gerudo Training Grounds Maze Path Final Chest",
+	// Gerudo Training Ground
+	"Gerudo Training Ground Lobby Left Chest",
+	"Gerudo Training Ground Lobby Right Chest",
+	"Gerudo Training Ground Stalfos Chest",
+	"Gerudo Training Ground Before Heavy Block Chest",
+	"Gerudo Training Ground Heavy Block First Chest",  // near
+	"Gerudo Training Ground Heavy Block Second Chest", // left
+	"Gerudo Training Ground Heavy Block Third Chest",  // right (invisible)
+	"Gerudo Training Ground Heavy Block Fourth Chest", // far
+	"Gerudo Training Ground Eye Statue Chest",
+	"Gerudo Training Ground Near Scarecrow Chest",
+	"Gerudo Training Ground Hammer Room Clear Chest",
+	"Gerudo Training Ground Hammer Room Switch Chest",
+	"Gerudo Training Ground Freestanding Key",
+	"Gerudo Training Ground Maze Right Central Chest",
+	"Gerudo Training Ground Maze Right Side Chest",
+	"Gerudo Training Ground Underwater Silver Rupee Chest",
+	"Gerudo Training Ground Beamos Chest",
+	"Gerudo Training Ground Hidden Ceiling Chest",
+	"Gerudo Training Ground Maze Path First Chest",
+	"Gerudo Training Ground Maze Path Second Chest",
+	"Gerudo Training Ground Maze Path Third Chest",
+	"Gerudo Training Ground Maze Path Final Chest",
 
 	// Ganons Castle
 	"Ganons Castle Forest Trial Chest",
@@ -703,6 +705,189 @@ window.RandoStuffs.OoT.core.Location.list = [
 
 ];
 
+// window.RandoStuffs.OoT.core.Location.oldToNewNames
+//
+(()=>{
+	// last version 
+	let newNameUntil71 = { // PAY VERY ATTENTION TO THE ORDER OF INDEXICES
+		                   // CANNOT INSERT BETWEEN / CAN ONLY ADD AT END
+		'Song' : [
+			"Song from Royal Familys Tomb", // 0
+		],
+		'Kak' : [
+			"Kak GS Near Gate Guard", // 0
+		],
+		'Graveyard' : [
+			"Graveyard Royal Familys Tomb Chest",  // 0
+			"Graveyard Dampe Race Hookshot Chest", // 1
+		],
+		'GF & Hideout' : [
+			"Hideout 1 Torch Jail Gerudo Key",   // 0
+			"Hideout 2 Torches Jail Gerudo Key", // 1
+			"Hideout 3 Torches Jail Gerudo Key", // 2
+			"Hideout 4 Torches Jail Gerudo Key", // 3
+			"Hideout Gerudo Membership Card",    // 4
+		],
+		'Fire Temple MQ' : [
+			"Fire Temple MQ GS Flame Maze Center",    // 0
+			"Fire Temple MQ GS Flame Maze Side Room", // 1
+			"Fire Temple MQ GS Above Flame Maze",     // 2
+		],
+		'Shadow Temple' : [
+			"Shadow Temple GS Invisible Blades Room", // 0
+		],
+		'GTG' : [
+			"Gerudo Training Ground Lobby Left Chest",              // 0
+			"Gerudo Training Ground Lobby Right Chest",             // 1
+			"Gerudo Training Ground Stalfos Chest",                 // 2
+			"Gerudo Training Ground Before Heavy Block Chest",      // 3
+			"Gerudo Training Ground Heavy Block First Chest",       // 4
+			"Gerudo Training Ground Heavy Block Second Chest",      // 5
+			"Gerudo Training Ground Heavy Block Third Chest",       // 6
+			"Gerudo Training Ground Heavy Block Fourth Chest",      // 7
+			"Gerudo Training Ground Eye Statue Chest",              // 8
+			"Gerudo Training Ground Near Scarecrow Chest",          // 9
+			"Gerudo Training Ground Hammer Room Clear Chest",       // 10
+			"Gerudo Training Ground Hammer Room Switch Chest",      // 11
+			"Gerudo Training Ground Freestanding Key",              // 12
+			"Gerudo Training Ground Maze Right Central Chest",      // 13
+			"Gerudo Training Ground Maze Right Side Chest",         // 14
+			"Gerudo Training Ground Underwater Silver Rupee Chest", // 15
+			"Gerudo Training Ground Beamos Chest",                  // 16
+			"Gerudo Training Ground Hidden Ceiling Chest",          // 17
+			"Gerudo Training Ground Maze Path First Chest",         // 18
+			"Gerudo Training Ground Maze Path Second Chest",        // 19
+			"Gerudo Training Ground Maze Path Third Chest",         // 20
+			"Gerudo Training Ground Maze Path Final Chest",         // 21
+		],
+		'GTG MQ' : [
+			"Gerudo Training Ground MQ Lobby Left Chest",              // 0
+			"Gerudo Training Ground MQ Lobby Right Chest",             // 1
+			"Gerudo Training Ground MQ First Iron Knuckle Chest",      // 2
+			"Gerudo Training Ground MQ Before Heavy Block Chest",      // 3
+			"Gerudo Training Ground MQ Heavy Block Chest",             // 4
+			"Gerudo Training Ground MQ Eye Statue Chest",              // 5
+			"Gerudo Training Ground MQ Ice Arrows Chest",              // 6
+			"Gerudo Training Ground MQ Second Iron Knuckle Chest",     // 7
+			"Gerudo Training Ground MQ Flame Circle Chest",            // 8
+			"Gerudo Training Ground MQ Maze Right Central Chest",      // 9
+			"Gerudo Training Ground MQ Maze Right Side Chest",         // 10
+			"Gerudo Training Ground MQ Underwater Silver Rupee Chest", // 11
+			"Gerudo Training Ground MQ Dinolfos Chest",                // 12
+			"Gerudo Training Ground MQ Hidden Ceiling Chest",          // 13
+			"Gerudo Training Ground MQ Maze Path First Chest",         // 14
+			"Gerudo Training Ground MQ Maze Path Third Chest",         // 15
+			"Gerudo Training Ground MQ Maze Path Second Chest",        // 16
+		],
+	};
+
+	let NN = newNameUntil71; // (NN : new name)
+
+	// from v6.0.0 to v7.1.0
+	let oldToNewNames = [ // PAY VERY ATTENTION TO THE ORDER OF INDEXICES
+		// Song
+		[
+			["Song from Composers Grave", NN['Song'][0]],
+		],
+		// Kak
+		[
+			["Kak GS Guards House", NN['Kak'][0]],
+		],
+		// Graveyard
+		[
+			["Graveyard Composers Grave Chest", NN['Graveyard'][0]],
+			["Royal Familys Tomb Chest", NN['Graveyard'][0]],
+
+			["Graveyard Hookshot Chest", NN['Graveyard'][1]],
+		],
+		// GF & Hideout
+		[
+			["GF North F1 Carpenter",     NN['GF & Hideout'][0]],
+			["GF North F2 Carpenter",     NN['GF & Hideout'][2]],
+			["GF South F1 Carpenter",     NN['GF & Hideout'][3]],
+			["GF South F2 Carpenter",     NN['GF & Hideout'][1]],
+			["GF Gerudo Membership Card", NN['GF & Hideout'][4]],
+
+			["TH North 1F Red Jail Gerudo Key",   NN['GF & Hideout'][0]],
+			["TH North 2F Green Jail Gerudo Key", NN['GF & Hideout'][2]],
+			["TH South 1F Olive Jail Gerudo Key", NN['GF & Hideout'][3]],
+			["TH South 2F Blue Jail Gerudo Key",  NN['GF & Hideout'][1]],
+			["TH Gerudo Membership Card",         NN['GF & Hideout'][4]],
+
+			["Hideout Red Jail Guard",         NN['GF & Hideout'][0]],
+			["Hideout Green Jail Guard",       NN['GF & Hideout'][2]],
+			["Hideout Olive Jail Guard",       NN['GF & Hideout'][3]],
+			["Hideout Blue Jail Guard",        NN['GF & Hideout'][1]],
+			["Hideout Gerudo Membership Card", NN['GF & Hideout'][4]],
+
+			["Hideout 1 Torch Jail Guard",   NN['GF & Hideout'][0]],
+			["Hideout 2 Torches Jail Guard", NN['GF & Hideout'][1]],
+			["Hideout 3 Torches Jail Guard", NN['GF & Hideout'][2]],
+			["Hideout 4 Torches Jail Guard", NN['GF & Hideout'][3]],
+
+			["Hideout Jail Guard (1 Torch)",   NN['GF & Hideout'][0]],
+			["Hideout Jail Guard (2 Torches)", NN['GF & Hideout'][1]],
+			["Hideout Jail Guard (3 Torches)", NN['GF & Hideout'][2]],
+			["Hideout Jail Guard (4 Torches)", NN['GF & Hideout'][3]],
+		],
+		// Fire Temple MQ
+		[
+			["Fire Temple MQ GS Fire Wall Maze Center",    NN['Fire Temple MQ'][0]],
+			["Fire Temple MQ GS Fire Wall Maze Side Room", NN['Fire Temple MQ'][1]],
+			["Fire Temple MQ GS Above Fire Wall Maze",     NN['Fire Temple MQ'][2]],
+		],
+		// Shadow Temple
+		[
+			["Shadow Temple GS Like Like Room", NN['Shadow Temple'][0]],
+		],
+		// GTG
+		[
+			["Gerudo Training Grounds Lobby Left Chest",              NN['GTG'][ 0]],
+			["Gerudo Training Grounds Lobby Right Chest",             NN['GTG'][ 1]],
+			["Gerudo Training Grounds Stalfos Chest",                 NN['GTG'][ 2]],
+			["Gerudo Training Grounds Before Heavy Block Chest",      NN['GTG'][ 3]],
+			["Gerudo Training Grounds Heavy Block First Chest",       NN['GTG'][ 4]],
+			["Gerudo Training Grounds Heavy Block Second Chest",      NN['GTG'][ 5]],
+			["Gerudo Training Grounds Heavy Block Third Chest",       NN['GTG'][ 6]],
+			["Gerudo Training Grounds Heavy Block Fourth Chest",      NN['GTG'][ 7]],
+			["Gerudo Training Grounds Eye Statue Chest",              NN['GTG'][ 8]],
+			["Gerudo Training Grounds Near Scarecrow Chest",          NN['GTG'][ 9]],
+			["Gerudo Training Grounds Hammer Room Clear Chest",       NN['GTG'][10]],
+			["Gerudo Training Grounds Hammer Room Switch Chest",      NN['GTG'][11]],
+			["Gerudo Training Grounds Freestanding Key",              NN['GTG'][12]],
+			["Gerudo Training Grounds Maze Right Central Chest",      NN['GTG'][13]],
+			["Gerudo Training Grounds Maze Right Side Chest",         NN['GTG'][14]],
+			["Gerudo Training Grounds Underwater Silver Rupee Chest", NN['GTG'][15]],
+			["Gerudo Training Grounds Beamos Chest",                  NN['GTG'][16]],
+			["Gerudo Training Grounds Hidden Ceiling Chest",          NN['GTG'][17]],
+			["Gerudo Training Grounds Maze Path First Chest",         NN['GTG'][18]],
+			["Gerudo Training Grounds Maze Path Second Chest",        NN['GTG'][19]],
+			["Gerudo Training Grounds Maze Path Third Chest",         NN['GTG'][20]],
+			["Gerudo Training Grounds Maze Path Final Chest",         NN['GTG'][21]],
+		],
+		// GTG MQ
+		[
+			["Gerudo Training Grounds MQ Lobby Left Chest",              NN['GTG MQ'][ 0]],
+			["Gerudo Training Grounds MQ Lobby Right Chest",             NN['GTG MQ'][ 1]],
+			["Gerudo Training Grounds MQ First Iron Knuckle Chest",      NN['GTG MQ'][ 2]],
+			["Gerudo Training Grounds MQ Before Heavy Block Chest",      NN['GTG MQ'][ 3]],
+			["Gerudo Training Grounds MQ Heavy Block Chest",             NN['GTG MQ'][ 4]],
+			["Gerudo Training Grounds MQ Eye Statue Chest",              NN['GTG MQ'][ 5]],
+			["Gerudo Training Grounds MQ Ice Arrows Chest",              NN['GTG MQ'][ 6]],
+			["Gerudo Training Grounds MQ Second Iron Knuckle Chest",     NN['GTG MQ'][ 7]],
+			["Gerudo Training Grounds MQ Flame Circle Chest",            NN['GTG MQ'][ 8]],
+			["Gerudo Training Grounds MQ Maze Right Central Chest",      NN['GTG MQ'][ 9]],
+			["Gerudo Training Grounds MQ Maze Right Side Chest",         NN['GTG MQ'][10]],
+			["Gerudo Training Grounds MQ Underwater Silver Rupee Chest", NN['GTG MQ'][11]],
+			["Gerudo Training Grounds MQ Dinolfos Chest",                NN['GTG MQ'][12]],
+			["Gerudo Training Grounds MQ Hidden Ceiling Chest",          NN['GTG MQ'][13]],
+			["Gerudo Training Grounds MQ Maze Path First Chest",         NN['GTG MQ'][14]],
+			["Gerudo Training Grounds MQ Maze Path Third Chest",         NN['GTG MQ'][15]],
+			["Gerudo Training Grounds MQ Maze Path Second Chest",        NN['GTG MQ'][16]],
+		],
+	];
+	window.RandoStuffs.OoT.core.Location.oldToNewNames = oldToNewNames.flat();
+})();
 
 window.RandoStuffs.OoT.core.Location.make = function(){
 

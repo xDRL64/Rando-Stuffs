@@ -3,6 +3,7 @@ window.RandoStuffs.OoT.core ??= {};
 window.RandoStuffs.OoT.core.Location ??= {};
 
 window.RandoStuffs.OoT.core.Location.context = {
+	// ENVIRONMENT CONTEXTS
 	water             : 'Water',
 	immersed          : 'Immersed',
 	forest            : 'Forest',
@@ -34,21 +35,35 @@ window.RandoStuffs.OoT.core.Location.context = {
 	// paving
 	// relief motif
 	// boulder
+
+	// SANITY CONTEXTS
 	common            : 'Common',
-    song              : 'Song',
-    smallKey          : 'Small Key',
-    mapCompass        : 'Map & Compass',
-    bossKey           : 'Boss Key',
-    bossHeart         : 'Boss Heart',
-    dungeonReward     : 'Dungeon Reward',
+	songQuest         : 'Song Quest',
+	smallKey          : 'Small Key',
+	mapCompass        : 'Map & Compass',
+	bossKey           : 'Boss Key',
+	bossHeart         : 'Boss Heart',
+	dungeonReward     : 'Dungeon Reward',
 	songDungeonReward : 'Songs as Dungeon Reward',
 	stonesMedallions  : 'Stones & Medallions',
-    cow               : 'Cow',
-    scrub             : 'Scrub',
-    shop              : 'Shop',
-    token             : 'Token',
-    tokenReward       : 'GS Token Reward',
-    minigame          : 'Minigame',
+	cow               : 'Cow',
+	scrub             : 'Scrub',
+	shop              : 'Shop',
+	token             : 'Token',
+	tokenReward       : 'GS Token Reward',
+	minigame          : 'Minigame',
+	chest             : 'Chest',
+	// pot
+	// crate
+	// NPC            // scrub / cow / people
+	// kill           // GS / boss heart / kill them all
+	// container      // crate / chest / dampe race chest
+	// freestanding   // fire arrow / dampe race PoH
+
+	
+
+
+
 
 	//treslongetchiantnomaecrir2xtreslongetchiantnomaecrir2x : 'treslongetchiantnomaecrir2xtreslongetchiantnomaecrir2x',
 };
@@ -72,7 +87,98 @@ window.RandoStuffs.OoT.core.Location.context = {
 // 'desert' : GF Wasteland Colossus
 
 
+/* ALL STANDARD COMMON CRATE LOCATIONS
+
+	"Market GS Guard House",      // child only / does not drop rupee
+
+	"Graveyard Freestanding PoH", // (adult only) / does not drop rupee
+
+	"GC GS Boulder Maze",         // child only // ALSO CRATE SANITY as "GC Boulder Maze Crate" any age
+
+	"DMC GS Crate",               // child only / does not drop rupee
+
+	"LH GS Lab Crate",            // (adult only) / does not drop rupee
+
+	"GV Crate Freestanding PoH",  // any age // ALSO CRATE SANITY as "GV Freestanding PoH Crate" any age
+*/
+
+
 window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
+
+	// template (ENVIRONMENT CONTEXTS)
+	{
+		water : [
+			
+		],
+		immersed : [
+			
+		],
+		forest : [
+			
+		],
+		grass : [
+			
+		],
+		wood : [
+			
+		],
+		rock : [
+			
+		],
+		mountain : [
+			
+		],
+		underground : [
+			
+		],
+		sandy : [
+			
+		],
+		earthy : [
+			
+		],
+		people : [
+			
+		],
+		building : [
+			
+		],
+		town : [
+			
+		],
+		desert : [
+			
+		],
+		hot : [
+			
+		],
+		fire : [
+			
+		],
+		cold : [
+			
+		],
+		ice : [
+			
+		],
+		magic : [
+			
+		],
+		explosive : [
+			
+		],
+		song : [
+			
+		],
+		reward : [
+			
+		],
+		enemy : [
+			
+		],
+	},
+
+	// ENVIRONMENT CONTEXTS
 
 	// dungeon rewards & songs
 	{
@@ -120,7 +226,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Phantom Ganon",
 			"Morpha",
 			"Bongo Bongo",
-			"Song from Composers Grave",
+			"Song from Royal Familys Tomb",
 			"Sheik in Ice Cavern",
 		],
 		sandy : [
@@ -144,7 +250,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Twinrova",
 			"Song from Impa",
 			"Song from Malon",
-			"Song from Composers Grave",
+			"Song from Royal Familys Tomb",
 			"Song from Windmill",
 			"Sheik at Temple",
 		],
@@ -168,7 +274,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Sheik in Kakariko",
 		],
 		cold : [
-			"Song from Composers Grave",
+			"Song from Royal Familys Tomb",
 			"Sheik in Ice Cavern",
 		],
 		ice : [
@@ -181,7 +287,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"King Dodongo",
 		],
 		song : [
-			"Song from Composers Grave",
+			"Song from Royal Familys Tomb",
 		],
 		reward : [
 			"Queen Gohma",
@@ -204,14 +310,17 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Sheik in Kakariko",
 			"Sheik at Temple",
 		],
+		enemy : [
+
+		],
 	},
 
 	// KF & LW & SFM
 	{
 		water : [
+			"KF Storms Grotto Chest",
 			"KF GS Bean Patch",
 			"KF GS House of Twins",
-			"KF Storms Grotto Chest",
 			"LW Near Shortcuts Grotto Chest",
 		],
 		immersed : [
@@ -237,7 +346,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"KF Shop Item 7",
 			"KF Shop Item 8",
 			"LW Gift from Saria",
-			"LW Ocarina Memory Game", // minigame
+			"LW Ocarina Memory Game",
 			"LW Target in Woods",
 			"LW Near Shortcuts Grotto Chest",
 			"Deku Theater Skull Mask",
@@ -260,7 +369,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"KF Kokiri Sword Chest",
 			"KF GS Know It All House",
 			"KF GS Bean Patch",
-			"LW Ocarina Memory Game", // minigame
+			"LW Ocarina Memory Game",
 			"Deku Theater Skull Mask",
 			"Deku Theater Mask of Truth",
 			"LW Skull Kid",
@@ -282,6 +391,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"KF Midos Bottom Left Chest",
 			"KF Midos Bottom Right Chest",
 			"KF Kokiri Sword Chest",
+			"KF Storms Grotto Chest",
 			"KF Links House Cow",
 			"KF GS Know It All House",
 			"KF GS House of Twins",
@@ -294,9 +404,11 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"KF Shop Item 7",
 			"KF Shop Item 8",
 			"LW Gift from Saria",
-			"LW Ocarina Memory Game", // minigame
+			"LW Ocarina Memory Game",
 			"LW Target in Woods",
+			"LW Near Shortcuts Grotto Chest",
 			"LW Skull Kid",
+			"SFM Wolfos Grotto Chest",
 		],
 		rock : [
 			"SFM Wolfos Grotto Chest",
@@ -400,7 +512,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"KF Kokiri Sword Chest",
 			"KF Links House Cow",
 			"LW Gift from Saria",
-			"LW Ocarina Memory Game", // minigame
+			"LW Ocarina Memory Game",
 			"LW Target in Woods",
 			"Deku Theater Skull Mask",
 			"Deku Theater Mask of Truth",
@@ -428,7 +540,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
-	// HF & Market & HC & ToT & OGC
+	// HF & Market & ToT & HC & OGC
 	{
 		water : [
 			"HF Near Market Grotto Chest",
@@ -449,8 +561,12 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 
 		],
 		wood : [
+			"HF Near Market Grotto Chest",
+			"HF Southeast Grotto Chest",
+			"HF Open Grotto Chest",
 			"HF GS Near Kak Grotto",
-			"HC GS Tree",
+			"Market Treasure Chest Game Reward",
+			"Market GS Guard House",
 			"Market Bazaar Item 1",
 			"Market Bazaar Item 2",
 			"Market Bazaar Item 3",
@@ -475,6 +591,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Market Bombchu Shop Item 6",
 			"Market Bombchu Shop Item 7",
 			"Market Bombchu Shop Item 8",
+			"HC GS Tree",
 		],
 		rock : [
 
@@ -509,11 +626,11 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"HC GS Tree",
 		],
 		people : [
-			"Market Shooting Gallery Reward", // minigame
-			"Market Bombchu Bowling First Prize", // minigame
-			"Market Bombchu Bowling Second Prize", // minigame
+			"Market Shooting Gallery Reward",
+			"Market Bombchu Bowling First Prize",
+			"Market Bombchu Bowling Second Prize",
 			"Market Lost Dog",
-			"Market Treasure Chest Game Reward", // minigame
+			"Market Treasure Chest Game Reward",
 			"Market 10 Big Poes",
 			"Market GS Guard House",
 			"Market Bazaar Item 1",
@@ -544,11 +661,11 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"HC GS Tree",
 		],
 		building : [
-			"Market Shooting Gallery Reward", // minigame
-			"Market Bombchu Bowling First Prize", // minigame
-			"Market Bombchu Bowling Second Prize", // minigame
+			"Market Shooting Gallery Reward",
+			"Market Bombchu Bowling First Prize",
+			"Market Bombchu Bowling Second Prize",
 			"Market Lost Dog",
-			"Market Treasure Chest Game Reward", // minigame
+			"Market Treasure Chest Game Reward",
 			"Market 10 Big Poes",
 			"Market GS Guard House",
 			"Market Bazaar Item 1",
@@ -580,11 +697,11 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"OGC Great Fairy Reward",
 		],
 		town : [
-			"Market Shooting Gallery Reward", // minigame
-			"Market Bombchu Bowling First Prize", // minigame
-			"Market Bombchu Bowling Second Prize", // minigame
+			"Market Shooting Gallery Reward",
+			"Market Bombchu Bowling First Prize",
+			"Market Bombchu Bowling Second Prize",
 			"Market Lost Dog",
-			"Market Treasure Chest Game Reward", // minigame
+			"Market Treasure Chest Game Reward",
 			"Market 10 Big Poes",
 			"Market GS Guard House",
 			"Market Bazaar Item 1",
@@ -640,8 +757,8 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"HF Cow Grotto Cow",
 			"HF GS Cow Grotto",
 			"HF GS Near Kak Grotto",
-			"Market Bombchu Bowling First Prize", // minigame
-			"Market Bombchu Bowling Second Prize", // minigame
+			"Market Bombchu Bowling First Prize",
+			"Market Bombchu Bowling Second Prize",
 			"HC Great Fairy Reward",
 			"HC GS Storms Grotto",
 		],
@@ -654,11 +771,11 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		reward : [
 			"HF Ocarina of Time Item",
 			"HF Cow Grotto Cow",
-			"Market Shooting Gallery Reward", // minigame
-			"Market Bombchu Bowling First Prize", // minigame
-			"Market Bombchu Bowling Second Prize", // minigame
+			"Market Shooting Gallery Reward",
+			"Market Bombchu Bowling First Prize",
+			"Market Bombchu Bowling Second Prize",
 			"Market Lost Dog",
-			"Market Treasure Chest Game Reward", // minigame
+			"Market Treasure Chest Game Reward",
 			"Market 10 Big Poes",
 			"ToT Light Arrows Cutscene",
 			"HC Malon Egg",
@@ -684,10 +801,10 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Redead Grotto Chest",
 		],
 		immersed : [
-			
+
 		],
 		forest : [
-			
+
 		],
 		grass : [
 			"LLR Deku Scrub Grotto Left",
@@ -699,16 +816,16 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Anju as Child",
 			"Kak Anju as Adult",
 			"Kak GS Tree",
-			"Kak GS Guards House",
+			"Kak GS Near Gate Guard",
 			"Kak GS Skulltula House",
 			"Kak GS House Under Construction",
 			"Graveyard Freestanding PoH",
-			"Graveyard Dampe Gravedigging Tour", // minigame
+			"Graveyard Dampe Gravedigging Tour",
 			"Graveyard GS Bean Patch",
 			"Graveyard GS Wall",
 		],
 		wood : [
-			"LLR Talons Chickens", // minigame
+			"LLR Talons Chickens",
 			"LLR Stables Left Cow",
 			"LLR Stables Right Cow",
 			"LLR Tower Left Cow",
@@ -721,7 +838,9 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Anju as Adult",
 			"Kak Impas House Freestanding PoH",
 			"Kak Windmill Freestanding PoH",
-			"Kak Shooting Gallery Reward", // minigame
+			"Kak Open Grotto Chest",
+			"Kak Redead Grotto Chest",
+			"Kak Shooting Gallery Reward",
 			"Kak 10 Gold Skulltula Reward",
 			"Kak 20 Gold Skulltula Reward",
 			"Kak 30 Gold Skulltula Reward",
@@ -747,9 +866,12 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Potion Shop Item 6",
 			"Kak Potion Shop Item 7",
 			"Kak Potion Shop Item 8",
+			"Graveyard Shield Grave Chest",
+			"Graveyard Heart Piece Grave Chest",
+			"Graveyard Royal Familys Tomb Chest",
 			"Graveyard Freestanding PoH",
-			"Graveyard Dampe Gravedigging Tour", // minigame
-			"Graveyard Hookshot Chest",
+			"Graveyard Dampe Gravedigging Tour",
+			"Graveyard Dampe Race Hookshot Chest",
 			"Graveyard Dampe Race Freestanding PoH",
 			"Graveyard GS Bean Patch",
 		],
@@ -758,15 +880,15 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Redead Grotto Chest",
 			"Graveyard Shield Grave Chest",
 			"Graveyard Heart Piece Grave Chest",
-			"Graveyard Composers Grave Chest",
-			"Graveyard Dampe Gravedigging Tour", // minigame
-			"Graveyard Hookshot Chest",
+			"Graveyard Royal Familys Tomb Chest",
+			"Graveyard Dampe Gravedigging Tour",
+			"Graveyard Dampe Race Hookshot Chest",
 			"Graveyard Dampe Race Freestanding PoH",
 			"Graveyard GS Bean Patch",
 			"Graveyard GS Wall",
 		],
 		mountain : [
-			
+
 		],
 		underground : [
 			"LLR Deku Scrub Grotto Left",
@@ -776,8 +898,8 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Redead Grotto Chest",
 			"Graveyard Shield Grave Chest",
 			"Graveyard Heart Piece Grave Chest",
-			"Graveyard Composers Grave Chest",
-			"Graveyard Hookshot Chest",
+			"Graveyard Royal Familys Tomb Chest",
+			"Graveyard Dampe Race Hookshot Chest",
 			"Graveyard Dampe Race Freestanding PoH",
 		],
 		sandy : [
@@ -785,10 +907,10 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Graveyard GS Bean Patch",
 		],
 		earthy : [
-			"Graveyard Dampe Gravedigging Tour", // minigame
+			"Graveyard Dampe Gravedigging Tour",
 		],
 		people : [
-			"LLR Talons Chickens", // minigame
+			"LLR Talons Chickens",
 			"LLR Stables Left Cow",
 			"LLR Stables Right Cow",
 			"Kak Anju as Child",
@@ -796,7 +918,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Impas House Freestanding PoH",
 			"Kak Windmill Freestanding PoH",
 			"Kak Man on Roof",
-			"Kak Shooting Gallery Reward", // minigame
+			"Kak Shooting Gallery Reward",
 			"Kak 10 Gold Skulltula Reward",
 			"Kak 20 Gold Skulltula Reward",
 			"Kak 30 Gold Skulltula Reward",
@@ -804,7 +926,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak 50 Gold Skulltula Reward",
 			"Kak Impas House Cow",
 			"Kak GS Tree",
-			"Kak GS Guards House",
+			"Kak GS Near Gate Guard",
 			"Kak GS Watchtower",
 			"Kak Bazaar Item 1",
 			"Kak Bazaar Item 2",
@@ -822,12 +944,12 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Potion Shop Item 6",
 			"Kak Potion Shop Item 7",
 			"Kak Potion Shop Item 8",
-			"Graveyard Dampe Gravedigging Tour", // minigame
-			"Graveyard Hookshot Chest",
+			"Graveyard Dampe Gravedigging Tour",
+			"Graveyard Dampe Race Hookshot Chest",
 			"Graveyard Dampe Race Freestanding PoH",
 		],
 		building : [
-			"LLR Talons Chickens", // minigame
+			"LLR Talons Chickens",
 			"LLR Freestanding PoH",
 			"LLR Stables Left Cow",
 			"LLR Stables Right Cow",
@@ -835,7 +957,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"LLR Tower Right Cow",
 			"Kak Impas House Freestanding PoH",
 			"Kak Windmill Freestanding PoH",
-			"Kak Shooting Gallery Reward", // minigame
+			"Kak Shooting Gallery Reward",
 			"Kak 10 Gold Skulltula Reward",
 			"Kak 20 Gold Skulltula Reward",
 			"Kak 30 Gold Skulltula Reward",
@@ -860,8 +982,8 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Potion Shop Item 8",
 			"Graveyard Shield Grave Chest",
 			"Graveyard Heart Piece Grave Chest",
-			"Graveyard Composers Grave Chest",
-			"Graveyard Hookshot Chest",
+			"Graveyard Royal Familys Tomb Chest",
+			"Graveyard Dampe Race Hookshot Chest",
 			"Graveyard Dampe Race Freestanding PoH",
 		],
 		town : [
@@ -872,7 +994,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Man on Roof",
 			"Kak Open Grotto Chest",
 			"Kak Redead Grotto Chest",
-			"Kak Shooting Gallery Reward", // minigame
+			"Kak Shooting Gallery Reward",
 			"Kak 10 Gold Skulltula Reward",
 			"Kak 20 Gold Skulltula Reward",
 			"Kak 30 Gold Skulltula Reward",
@@ -880,7 +1002,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak 50 Gold Skulltula Reward",
 			"Kak Impas House Cow",
 			"Kak GS Tree",
-			"Kak GS Guards House",
+			"Kak GS Near Gate Guard",
 			"Kak GS Watchtower",
 			"Kak GS Skulltula House",
 			"Kak GS House Under Construction",
@@ -903,27 +1025,27 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Potion Shop Item 8",
 		],
 		desert : [
-			
+
 		],
 		hot : [
-			
+
 		],
 		fire : [
-			"Graveyard Hookshot Chest",
+			"Graveyard Dampe Race Hookshot Chest",
 			"Graveyard Dampe Race Freestanding PoH",
 		],
 		cold : [
 			"Graveyard Shield Grave Chest",
 			"Graveyard Heart Piece Grave Chest",
-			"Graveyard Composers Grave Chest",
-			"Graveyard Hookshot Chest",
+			"Graveyard Royal Familys Tomb Chest",
+			"Graveyard Dampe Race Hookshot Chest",
 			"Graveyard Dampe Race Freestanding PoH",
 		],
 		ice : [
-			
+
 		],
 		magic : [
-			"Graveyard Composers Grave Chest",
+			"Graveyard Royal Familys Tomb Chest",
 		],
 		explosive : [
 			"Kak Redead Grotto Chest",
@@ -931,10 +1053,10 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		song : [
 			"Kak Impas House Cow",
 			"Graveyard Heart Piece Grave Chest",
-			"Graveyard Composers Grave Chest",
+			"Graveyard Royal Familys Tomb Chest",
 		],
 		reward : [
-			"LLR Talons Chickens", // minigame
+			"LLR Talons Chickens",
 			"LLR Stables Left Cow",
 			"LLR Stables Right Cow",
 			"LLR Tower Left Cow",
@@ -943,7 +1065,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak Anju as Adult",
 			"Kak Man on Roof",
 			"Kak Redead Grotto Chest",
-			"Kak Shooting Gallery Reward", // minigame
+			"Kak Shooting Gallery Reward",
 			"Kak 10 Gold Skulltula Reward",
 			"Kak 20 Gold Skulltula Reward",
 			"Kak 30 Gold Skulltula Reward",
@@ -951,9 +1073,9 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak 50 Gold Skulltula Reward",
 			"Kak Impas House Cow",
 			"Graveyard Heart Piece Grave Chest",
-			"Graveyard Composers Grave Chest",
-			"Graveyard Dampe Gravedigging Tour", // minigame
-			"Graveyard Hookshot Chest",
+			"Graveyard Royal Familys Tomb Chest",
+			"Graveyard Dampe Gravedigging Tour",
+			"Graveyard Dampe Race Hookshot Chest",
 			"Graveyard Dampe Race Freestanding PoH",
 		],
 		enemy : [
@@ -971,17 +1093,18 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Kak 40 Gold Skulltula Reward",
 			"Kak 50 Gold Skulltula Reward",
 			"Kak GS Tree",
-			"Kak GS Guards House",
+			"Kak GS Near Gate Guard",
 			"Kak GS Watchtower",
 			"Kak GS Skulltula House",
 			"Kak GS House Under Construction",
 			"Kak GS Above Impas House",
 			"Graveyard Heart Piece Grave Chest",
-			"Graveyard Composers Grave Chest",
+			"Graveyard Royal Familys Tomb Chest",
 			"Graveyard GS Bean Patch",
 			"Graveyard GS Wall",
 		],
 	},
+
 	// DMT & GC & DMC
 	{
 		water : [
@@ -1004,19 +1127,23 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"DMC Deku Scrub Grotto Left",
 			"DMC Deku Scrub Grotto Center",
 			"DMC Deku Scrub Grotto Right",
-
 		],
 		wood : [
+			"DMT Chest",
+			"DMT Storms Grotto Chest",
 			"GC Darunias Joy",
 			"GC Pot Freestanding PoH",
 			"GC Rolling Goron as Child",
 			"GC Rolling Goron as Adult",
 			"GC Medigoron",
+			"GC Maze Left Chest",
 			"GC Maze Right Chest",
 			"GC Maze Center Chest",
 			"GC GS Center Platform",
 			"GC GS Boulder Maze",
 			"DMC Wall Freestanding PoH",
+			"DMC Upper Grotto Chest",
+			"DMC GS Crate",
 		],
 		rock : [
 			"DMT Freestanding PoH",
@@ -1263,23 +1390,24 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"DMC GS Bean Patch",
 		],
 	},
+
 	// ZR & ZD & ZF & LH
 	{
 		water : [
 			"ZR Magic Bean Salesman",
 			"ZR Open Grotto Chest",
 			"ZR Frogs in the Rain",
-			"ZR Frogs Ocarina Game", // minigame
+			"ZR Frogs Ocarina Game",
 			"ZR GS Tree",
 			"ZR GS Ladder",
-			"ZD Diving Minigame", // minigame
+			"ZD Diving Minigame",
 			"ZD Chest",
 			"ZF Great Fairy Reward",
 			"ZF Iceberg Freestanding PoH",
 			"ZF GS Above the Log",
 			"ZF GS Tree",
-			"LH Child Fishing", // minigame
-			"LH Adult Fishing", // minigame
+			"LH Child Fishing",
+			"LH Adult Fishing",
 			"LH Lab Dive",
 			"LH Sun",
 			"LH GS Small Island",
@@ -1309,23 +1437,26 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"LH GS Small Island",
 		],
 		wood : [
+			"ZR Open Grotto Chest",
 			"ZR Frogs in the Rain",
-			"ZR Frogs Ocarina Game", // minigame
+			"ZR Frogs Ocarina Game",
 			"ZR GS Tree",
 			"ZR GS Ladder",
+			"ZD Chest",
 			"ZF GS Above the Log",
 			"ZF GS Tree",
-			"LH Child Fishing", // minigame
-			"LH Adult Fishing", // minigame
+			"LH Child Fishing",
+			"LH Adult Fishing",
 			"LH Lab Dive",
 			"LH Freestanding PoH",
 			"LH GS Lab Wall",
+			"LH GS Lab Crate",
 			"LH GS Tree",
 		],
 		rock : [
 			"ZR GS Near Raised Grottos",
 			"ZR GS Above Bridge",
-			"ZD Diving Minigame", // minigame
+			"ZD Diving Minigame",
 			"ZD Chest",
 			"ZD King Zora Thawed",
 			"ZD GS Frozen Waterfall",
@@ -1342,8 +1473,8 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"ZF GS Tree",
 			"ZF GS Hidden Cave",
 			"LH Underwater Item",
-			"LH Child Fishing", // minigame
-			"LH Adult Fishing", // minigame
+			"LH Child Fishing",
+			"LH Adult Fishing",
 			"LH Sun",
 			"LH GS Small Island",
 		],
@@ -1357,13 +1488,12 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"LH Deku Scrub Grotto Left",
 			"LH Deku Scrub Grotto Center",
 			"LH Deku Scrub Grotto Right",
-
 		],
 		sandy : [
 			"ZR Magic Bean Salesman",
 			"ZR Open Grotto Chest",
-			"LH Child Fishing", // minigame
-			"LH Adult Fishing", // minigame
+			"LH Child Fishing",
+			"LH Adult Fishing",
 			"LH GS Bean Patch",
 		],
 		earthy : [
@@ -1371,7 +1501,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 		people : [
 			"ZR Magic Bean Salesman",
-			"ZD Diving Minigame", // minigame
+			"ZD Diving Minigame",
 			"ZD King Zora Thawed",
 			"ZD Shop Item 1",
 			"ZD Shop Item 2",
@@ -1381,8 +1511,8 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"ZD Shop Item 6",
 			"ZD Shop Item 7",
 			"ZD Shop Item 8",
-			"LH Child Fishing", // minigame
-			"LH Adult Fishing", // minigame
+			"LH Child Fishing",
+			"LH Adult Fishing",
 			"LH Lab Dive",
 			"LH GS Lab Crate",
 		],
@@ -1396,13 +1526,13 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"ZD Shop Item 7",
 			"ZD Shop Item 8",
 			"ZF Great Fairy Reward",
-			"LH Child Fishing", // minigame
-			"LH Adult Fishing", // minigame
+			"LH Child Fishing",
+			"LH Adult Fishing",
 			"LH Lab Dive",
 			"LH GS Lab Crate",
 		],
 		town : [
-			"ZD Diving Minigame", // minigame
+			"ZD Diving Minigame",
 			"ZD Chest",
 			"ZD King Zora Thawed",
 			"ZD GS Frozen Waterfall",
@@ -1443,33 +1573,33 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		explosive : [
 			"ZR Magic Bean Salesman",
 			"ZR Frogs in the Rain",
-			"ZR Frogs Ocarina Game", // minigame
+			"ZR Frogs Ocarina Game",
 			"ZR Near Open Grotto Freestanding PoH",
 			"ZR Near Domain Freestanding PoH",
 			"ZR GS Tree",
 			"ZR GS Ladder",
-			"ZD Diving Minigame", // minigame
+			"ZD Diving Minigame",
 			"ZF Great Fairy Reward",
 			"ZF GS Hidden Cave",
 		],
 		song : [
 			"ZR Frogs in the Rain",
-			"ZR Frogs Ocarina Game", // minigame
+			"ZR Frogs Ocarina Game",
 			"ZR Deku Scrub Grotto Front",
 			"ZR Deku Scrub Grotto Rear",
-			"ZD Diving Minigame", // minigame
+			"ZD Diving Minigame",
 			"ZF Great Fairy Reward",
 			"LH Freestanding PoH",
 		],
 		reward : [
 			"ZR Frogs in the Rain",
-			"ZR Frogs Ocarina Game", // minigame
-			"ZD Diving Minigame", // minigame
+			"ZR Frogs Ocarina Game",
+			"ZD Diving Minigame",
 			"ZD Chest",
 			"ZD King Zora Thawed",
 			"ZF Great Fairy Reward",
-			"LH Child Fishing", // minigame
-			"LH Adult Fishing", // minigame
+			"LH Child Fishing",
+			"LH Adult Fishing",
 			"LH Lab Dive",
 			"LH Sun",
 		],
@@ -1495,6 +1625,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"LH GS Tree",
 		],
 	},
+
 	// GV & GF & Wasteland & Colossus
 	{
 		water : [
@@ -1517,21 +1648,25 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Colossus Deku Scrub Grotto Rear",
 		],
 		wood : [
+			"GV Crate Freestanding PoH",
 			"GV Waterfall Freestanding PoH",
+			"GV Chest",
 			"GV Cow",
 			"GV GS Small Bridge",
 			"GV GS Bean Patch",
 			"GV GS Behind Tent",
-			"GF North F1 Carpenter", // (RED)
-			"GF North F2 Carpenter", // (GREEN)
-			"GF South F1 Carpenter", // (YELLOW)
-			"GF South F2 Carpenter", // (BLUE)
-			"GF Gerudo Membership Card",
-			"GF HBA 1000 Points", // minigame
-			"GF HBA 1500 Points", // minigame
+			"GF Chest",
+			"GF HBA 1000 Points",
+			"GF HBA 1500 Points",
 			"GF GS Top Floor",
 			"GF GS Archery Range",
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
+			"Hideout Gerudo Membership Card",
 			"Wasteland Bombchu Salesman",
+			"Wasteland Chest",
 			"Colossus GS Tree",
 		],
 		rock : [
@@ -1544,8 +1679,8 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"GV GS Behind Tent",
 			"GV GS Pillar",
 			"GF Chest",
-			"GF HBA 1000 Points", // minigame
-			"GF HBA 1500 Points", // minigame
+			"GF HBA 1000 Points",
+			"GF HBA 1500 Points",
 			"GF GS Top Floor",
 			"Colossus Freestanding PoH",
 			"Colossus GS Bean Patch",
@@ -1580,46 +1715,46 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"GV GS Bean Patch",
 			"GV GS Behind Tent",
 			"GV GS Pillar",
-			"GF North F1 Carpenter", // (RED)
-			"GF North F2 Carpenter", // (GREEN)
-			"GF South F1 Carpenter", // (YELLOW)
-			"GF South F2 Carpenter", // (BLUE)
-			"GF Gerudo Membership Card",
-			"GF HBA 1000 Points", // minigame
-			"GF HBA 1500 Points", // minigame
+			"GF HBA 1000 Points",
+			"GF HBA 1500 Points",
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
+			"Hideout Gerudo Membership Card",
 			"Wasteland Bombchu Salesman",
 		],
 		building : [
-			"GF North F1 Carpenter", // (RED)
-			"GF North F2 Carpenter", // (GREEN)
-			"GF South F1 Carpenter", // (YELLOW)
-			"GF South F2 Carpenter", // (BLUE)
-			"GF Gerudo Membership Card",
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
+			"Hideout Gerudo Membership Card",
 			"Colossus Great Fairy Reward",
 		],
 		town : [
-			"GF North F1 Carpenter", // (RED)
-			"GF North F2 Carpenter", // (GREEN)
-			"GF South F1 Carpenter", // (YELLOW)
-			"GF South F2 Carpenter", // (BLUE)
-			"GF Gerudo Membership Card",
 			"GF Chest",
-			"GF HBA 1000 Points", // minigame
-			"GF HBA 1500 Points", // minigame
+			"GF HBA 1000 Points",
+			"GF HBA 1500 Points",
 			"GF GS Top Floor",
 			"GF GS Archery Range",
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
+			"Hideout Gerudo Membership Card",
 		],
 		desert : [
-			"GF North F1 Carpenter", // (RED)
-			"GF North F2 Carpenter", // (GREEN)
-			"GF South F1 Carpenter", // (YELLOW)
-			"GF South F2 Carpenter", // (BLUE)
-			"GF Gerudo Membership Card",
 			"GF Chest",
-			"GF HBA 1000 Points", // minigame
-			"GF HBA 1500 Points", // minigame
+			"GF HBA 1000 Points",
+			"GF HBA 1500 Points",
 			"GF GS Top Floor",
 			"GF GS Archery Range",
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
+			"Hideout Gerudo Membership Card",
 			"Wasteland Bombchu Salesman",
 			"Wasteland Chest",
 			"Wasteland GS",
@@ -1641,11 +1776,11 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Colossus GS Hill",
 		],
 		fire : [
-			"GF North F1 Carpenter", // (RED)
-			"GF North F2 Carpenter", // (GREEN)
-			"GF South F1 Carpenter", // (YELLOW)
-			"GF South F2 Carpenter", // (BLUE)
-			"GF Gerudo Membership Card",
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
+			"Hideout Gerudo Membership Card",
 			"Colossus Great Fairy Reward",
 		],
 		cold : [
@@ -1669,14 +1804,14 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 		reward : [
 			"GV Cow",
-			"GF North F1 Carpenter", // (RED)
-			"GF North F2 Carpenter", // (GREEN)
-			"GF South F1 Carpenter", // (YELLOW)
-			"GF South F2 Carpenter", // (BLUE)
-			"GF Gerudo Membership Card",
 			"GF Chest",
-			"GF HBA 1000 Points", // minigame
-			"GF HBA 1500 Points", // minigame
+			"GF HBA 1000 Points",
+			"GF HBA 1500 Points",
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
+			"Hideout Gerudo Membership Card",
 			"Wasteland Chest",
 			"Colossus Great Fairy Reward",
 		],
@@ -1687,12 +1822,12 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"GV GS Bean Patch",
 			"GV GS Behind Tent",
 			"GV GS Pillar",
-			"GF North F1 Carpenter", // (RED)
-			"GF North F2 Carpenter", // (GREEN)
-			"GF South F1 Carpenter", // (YELLOW)
-			"GF South F2 Carpenter", // (BLUE)
 			"GF GS Top Floor",
 			"GF GS Archery Range",
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
 			"Wasteland GS",
 			"Colossus Freestanding PoH",
 			"Colossus Deku Scrub Grotto Front",
@@ -1702,6 +1837,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Colossus GS Hill",
 		],
 	},
+
 
 	// Deku
 	{
@@ -1735,6 +1871,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Deku Tree Slingshot Chest",
 			"Deku Tree Compass Chest",
 			"Deku Tree Compass Room Side Chest",
+			"Deku Tree Basement Chest",
 			"Deku Tree GS Compass Room",
 			"Deku Tree GS Basement Gate",
 		],
@@ -1823,7 +1960,6 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
-
 	// Dodongo
 	{
 		water : [
@@ -1839,11 +1975,15 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			
 		],
 		wood : [
+			"Dodongos Cavern Map Chest",
+			"Dodongos Cavern Compass Chest",
+			"Dodongos Cavern Bomb Flower Platform Chest",
 			"Dodongos Cavern Bomb Bag Chest",
 			"Dodongos Cavern End of Bridge Chest",
 			"Dodongos Cavern GS Side Room Near Lower Lizalfos",
 			"Dodongos Cavern GS Alcove Above Stairs",
 			"Dodongos Cavern GS Vines Above Stairs",
+			"Dodongos Cavern Boss Room Chest",
 		],
 		rock : [
 			"Dodongos Cavern Map Chest",
@@ -1985,84 +2125,862 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 
 
 
-	// template
+
+
+
+	// Jabu
 	{
 		water : [
-			
+
 		],
 		immersed : [
-			
+
 		],
 		forest : [
-			
+
 		],
 		grass : [
-			
+
 		],
 		wood : [
-			
+			"Jabu Jabus Belly Boomerang Chest",
+			"Jabu Jabus Belly Map Chest",
+			"Jabu Jabus Belly Compass Chest",
 		],
 		rock : [
-			
+
 		],
 		mountain : [
-			
+
 		],
 		underground : [
-			
+
 		],
 		sandy : [
-			
+
 		],
 		earthy : [
-			
+
 		],
 		people : [
-			
+
 		],
 		building : [
-			
+
 		],
 		town : [
-			
+
 		],
 		desert : [
-			
+
 		],
 		hot : [
-			
+
 		],
 		fire : [
-			
+
 		],
 		cold : [
-			
+
 		],
 		ice : [
-			
+
 		],
 		magic : [
-			
+
 		],
 		explosive : [
-			
+
 		],
 		song : [
-			
+
 		],
 		reward : [
-			
+
 		],
 		enemy : [
-			
+
+		],
+	},
+
+	// Well
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Bottom of the Well Front Left Fake Wall Chest",
+			"Bottom of the Well Front Center Bombable Chest",
+			"Bottom of the Well Back Left Bombable Chest",
+			"Bottom of the Well Underwater Left Chest",
+			"Bottom of the Well Compass Chest",
+			"Bottom of the Well Center Skulltula Chest",
+			"Bottom of the Well Right Bottom Fake Wall Chest",
+			"Bottom of the Well Fire Keese Chest",
+			"Bottom of the Well Like Like Chest",
+			"Bottom of the Well Map Chest",
+			"Bottom of the Well Underwater Front Chest",
+			"Bottom of the Well Invisible Chest",
+			"Bottom of the Well Lens of Truth Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// Forest
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Forest Temple First Room Chest",
+			"Forest Temple First Stalfos Chest",
+			"Forest Temple Raised Island Courtyard Chest",
+			"Forest Temple Map Chest",
+			"Forest Temple Well Chest",
+			"Forest Temple Eye Switch Chest",
+			"Forest Temple Floormaster Chest",
+			"Forest Temple Red Poe Chest",
+			"Forest Temple Bow Chest",
+			"Forest Temple Blue Poe Chest",
+			"Forest Temple Falling Ceiling Room Chest",
+			"Forest Temple Basement Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// Fire
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Fire Temple Near Boss Chest",
+			"Fire Temple Flare Dancer Chest",
+			"Fire Temple Big Lava Room Lower Open Door Chest",
+			"Fire Temple Big Lava Room Blocked Door Chest",
+			"Fire Temple Boulder Maze Lower Chest",
+			"Fire Temple Boulder Maze Side Room Chest",
+			"Fire Temple Map Chest",
+			"Fire Temple Boulder Maze Shortcut Chest",
+			"Fire Temple Boulder Maze Upper Chest",
+			"Fire Temple Scarecrow Chest",
+			"Fire Temple Compass Chest",
+			"Fire Temple Megaton Hammer Chest",
+			"Fire Temple Highest Goron Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// Water
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Water Temple Compass Chest",
+			"Water Temple Map Chest",
+			"Water Temple Cracked Wall Chest",
+			"Water Temple Torches Chest",
+			"Water Temple Central Pillar Chest",
+			"Water Temple Central Bow Target Chest",
+			"Water Temple Longshot Chest",
+			"Water Temple River Chest",
+			"Water Temple Dragon Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// Shadow
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Shadow Temple Map Chest",
+			"Shadow Temple Hover Boots Chest",
+			"Shadow Temple Compass Chest",
+			"Shadow Temple Early Silver Rupee Chest",
+			"Shadow Temple Invisible Blades Visible Chest",
+			"Shadow Temple Invisible Blades Invisible Chest",
+			"Shadow Temple Falling Spikes Lower Chest",
+			"Shadow Temple Falling Spikes Upper Chest",
+			"Shadow Temple Falling Spikes Switch Chest",
+			"Shadow Temple Invisible Spikes Chest",
+			"Shadow Temple Wind Hint Chest",
+			"Shadow Temple After Wind Enemy Chest",
+			"Shadow Temple After Wind Hidden Chest",
+			"Shadow Temple Spike Walls Left Chest",
+			"Shadow Temple Invisible Floormaster Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// Spirit
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Spirit Temple Child Bridge Chest",
+			"Spirit Temple Child Early Torches Chest",
+			"Spirit Temple Child Climb North Chest",
+			"Spirit Temple Child Climb East Chest",
+			"Spirit Temple Map Chest",
+			"Spirit Temple Sun Block Room Chest",
+			"Spirit Temple Silver Gauntlets Chest",
+			"Spirit Temple Compass Chest",
+			"Spirit Temple Early Adult Right Chest",
+			"Spirit Temple First Mirror Left Chest",
+			"Spirit Temple First Mirror Right Chest",
+			"Spirit Temple Statue Room Northeast Chest",
+			"Spirit Temple Statue Room Hand Chest",
+			"Spirit Temple Near Four Armos Chest",
+			"Spirit Temple Hallway Right Invisible Chest",
+			"Spirit Temple Hallway Left Invisible Chest",
+			"Spirit Temple Mirror Shield Chest",
+			"Spirit Temple Topmost Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// Ice
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Ice Cavern Map Chest",
+			"Ice Cavern Compass Chest",
+			"Ice Cavern Iron Boots Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// GTG
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Gerudo Training Ground Lobby Left Chest",
+			"Gerudo Training Ground Lobby Right Chest",
+			"Gerudo Training Ground Stalfos Chest",
+			"Gerudo Training Ground Before Heavy Block Chest",
+			"Gerudo Training Ground Heavy Block First Chest",  // near
+			"Gerudo Training Ground Heavy Block Second Chest", // left
+			"Gerudo Training Ground Heavy Block Third Chest",  // right (invisible)
+			"Gerudo Training Ground Heavy Block Fourth Chest", // far
+			"Gerudo Training Ground Eye Statue Chest",
+			"Gerudo Training Ground Near Scarecrow Chest",
+			"Gerudo Training Ground Hammer Room Clear Chest",
+			"Gerudo Training Ground Hammer Room Switch Chest",
+			"Gerudo Training Ground Maze Right Central Chest",
+			"Gerudo Training Ground Maze Right Side Chest",
+			"Gerudo Training Ground Underwater Silver Rupee Chest",
+			"Gerudo Training Ground Beamos Chest",
+			"Gerudo Training Ground Hidden Ceiling Chest",
+			"Gerudo Training Ground Maze Path First Chest",
+			"Gerudo Training Ground Maze Path Second Chest",
+			"Gerudo Training Ground Maze Path Third Chest",
+			"Gerudo Training Ground Maze Path Final Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// Ganon
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Ganons Castle Forest Trial Chest",
+			"Ganons Castle Water Trial Left Chest",
+			"Ganons Castle Water Trial Right Chest",
+			"Ganons Castle Shadow Trial Front Chest",
+			"Ganons Castle Shadow Trial Golden Gauntlets Chest",
+			"Ganons Castle Light Trial First Left Chest",
+			"Ganons Castle Light Trial Second Left Chest",
+			"Ganons Castle Light Trial Third Left Chest",
+			"Ganons Castle Light Trial First Right Chest",
+			"Ganons Castle Light Trial Second Right Chest",
+			"Ganons Castle Light Trial Third Right Chest",
+			"Ganons Castle Light Trial Invisible Enemies Chest",
+			"Ganons Castle Light Trial Lullaby Chest",
+			"Ganons Castle Spirit Trial Crystal Switch Chest",
+			"Ganons Castle Spirit Trial Invisible Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
 		],
 	},
 
 
-	// SANITY
+
+
+	// SANITY CONTEXTS
 	{
 		// contains : kokiri sword, ocarinas, weird egg,
 		//            magic beans, gerudo card, medigoron/salesman,
+		// includes : chests, NPC gifts/rewards/minigames, boss reward(stoneMed)
+		// (+)        extended frog songs 
+		// exculdes : GS sanity, extended scrubs, cows, shops, song learning spots,
+		// (+)        freestanding sanity, pots, crates, beehive
 		common : [
 			// boss reward
 			"Links Pocket",
@@ -2135,10 +3053,10 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			// Graveyard
 			"Graveyard Shield Grave Chest",
 			"Graveyard Heart Piece Grave Chest",
-			"Graveyard Composers Grave Chest",
+			"Graveyard Royal Familys Tomb Chest",
 			"Graveyard Freestanding PoH",
 			"Graveyard Dampe Gravedigging Tour", // minigame
-			"Graveyard Hookshot Chest",
+			"Graveyard Dampe Race Hookshot Chest",
 			"Graveyard Dampe Race Freestanding PoH",
 			// DMT
 			"DMT Freestanding PoH",
@@ -2187,14 +3105,15 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"GV Waterfall Freestanding PoH",
 			"GV Chest",
 			// GF
-			"GF North F1 Carpenter", // (RED)
-			"GF North F2 Carpenter", // (GREEN)
-			"GF South F1 Carpenter", // (YELLOW)
-			"GF South F2 Carpenter", // (BLUE)
-			"GF Gerudo Membership Card",
 			"GF Chest",
 			"GF HBA 1000 Points", // minigame
 			"GF HBA 1500 Points", // minigame
+			// Hideout
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
+			"Hideout Gerudo Membership Card",
 			// Wasteland
 			"Wasteland Bombchu Salesman",
 			"Wasteland Chest",
@@ -2338,29 +3257,29 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Ice Cavern Compass Chest",
 			"Ice Cavern Freestanding PoH",
 			"Ice Cavern Iron Boots Chest",
-			// Gerudo Training Grounds
-			"Gerudo Training Grounds Lobby Left Chest",
-			"Gerudo Training Grounds Lobby Right Chest",
-			"Gerudo Training Grounds Stalfos Chest",
-			"Gerudo Training Grounds Before Heavy Block Chest",
-			"Gerudo Training Grounds Heavy Block First Chest",  // near
-			"Gerudo Training Grounds Heavy Block Second Chest", // left
-			"Gerudo Training Grounds Heavy Block Third Chest",  // right (invisible)
-			"Gerudo Training Grounds Heavy Block Fourth Chest", // far
-			"Gerudo Training Grounds Eye Statue Chest",
-			"Gerudo Training Grounds Near Scarecrow Chest",
-			"Gerudo Training Grounds Hammer Room Clear Chest",
-			"Gerudo Training Grounds Hammer Room Switch Chest",
-			"Gerudo Training Grounds Freestanding Key",
-			"Gerudo Training Grounds Maze Right Central Chest",
-			"Gerudo Training Grounds Maze Right Side Chest",
-			"Gerudo Training Grounds Underwater Silver Rupee Chest",
-			"Gerudo Training Grounds Beamos Chest",
-			"Gerudo Training Grounds Hidden Ceiling Chest",
-			"Gerudo Training Grounds Maze Path First Chest",
-			"Gerudo Training Grounds Maze Path Second Chest",
-			"Gerudo Training Grounds Maze Path Third Chest",
-			"Gerudo Training Grounds Maze Path Final Chest",
+			// Gerudo Training Ground
+			"Gerudo Training Ground Lobby Left Chest",
+			"Gerudo Training Ground Lobby Right Chest",
+			"Gerudo Training Ground Stalfos Chest",
+			"Gerudo Training Ground Before Heavy Block Chest",
+			"Gerudo Training Ground Heavy Block First Chest",  // near
+			"Gerudo Training Ground Heavy Block Second Chest", // left
+			"Gerudo Training Ground Heavy Block Third Chest",  // right (invisible)
+			"Gerudo Training Ground Heavy Block Fourth Chest", // far
+			"Gerudo Training Ground Eye Statue Chest",
+			"Gerudo Training Ground Near Scarecrow Chest",
+			"Gerudo Training Ground Hammer Room Clear Chest",
+			"Gerudo Training Ground Hammer Room Switch Chest",
+			"Gerudo Training Ground Freestanding Key",
+			"Gerudo Training Ground Maze Right Central Chest",
+			"Gerudo Training Ground Maze Right Side Chest",
+			"Gerudo Training Ground Underwater Silver Rupee Chest",
+			"Gerudo Training Ground Beamos Chest",
+			"Gerudo Training Ground Hidden Ceiling Chest",
+			"Gerudo Training Ground Maze Path First Chest",
+			"Gerudo Training Ground Maze Path Second Chest",
+			"Gerudo Training Ground Maze Path Third Chest",
+			"Gerudo Training Ground Maze Path Final Chest",
 			// Ganons Castle
 			"Ganons Castle Forest Trial Chest",
 			"Ganons Castle Water Trial Left Chest",
@@ -2380,12 +3299,12 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			// Ganons Tower
 			"Ganons Tower Boss Key Chest",
 		],
-		song : [
+		songQuest : [
 			// song
 			"Song from Impa",
 			"Song from Malon",
 			"Song from Saria",
-			"Song from Composers Grave",
+			"Song from Royal Familys Tomb",
 			"Song from Ocarina of Time",
 			"Song from Windmill",
 			// teleport song
@@ -2397,11 +3316,11 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Sheik at Temple",
 		],
 		smallKey : [
-			// GF
-			"GF North F1 Carpenter", // (RED)
-			"GF North F2 Carpenter", // (GREEN)
-			"GF South F1 Carpenter", // (YELLOW)
-			"GF South F2 Carpenter", // (BLUE)
+			// Hideout
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
 			// Forest Temple
 			"Forest Temple First Room Chest",
 			"Forest Temple First Stalfos Chest",
@@ -2440,16 +3359,16 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Bottom of the Well Front Left Fake Wall Chest",
 			"Bottom of the Well Freestanding Key",
 			"Bottom of the Well Right Bottom Fake Wall Chest",
-			// Gerudo Training Grounds
-			"Gerudo Training Grounds Stalfos Chest",
-			"Gerudo Training Grounds Heavy Block Third Chest",
-			"Gerudo Training Grounds Eye Statue Chest",
-			"Gerudo Training Grounds Near Scarecrow Chest",
-			"Gerudo Training Grounds Hammer Room Switch Chest",
-			"Gerudo Training Grounds Freestanding Key",
-			"Gerudo Training Grounds Underwater Silver Rupee Chest",
-			"Gerudo Training Grounds Beamos Chest",
-			"Gerudo Training Grounds Hidden Ceiling Chest",
+			// Gerudo Training Ground
+			"Gerudo Training Ground Stalfos Chest",
+			"Gerudo Training Ground Heavy Block Third Chest",
+			"Gerudo Training Ground Eye Statue Chest",
+			"Gerudo Training Ground Near Scarecrow Chest",
+			"Gerudo Training Ground Hammer Room Switch Chest",
+			"Gerudo Training Ground Freestanding Key",
+			"Gerudo Training Ground Underwater Silver Rupee Chest",
+			"Gerudo Training Ground Beamos Chest",
+			"Gerudo Training Ground Hidden Ceiling Chest",
 			// Ganons Castle
 			"Ganons Castle Light Trial Invisible Enemies Chest",
 			"Ganons Castle Light Trial Lullaby Chest",
@@ -2531,7 +3450,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			// minidungeon reward
 			"Bottom of the Well Lens of Truth Chest",
 			"Ice Cavern Iron Boots Chest",
-			"Gerudo Training Grounds Maze Path Final Chest",
+			"Gerudo Training Ground Maze Path Final Chest",
 		],
 		songDungeonReward : [
 			// boss reward
@@ -2546,7 +3465,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			// minidungeon reward
 			"Bottom of the Well Lens of Truth Chest",
 			"Ice Cavern Iron Boots Chest",
-			"Gerudo Training Grounds Maze Path Final Chest",
+			"Gerudo Training Ground Maze Path Final Chest",
 			// + zelda's lullaby location
 			"Song from Impa",
 		],
@@ -2729,7 +3648,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"LLR GS Back Wall",
 			// Kak GS
 			"Kak GS Tree",
-			"Kak GS Guards House",
+			"Kak GS Near Gate Guard",
 			"Kak GS Watchtower",
 			"Kak GS Skulltula House",
 			"Kak GS House Under Construction",
@@ -2820,7 +3739,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Water Temple GS Falling Platform Room",
 			"Water Temple GS River",
 			// Shadow Temple GS
-			"Shadow Temple GS Like Like Room",
+			"Shadow Temple GS Invisible Blades Room",
 			"Shadow Temple GS Falling Spikes Room",
 			"Shadow Temple GS Single Giant Pot",
 			"Shadow Temple GS Near Ship",
@@ -2869,6 +3788,206 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"GF HBA 1000 Points", // minigame
 			"GF HBA 1500 Points", // minigame
 		],
+		chest : [
+			// KF
+			"KF Midos Top Left Chest",
+			"KF Midos Top Right Chest",
+			"KF Midos Bottom Left Chest",
+			"KF Midos Bottom Right Chest",
+			"KF Kokiri Sword Chest",
+			"KF Storms Grotto Chest",
+			// LW
+			"LW Near Shortcuts Grotto Chest",
+			// SFM
+			"SFM Wolfos Grotto Chest",
+			// HF
+			"HF Near Market Grotto Chest",
+			"HF Southeast Grotto Chest",
+			"HF Open Grotto Chest",
+			// Market
+			"Market Treasure Chest Game Reward", // minigame
+			// Kak
+			"Kak Open Grotto Chest",
+			"Kak Redead Grotto Chest",
+			// Graveyard
+			"Graveyard Shield Grave Chest",
+			"Graveyard Heart Piece Grave Chest",
+			"Graveyard Royal Familys Tomb Chest",
+			"Graveyard Dampe Race Hookshot Chest",
+			// DMT
+			"DMT Chest",
+			"DMT Storms Grotto Chest",
+			// GC
+			"GC Maze Left Chest",
+			"GC Maze Right Chest",
+			"GC Maze Center Chest",
+			// DMC
+			"DMC Upper Grotto Chest",
+			// ZR
+			"ZR Open Grotto Chest",
+			// ZD
+			"ZD Chest",
+			// GV
+			"GV Chest",
+			// GF
+			"GF Chest",
+			// Wasteland
+			"Wasteland Chest",
+			// Deku Tree
+			"Deku Tree Map Chest",
+			"Deku Tree Slingshot Room Side Chest",
+			"Deku Tree Slingshot Chest",
+			"Deku Tree Compass Chest",
+			"Deku Tree Compass Room Side Chest",
+			"Deku Tree Basement Chest",
+			// Dodongos Cavern
+			"Dodongos Cavern Map Chest",
+			"Dodongos Cavern Compass Chest",
+			"Dodongos Cavern Bomb Flower Platform Chest",
+			"Dodongos Cavern Bomb Bag Chest",
+			"Dodongos Cavern End of Bridge Chest",
+			// Dodongos Cavern boss room
+			"Dodongos Cavern Boss Room Chest",
+			// Jabu Jabus Belly
+			"Jabu Jabus Belly Boomerang Chest",
+			"Jabu Jabus Belly Map Chest",
+			"Jabu Jabus Belly Compass Chest",
+			// Bottom of the Well
+			"Bottom of the Well Front Left Fake Wall Chest",
+			"Bottom of the Well Front Center Bombable Chest",
+			"Bottom of the Well Back Left Bombable Chest",
+			"Bottom of the Well Underwater Left Chest",
+			"Bottom of the Well Compass Chest",
+			"Bottom of the Well Center Skulltula Chest",
+			"Bottom of the Well Right Bottom Fake Wall Chest",
+			"Bottom of the Well Fire Keese Chest",
+			"Bottom of the Well Like Like Chest",
+			"Bottom of the Well Map Chest",
+			"Bottom of the Well Underwater Front Chest",
+			"Bottom of the Well Invisible Chest",
+			"Bottom of the Well Lens of Truth Chest",
+			// Forest Temple
+			"Forest Temple First Room Chest",
+			"Forest Temple First Stalfos Chest",
+			"Forest Temple Raised Island Courtyard Chest",
+			"Forest Temple Map Chest",
+			"Forest Temple Well Chest",
+			"Forest Temple Eye Switch Chest",
+			"Forest Temple Boss Key Chest",
+			"Forest Temple Floormaster Chest",
+			"Forest Temple Red Poe Chest",
+			"Forest Temple Bow Chest",
+			"Forest Temple Blue Poe Chest",
+			"Forest Temple Falling Ceiling Room Chest",
+			"Forest Temple Basement Chest",
+			// Fire Temple
+			"Fire Temple Near Boss Chest",
+			"Fire Temple Flare Dancer Chest",
+			"Fire Temple Boss Key Chest",
+			"Fire Temple Big Lava Room Lower Open Door Chest",
+			"Fire Temple Big Lava Room Blocked Door Chest",
+			"Fire Temple Boulder Maze Lower Chest",
+			"Fire Temple Boulder Maze Side Room Chest",
+			"Fire Temple Map Chest",
+			"Fire Temple Boulder Maze Shortcut Chest",
+			"Fire Temple Boulder Maze Upper Chest",
+			"Fire Temple Scarecrow Chest",
+			"Fire Temple Compass Chest",
+			"Fire Temple Megaton Hammer Chest",
+			"Fire Temple Highest Goron Chest",
+			// Water Temple
+			"Water Temple Compass Chest",
+			"Water Temple Map Chest",
+			"Water Temple Cracked Wall Chest",
+			"Water Temple Torches Chest",
+			"Water Temple Boss Key Chest",
+			"Water Temple Central Pillar Chest",
+			"Water Temple Central Bow Target Chest",
+			"Water Temple Longshot Chest",
+			"Water Temple River Chest",
+			"Water Temple Dragon Chest",
+			// Shadow Temple
+			"Shadow Temple Map Chest",
+			"Shadow Temple Hover Boots Chest",
+			"Shadow Temple Compass Chest",
+			"Shadow Temple Early Silver Rupee Chest",
+			"Shadow Temple Invisible Blades Visible Chest",
+			"Shadow Temple Invisible Blades Invisible Chest",
+			"Shadow Temple Falling Spikes Lower Chest",
+			"Shadow Temple Falling Spikes Upper Chest",
+			"Shadow Temple Falling Spikes Switch Chest",
+			"Shadow Temple Invisible Spikes Chest",
+			"Shadow Temple Wind Hint Chest",
+			"Shadow Temple After Wind Enemy Chest",
+			"Shadow Temple After Wind Hidden Chest",
+			"Shadow Temple Spike Walls Left Chest",
+			"Shadow Temple Boss Key Chest",
+			"Shadow Temple Invisible Floormaster Chest",
+			// Spirit Temple
+			"Spirit Temple Child Bridge Chest",
+			"Spirit Temple Child Early Torches Chest",
+			"Spirit Temple Child Climb North Chest",
+			"Spirit Temple Child Climb East Chest",
+			"Spirit Temple Map Chest",
+			"Spirit Temple Sun Block Room Chest",
+			"Spirit Temple Silver Gauntlets Chest",
+			"Spirit Temple Compass Chest",
+			"Spirit Temple Early Adult Right Chest",
+			"Spirit Temple First Mirror Left Chest",
+			"Spirit Temple First Mirror Right Chest",
+			"Spirit Temple Statue Room Northeast Chest",
+			"Spirit Temple Statue Room Hand Chest",
+			"Spirit Temple Near Four Armos Chest",
+			"Spirit Temple Hallway Right Invisible Chest",
+			"Spirit Temple Hallway Left Invisible Chest",
+			"Spirit Temple Mirror Shield Chest",
+			"Spirit Temple Boss Key Chest",
+			"Spirit Temple Topmost Chest",
+			// Ice Cavern
+			"Ice Cavern Map Chest",
+			"Ice Cavern Compass Chest",
+			"Ice Cavern Iron Boots Chest",
+			// Gerudo Training Ground
+			"Gerudo Training Ground Lobby Left Chest",
+			"Gerudo Training Ground Lobby Right Chest",
+			"Gerudo Training Ground Stalfos Chest",
+			"Gerudo Training Ground Before Heavy Block Chest",
+			"Gerudo Training Ground Heavy Block First Chest",  // near
+			"Gerudo Training Ground Heavy Block Second Chest", // left
+			"Gerudo Training Ground Heavy Block Third Chest",  // right (invisible)
+			"Gerudo Training Ground Heavy Block Fourth Chest", // far
+			"Gerudo Training Ground Eye Statue Chest",
+			"Gerudo Training Ground Near Scarecrow Chest",
+			"Gerudo Training Ground Hammer Room Clear Chest",
+			"Gerudo Training Ground Hammer Room Switch Chest",
+			"Gerudo Training Ground Maze Right Central Chest",
+			"Gerudo Training Ground Maze Right Side Chest",
+			"Gerudo Training Ground Underwater Silver Rupee Chest",
+			"Gerudo Training Ground Beamos Chest",
+			"Gerudo Training Ground Hidden Ceiling Chest",
+			"Gerudo Training Ground Maze Path First Chest",
+			"Gerudo Training Ground Maze Path Second Chest",
+			"Gerudo Training Ground Maze Path Third Chest",
+			"Gerudo Training Ground Maze Path Final Chest",
+			// Ganons Castle
+			"Ganons Castle Forest Trial Chest",
+			"Ganons Castle Water Trial Left Chest",
+			"Ganons Castle Water Trial Right Chest",
+			"Ganons Castle Shadow Trial Front Chest",
+			"Ganons Castle Shadow Trial Golden Gauntlets Chest",
+			"Ganons Castle Light Trial First Left Chest",
+			"Ganons Castle Light Trial Second Left Chest",
+			"Ganons Castle Light Trial Third Left Chest",
+			"Ganons Castle Light Trial First Right Chest",
+			"Ganons Castle Light Trial Second Right Chest",
+			"Ganons Castle Light Trial Third Right Chest",
+			"Ganons Castle Light Trial Invisible Enemies Chest",
+			"Ganons Castle Light Trial Lullaby Chest",
+			"Ganons Castle Spirit Trial Crystal Switch Chest",
+			"Ganons Castle Spirit Trial Invisible Chest",
+			// Ganons Tower
+			"Ganons Tower Boss Key Chest",
+		],
 	}
 ];
 
@@ -2916,6 +4035,779 @@ window.RandoStuffs.OoT.core.Location.sortUpdate_byContext = ()=>{
 	}
 }
 
+// build back the ENVIRONMENT CONTEXTS of CONTEXT_SETS
+// includes the empty 'template' of ENVIRONMENT CONTEXTS
+// but does not the SANITY CONTEXTS of CONTEXT_SETS
+// (output web page text contains some not raw text chars
+// which make some bug in vscode when foldable code is used.
+// copy/past in a notepad to loose the weird data, and copy from notepad)
+window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
+	let locData = window.RandoStuffs.OoT.core.Location.Data;
+	let allCtxID = Object.keys(window.RandoStuffs.OoT.core.Location.context);
+	let envCtxID = Object.keys(window.RandoStuffs.OoT.core.Location.CONTEXT_SETS[0]);
+	// ENVIRONMENT CONTEXTS
+
+	let groupedLoc_struct = [
+		{	name : '// dungeon rewards & songs',
+			locs : [
+				// boss reward
+				"Links Pocket",
+				"Queen Gohma",
+				"King Dodongo",
+				"Barinade",
+				"Phantom Ganon",
+				"Volvagia",
+				"Morpha",
+				"Bongo Bongo",
+				"Twinrova",
+				// song
+				"Song from Impa",
+				"Song from Malon",
+				"Song from Saria",
+				"Song from Royal Familys Tomb",
+				"Song from Ocarina of Time",
+				"Song from Windmill",
+				// teleport song
+				"Sheik in Forest",
+				"Sheik in Crater",
+				"Sheik in Ice Cavern",
+				"Sheik at Colossus",
+				"Sheik in Kakariko",
+				"Sheik at Temple",
+			],
+		},
+		{	name : '// KF & LW & SFM',
+			locs : [
+				// KF
+				"KF Midos Top Left Chest",
+				"KF Midos Top Right Chest",
+				"KF Midos Bottom Left Chest",
+				"KF Midos Bottom Right Chest",
+				"KF Kokiri Sword Chest",
+				"KF Storms Grotto Chest",
+				// KF cow
+				"KF Links House Cow",
+				// KF GS
+				"KF GS Know It All House",
+				"KF GS Bean Patch",
+				"KF GS House of Twins",
+				// KF shop
+				"KF Shop Item 1",
+				"KF Shop Item 2",
+				"KF Shop Item 3",
+				"KF Shop Item 4",
+				"KF Shop Item 5",
+				"KF Shop Item 6",
+				"KF Shop Item 7",
+				"KF Shop Item 8",
+				// LW
+				"LW Gift from Saria",
+				"LW Ocarina Memory Game", // minigame
+				"LW Target in Woods",
+				"LW Near Shortcuts Grotto Chest",
+				"Deku Theater Skull Mask",
+				"Deku Theater Mask of Truth",
+				"LW Skull Kid",
+				// LW scrub
+				"LW Deku Scrub Near Bridge",
+				"LW Deku Scrub Near Deku Theater Left",
+				"LW Deku Scrub Near Deku Theater Right",
+				"LW Deku Scrub Grotto Front",
+				"LW Deku Scrub Grotto Rear",
+				// LW GS
+				"LW GS Bean Patch Near Bridge",
+				"LW GS Bean Patch Near Theater",
+				"LW GS Above Theater",
+				// SFM
+				"SFM Wolfos Grotto Chest",
+				// SFM scrub
+				"SFM Deku Scrub Grotto Front",
+				"SFM Deku Scrub Grotto Rear",
+				// SFM GS
+				"SFM GS",
+			],
+		},
+		{	name : '// HF & Market & ToT & HC & OGC',
+			locs : [
+				// HF
+				"HF Ocarina of Time Item",
+				"HF Near Market Grotto Chest",
+				"HF Tektite Grotto Freestanding PoH",
+				"HF Southeast Grotto Chest",
+				"HF Open Grotto Chest",
+				// HF scrub
+				"HF Deku Scrub Grotto",
+				// HF cow
+				"HF Cow Grotto Cow",
+				// HF GS
+				"HF GS Cow Grotto",
+				"HF GS Near Kak Grotto",
+				// Market
+				"Market Shooting Gallery Reward", // minigame
+				"Market Bombchu Bowling First Prize", // minigame
+				"Market Bombchu Bowling Second Prize", // minigame
+				"Market Lost Dog",
+				"Market Treasure Chest Game Reward", // minigame
+				"Market 10 Big Poes",
+				// Market GS
+				"Market GS Guard House",
+				// Market shop
+				"Market Bazaar Item 1",
+				"Market Bazaar Item 2",
+				"Market Bazaar Item 3",
+				"Market Bazaar Item 4",
+				"Market Bazaar Item 5",
+				"Market Bazaar Item 6",
+				"Market Bazaar Item 7",
+				"Market Bazaar Item 8",
+				// Market shop
+				"Market Potion Shop Item 1",
+				"Market Potion Shop Item 2",
+				"Market Potion Shop Item 3",
+				"Market Potion Shop Item 4",
+				"Market Potion Shop Item 5",
+				"Market Potion Shop Item 6",
+				"Market Potion Shop Item 7",
+				"Market Potion Shop Item 8",
+				// Market shop
+				"Market Bombchu Shop Item 1",
+				"Market Bombchu Shop Item 2",
+				"Market Bombchu Shop Item 3",
+				"Market Bombchu Shop Item 4",
+				"Market Bombchu Shop Item 5",
+				"Market Bombchu Shop Item 6",
+				"Market Bombchu Shop Item 7",
+				"Market Bombchu Shop Item 8",
+				// ToT
+				"ToT Light Arrows Cutscene",
+				// HC
+				"HC Malon Egg",
+				"HC Great Fairy Reward",
+				// HC GS
+				"HC GS Tree",
+				"HC GS Storms Grotto",
+				// OGC
+				"OGC Great Fairy Reward",
+				// OGC GS
+				"OGC GS",
+			],
+		},
+		{	name : '// LLR & Kak & Graveyard',
+			locs : [
+				// LLR
+				"LLR Talons Chickens", // minigame
+				"LLR Freestanding PoH",
+				// LLR scrub
+				"LLR Deku Scrub Grotto Left",
+				"LLR Deku Scrub Grotto Center",
+				"LLR Deku Scrub Grotto Right",
+				// LLR cow
+				"LLR Stables Left Cow",
+				"LLR Stables Right Cow",
+				"LLR Tower Left Cow",
+				"LLR Tower Right Cow",
+				// LLR GS
+				"LLR GS House Window",
+				"LLR GS Tree",
+				"LLR GS Rain Shed",
+				"LLR GS Back Wall",
+				// Kak
+				"Kak Anju as Child",
+				"Kak Anju as Adult",
+				"Kak Impas House Freestanding PoH",
+				"Kak Windmill Freestanding PoH",
+				"Kak Man on Roof",
+				"Kak Open Grotto Chest",
+				"Kak Redead Grotto Chest",
+				"Kak Shooting Gallery Reward", // minigame
+				// Kak GS reward
+				"Kak 10 Gold Skulltula Reward",
+				"Kak 20 Gold Skulltula Reward",
+				"Kak 30 Gold Skulltula Reward",
+				"Kak 40 Gold Skulltula Reward",
+				"Kak 50 Gold Skulltula Reward",
+				// Kak cow
+				"Kak Impas House Cow",
+				// Kak GS
+				"Kak GS Tree",
+				"Kak GS Near Gate Guard",
+				"Kak GS Watchtower",
+				"Kak GS Skulltula House",
+				"Kak GS House Under Construction",
+				"Kak GS Above Impas House",
+				// Kak shop
+				"Kak Bazaar Item 1",
+				"Kak Bazaar Item 2",
+				"Kak Bazaar Item 3",
+				"Kak Bazaar Item 4",
+				"Kak Bazaar Item 5",
+				"Kak Bazaar Item 6",
+				"Kak Bazaar Item 7",
+				"Kak Bazaar Item 8",
+				// Kak shop
+				"Kak Potion Shop Item 1",
+				"Kak Potion Shop Item 2",
+				"Kak Potion Shop Item 3",
+				"Kak Potion Shop Item 4",
+				"Kak Potion Shop Item 5",
+				"Kak Potion Shop Item 6",
+				"Kak Potion Shop Item 7",
+				"Kak Potion Shop Item 8",
+				// Graveyard
+				"Graveyard Shield Grave Chest",
+				"Graveyard Heart Piece Grave Chest",
+				"Graveyard Royal Familys Tomb Chest",
+				"Graveyard Freestanding PoH",
+				"Graveyard Dampe Gravedigging Tour", // minigame
+				"Graveyard Dampe Race Hookshot Chest",
+				"Graveyard Dampe Race Freestanding PoH",
+				// Graveyard GS
+				"Graveyard GS Bean Patch",
+				"Graveyard GS Wall",
+			],
+		},
+		{	name : '// DMT & GC & DMC',
+			locs : [
+				// DMT
+				"DMT Freestanding PoH",
+				"DMT Chest",
+				"DMT Storms Grotto Chest",
+				"DMT Great Fairy Reward",
+				"DMT Biggoron",
+				// DMT cow
+				"DMT Cow Grotto Cow",
+				// DMT GS
+				"DMT GS Near Kak",
+				"DMT GS Bean Patch",
+				"DMT GS Above Dodongos Cavern",
+				"DMT GS Falling Rocks Path",
+				// GC
+				"GC Darunias Joy",
+				"GC Pot Freestanding PoH",
+				"GC Rolling Goron as Child",
+				"GC Rolling Goron as Adult",
+				"GC Medigoron",
+				"GC Maze Left Chest",
+				"GC Maze Right Chest",
+				"GC Maze Center Chest",
+				// GC scrub
+				"GC Deku Scrub Grotto Left",
+				"GC Deku Scrub Grotto Center",
+				"GC Deku Scrub Grotto Right",
+				// GC GS
+				"GC GS Center Platform",
+				"GC GS Boulder Maze",
+				// GC shop
+				"GC Shop Item 1",
+				"GC Shop Item 2",
+				"GC Shop Item 3",
+				"GC Shop Item 4",
+				"GC Shop Item 5",
+				"GC Shop Item 6",
+				"GC Shop Item 7",
+				"GC Shop Item 8",
+				// DMC
+				"DMC Volcano Freestanding PoH",
+				"DMC Wall Freestanding PoH",
+				"DMC Upper Grotto Chest",
+				"DMC Great Fairy Reward",
+				// DMC scrub
+				"DMC Deku Scrub",
+				"DMC Deku Scrub Grotto Left",
+				"DMC Deku Scrub Grotto Center",
+				"DMC Deku Scrub Grotto Right",
+				// DMC GS
+				"DMC GS Crate",
+				"DMC GS Bean Patch",
+			],
+		},
+		{	name : '// ZR & ZD & ZF & LH',
+			locs : [
+				// ZR
+				"ZR Magic Bean Salesman",
+				"ZR Open Grotto Chest",
+				"ZR Frogs in the Rain",
+				"ZR Frogs Ocarina Game", // minigame
+				"ZR Near Open Grotto Freestanding PoH",
+				"ZR Near Domain Freestanding PoH",
+				// ZR scrub
+				"ZR Deku Scrub Grotto Front",
+				"ZR Deku Scrub Grotto Rear",
+				// ZR GS
+				"ZR GS Tree",
+				"ZR GS Ladder",
+				"ZR GS Near Raised Grottos",
+				"ZR GS Above Bridge",
+				// ZD
+				"ZD Diving Minigame", // minigame
+				"ZD Chest",
+				"ZD King Zora Thawed",
+				// ZD GS
+				"ZD GS Frozen Waterfall",
+				// ZD shop
+				"ZD Shop Item 1",
+				"ZD Shop Item 2",
+				"ZD Shop Item 3",
+				"ZD Shop Item 4",
+				"ZD Shop Item 5",
+				"ZD Shop Item 6",
+				"ZD Shop Item 7",
+				"ZD Shop Item 8",
+				// ZF
+				"ZF Great Fairy Reward",
+				"ZF Iceberg Freestanding PoH",
+				"ZF Bottom Freestanding PoH",
+				// ZF GS
+				"ZF GS Above the Log",
+				"ZF GS Tree",
+				"ZF GS Hidden Cave",
+				// LH
+				"LH Underwater Item",
+				"LH Child Fishing", // minigame
+				"LH Adult Fishing", // minigame
+				"LH Lab Dive",
+				"LH Freestanding PoH",
+				"LH Sun",
+				// LH scrub
+				"LH Deku Scrub Grotto Left",
+				"LH Deku Scrub Grotto Center",
+				"LH Deku Scrub Grotto Right",
+				// LH GS
+				"LH GS Bean Patch",
+				"LH GS Lab Wall",
+				"LH GS Small Island",
+				"LH GS Lab Crate",
+				"LH GS Tree",
+			],
+		},
+		{	name : '// GV & GF & Wasteland & Colossus',
+			locs : [
+				// GV
+				"GV Crate Freestanding PoH",
+				"GV Waterfall Freestanding PoH",
+				"GV Chest",
+				// GV scrub
+				"GV Deku Scrub Grotto Front",
+				"GV Deku Scrub Grotto Rear",
+				// GV cow
+				"GV Cow",
+				// GV GS
+				"GV GS Small Bridge",
+				"GV GS Bean Patch",
+				"GV GS Behind Tent",
+				"GV GS Pillar",
+				// GF
+				"GF Chest",
+				"GF HBA 1000 Points", // minigame
+				"GF HBA 1500 Points", // minigame
+				// GF GS
+				"GF GS Top Floor",
+				"GF GS Archery Range",
+				// Hideout
+				"Hideout 1 Torch Jail Gerudo Key",   // (RED)
+				"Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+				"Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+				"Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
+				"Hideout Gerudo Membership Card",
+				// Wasteland
+				"Wasteland Bombchu Salesman",
+				"Wasteland Chest",
+				// Wasteland GS
+				"Wasteland GS",
+				// Colossus
+				"Colossus Great Fairy Reward",
+				"Colossus Freestanding PoH",
+				// Colossus scrub
+				"Colossus Deku Scrub Grotto Front",
+				"Colossus Deku Scrub Grotto Rear",
+				// Colossus GS
+				"Colossus GS Bean Patch",
+				"Colossus GS Tree",
+				"Colossus GS Hill",
+			],
+		},
+		{	name : '// Deku',
+			locs : [
+				// Deku Tree
+				"Deku Tree Map Chest",
+				"Deku Tree Slingshot Room Side Chest",
+				"Deku Tree Slingshot Chest",
+				"Deku Tree Compass Chest",
+				"Deku Tree Compass Room Side Chest",
+				"Deku Tree Basement Chest",
+				// Deku Tree GS
+				"Deku Tree GS Compass Room",
+				"Deku Tree GS Basement Vines",
+				"Deku Tree GS Basement Gate",
+				"Deku Tree GS Basement Back Room",
+				// Deku Tree boss heart
+				"Deku Tree Queen Gohma Heart",
+			],
+		},
+		{	name : '// Dodongo',
+			locs : [
+				// Dodongos Cavern
+				"Dodongos Cavern Map Chest",
+				"Dodongos Cavern Compass Chest",
+				"Dodongos Cavern Bomb Flower Platform Chest",
+				"Dodongos Cavern Bomb Bag Chest",
+				"Dodongos Cavern End of Bridge Chest",
+				// Dodongos Cavern scrub
+				"Dodongos Cavern Deku Scrub Side Room Near Dodongos",
+				"Dodongos Cavern Deku Scrub Lobby",
+				"Dodongos Cavern Deku Scrub Near Bomb Bag Left",
+				"Dodongos Cavern Deku Scrub Near Bomb Bag Right",
+				// Dodongos Cavern GS
+				"Dodongos Cavern GS Side Room Near Lower Lizalfos",
+				"Dodongos Cavern GS Scarecrow",
+				"Dodongos Cavern GS Alcove Above Stairs",
+				"Dodongos Cavern GS Vines Above Stairs",
+				"Dodongos Cavern GS Back Room",
+				// Dodongos Cavern boss room
+				"Dodongos Cavern Boss Room Chest",
+				// Dodongos Cavern boss heart
+				"Dodongos Cavern King Dodongo Heart",
+			],
+		},
+		{	name : '// Jabu',
+			locs : [
+				// Jabu Jabus Belly
+				"Jabu Jabus Belly Boomerang Chest",
+				"Jabu Jabus Belly Map Chest",
+				"Jabu Jabus Belly Compass Chest",
+				// Jabu Jabus Belly scrub
+				"Jabu Jabus Belly Deku Scrub",
+				// Jabu Jabus Belly GS
+				"Jabu Jabus Belly GS Water Switch Room",
+				"Jabu Jabus Belly GS Lobby Basement Lower",
+				"Jabu Jabus Belly GS Lobby Basement Upper",
+				"Jabu Jabus Belly GS Near Boss",
+				// Jabu Jabus Belly boss heart
+				"Jabu Jabus Belly Barinade Heart",
+			],
+		},
+		{	name : '// Well',
+			locs : [
+				// Bottom of the Well
+				"Bottom of the Well Front Left Fake Wall Chest",
+				"Bottom of the Well Front Center Bombable Chest",
+				"Bottom of the Well Back Left Bombable Chest",
+				"Bottom of the Well Underwater Left Chest",
+				"Bottom of the Well Freestanding Key",
+				"Bottom of the Well Compass Chest",
+				"Bottom of the Well Center Skulltula Chest",
+				"Bottom of the Well Right Bottom Fake Wall Chest",
+				"Bottom of the Well Fire Keese Chest",
+				"Bottom of the Well Like Like Chest",
+				"Bottom of the Well Map Chest",
+				"Bottom of the Well Underwater Front Chest",
+				"Bottom of the Well Invisible Chest",
+				"Bottom of the Well Lens of Truth Chest",
+				// Bottom of the Well GS
+				"Bottom of the Well GS West Inner Room",
+				"Bottom of the Well GS East Inner Room",
+				"Bottom of the Well GS Like Like Cage",
+			],
+		},
+		{	name : '// Forest',
+			locs : [
+				// Forest Temple
+				"Forest Temple First Room Chest",
+				"Forest Temple First Stalfos Chest",
+				"Forest Temple Raised Island Courtyard Chest",
+				"Forest Temple Map Chest",
+				"Forest Temple Well Chest",
+				"Forest Temple Eye Switch Chest",
+				"Forest Temple Boss Key Chest",
+				"Forest Temple Floormaster Chest",
+				"Forest Temple Red Poe Chest",
+				"Forest Temple Bow Chest",
+				"Forest Temple Blue Poe Chest",
+				"Forest Temple Falling Ceiling Room Chest",
+				"Forest Temple Basement Chest",
+				// Forest Temple GS
+				"Forest Temple GS First Room",
+				"Forest Temple GS Lobby",
+				"Forest Temple GS Raised Island Courtyard",
+				"Forest Temple GS Level Island Courtyard",
+				"Forest Temple GS Basement",
+				// Forest Temple boss heart
+				"Forest Temple Phantom Ganon Heart",
+			],
+		},
+		{	name : '// Fire',
+			locs : [
+				// Fire Temple
+				"Fire Temple Near Boss Chest",
+				"Fire Temple Flare Dancer Chest",
+				"Fire Temple Boss Key Chest",
+				"Fire Temple Big Lava Room Lower Open Door Chest",
+				"Fire Temple Big Lava Room Blocked Door Chest",
+				"Fire Temple Boulder Maze Lower Chest",
+				"Fire Temple Boulder Maze Side Room Chest",
+				"Fire Temple Map Chest",
+				"Fire Temple Boulder Maze Shortcut Chest",
+				"Fire Temple Boulder Maze Upper Chest",
+				"Fire Temple Scarecrow Chest",
+				"Fire Temple Compass Chest",
+				"Fire Temple Megaton Hammer Chest",
+				"Fire Temple Highest Goron Chest",
+				// Fire Temple GS
+				"Fire Temple GS Boss Key Loop",
+				"Fire Temple GS Song of Time Room",
+				"Fire Temple GS Boulder Maze",
+				"Fire Temple GS Scarecrow Climb",
+				"Fire Temple GS Scarecrow Top",
+				// Fire Temple boss heart
+				"Fire Temple Volvagia Heart",
+			],
+		},
+		{	name : '// Water',
+			locs : [
+				// Water Temple
+				"Water Temple Compass Chest",
+				"Water Temple Map Chest",
+				"Water Temple Cracked Wall Chest",
+				"Water Temple Torches Chest",
+				"Water Temple Boss Key Chest",
+				"Water Temple Central Pillar Chest",
+				"Water Temple Central Bow Target Chest",
+				"Water Temple Longshot Chest",
+				"Water Temple River Chest",
+				"Water Temple Dragon Chest",
+				// Water Temple GS
+				"Water Temple GS Behind Gate",
+				"Water Temple GS Near Boss Key Chest",
+				"Water Temple GS Central Pillar",
+				"Water Temple GS Falling Platform Room",
+				"Water Temple GS River",
+				// Water Temple boss heart
+				"Water Temple Morpha Heart",
+			],
+		},
+		{	name : '// Shadow',
+			locs : [
+				// Shadow Temple
+				"Shadow Temple Map Chest",
+				"Shadow Temple Hover Boots Chest",
+				"Shadow Temple Compass Chest",
+				"Shadow Temple Early Silver Rupee Chest",
+				"Shadow Temple Invisible Blades Visible Chest",
+				"Shadow Temple Invisible Blades Invisible Chest",
+				"Shadow Temple Falling Spikes Lower Chest",
+				"Shadow Temple Falling Spikes Upper Chest",
+				"Shadow Temple Falling Spikes Switch Chest",
+				"Shadow Temple Invisible Spikes Chest",
+				"Shadow Temple Freestanding Key",
+				"Shadow Temple Wind Hint Chest",
+				"Shadow Temple After Wind Enemy Chest",
+				"Shadow Temple After Wind Hidden Chest",
+				"Shadow Temple Spike Walls Left Chest",
+				"Shadow Temple Boss Key Chest",
+				"Shadow Temple Invisible Floormaster Chest",
+				// Shadow Temple GS
+				"Shadow Temple GS Invisible Blades Room",
+				"Shadow Temple GS Falling Spikes Room",
+				"Shadow Temple GS Single Giant Pot",
+				"Shadow Temple GS Near Ship",
+				"Shadow Temple GS Triple Giant Pot",
+				// Shadow Temple boss heart
+				"Shadow Temple Bongo Bongo Heart",
+			],
+		},
+		{	name : '// Spirit',
+			locs : [
+				// Spirit Temple
+				"Spirit Temple Child Bridge Chest",
+				"Spirit Temple Child Early Torches Chest",
+				"Spirit Temple Child Climb North Chest",
+				"Spirit Temple Child Climb East Chest",
+				"Spirit Temple Map Chest",
+				"Spirit Temple Sun Block Room Chest",
+				"Spirit Temple Silver Gauntlets Chest",
+				"Spirit Temple Compass Chest",
+				"Spirit Temple Early Adult Right Chest",
+				"Spirit Temple First Mirror Left Chest",
+				"Spirit Temple First Mirror Right Chest",
+				"Spirit Temple Statue Room Northeast Chest",
+				"Spirit Temple Statue Room Hand Chest",
+				"Spirit Temple Near Four Armos Chest",
+				"Spirit Temple Hallway Right Invisible Chest",
+				"Spirit Temple Hallway Left Invisible Chest",
+				"Spirit Temple Mirror Shield Chest",
+				"Spirit Temple Boss Key Chest",
+				"Spirit Temple Topmost Chest",
+				// Spirit Temple GS
+				"Spirit Temple GS Metal Fence",
+				"Spirit Temple GS Sun on Floor Room",
+				"Spirit Temple GS Hall After Sun Block Room",
+				"Spirit Temple GS Lobby",
+				"Spirit Temple GS Boulder Room",
+				// Spirit Temple boss heart
+				"Spirit Temple Twinrova Heart",
+			],
+		},
+		{	name : '// Ice',
+			locs : [
+				// Ice Cavern
+				"Ice Cavern Map Chest",
+				"Ice Cavern Compass Chest",
+				"Ice Cavern Freestanding PoH",
+				"Ice Cavern Iron Boots Chest",
+				// Ice Cavern GS
+				"Ice Cavern GS Spinning Scythe Room",
+				"Ice Cavern GS Heart Piece Room",
+				"Ice Cavern GS Push Block Room",
+			],
+		},
+		{	name : '// GTG',
+			locs : [
+				// Gerudo Training Ground
+				"Gerudo Training Ground Lobby Left Chest",
+				"Gerudo Training Ground Lobby Right Chest",
+				"Gerudo Training Ground Stalfos Chest",
+				"Gerudo Training Ground Before Heavy Block Chest",
+				"Gerudo Training Ground Heavy Block First Chest",  // near
+				"Gerudo Training Ground Heavy Block Second Chest", // left
+				"Gerudo Training Ground Heavy Block Third Chest",  // right (invisible)
+				"Gerudo Training Ground Heavy Block Fourth Chest", // far
+				"Gerudo Training Ground Eye Statue Chest",
+				"Gerudo Training Ground Near Scarecrow Chest",
+				"Gerudo Training Ground Hammer Room Clear Chest",
+				"Gerudo Training Ground Hammer Room Switch Chest",
+				"Gerudo Training Ground Freestanding Key",
+				"Gerudo Training Ground Maze Right Central Chest",
+				"Gerudo Training Ground Maze Right Side Chest",
+				"Gerudo Training Ground Underwater Silver Rupee Chest",
+				"Gerudo Training Ground Beamos Chest",
+				"Gerudo Training Ground Hidden Ceiling Chest",
+				"Gerudo Training Ground Maze Path First Chest",
+				"Gerudo Training Ground Maze Path Second Chest",
+				"Gerudo Training Ground Maze Path Third Chest",
+				"Gerudo Training Ground Maze Path Final Chest",
+			],
+		},
+		{	name : '// Ganon',
+			locs : [
+				// Ganons Castle
+				"Ganons Castle Forest Trial Chest",
+				"Ganons Castle Water Trial Left Chest",
+				"Ganons Castle Water Trial Right Chest",
+				"Ganons Castle Shadow Trial Front Chest",
+				"Ganons Castle Shadow Trial Golden Gauntlets Chest",
+				"Ganons Castle Light Trial First Left Chest",
+				"Ganons Castle Light Trial Second Left Chest",
+				"Ganons Castle Light Trial Third Left Chest",
+				"Ganons Castle Light Trial First Right Chest",
+				"Ganons Castle Light Trial Second Right Chest",
+				"Ganons Castle Light Trial Third Right Chest",
+				"Ganons Castle Light Trial Invisible Enemies Chest",
+				"Ganons Castle Light Trial Lullaby Chest",
+				"Ganons Castle Spirit Trial Crystal Switch Chest",
+				"Ganons Castle Spirit Trial Invisible Chest",
+				// Ganons Castle scrub
+				"Ganons Castle Deku Scrub Left",
+				"Ganons Castle Deku Scrub Center-Left",
+				"Ganons Castle Deku Scrub Center-Right",
+				"Ganons Castle Deku Scrub Right",
+				// Ganons Tower
+				"Ganons Tower Boss Key Chest",
+			],
+		},
+		{	name : '// template (ENVIRONMENT CONTEXTS)',
+			locs : [
+			],
+		},
+		/* {	name : '// ',
+			locs : [
+
+			],
+		}, */
+
+	];
+
+	let str_title = '// ENVIRONMENT CONTEXTS';
+
+	let obj_output = [];
+
+	// build obj_output
+	groupedLoc_struct.forEach((locSet)=>{
+		let current = {};
+			current.name = locSet.name;
+			current.obj = {};
+			for(let name of envCtxID) current.obj[name] = [];
+			locSet.locs.forEach((loc)=>{
+				envCtxID.forEach((ctx)=>{
+					if(locData[loc].context[ctx]) current.obj[ctx].push(loc);
+				});
+			});
+		obj_output.push(current);
+	});
+
+	// print result
+	// 
+
+	// open a new page to display result
+	let win = open();
+	let body = win.document.body;
+	body.style.whiteSpace = 'pre';
+
+	// build the text content
+	let str = str_title;
+	obj_output.forEach((e)=>{str+=`\n\n${e.name}\n${JSON.stringify(e.obj, null, '\t')},`});
+
+	// format the native JSON syntax to my personal JS Object syntax
+	(()=>{
+		// - open emtpy arrays
+		let occ = '": []';
+		if(envCtxID.reduce((o,e)=>(o||e.includes(occ)),false))
+			console.warn(`OCCURENCE ${occ} is present in a Context Name !`);
+		str = str.replaceAll(occ, '": [\n\n\t]');
+	
+			// - remove "" on prop name (ctx name ID)
+			// - add a space between 'ctx name ID' and '[' opening
+			envCtxID.forEach((ctx)=>{
+				occ = `"${ctx}": [\n`;
+				if(envCtxID.reduce((o,e)=>(o||e.includes(occ)),false))
+					console.warn(`OCCURENCE ${occ} is present in a Context Name !`);
+				str = str.replaceAll(occ, `${ctx} : [\n`);
+			});
+		
+		// - add comma at last context in a set
+		occ = `\n\t]\n},`;
+		if(envCtxID.reduce((o,e)=>(o||e.includes(occ)),false))
+			console.warn(`OCCURENCE ${occ} is present in a Context Name !`);
+		str = str.replaceAll(occ, `\n\t],\n},`);
+	
+			// - add comma at last value in a context
+			occ = `"\n\t],\n`;
+			if(envCtxID.reduce((o,e)=>(o||e.includes(occ)),false))
+				console.warn(`OCCURENCE ${occ} is present in a Context Name !`);
+			str = str.replaceAll(occ, `",\n\t],\n`);
+	})();
+
+	
+
+	// add comments to locations
+	let commentLocList = [
+		// GF Hideout
+		{ loc : `"Hideout 1 Torch Jail Gerudo Key",\n`, comment : `   // (RED)\n`},
+		{ loc : `"Hideout 2 Torches Jail Gerudo Key",\n`, comment : ` // (BLUE)\n`},
+		{ loc : `"Hideout 3 Torches Jail Gerudo Key",\n`, comment : ` // (GREEN)\n`},
+		{ loc : `"Hideout 4 Torches Jail Gerudo Key",\n`, comment : ` // (YELLOW)\n`},
+		// GTG
+		{ loc : `"Gerudo Training Ground Heavy Block First Chest",\n`,  comment : `  // near\n`},
+		{ loc : `"Gerudo Training Ground Heavy Block Second Chest",\n`, comment : ` // left\n`},
+		{ loc : `"Gerudo Training Ground Heavy Block Third Chest",\n`,  comment : `  // right (invisible)\n`},
+		{ loc : `"Gerudo Training Ground Heavy Block Fourth Chest",\n`, comment : ` // far\n`},
+	];
+	commentLocList.forEach((e)=>{str=str.replaceAll(e.loc, e.loc.slice(0,-1)+e.comment);});
+
+	// display result
+	body.textContent = str;
+
+};
+
 
 // CONTEXT_SETS direct to Location.Data[].context
 /* for(let C of byCtx){
@@ -2941,3 +4833,32 @@ window.RandoStuffs.OoT.core.Location.sortUpdate_byContext = ()=>{
 	}
 	return o;
 }; */
+
+
+var debug_filterByContext = (htmlGrid, ctxFltrList)=>{
+	let rowLen = Object.keys(window.RandoStuffs.OoT.core.Location.context).length + 1;
+	let data = window.RandoStuffs.OoT.core.Location.Data;
+
+	let hideNextOne = false;
+	let elems = [...htmlGrid.children];
+
+	elems.forEach((elem,index)=>{
+		if( !(index<rowLen) ){
+			if(elem.tagName==='DIV'){
+				hideNextOne = false;
+				ctxFltrList.forEach((ctx)=>{
+					if(data[elem.textContent].context[ctx])
+						hideNextOne = true;
+				});
+			}
+			if(hideNextOne){
+				elem.style.display = 'none';
+			}
+		}
+	});
+
+	// example :
+	// remove all that are not 'chest' 100% sure
+	// debug_filterByContext(temp1, ['songQuest','cow','scrub','shop','token'])
+
+};

@@ -1521,7 +1521,24 @@ window.RandoStuffs.OoT.viewModes.itemReqView.init = function(workspace){
 
 		let create_resultEntry = function(locName, conditions){
 
+			let make_errorUnknownLoc = ()=>{
+				let elem = document.createElement('div');
+				elem.style.border = '1px solid black';
+				elem.style.whiteSpace = 'pre';
+				let msg = 'Unknown Location name coming from Spoiler.json :\n'
+				        + `"${locName}"\n`
+						+ `(Probably an older or newer Location name)\n`
+						+ `'Area Name', 'Area Contexts', 'Map Position', and\n` // impossible css wrap
+						+ `'Location Context' are not available for\n`
+						+ `this pair "Item/Location".`;
+				let c = secretCssClassNameToDetectNonEmptyResult;
+				elem.innerHTML += `<span class="${c}" style="color:red">${msg}</span>`;
+				return elem;
+			};
+
 			let location = appLocs[locName];
+			if(!location) return make_errorUnknownLoc(); // stop function process
+
 			let locNameID = location?.nameID;
 			let locCtx    = location?.context || {/* implicite all prop at false */};
 

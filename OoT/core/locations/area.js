@@ -201,7 +201,7 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // Kak GS
         "Kak GS Tree",
-        "Kak GS Guards House",
+        "Kak GS Near Gate Guard",
         "Kak GS Watchtower",
         "Kak GS Skulltula House",
         "Kak GS House Under Construction",
@@ -235,10 +235,10 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         // Graveyard
         "Graveyard Shield Grave Chest",
         "Graveyard Heart Piece Grave Chest",
-        "Graveyard Composers Grave Chest",
+        "Graveyard Royal Familys Tomb Chest",
         "Graveyard Freestanding PoH",
         "Graveyard Dampe Gravedigging Tour", // minigame
-        "Graveyard Hookshot Chest",
+        "Graveyard Dampe Race Hookshot Chest",
         "Graveyard Dampe Race Freestanding PoH",
         
         // Graveyard GS
@@ -246,7 +246,7 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "Graveyard GS Wall",
 
         // Graveyard main quest
-        "Song from Composers Grave",
+        "Song from Royal Familys Tomb",
     ],
     DeathMountainTrail : [
         // DMT
@@ -454,6 +454,16 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "Deku Tree GS Basement Gate",
         "Deku Tree GS Basement Back Room",
 
+        // Deku Tree Freestanding
+        // Deku Tree Pot
+        // Deku Tree Crate
+        
+        // Deku Tree MQ
+        // Deku Tree MQ GS
+        // Deku Tree MQ Freestanding
+        // Deku Tree MQ Pot
+        // Deku Tree MQ Crate
+        
         // Deku Tree boss heart
         "Deku Tree Queen Gohma Heart",
 
@@ -652,7 +662,7 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "Shadow Temple Invisible Floormaster Chest",
 
         // Shadow Temple GS
-        "Shadow Temple GS Like Like Room",
+        "Shadow Temple GS Invisible Blades Room",
         "Shadow Temple GS Falling Spikes Room",
         "Shadow Temple GS Single Giant Pot",
         "Shadow Temple GS Near Ship",
@@ -703,36 +713,36 @@ window.RandoStuffs.OoT.core.Location.byArea = {
     ],
     ThievesHideout : [
         // GF ThievesHideout
-        "GF North F1 Carpenter", // (RED)
-        "GF North F2 Carpenter", // (GREEN)
-        "GF South F1 Carpenter", // (YELLOW)
-        "GF South F2 Carpenter", // (BLUE)
-        "GF Gerudo Membership Card",
+        "Hideout 1 Torch Jail Gerudo Key",   // (RED)
+        "Hideout 2 Torches Jail Gerudo Key", // (BLUE)
+        "Hideout 3 Torches Jail Gerudo Key", // (GREEN)
+        "Hideout 4 Torches Jail Gerudo Key", // (YELLOW)
+        "Hideout Gerudo Membership Card",
     ],
     GerudoTrainingGround : [
-        // Gerudo Training Grounds
-        "Gerudo Training Grounds Lobby Left Chest",
-        "Gerudo Training Grounds Lobby Right Chest",
-        "Gerudo Training Grounds Stalfos Chest",
-        "Gerudo Training Grounds Before Heavy Block Chest",
-        "Gerudo Training Grounds Heavy Block First Chest",  // near
-		"Gerudo Training Grounds Heavy Block Second Chest", // left
-		"Gerudo Training Grounds Heavy Block Third Chest",  // right (invisible)
-		"Gerudo Training Grounds Heavy Block Fourth Chest", // far
-        "Gerudo Training Grounds Eye Statue Chest",
-        "Gerudo Training Grounds Near Scarecrow Chest",
-        "Gerudo Training Grounds Hammer Room Clear Chest",
-        "Gerudo Training Grounds Hammer Room Switch Chest",
-        "Gerudo Training Grounds Freestanding Key",
-        "Gerudo Training Grounds Maze Right Central Chest",
-        "Gerudo Training Grounds Maze Right Side Chest",
-        "Gerudo Training Grounds Underwater Silver Rupee Chest",
-        "Gerudo Training Grounds Beamos Chest",
-        "Gerudo Training Grounds Hidden Ceiling Chest",
-        "Gerudo Training Grounds Maze Path First Chest",
-        "Gerudo Training Grounds Maze Path Second Chest",
-        "Gerudo Training Grounds Maze Path Third Chest",
-        "Gerudo Training Grounds Maze Path Final Chest",
+        // Gerudo Training Ground
+        "Gerudo Training Ground Lobby Left Chest",
+        "Gerudo Training Ground Lobby Right Chest",
+        "Gerudo Training Ground Stalfos Chest",
+        "Gerudo Training Ground Before Heavy Block Chest",
+        "Gerudo Training Ground Heavy Block First Chest",  // near
+		"Gerudo Training Ground Heavy Block Second Chest", // left
+		"Gerudo Training Ground Heavy Block Third Chest",  // right (invisible)
+		"Gerudo Training Ground Heavy Block Fourth Chest", // far
+        "Gerudo Training Ground Eye Statue Chest",
+        "Gerudo Training Ground Near Scarecrow Chest",
+        "Gerudo Training Ground Hammer Room Clear Chest",
+        "Gerudo Training Ground Hammer Room Switch Chest",
+        "Gerudo Training Ground Freestanding Key",
+        "Gerudo Training Ground Maze Right Central Chest",
+        "Gerudo Training Ground Maze Right Side Chest",
+        "Gerudo Training Ground Underwater Silver Rupee Chest",
+        "Gerudo Training Ground Beamos Chest",
+        "Gerudo Training Ground Hidden Ceiling Chest",
+        "Gerudo Training Ground Maze Path First Chest",
+        "Gerudo Training Ground Maze Path Second Chest",
+        "Gerudo Training Ground Maze Path Third Chest",
+        "Gerudo Training Ground Maze Path Final Chest",
     ],
     GanonCastle : [
         // Ganons Castle
