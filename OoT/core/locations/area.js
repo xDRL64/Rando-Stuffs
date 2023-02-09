@@ -439,6 +439,7 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         // Colossus main quest
         "Sheik at Colossus",
     ],
+
     DekuTree : [
         // Deku Tree
         "Deku Tree Map Chest",
@@ -454,21 +455,58 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "Deku Tree GS Basement Gate",
         "Deku Tree GS Basement Back Room",
 
-        // Deku Tree Freestanding
-        // Deku Tree Pot
-        // Deku Tree Crate
-        
-        // Deku Tree MQ
-        // Deku Tree MQ GS
-        // Deku Tree MQ Freestanding
-        // Deku Tree MQ Pot
-        // Deku Tree MQ Crate
+        // v7 sanities
+        [
+            // Deku Tree Freestanding
+    
+            // Deku Tree Pot
+    
+            // Deku Tree Crate
+        ],
         
         // Deku Tree boss heart
         "Deku Tree Queen Gohma Heart",
 
         // Deku Tree dungeon boss reward
         "Queen Gohma",
+
+        // Deku Tree MQ ONLY
+		[
+			// Deku Tree MQ
+			"Deku Tree MQ Map Chest",
+			"Deku Tree MQ Slingshot Chest",
+			"Deku Tree MQ Slingshot Room Back Chest",
+			"Deku Tree MQ Compass Chest",
+			"Deku Tree MQ Basement Chest",
+			"Deku Tree MQ Before Spinning Log Chest",
+			"Deku Tree MQ After Spinning Log Chest",
+
+            // Deku Tree MQ scrub
+			"Deku Tree MQ Deku Scrub",
+
+			// Deku Tree MQ GS
+			"Deku Tree MQ GS Lobby",
+			"Deku Tree MQ GS Compass Room",
+			"Deku Tree MQ GS Basement Graves Room",
+			"Deku Tree MQ GS Basement Back Room",
+
+			// v7 sanities
+			[
+				// Deku Tree MQ Freestanding
+				"Deku Tree MQ Lower Lobby Recovery Heart",
+				"Deku Tree MQ Near Compass Room Recovery Heart",
+				"Deku Tree MQ Compass Room Recovery Heart",
+				"Deku Tree MQ Basement Recovery Heart 1",
+				"Deku Tree MQ Basement Recovery Heart 2",
+				"Deku Tree MQ Basement Recovery Heart 3",
+				"Deku Tree MQ Slingshot Room Recovery Heart",
+
+				// Deku Tree MQ Crate
+				"Deku Tree MQ Lobby Crate",
+				"Deku Tree MQ Slingshot Room Crate 1",
+				"Deku Tree MQ Slingshot Room Crate 2",
+			],
+		],
     ],
     DodongoCavern : [
         // Dodongos Cavern
@@ -499,6 +537,91 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // Dodongos Cavern dungeon boss reward
         "King Dodongo",
+
+        // Dodongos Cavern MQ ONLY
+		[
+			// Dodongos Cavern MQ
+			"Dodongos Cavern MQ Map Chest",
+			"Dodongos Cavern MQ Bomb Bag Chest",
+			"Dodongos Cavern MQ Torch Puzzle Room Chest",
+			"Dodongos Cavern MQ Larvae Room Chest",
+			"Dodongos Cavern MQ Compass Chest",
+			"Dodongos Cavern MQ Under Grave Chest",
+
+			// Dodongos Cavern MQ scrub
+			"Dodongos Cavern MQ Deku Scrub Lobby Front",
+			"Dodongos Cavern MQ Deku Scrub Lobby Rear",
+			"Dodongos Cavern MQ Deku Scrub Side Room Near Lower Lizalfos",
+			"Dodongos Cavern MQ Deku Scrub Staircase",
+
+			// Dodongos Cavern MQ GS
+			"Dodongos Cavern MQ GS Scrub Room",
+			"Dodongos Cavern MQ GS Larvae Room",
+			"Dodongos Cavern MQ GS Lizalfos Room",
+			"Dodongos Cavern MQ GS Song of Time Block Room",
+			"Dodongos Cavern MQ GS Back Area",
+
+			// v7 sanities
+			[
+				// Dodongos Cavern MQ Freestanding
+				"Dodongos Cavern MQ Torch Puzzle Room Recovery Heart",
+
+				// Dodongos Cavern MQ Pot
+				"Dodongos Cavern MQ Right Side Pot 1",
+				"Dodongos Cavern MQ Right Side Pot 2",
+				"Dodongos Cavern MQ Right Side Pot 3",
+				"Dodongos Cavern MQ Right Side Pot 4",
+				"Dodongos Cavern MQ Staircase Pot 1",
+				"Dodongos Cavern MQ Staircase Pot 2",
+				"Dodongos Cavern MQ Staircase Pot 3",
+				"Dodongos Cavern MQ Staircase Pot 4",
+				"Dodongos Cavern MQ Upper Lizalfos Pot 1",
+				"Dodongos Cavern MQ Upper Lizalfos Pot 2",
+				"Dodongos Cavern MQ Upper Lizalfos Pot 3",
+				"Dodongos Cavern MQ Upper Lizalfos Pot 4",
+				"Dodongos Cavern MQ Poes Room Pot 1",
+				"Dodongos Cavern MQ Poes Room Pot 2",
+				"Dodongos Cavern MQ Poes Room Pot 3",
+				"Dodongos Cavern MQ Poes Room Pot 4",
+				"Dodongos Cavern MQ Room Before Boss Pot 1",
+				"Dodongos Cavern MQ Room Before Boss Pot 2",
+				"Dodongos Cavern MQ Armos Army Room Upper Pot",
+				"Dodongos Cavern MQ Armos Army Room Pot 1",
+				"Dodongos Cavern MQ Armos Army Room Pot 2",
+				"Dodongos Cavern MQ Torch Puzzle Room Pot Pillar",
+				"Dodongos Cavern MQ Torch Puzzle Room Pot Corner",
+				"Dodongos Cavern MQ Before Upper Lizalfos Pot 1",
+				"Dodongos Cavern MQ Before Upper Lizalfos Pot 2",
+				"Dodongos Cavern MQ After Upper Lizalfos Pot 1",
+				"Dodongos Cavern MQ After Upper Lizalfos Pot 2",
+				"Dodongos Cavern MQ Back Poe Room Pot 1",
+				"Dodongos Cavern MQ Back Poe Room Pot 2",
+
+				// Dodongos Cavern MQ Crate
+				"Dodongos Cavern MQ Staircase Crate Bottom Left",
+				"Dodongos Cavern MQ Staircase Crate Bottom Right",
+				"Dodongos Cavern MQ Staircase Crate Mid Left",
+				"Dodongos Cavern MQ Staircase Crate Top Left",
+				"Dodongos Cavern MQ Staircase Crate Mid Right",
+				"Dodongos Cavern MQ Staircase Crate Top Right",
+				"Dodongos Cavern MQ Poes Room Crate 5",
+				"Dodongos Cavern MQ Poes Room Crate 6",
+				"Dodongos Cavern MQ Poes Room Crate 1",
+				"Dodongos Cavern MQ Poes Room Crate 2",
+				"Dodongos Cavern MQ Poes Room Crate 3",
+				"Dodongos Cavern MQ Poes Room Crate 4",
+				"Dodongos Cavern MQ Poes Room Crate Near Bomb Flower",
+				"Dodongos Cavern MQ Poes Room Crate 7",
+				"Dodongos Cavern MQ Larvae Room Crate 1",
+				"Dodongos Cavern MQ Larvae Room Crate 2",
+				"Dodongos Cavern MQ Larvae Room Crate 3",
+				"Dodongos Cavern MQ Larvae Room Crate 4",
+				"Dodongos Cavern MQ Larvae Room Crate 5",
+				"Dodongos Cavern MQ Larvae Room Crate 6",
+				"Dodongos Cavern MQ After Upper Lizalfos Crate 1",
+				"Dodongos Cavern MQ After Upper Lizalfos Crate 2",
+			],
+		],
     ],
     JabuJabu : [
         // Jabu Jabus Belly
@@ -520,6 +643,51 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // Jabu Jabus Belly dungeon boss reward
         "Barinade",
+
+        // Jabu Jabus Belly MQ ONLY
+		[
+			// Jabu Jabus Belly MQ
+			"Jabu Jabus Belly MQ Map Chest",
+			"Jabu Jabus Belly MQ First Room Side Chest",
+			"Jabu Jabus Belly MQ Second Room Lower Chest",
+			"Jabu Jabus Belly MQ Compass Chest",
+			"Jabu Jabus Belly MQ Basement Near Switches Chest",
+			"Jabu Jabus Belly MQ Basement Near Vines Chest",
+			"Jabu Jabus Belly MQ Boomerang Room Small Chest",
+			"Jabu Jabus Belly MQ Boomerang Chest",
+			"Jabu Jabus Belly MQ Falling Like Like Room Chest",
+			"Jabu Jabus Belly MQ Second Room Upper Chest",
+			"Jabu Jabus Belly MQ Near Boss Chest",
+
+			// Jabu Jabus Belly MQ cow
+			"Jabu Jabus Belly MQ Cow",
+
+			// Jabu Jabus Belly MQ GS
+			"Jabu Jabus Belly MQ GS Boomerang Chest Room",
+			"Jabu Jabus Belly MQ GS Tailpasaran Room",
+			"Jabu Jabus Belly MQ GS Invisible Enemies Room",
+			"Jabu Jabus Belly MQ GS Near Boss",
+
+			// v7 sanities
+			[
+				// Jabu Jabus Belly MQ Freestanding
+				"Jabu Jabus Belly MQ Underwater Green Rupee 1",
+				"Jabu Jabus Belly MQ Underwater Green Rupee 2",
+				"Jabu Jabus Belly MQ Underwater Green Rupee 3",
+				"Jabu Jabus Belly MQ Recovery Heart 1",
+				"Jabu Jabus Belly MQ Recovery Heart 2",
+
+				// Jabu Jabus Belly MQ Pot
+				"Jabu Jabus Belly MQ First Room Pot 1",
+				"Jabu Jabus Belly MQ First Room Pot 2",
+				"Jabu Jabus Belly MQ Elevator Room Pot 1",
+				"Jabu Jabus Belly MQ Elevator Room Pot 2",
+				"Jabu Jabus Belly MQ Falling Like Like Room Pot 1",
+				"Jabu Jabus Belly MQ Falling Like Like Room Pot 2",
+				"Jabu Jabus Belly MQ Boomerang Room Pot 1",
+				"Jabu Jabus Belly MQ Boomerang Room Pot 2",
+			],
+		],
     ],
     ForestTemple : [
         // Forest Temple
@@ -549,6 +717,68 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // Forest Temple dungeon boss reward
         "Phantom Ganon",
+
+        // Forest Temple MQ ONLY
+		[
+			// Forest Temple MQ
+			"Forest Temple MQ First Room Chest",
+			"Forest Temple MQ Wolfos Chest",
+			"Forest Temple MQ Well Chest",
+			"Forest Temple MQ Raised Island Courtyard Lower Chest",
+			"Forest Temple MQ Raised Island Courtyard Upper Chest",
+			"Forest Temple MQ Boss Key Chest",
+			"Forest Temple MQ Redead Chest",
+			"Forest Temple MQ Map Chest",
+			"Forest Temple MQ Bow Chest",
+			"Forest Temple MQ Compass Chest",
+			"Forest Temple MQ Falling Ceiling Room Chest",
+			"Forest Temple MQ Basement Chest",
+
+			// Forest Temple MQ GS
+			"Forest Temple MQ GS First Hallway",
+			"Forest Temple MQ GS Raised Island Courtyard",
+			"Forest Temple MQ GS Level Island Courtyard",
+			"Forest Temple MQ GS Well",
+			"Forest Temple MQ GS Block Push Room",
+
+			// v7 sanities
+			[
+				// Forest Temple MQ Freestanding
+				"Forest Temple MQ Courtyard Recovery Heart 1",
+				"Forest Temple MQ Courtyard Recovery Heart 2",
+				"Forest Temple MQ Courtyard Recovery Heart 3",
+				"Forest Temple MQ Well Recovery Heart 1",
+				"Forest Temple MQ Well Recovery Heart 2",
+				"Forest Temple MQ Well Recovery Heart 3",
+
+				// Forest Temple MQ Pot
+				"Forest Temple MQ Center Room Right Pot 1",
+				"Forest Temple MQ Center Room Right Pot 2",
+				"Forest Temple MQ Center Room Right Pot 3",
+				"Forest Temple MQ Center Room Left Pot 1",
+				"Forest Temple MQ Center Room Left Pot 2",
+				"Forest Temple MQ Center Room Left Pot 3",
+				"Forest Temple MQ Wolfos Room Pot",
+				"Forest Temple MQ Upper Stalfos Pot 1",
+				"Forest Temple MQ Upper Stalfos Pot 2",
+				"Forest Temple MQ Upper Stalfos Pot 3",
+				"Forest Temple MQ Upper Stalfos Pot 4",
+				"Forest Temple MQ Blue Poe Room Pot 1",
+				"Forest Temple MQ Blue Poe Room Pot 2",
+				"Forest Temple MQ Blue Poe Room Pot 3",
+				"Forest Temple MQ Green Poe Room Pot 1",
+				"Forest Temple MQ Green Poe Room Pot 2",
+				"Forest Temple MQ Basement Pot 1",
+				"Forest Temple MQ Basement Pot 2",
+				"Forest Temple MQ Basement Pot 3",
+				"Forest Temple MQ Basement Pot 4",
+
+                // Forest Temple MQ Crate
+				"Forest Temple MQ Frozen Eye Switch Room Small Wooden Crate 1",
+				"Forest Temple MQ Frozen Eye Switch Room Small Wooden Crate 2",
+				"Forest Temple MQ Frozen Eye Switch Room Small Wooden Crate 3",
+			],
+		],
     ],
     FireTemple : [
         // Fire Temple
@@ -579,6 +809,87 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // Fire Temple dungeon boss reward
         "Volvagia",
+
+        // Fire Temple MQ ONLY
+		[
+			// Fire Temple MQ
+			"Fire Temple MQ Map Room Side Chest",
+			"Fire Temple MQ Megaton Hammer Chest",
+			"Fire Temple MQ Map Chest",
+			"Fire Temple MQ Near Boss Chest",
+			"Fire Temple MQ Big Lava Room Blocked Door Chest",
+			"Fire Temple MQ Boss Key Chest",
+			"Fire Temple MQ Lizalfos Maze Side Room Chest",
+			"Fire Temple MQ Compass Chest",
+			"Fire Temple MQ Lizalfos Maze Upper Chest",
+			"Fire Temple MQ Lizalfos Maze Lower Chest",
+			"Fire Temple MQ Freestanding Key",
+			"Fire Temple MQ Chest On Fire",
+
+			// Fire Temple MQ GS
+			"Fire Temple MQ GS Big Lava Room Open Door",
+			"Fire Temple MQ GS Skull On Fire",
+			"Fire Temple MQ GS Flame Maze Center",
+			"Fire Temple MQ GS Flame Maze Side Room",
+			"Fire Temple MQ GS Above Flame Maze",
+
+			// v7 sanities
+			[
+				// Fire Temple MQ Freestanding
+				"Fire Temple MQ Elevator Room Recovery Heart 1",
+				"Fire Temple MQ Elevator Room Recovery Heart 2",
+				"Fire Temple MQ Elevator Room Recovery Heart 3",
+
+				// Fire Temple MQ Pot
+				"Fire Temple MQ First Room Pot 1",
+				"Fire Temple MQ First Room Pot 2",
+				"Fire Temple MQ Big Lava Room Left Pot",
+				"Fire Temple MQ Big Lava Room Right Pot",
+				"Fire Temple MQ Big Lava Room Alcove Pot",
+				"Fire Temple MQ Near Boss Pot 1",
+				"Fire Temple MQ Near Boss Pot 2",
+				"Fire Temple MQ Narrow Path Room Pot 1",
+				"Fire Temple MQ Narrow Path Room Pot 2",
+				"Fire Temple MQ Flame Maze Right Upper Pot 1",
+				"Fire Temple MQ Flame Maze Right Upper Pot 2",
+				"Fire Temple MQ Flame Maze Right Pot 1",
+				"Fire Temple MQ Flame Maze Right Pot 2",
+				"Fire Temple MQ Flame Maze Left Pot 1",
+				"Fire Temple MQ Shoot Torch On Wall Room Pot 1",
+				"Fire Temple MQ Shoot Torch On Wall Room Pot 2",
+				"Fire Temple MQ Iron Knuckle Room Pot 1",
+				"Fire Temple MQ Iron Knuckle Room Pot 2",
+				"Fire Temple MQ Iron Knuckle Room Pot 3",
+				"Fire Temple MQ Iron Knuckle Room Pot 4",
+				"Fire Temple MQ Boss Key Chest Room Pot",
+
+				// Fire Temple MQ Crate
+				"Fire Temple MQ Near Boss Left Crate 1",
+				"Fire Temple MQ Near Boss Left Crate 2",
+				"Fire Temple MQ Near Boss Right Lower Crate 1",
+				"Fire Temple MQ Near Boss Right Lower Crate 2",
+				"Fire Temple MQ Near Boss Right Mid Crate",
+				"Fire Temple MQ Near Boss Right Upper Crate",
+				"Fire Temple MQ Shortcut Crate 1",
+				"Fire Temple MQ Shortcut Crate 2",
+				"Fire Temple MQ Shortcut Crate 3",
+				"Fire Temple MQ Shortcut Crate 4",
+				"Fire Temple MQ Shortcut Crate 5",
+				"Fire Temple MQ Shortcut Crate 6",
+				"Fire Temple MQ Lower Lizalfos Maze Crate 1",
+				"Fire Temple MQ Lower Lizalfos Maze Crate 2",
+				"Fire Temple MQ Lower Lizalfos Maze Crate 3",
+				"Fire Temple MQ Upper Lizalfos Maze Crate 1",
+				"Fire Temple MQ Upper Lizalfos Maze Crate 2",
+				"Fire Temple MQ Upper Lizalfos Maze Crate 3",
+				"Fire Temple MQ Shoot Torch On Wall Room Right Crate 1",
+				"Fire Temple MQ Shoot Torch On Wall Room Right Crate 2",
+				"Fire Temple MQ Shoot Torch On Wall Room Center Crate",
+				"Fire Temple MQ Shoot Torch On Wall Room Left Crate 1",
+				"Fire Temple MQ Shoot Torch On Wall Room Left Crate 2",
+			],
+		],
+
     ],
     WaterTemple : [
         // Water Temple
@@ -605,6 +916,142 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // Water Temple dungeon boss reward
         "Morpha",
+
+        // Water Temple MQ ONLY
+		[
+			// Water Temple MQ
+			"Water Temple MQ Longshot Chest",
+			"Water Temple MQ Map Chest",
+			"Water Temple MQ Compass Chest",
+			"Water Temple MQ Central Pillar Chest",
+			"Water Temple MQ Boss Key Chest",
+			"Water Temple MQ Freestanding Key",
+
+			// Water Temple MQ GS
+			"Water Temple MQ GS Lizalfos Hallway",
+			"Water Temple MQ GS Before Upper Water Switch",
+			"Water Temple MQ GS River",
+			"Water Temple MQ GS Freestanding Key Area",
+			"Water Temple MQ GS Triple Wall Torch",
+
+			// v7 sanities
+			[
+				// Water Temple MQ Pot
+				"Water Temple MQ Triple Wall Torch Pot 1",
+				"Water Temple MQ Triple Wall Torch Pot 2",
+				"Water Temple MQ Triple Wall Torch Pot 3",
+				"Water Temple MQ Triple Wall Torch Pot 4",
+				"Water Temple MQ Storage Room Pot 1",
+				"Water Temple MQ Storage Room Pot 2",
+				"Water Temple MQ Storage Room Pot 3",
+				"Water Temple MQ Before Dark Link Top Pot 1",
+				"Water Temple MQ Before Dark Link Top Pot 2",
+				"Water Temple MQ Before Dark Link Lower Pot",
+				"Water Temple MQ Room After Dark Link Pot",
+				"Water Temple MQ Boss Key Chest Room Pot",
+				"Water Temple MQ Before Upper Water Switch Pot 1",
+				"Water Temple MQ Before Upper Water Switch Pot 2",
+				"Water Temple MQ Before Upper Water Switch Pot 3",
+				"Water Temple MQ Dodongo Room Pot 1",
+				"Water Temple MQ Dodongo Room Pot 2",
+				"Water Temple MQ Freestanding Key Room Pot",
+				"Water Temple MQ L1 Torch Pot 1",
+				"Water Temple MQ L1 Torch Pot 2",
+				"Water Temple MQ Lizalfos Hallway Pot 1",
+				"Water Temple MQ Lizalfos Hallway Pot 2",
+				"Water Temple MQ Lizalfos Hallway Pot 3",
+				"Water Temple MQ Lizalfos Hallway Gate Pot 1",
+				"Water Temple MQ Lizalfos Hallway Gate Pot 2",
+				"Water Temple MQ River Pot",
+
+				// Water Temple MQ Crate
+				"Water Temple MQ Central Pillar Upper Crate 1",
+				"Water Temple MQ Central Pillar Upper Crate 2",
+				"Water Temple MQ Central Pillar Lower Crate 1",
+				"Water Temple MQ Central Pillar Lower Crate 2",
+				"Water Temple MQ Central Pillar Lower Crate 3",
+				"Water Temple MQ Central Pillar Lower Crate 4",
+				"Water Temple MQ Central Pillar Lower Crate 5",
+				"Water Temple MQ Central Pillar Lower Crate 6",
+				"Water Temple MQ Central Pillar Lower Crate 7",
+				"Water Temple MQ Central Pillar Lower Crate 8",
+				"Water Temple MQ Central Pillar Lower Crate 9",
+				"Water Temple MQ Central Pillar Lower Crate 10",
+				"Water Temple MQ Central Pillar Lower Crate 11",
+				"Water Temple MQ Central Pillar Lower Crate 12",
+				"Water Temple MQ Central Pillar Lower Crate 13",
+				"Water Temple MQ Central Pillar Lower Crate 14",
+				"Water Temple MQ Triple Wall Torch Submerged Crate 1",
+				"Water Temple MQ Triple Wall Torch Submerged Crate 2",
+				"Water Temple MQ Triple Wall Torch Submerged Crate 3",
+				"Water Temple MQ Triple Wall Torch Submerged Crate 4",
+				"Water Temple MQ Triple Wall Torch Submerged Crate 5",
+				"Water Temple MQ Triple Wall Torch Submerged Crate 6",
+				"Water Temple MQ Triple Wall Torch Behind Gate Crate 1",
+				"Water Temple MQ Triple Wall Torch Behind Gate Crate 2",
+				"Water Temple MQ Triple Wall Torch Behind Gate Crate 3",
+				"Water Temple MQ Storage Room Crate 1",
+				"Water Temple MQ Storage Room Crate 2",
+				"Water Temple MQ Storage Room Crate 3",
+				"Water Temple MQ Storage Room Crate 4",
+				"Water Temple MQ Storage Room Crate 5",
+				"Water Temple MQ Storage Room Crate 6",
+				"Water Temple MQ Storage Room Crate 7",
+				"Water Temple MQ Dragon Statue By Torches Crate 1",
+				"Water Temple MQ Dragon Statue By Torches Crate 2",
+				"Water Temple MQ Dragon Statue Submerged Crate 1",
+				"Water Temple MQ Dragon Statue Submerged Crate 2",
+				"Water Temple MQ Dragon Statue Submerged Crate 3",
+				"Water Temple MQ Dragon Statue Submerged Crate 4",
+				"Water Temple MQ Dragon Statue Near Door Crate 1",
+				"Water Temple MQ Dragon Statue Near Door Crate 2",
+				"Water Temple MQ Boss Key Chest Room Upper Crate",
+				"Water Temple MQ Boss Key Chest Room Lower Crate 1",
+				"Water Temple MQ Boss Key Chest Room Lower Crate 2",
+				"Water Temple MQ Boss Key Chest Room Lower Crate 3",
+				"Water Temple MQ Boss Key Chest Room Lower Crate 4",
+				"Water Temple MQ Before Upper Water Switch Lower Crate 1",
+				"Water Temple MQ Before Upper Water Switch Lower Crate 2",
+				"Water Temple MQ Before Upper Water Switch Lower Crate 3",
+				"Water Temple MQ Before Upper Water Switch Lower Crate 4",
+				"Water Temple MQ Before Upper Water Switch Lower Crate 5",
+				"Water Temple MQ Before Upper Water Switch Lower Crate 6",
+				"Water Temple MQ Before Upper Water Switch Upper Crate 1",
+				"Water Temple MQ Before Upper Water Switch Upper Crate 2",
+				"Water Temple MQ Freestanding Key Area Behind Gate Crate 1",
+				"Water Temple MQ Freestanding Key Area Behind Gate Crate 2",
+				"Water Temple MQ Freestanding Key Area Behind Gate Crate 3",
+				"Water Temple MQ Freestanding Key Area Behind Gate Crate 4",
+				"Water Temple MQ Freestanding Key Area Front Crate 1",
+				"Water Temple MQ Freestanding Key Area Front Crate 2",
+				"Water Temple MQ Freestanding Key Area Submerged Crate 1",
+				"Water Temple MQ Freestanding Key Area Submerged Crate 2",
+				"Water Temple MQ Freestanding Key Area Submerged Crate 3",
+				"Water Temple MQ Freestanding Key Area Submerged Crate 4",
+				"Water Temple MQ Freestanding Key Area Submerged Crate 5",
+				"Water Temple MQ Freestanding Key Area Submerged Crate 6",
+				"Water Temple MQ Dodongo Room Lower Crate 1",
+				"Water Temple MQ Dodongo Room Lower Crate 2",
+				"Water Temple MQ Dodongo Room Lower Crate 3",
+				"Water Temple MQ Dodongo Room Upper Crate",
+				"Water Temple MQ Dodongo Room Hall Crate",
+				"Water Temple MQ Freestanding Key Room Crate 1",
+				"Water Temple MQ Freestanding Key Room Crate 2",
+				"Water Temple MQ Freestanding Key Room Crate 3",
+				"Water Temple MQ Freestanding Key Room Crate 4",
+				"Water Temple MQ Freestanding Key Room Crate 5",
+				"Water Temple MQ Lizalfos Hallway Gate Crate 1",
+				"Water Temple MQ Lizalfos Hallway Gate Crate 2",
+				"Water Temple MQ Lizalfos Hallway Room Crate 1",
+				"Water Temple MQ Lizalfos Hallway Room Crate 2",
+				"Water Temple MQ Lizalfos Hallway Room Crate 3",
+				"Water Temple MQ Lizalfos Hallway Room Crate 4",
+				"Water Temple MQ Lizalfos Hallway Room Crate 5",
+				"Water Temple MQ Lizalfos Hallway Hall Crate 1",
+				"Water Temple MQ Lizalfos Hallway Hall Crate 2",
+				"Water Temple MQ Lizalfos Hallway Hall Crate 3",
+			],
+		],
     ],
     SpiritTemple : [
         // Spirit Temple
@@ -640,6 +1087,83 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // Spirit Temple dungeon boss reward
         "Twinrova",
+
+        // Spirit Temple MQ ONLY
+		[
+			// Spirit Temple MQ
+			"Spirit Temple MQ Entrance Front Left Chest",
+			"Spirit Temple MQ Entrance Back Right Chest",
+			"Spirit Temple MQ Entrance Front Right Chest",
+			"Spirit Temple MQ Entrance Back Left Chest",
+			"Spirit Temple MQ Map Chest",
+			"Spirit Temple MQ Map Room Enemy Chest",
+			"Spirit Temple MQ Child Climb North Chest",
+			"Spirit Temple MQ Child Climb South Chest",
+			"Spirit Temple MQ Compass Chest",
+			"Spirit Temple MQ Silver Block Hallway Chest",
+			"Spirit Temple MQ Sun Block Room Chest",
+			"Spirit Temple MQ Child Hammer Switch Chest",
+			"Spirit Temple MQ Statue Room Lullaby Chest",
+			"Spirit Temple MQ Statue Room Invisible Chest",
+			"Spirit Temple MQ Leever Room Chest",
+			"Spirit Temple MQ Symphony Room Chest",
+			"Spirit Temple MQ Beamos Room Chest",
+			"Spirit Temple MQ Chest Switch Chest",
+			"Spirit Temple MQ Boss Key Chest",
+			"Spirit Temple MQ Mirror Puzzle Invisible Chest",
+
+			// Spirit Temple MQ GS
+			"Spirit Temple MQ GS Sun Block Room",
+			"Spirit Temple MQ GS Leever Room",
+			"Spirit Temple MQ GS Symphony Room",
+			"Spirit Temple MQ GS Nine Thrones Room West",
+			"Spirit Temple MQ GS Nine Thrones Room North",
+
+			// v7 sanities
+			[
+				// Spirit Temple MQ Freestanding
+				"Spirit Temple MQ Child Recovery Heart 1",
+				"Spirit Temple MQ Child Recovery Heart 2",
+
+				// Spirit Temple MQ Pot
+				"Spirit Temple MQ Lobby Pot 1",
+				"Spirit Temple MQ Lobby Pot 2",
+				"Spirit Temple MQ Lobby Pot 3",
+				"Spirit Temple MQ Lobby Pot 4",
+				"Spirit Temple MQ Child Torch Slugs Room Pot",
+				"Spirit Temple MQ Child 3 Gibdo Room Pot 1",
+				"Spirit Temple MQ Child 3 Gibdo Room Pot 2",
+				"Spirit Temple MQ Child Stalfos Fight Pot 1",
+				"Spirit Temple MQ Child Stalfos Fight Pot 2",
+				"Spirit Temple MQ Child Stalfos Fight Pot 3",
+				"Spirit Temple MQ Child Climb Pot",
+				"Spirit Temple MQ Central Chamber Floor Pot 1",
+				"Spirit Temple MQ Central Chamber Floor Pot 2",
+				"Spirit Temple MQ Central Chamber Floor Pot 3",
+				"Spirit Temple MQ Central Chamber Top Left Pot (Left)",
+				"Spirit Temple MQ Central Chamber Top Left Pot (Right)",
+				"Spirit Temple MQ Sun Block Room Pot 1",
+				"Spirit Temple MQ Sun Block Room Pot 2",
+				"Spirit Temple MQ Below 4 Wallmasters Pot 1",
+				"Spirit Temple MQ Below 4 Wallmasters Pot 2",
+				"Spirit Temple MQ Shifting Wall Pot 1",
+				"Spirit Temple MQ Shifting Wall Pot 2",
+				"Spirit Temple MQ After Shifting Wall Room Pot 1",
+				"Spirit Temple MQ After Shifting Wall Room Pot 2",
+				"Spirit Temple MQ Big Mirror Pot 1",
+				"Spirit Temple MQ Big Mirror Pot 2",
+				"Spirit Temple MQ Big Mirror Pot 3",
+				"Spirit Temple MQ Big Mirror Pot 4",
+
+				// Spirit Temple MQ Crate
+				"Spirit Temple MQ Central Chamber Crate 1",
+				"Spirit Temple MQ Central Chamber Crate 2",
+				"Spirit Temple MQ Big Mirror Crate 1",
+				"Spirit Temple MQ Big Mirror Crate 2",
+				"Spirit Temple MQ Big Mirror Crate 3",
+				"Spirit Temple MQ Big Mirror Crate 4",
+			],
+		],
     ],
     ShadowTemple : [
         // Shadow Temple
@@ -673,6 +1197,90 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // Shadow Temple dungeon boss reward
         "Bongo Bongo",
+
+        // Shadow Temple MQ ONLY
+		[
+			// Shadow Temple MQ
+			"Shadow Temple MQ Early Gibdos Chest",
+			"Shadow Temple MQ Map Chest",
+			"Shadow Temple MQ Near Ship Invisible Chest",
+			"Shadow Temple MQ Compass Chest",
+			"Shadow Temple MQ Hover Boots Chest",
+			"Shadow Temple MQ Invisible Blades Invisible Chest",
+			"Shadow Temple MQ Invisible Blades Visible Chest",
+			"Shadow Temple MQ Beamos Silver Rupees Chest",
+			"Shadow Temple MQ Falling Spikes Lower Chest",
+			"Shadow Temple MQ Falling Spikes Upper Chest",
+			"Shadow Temple MQ Falling Spikes Switch Chest",
+			"Shadow Temple MQ Invisible Spikes Chest",
+			"Shadow Temple MQ Stalfos Room Chest",
+			"Shadow Temple MQ Wind Hint Chest",
+			"Shadow Temple MQ After Wind Hidden Chest",
+			"Shadow Temple MQ After Wind Enemy Chest",
+			"Shadow Temple MQ Boss Key Chest",
+			"Shadow Temple MQ Spike Walls Left Chest",
+			"Shadow Temple MQ Freestanding Key",
+			"Shadow Temple MQ Bomb Flower Chest",
+
+			// Shadow Temple MQ GS
+			"Shadow Temple MQ GS Falling Spikes Room",
+			"Shadow Temple MQ GS Wind Hint Room",
+			"Shadow Temple MQ GS After Wind",
+			"Shadow Temple MQ GS After Ship",
+			"Shadow Temple MQ GS Near Boss",
+
+			// v7 sanities
+			[
+				// Shadow Temple MQ Freestanding
+				"Shadow Temple MQ Invisible Blades Recovery Heart 1",
+				"Shadow Temple MQ Invisible Blades Recovery Heart 2",
+				"Shadow Temple MQ Before Boat Recovery Heart 1",
+				"Shadow Temple MQ Before Boat Recovery Heart 2",
+				"Shadow Temple MQ After Boat Upper Recovery Heart 1",
+				"Shadow Temple MQ After Boat Upper Recovery Heart 2",
+				"Shadow Temple MQ After Boat Lower Recovery Heart",
+				"Shadow Temple MQ 3 Spinning Pots Rupee 1",
+				"Shadow Temple MQ 3 Spinning Pots Rupee 2",
+				"Shadow Temple MQ 3 Spinning Pots Rupee 3",
+				"Shadow Temple MQ 3 Spinning Pots Rupee 4",
+				"Shadow Temple MQ 3 Spinning Pots Rupee 5",
+				"Shadow Temple MQ 3 Spinning Pots Rupee 6",
+				"Shadow Temple MQ 3 Spinning Pots Rupee 7",
+				"Shadow Temple MQ 3 Spinning Pots Rupee 8",
+				"Shadow Temple MQ 3 Spinning Pots Rupee 9",
+
+				// Shadow Temple MQ Pot
+				"Shadow Temple MQ Whispering Walls Pot 1",
+				"Shadow Temple MQ Whispering Walls Pot 2",
+				"Shadow Temple MQ Whispering Walls After Time Block Flying Pot 1",
+				"Shadow Temple MQ Whispering Walls After Time Block Flying Pot 2",
+				"Shadow Temple MQ Whispering Walls Before Time Block Flying Pot 1",
+				"Shadow Temple MQ Whispering Walls Before Time Block Flying Pot 2",
+				"Shadow Temple MQ Compass Room Pot 1",
+				"Shadow Temple MQ Compass Room Pot 2",
+				"Shadow Temple MQ Falling Spikes Lower Pot 1",
+				"Shadow Temple MQ Falling Spikes Lower Pot 2",
+				"Shadow Temple MQ Falling Spikes Upper Pot 1",
+				"Shadow Temple MQ Falling Spikes Upper Pot 2",
+				"Shadow Temple MQ After Wind Pot 1",
+				"Shadow Temple MQ After Wind Pot 2",
+				"Shadow Temple MQ After Wind Flying Pot 1",
+				"Shadow Temple MQ After Wind Flying Pot 2",
+				"Shadow Temple MQ After Boat Pot 1",
+				"Shadow Temple MQ After Boat Pot 2",
+				"Shadow Temple MQ Near Boss Pot 1",
+				"Shadow Temple MQ Near Boss Pot 2",
+				"Shadow Temple MQ Bomb Flower Room Pot 1",
+				"Shadow Temple MQ Bomb Flower Room Pot 2",
+				"Shadow Temple MQ Spike Walls Pot",
+
+				// Shadow Temple MQ Crate
+				"Shadow Temple MQ Truth Spinner Small Wooden Crate 1",
+				"Shadow Temple MQ Truth Spinner Small Wooden Crate 2",
+				"Shadow Temple MQ Truth Spinner Small Wooden Crate 3",
+				"Shadow Temple MQ Truth Spinner Small Wooden Crate 4",
+			],
+		],
     ],
     BottomWell : [
         // Bottom of the Well
@@ -695,6 +1303,41 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "Bottom of the Well GS West Inner Room",
         "Bottom of the Well GS East Inner Room",
         "Bottom of the Well GS Like Like Cage",
+
+        // Bottom of the Well MQ ONLY
+		[
+			// Bottom of the Well MQ
+			"Bottom of the Well MQ Map Chest",
+			"Bottom of the Well MQ East Inner Room Freestanding Key",
+			"Bottom of the Well MQ Compass Chest",
+			"Bottom of the Well MQ Dead Hand Freestanding Key",
+			"Bottom of the Well MQ Lens of Truth Chest",
+
+			// Bottom of the Well MQ GS
+			"Bottom of the Well MQ GS Coffin Room",
+			"Bottom of the Well MQ GS West Inner Room",
+			"Bottom of the Well MQ GS Basement",
+
+			// v7 sanities
+			[
+				// Bottom of the Well MQ Freestanding
+				"Bottom of the Well MQ Bombable Recovery Heart 1",
+				"Bottom of the Well MQ Bombable Recovery Heart 2",
+				"Bottom of the Well MQ Basement Recovery Heart 1",
+				"Bottom of the Well MQ Basement Recovery Heart 2",
+				"Bottom of the Well MQ Basement Recovery Heart 3",
+				"Bottom of the Well MQ Coffin Recovery Heart 1",
+				"Bottom of the Well MQ Coffin Recovery Heart 2",
+
+				// Bottom of the Well MQ Pot
+				"Bottom of the Well MQ Center Room Right Pot 1",
+				"Bottom of the Well MQ Center Room Right Pot 2",
+				"Bottom of the Well MQ Center Room Right Pot 3",
+				"Bottom of the Well MQ East Inner Room Pot 1",
+				"Bottom of the Well MQ East Inner Room Pot 2",
+				"Bottom of the Well MQ East Inner Room Pot 3",
+			],
+		],
     ],
     IceCavern : [
         // Ice Cavern
@@ -710,6 +1353,33 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // Ice Cavern main quest
         "Sheik in Ice Cavern",
+
+        // Ice Cavern MQ ONLY
+		[
+			// Ice Cavern MQ
+			"Ice Cavern MQ Map Chest",
+			"Ice Cavern MQ Compass Chest",
+			"Ice Cavern MQ Freestanding PoH",
+			"Ice Cavern MQ Iron Boots Chest",
+
+			// Ice Cavern MQ GS
+			"Ice Cavern MQ GS Red Ice",
+			"Ice Cavern MQ GS Ice Block",
+			"Ice Cavern MQ GS Scarecrow",
+
+			// v7 sanities
+			[
+				// Ice Cavern MQ Pot
+				"Ice Cavern MQ First Hall Pot",
+				"Ice Cavern MQ Tektite Room Pot 1",
+				"Ice Cavern MQ Tektite Room Pot 2",
+				"Ice Cavern MQ Center Room Pot 1",
+				"Ice Cavern MQ Center Room Pot 2",
+				"Ice Cavern MQ Near End Pot",
+				"Ice Cavern MQ Compass Room Pot 1",
+				"Ice Cavern MQ Compass Room Pot 2",
+			],
+		],
     ],
     ThievesHideout : [
         // GF ThievesHideout
@@ -743,6 +1413,40 @@ window.RandoStuffs.OoT.core.Location.byArea = {
         "Gerudo Training Ground Maze Path Second Chest",
         "Gerudo Training Ground Maze Path Third Chest",
         "Gerudo Training Ground Maze Path Final Chest",
+
+        // Gerudo Training Ground MQ ONLY
+		[
+			// Gerudo Training Ground MQ
+			"Gerudo Training Ground MQ Lobby Left Chest",
+			"Gerudo Training Ground MQ Lobby Right Chest",
+			"Gerudo Training Ground MQ First Iron Knuckle Chest",
+			"Gerudo Training Ground MQ Before Heavy Block Chest",
+			"Gerudo Training Ground MQ Heavy Block Chest",
+			"Gerudo Training Ground MQ Eye Statue Chest",
+			"Gerudo Training Ground MQ Ice Arrows Chest",
+			"Gerudo Training Ground MQ Second Iron Knuckle Chest",
+			"Gerudo Training Ground MQ Flame Circle Chest",
+			"Gerudo Training Ground MQ Maze Right Central Chest",
+			"Gerudo Training Ground MQ Maze Right Side Chest",
+			"Gerudo Training Ground MQ Underwater Silver Rupee Chest",
+			"Gerudo Training Ground MQ Dinolfos Chest",
+			"Gerudo Training Ground MQ Hidden Ceiling Chest",
+			"Gerudo Training Ground MQ Maze Path First Chest",
+			"Gerudo Training Ground MQ Maze Path Third Chest",
+			"Gerudo Training Ground MQ Maze Path Second Chest",
+
+			// v7 sanities
+			[
+				// Gerudo Training Ground MQ Pot
+				"Gerudo Training Ground MQ Lobby Left Pot 1",
+				"Gerudo Training Ground MQ Lobby Left Pot 2",
+				"Gerudo Training Ground MQ Lobby Right Pot 1",
+				"Gerudo Training Ground MQ Lobby Right Pot 2",
+
+				// Gerudo Training Ground MQ Crate
+				"Gerudo Training Ground MQ Maze Crate",
+			],
+		],
     ],
     GanonCastle : [
         // Ganons Castle
@@ -770,6 +1474,58 @@ window.RandoStuffs.OoT.core.Location.byArea = {
 
         // Ganons Tower
         "Ganons Tower Boss Key Chest",
+
+        // Ganons Castle MQ ONLY
+		[
+			// Ganons Castle MQ
+			"Ganons Castle MQ Forest Trial Freestanding Key",
+			"Ganons Castle MQ Forest Trial Eye Switch Chest",
+			"Ganons Castle MQ Forest Trial Frozen Eye Switch Chest",
+			"Ganons Castle MQ Water Trial Chest",
+			"Ganons Castle MQ Shadow Trial Bomb Flower Chest",
+			"Ganons Castle MQ Shadow Trial Eye Switch Chest",
+			"Ganons Castle MQ Light Trial Lullaby Chest",
+			"Ganons Castle MQ Spirit Trial First Chest",
+			"Ganons Castle MQ Spirit Trial Invisible Chest",
+			"Ganons Castle MQ Spirit Trial Sun Front Left Chest",
+			"Ganons Castle MQ Spirit Trial Sun Back Left Chest",
+			"Ganons Castle MQ Spirit Trial Sun Back Right Chest",
+			"Ganons Castle MQ Spirit Trial Golden Gauntlets Chest",
+
+			// Ganons Castle MQ scrub
+			"Ganons Castle MQ Deku Scrub Left",
+			"Ganons Castle MQ Deku Scrub Center-Left",
+			"Ganons Castle MQ Deku Scrub Center",
+			"Ganons Castle MQ Deku Scrub Center-Right",
+			"Ganons Castle MQ Deku Scrub Right",
+
+			// v7 sanities
+			[
+				// Ganons Castle MQ Freestanding
+				"Ganons Castle MQ Water Trial Recovery Heart",
+				"Ganons Castle MQ Light Trial Recovery Heart 1",
+				"Ganons Castle MQ Light Trial Recovery Heart 2",
+
+				// Ganons Castle MQ Pot
+				"Ganons Castle MQ Water Trial Pot 1",
+				"Ganons Castle MQ Water Trial Pot 2",
+				"Ganons Castle MQ Forest Trial Pot 1",
+				"Ganons Castle MQ Forest Trial Pot 2",
+				"Ganons Castle MQ Light Trial Pot 1",
+				"Ganons Castle MQ Light Trial Pot 2",
+				"Ganons Castle MQ Shadow Trial Pot 1",
+				"Ganons Castle MQ Shadow Trial Pot 2",
+				"Ganons Castle MQ Fire Trial Pot 1",
+				"Ganons Castle MQ Fire Trial Pot 2",
+				"Ganons Castle MQ Spirit Trial Pot 1",
+				"Ganons Castle MQ Spirit Trial Pot 2",
+			],
+		],
     ],
 };
 
+// flat-build Location.byArea
+Object.keys(window.RandoStuffs.OoT.core.Location.byArea).forEach(e=>{
+        window.RandoStuffs.OoT.core.Location.byArea[e] =
+        window.RandoStuffs.OoT.core.Location.byArea[e].flat(Number.MAX_SAFE_INTEGER);
+});
