@@ -320,6 +320,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : dungeon rewards & songs
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 	// KF & LW & SFM
 	{
 		water : [
@@ -542,6 +615,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"SFM Deku Scrub Grotto Front",
 			"SFM Deku Scrub Grotto Rear",
 			"SFM GS",
+		],
+	},
+
+	// v7 : KF & LW & SFM
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
 		],
 	},
 
@@ -796,6 +942,84 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"HC GS Tree",
 			"HC GS Storms Grotto",
 			"OGC GS",
+		],
+	},
+
+	// v7 : HF & Market & ToT & HC & OGC
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Market Night Red Rupee Crate",
+			"Market Night Green Rupee Crate 1",
+			"Market Night Green Rupee Crate 2",
+			"Market Night Green Rupee Crate 3",
+			"Market Dog Lady House Crate",
+			"Market Guard House Child Crate",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
 		],
 	},
 
@@ -1110,6 +1334,81 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : LLR & Kak & Graveyard
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"LLR Child Crate",
+			"Kak Adult Red Rupee Crate",
+			"Kak Adult Arrows Crate",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 	// DMT & GC & DMC
 	{
 		water : [
@@ -1396,6 +1695,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : DMT & GC & DMC
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"GC Boulder Maze Crate",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 	// ZR & ZD & ZF & LH
 	{
 		water : [
@@ -1631,6 +2003,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : ZR & ZD & ZF & LH
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 	// GV & GF & Wasteland & Colossus
 	{
 		water : [
@@ -1843,6 +2288,99 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : GV & GF & Wasteland & Colossus
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"GV Crate Near Cow",
+			"GV Freestanding PoH Crate",
+			"GF Above Jail Crate",
+			"Hideout Break Room Crate 1",
+			"Hideout Break Room Crate 2",
+			"Hideout Break Room Hallway Crate 1",
+			"Hideout Break Room Hallway Crate 2",
+			"Hideout 3 Torch Jail Crate",
+			"Hideout 1 Torch Jail Crate",
+			"Hideout Near Kitchen Crate 1",
+			"Hideout Near Kitchen Crate 2",
+			"Hideout Near Kitchen Crate 3",
+			"Hideout Near Kitchen Crate 4",
+			"Hideout Near Kitchen Crate 5",
+			"Hideout 2 Torch Jail Crate 1",
+			"Hideout 2 Torch Jail Crate 2",
+			"Wasteland Crate Before Quicksand",
+			"Wasteland Crate After Quicksand 1",
+			"Wasteland Crate After Quicksand 2",
+			"Wasteland Crate After Quicksand 3",
+			"Wasteland Crate Near Colossus",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 
 	// Deku
 	{
@@ -1852,7 +2390,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Deku Tree GS Basement Gate",
 		],
 		immersed : [
-			
+
 		],
 		forest : [
 			"Deku Tree Map Chest",
@@ -1868,7 +2406,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Deku Tree Queen Gohma Heart",
 		],
 		grass : [
-			
+
 		],
 		wood : [
 			"Deku Tree Map Chest",
@@ -1887,7 +2425,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Deku Tree Queen Gohma Heart",
 		],
 		mountain : [
-			
+
 		],
 		underground : [
 			"Deku Tree Basement Chest",
@@ -1897,7 +2435,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Deku Tree Queen Gohma Heart",
 		],
 		sandy : [
-			
+
 		],
 		earthy : [
 			"Deku Tree Basement Chest",
@@ -1905,7 +2443,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Deku Tree Queen Gohma Heart",
 		],
 		people : [
-			
+
 		],
 		building : [
 			"Deku Tree Map Chest",
@@ -1921,13 +2459,13 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Deku Tree Queen Gohma Heart",
 		],
 		town : [
-			
+
 		],
 		desert : [
-			
+
 		],
 		hot : [
-			
+
 		],
 		fire : [
 			"Deku Tree Basement Chest",
@@ -1935,19 +2473,19 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Deku Tree GS Basement Gate",
 		],
 		cold : [
-			
+
 		],
 		ice : [
-			
+
 		],
 		magic : [
-			
+
 		],
 		explosive : [
 			"Deku Tree GS Basement Back Room",
 		],
 		song : [
-			
+
 		],
 		reward : [
 			"Deku Tree Queen Gohma Heart",
@@ -1962,22 +2500,95 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Deku Tree GS Basement Gate",
 			"Deku Tree GS Basement Back Room",
 			"Deku Tree Queen Gohma Heart",
+		],
+	},
+
+	// v7 : Deku
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
 		],
 	},
 
 	// Dodongo
 	{
 		water : [
-			
+
 		],
 		immersed : [
-			
+
 		],
 		forest : [
-			
+
 		],
 		grass : [
-			
+
 		],
 		wood : [
 			"Dodongos Cavern Map Chest",
@@ -2023,7 +2634,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Dodongos Cavern King Dodongo Heart",
 		],
 		sandy : [
-			
+
 		],
 		earthy : [
 			"Dodongos Cavern Map Chest",
@@ -2042,7 +2653,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Dodongos Cavern King Dodongo Heart",
 		],
 		people : [
-			
+
 		],
 		building : [
 			"Dodongos Cavern Map Chest",
@@ -2063,10 +2674,10 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Dodongos Cavern King Dodongo Heart",
 		],
 		town : [
-			
+
 		],
 		desert : [
-			
+
 		],
 		hot : [
 			"Dodongos Cavern Map Chest",
@@ -2079,13 +2690,13 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Dodongos Cavern GS Side Room Near Lower Lizalfos",
 		],
 		cold : [
-			
+
 		],
 		ice : [
-			
+
 		],
 		magic : [
-			
+
 		],
 		explosive : [
 			"Dodongos Cavern Map Chest",
@@ -2106,7 +2717,7 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Dodongos Cavern King Dodongo Heart",
 		],
 		song : [
-			
+
 		],
 		reward : [
 			"Dodongos Cavern King Dodongo Heart",
@@ -2128,6 +2739,78 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : Dodongo
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
 
 
 
@@ -2151,6 +2834,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Jabu Jabus Belly Boomerang Chest",
 			"Jabu Jabus Belly Map Chest",
 			"Jabu Jabus Belly Compass Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : Jabu
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Jabu Jabus Belly Small Wooden Crate",
 		],
 		rock : [
 
@@ -2293,6 +3049,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : Well
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 	// Forest
 	{
 		water : [
@@ -2320,6 +3149,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Forest Temple Blue Poe Chest",
 			"Forest Temple Falling Ceiling Room Chest",
 			"Forest Temple Basement Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : Forest
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
 		],
 		rock : [
 
@@ -2462,6 +3364,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : Fire
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 	// Water
 	{
 		water : [
@@ -2486,6 +3461,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Water Temple Longshot Chest",
 			"Water Temple River Chest",
 			"Water Temple Dragon Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : Water
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
 		],
 		rock : [
 
@@ -2573,6 +3621,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Shadow Temple After Wind Hidden Chest",
 			"Shadow Temple Spike Walls Left Chest",
 			"Shadow Temple Invisible Floormaster Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : Shadow
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
 		],
 		rock : [
 
@@ -2720,6 +3841,80 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : Spirit
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+			"Spirit Temple Before Child Climb Small Wooden Crate 1",
+			"Spirit Temple Before Child Climb Small Wooden Crate 2",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 	// Ice
 	{
 		water : [
@@ -2738,6 +3933,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Ice Cavern Map Chest",
 			"Ice Cavern Compass Chest",
 			"Ice Cavern Iron Boots Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : Ice
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
 		],
 		rock : [
 
@@ -2888,6 +4156,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : GTG
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 	// Ganon
 	{
 		water : [
@@ -2975,10 +4316,82 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : Ganon
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
 
 
 
-
+	
 
 	// MQ Deku
 	{
@@ -3002,7 +4415,78 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Deku Tree MQ Basement Chest",
 			"Deku Tree MQ Before Spinning Log Chest",
 			"Deku Tree MQ After Spinning Log Chest",
+		],
+		rock : [
 
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : MQ Deku
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
 			"Deku Tree MQ Lobby Crate",
 			"Deku Tree MQ Slingshot Room Crate 1",
 			"Deku Tree MQ Slingshot Room Crate 2",
@@ -3084,7 +4568,78 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Dodongos Cavern MQ Larvae Room Chest",
 			"Dodongos Cavern MQ Compass Chest",
 			"Dodongos Cavern MQ Under Grave Chest",
+		],
+		rock : [
 
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : MQ Dodongo
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
 			"Dodongos Cavern MQ Staircase Crate Bottom Left",
 			"Dodongos Cavern MQ Staircase Crate Bottom Right",
 			"Dodongos Cavern MQ Staircase Crate Mid Left",
@@ -3247,6 +4802,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : MQ Jabu
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 	// MQ Well
 	{
 		water : [
@@ -3265,6 +4893,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Bottom of the Well MQ Map Chest",
 			"Bottom of the Well MQ Compass Chest",
 			"Bottom of the Well MQ Lens of Truth Chest",
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : MQ Well
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
 		],
 		rock : [
 
@@ -3348,7 +5049,78 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Forest Temple MQ Compass Chest",
 			"Forest Temple MQ Falling Ceiling Room Chest",
 			"Forest Temple MQ Basement Chest",
+		],
+		rock : [
 
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : MQ Forest
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
 			"Forest Temple MQ Frozen Eye Switch Room Small Wooden Crate 1",
 			"Forest Temple MQ Frozen Eye Switch Room Small Wooden Crate 2",
 			"Forest Temple MQ Frozen Eye Switch Room Small Wooden Crate 3",
@@ -3434,7 +5206,78 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Fire Temple MQ Lizalfos Maze Upper Chest",
 			"Fire Temple MQ Lizalfos Maze Lower Chest",
 			"Fire Temple MQ Chest On Fire",
+		],
+		rock : [
 
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : MQ Fire
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
 			"Fire Temple MQ Near Boss Left Crate 1",
 			"Fire Temple MQ Near Boss Left Crate 2",
 			"Fire Temple MQ Near Boss Right Lower Crate 1",
@@ -3534,7 +5377,78 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Water Temple MQ Map Chest",
 			"Water Temple MQ Compass Chest",
 			"Water Temple MQ Central Pillar Chest",
+		],
+		rock : [
 
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : MQ Water
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
 			"Water Temple MQ Central Pillar Upper Crate 1",
 			"Water Temple MQ Central Pillar Upper Crate 2",
 			"Water Temple MQ Central Pillar Lower Crate 1",
@@ -3710,7 +5624,78 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Shadow Temple MQ After Wind Enemy Chest",
 			"Shadow Temple MQ Spike Walls Left Chest",
 			"Shadow Temple MQ Bomb Flower Chest",
+		],
+		rock : [
 
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : MQ Shadow
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
 			"Shadow Temple MQ Truth Spinner Small Wooden Crate 1",
 			"Shadow Temple MQ Truth Spinner Small Wooden Crate 2",
 			"Shadow Temple MQ Truth Spinner Small Wooden Crate 3",
@@ -3806,7 +5791,78 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Spirit Temple MQ Beamos Room Chest",
 			"Spirit Temple MQ Chest Switch Chest",
 			"Spirit Temple MQ Mirror Puzzle Invisible Chest",
+		],
+		rock : [
 
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : MQ Spirit
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
 			"Spirit Temple MQ Central Chamber Crate 1",
 			"Spirit Temple MQ Central Chamber Crate 2",
 			"Spirit Temple MQ Big Mirror Crate 1",
@@ -3945,6 +6001,79 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : MQ Ice
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
 	// MQ GTG
 	{
 		water : [
@@ -3977,7 +6106,78 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Gerudo Training Ground MQ Maze Path First Chest",
 			"Gerudo Training Ground MQ Maze Path Third Chest",
 			"Gerudo Training Ground MQ Maze Path Second Chest",
+		],
+		rock : [
 
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+	// v7 : MQ GTG
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
 			"Gerudo Training Ground MQ Maze Crate",
 		],
 		rock : [
@@ -4120,16 +6320,91 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 		],
 	},
 
+	// v7 : MQ Ganon
+	{
+		water : [
+
+		],
+		immersed : [
+
+		],
+		forest : [
+
+		],
+		grass : [
+
+		],
+		wood : [
+
+		],
+		rock : [
+
+		],
+		mountain : [
+
+		],
+		underground : [
+
+		],
+		sandy : [
+
+		],
+		earthy : [
+
+		],
+		people : [
+
+		],
+		building : [
+
+		],
+		town : [
+
+		],
+		desert : [
+
+		],
+		hot : [
+
+		],
+		fire : [
+
+		],
+		cold : [
+
+		],
+		ice : [
+
+		],
+		magic : [
+
+		],
+		explosive : [
+
+		],
+		song : [
+
+		],
+		reward : [
+
+		],
+		enemy : [
+
+		],
+	},
+
+
 
 
 
 
 	// SANITY CONTEXTS
 	{
+		// .common precisions :
 		// contains : kokiri sword, ocarinas, weird egg,
 		//            magic beans, gerudo card, medigoron/salesman,
 		// includes : chests, NPC gifts/rewards/minigames, boss reward(stoneMed)
-		// (+)        extended frog songs 
+		// (+)        extended frog songs (v7)
 		// exculdes : GS sanity, extended scrubs, cows, shops, song learning spots,
 		// (+)        freestanding sanity, pots, crates, beehive
 		common : [
@@ -4232,6 +6507,11 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			// ZR
 			"ZR Magic Bean Salesman",
 			"ZR Open Grotto Chest",
+			"ZR Frogs Zeldas Lullaby", // v7 (frogs)
+			"ZR Frogs Eponas Song",    // v7 (frogs)
+			"ZR Frogs Sarias Song",    // v7 (frogs)
+			"ZR Frogs Suns Song",      // v7 (frogs)
+			"ZR Frogs Song of Time",   // v7 (frogs)
 			"ZR Frogs in the Rain",
 			"ZR Frogs Ocarina Game", // minigame
 			"ZR Near Open Grotto Freestanding PoH",
@@ -6370,6 +8650,212 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Ganons Castle MQ Spirit Trial Golden Gauntlets Chest",
 		],
 		freestanding : [
+			// OVERWORLD
+			//
+
+			// KF Freestanding
+			"KF Behind Midos Blue Rupee",
+			"KF Boulder Maze Blue Rupee 1",
+			"KF Boulder Maze Blue Rupee 2",
+			"KF End of Bridge Blue Rupee",
+			"KF Top of Sarias Recovery Heart 1",
+			"KF Top of Sarias Recovery Heart 2",
+			"KF Top of Sarias Recovery Heart 3",
+			"KF Bean Platform Green Rupee 1",
+			"KF Bean Platform Green Rupee 2",
+			"KF Bean Platform Green Rupee 3",
+			"KF Bean Platform Green Rupee 4",
+			"KF Bean Platform Green Rupee 5",
+			"KF Bean Platform Green Rupee 6",
+			"KF Bean Platform Red Rupee",
+			"KF Grass Near Ramp Green Rupee 1",
+			"KF Grass Near Ramp Green Rupee 2",
+			"KF Grass Near Midos Green Rupee 1",
+			"KF Grass Near Midos Green Rupee 2",
+			"KF Sarias House Recovery Heart 1",
+			"KF Sarias House Recovery Heart 2",
+			"KF Sarias House Recovery Heart 3",
+			"KF Sarias House Recovery Heart 4",
+			"KF Shop Blue Rupee",
+			// LW Freestanding
+			"LW Under Boulder Blue Rupee",
+			"LW Underwater Green Rupee 1",
+			"LW Underwater Green Rupee 2",
+			"LW Underwater Shortcut Green Rupee",
+			"LW Underwater Green Rupee 3",
+			"LW Underwater Green Rupee 4",
+			"LW Underwater Green Rupee 5",
+			"LW Underwater Green Rupee 6",
+			"LW Underwater Green Rupee 7",
+			// Graveyard Freestanding
+			"Graveyard Dampe Race Rupee 1",
+			"Graveyard Dampe Race Rupee 2",
+			"Graveyard Dampe Race Rupee 3",
+			"Graveyard Dampe Race Rupee 4",
+			"Graveyard Dampe Race Rupee 5",
+			"Graveyard Dampe Race Rupee 6",
+			"Graveyard Dampe Race Rupee 7",
+			"Graveyard Dampe Race Rupee 8",
+			// DMT Freestanding
+			"DMT Rock Red Rupee",
+			"DMT Rock Blue Rupee",
+			"DMT Cow Grotto Green Rupee 1",
+			"DMT Cow Grotto Green Rupee 2",
+			"DMT Cow Grotto Green Rupee 3",
+			"DMT Cow Grotto Green Rupee 4",
+			"DMT Cow Grotto Green Rupee 5",
+			"DMT Cow Grotto Green Rupee 6",
+			"DMT Cow Grotto Red Rupee",
+			"DMT Cow Grotto Recovery Heart 1",
+			"DMT Cow Grotto Recovery Heart 2",
+			"DMT Cow Grotto Recovery Heart 3",
+			"DMT Cow Grotto Recovery Heart 4",
+			// GC Freestanding
+			"GC Spinning Pot Bomb Drop 1",
+			"GC Spinning Pot Bomb Drop 2",
+			"GC Spinning Pot Bomb Drop 3",
+			"GC Spinning Pot Rupee Drop 1",
+			"GC Spinning Pot Rupee Drop 2",
+			"GC Spinning Pot Rupee Drop 3",
+			"GC Spinning Pot PoH Drop Rupee 1",
+			"GC Spinning Pot PoH Drop Rupee 2",
+			// DMC Freestanding
+			"DMC Adult Green Rupee 1",
+			"DMC Adult Green Rupee 2",
+			"DMC Adult Green Rupee 3",
+			"DMC Adult Green Rupee 4",
+			"DMC Adult Green Rupee 5",
+			"DMC Adult Green Rupee 6",
+			"DMC Adult Red Rupee",
+			"DMC Child Red Rupee 1",
+			"DMC Child Red Rupee 2",
+			"DMC Child Blue Rupee 1",
+			"DMC Child Blue Rupee 2",
+			"DMC Child Blue Rupee 3",
+			"DMC Child Blue Rupee 4",
+			"DMC Child Blue Rupee 5",
+			"DMC Child Blue Rupee 6",
+			// ZR Freestanding
+			"ZR Waterfall Red Rupee 1",
+			"ZR Waterfall Red Rupee 2",
+			"ZR Waterfall Red Rupee 3",
+			"ZR Waterfall Red Rupee 4",
+			// ZF Freestanding
+			"ZF Bottom Green Rupee 1",
+			"ZF Bottom Green Rupee 2",
+			"ZF Bottom Green Rupee 3",
+			"ZF Bottom Green Rupee 4",
+			"ZF Bottom Green Rupee 5",
+			"ZF Bottom Green Rupee 6",
+			"ZF Bottom Green Rupee 7",
+			"ZF Bottom Green Rupee 8",
+			"ZF Bottom Green Rupee 9",
+			"ZF Bottom Green Rupee 10",
+			"ZF Bottom Green Rupee 11",
+			"ZF Bottom Green Rupee 12",
+			"ZF Bottom Green Rupee 13",
+			"ZF Bottom Green Rupee 14",
+			"ZF Bottom Green Rupee 15",
+			"ZF Bottom Green Rupee 16",
+			"ZF Bottom Green Rupee 17",
+			"ZF Bottom Green Rupee 18",
+			// LH Freestanding
+			"LH Underwater Near Shore Green Rupee",
+			"LH Underwater Green Rupee 1",
+			"LH Underwater Green Rupee 2",
+			"LH Lab Dive Red Rupee 1",
+			"LH Lab Dive Red Rupee 2",
+			"LH Lab Dive Red Rupee 3",
+			// GV Freestanding
+			"GV Octorok Grotto Red Rupee",
+			"GV Octorok Grotto Blue Rupee 1",
+			"GV Octorok Grotto Blue Rupee 2",
+			"GV Octorok Grotto Blue Rupee 3",
+			"GV Octorok Grotto Green Rupee 1",
+			"GV Octorok Grotto Green Rupee 2",
+			"GV Octorok Grotto Green Rupee 3",
+			"GV Octorok Grotto Green Rupee 4",
+
+			// DUNGEON
+			//
+
+			// Deku Tree Freestanding
+			"Deku Tree Lower Lobby Recovery Heart",
+			"Deku Tree Upper Lobby Recovery Heart",
+			"Deku Tree Basement Recovery Heart 1",
+			"Deku Tree Basement Recovery Heart 2",
+			"Deku Tree Basement Recovery Heart 3",
+			// Dodongos Cavern Freestanding
+			"Dodongos Cavern Lizalfos Upper Recovery Heart 1",
+			"Dodongos Cavern Lizalfos Upper Recovery Heart 2",
+			"Dodongos Cavern Blade Room Behind Block Recovery Heart",
+			"Dodongos Cavern Lower Lizalfos Hidden Recovery Heart", // (shared with MQ)
+			// Bottom of the Well Freestanding
+			"Bottom of the Well Center Room Pit Fall Blue Rupee 1",
+			"Bottom of the Well Center Room Pit Fall Blue Rupee 2",
+			"Bottom of the Well Center Room Pit Fall Blue Rupee 3",
+			"Bottom of the Well Center Room Pit Fall Blue Rupee 4",
+			"Bottom of the Well Center Room Pit Fall Blue Rupee 5",
+			"Bottom of the Well Coffin Recovery Heart 1",
+			"Bottom of the Well Coffin Recovery Heart 2",
+			// Forest Temple Freestanding
+			"Forest Temple Courtyard Recovery Heart 1",
+			"Forest Temple Courtyard Recovery Heart 2",
+			"Forest Temple Well Recovery Heart 1",
+			"Forest Temple Well Recovery Heart 2",
+			// Fire Temple Freestanding
+			"Fire Temple Elevator Room Recovery Heart 1",
+			"Fire Temple Elevator Room Recovery Heart 2",
+			"Fire Temple Elevator Room Recovery Heart 3",
+			"Fire Temple Narrow Path Room Recovery Heart 1",
+			"Fire Temple Narrow Path Room Recovery Heart 2",
+			"Fire Temple Narrow Path Room Recovery Heart 3",
+			"Fire Temple Moving Fire Room Recovery Heart 1",
+			"Fire Temple Moving Fire Room Recovery Heart 2",
+			"Fire Temple Moving Fire Room Recovery Heart 3",
+			// Water Temple Freestanding
+			"Water Temple River Recovery Heart 1",
+			"Water Temple River Recovery Heart 2",
+			"Water Temple River Recovery Heart 3",
+			"Water Temple River Recovery Heart 4",
+			// Shadow Temple Freestanding
+			"Shadow Temple Invisible Blades Recovery Heart 1",
+			"Shadow Temple Invisible Blades Recovery Heart 2",
+			"Shadow Temple Before Boat Recovery Heart 1",
+			"Shadow Temple Before Boat Recovery Heart 2",
+			"Shadow Temple After Boat Upper Recovery Heart 1",
+			"Shadow Temple After Boat Upper Recovery Heart 2",
+			"Shadow Temple After Boat Lower Recovery Heart",
+			"Shadow Temple 3 Spinning Pots Rupee 1",
+			"Shadow Temple 3 Spinning Pots Rupee 2",
+			"Shadow Temple 3 Spinning Pots Rupee 3",
+			"Shadow Temple 3 Spinning Pots Rupee 4",
+			"Shadow Temple 3 Spinning Pots Rupee 5",
+			"Shadow Temple 3 Spinning Pots Rupee 6",
+			"Shadow Temple 3 Spinning Pots Rupee 7",
+			"Shadow Temple 3 Spinning Pots Rupee 8",
+			"Shadow Temple 3 Spinning Pots Rupee 9",
+			// Spirit Temple Freestanding
+			"Spirit Temple Shifting Wall Recovery Heart 1",
+			"Spirit Temple Shifting Wall Recovery Heart 2",
+			// Ice Cavern Freestanding
+			"Ice Cavern Frozen Blue Rupee",
+			"Ice Cavern Map Room Recovery Heart 1",
+			"Ice Cavern Map Room Recovery Heart 2",
+			"Ice Cavern Map Room Recovery Heart 3",
+			"Ice Cavern Block Room Red Rupee 1",
+			"Ice Cavern Block Room Red Rupee 2",
+			"Ice Cavern Block Room Red Rupee 3",
+			// Gerudo Training Ground Freestanding
+			"Gerudo Training Ground Beamos Recovery Heart 1",
+			"Gerudo Training Ground Beamos Recovery Heart 2",
+			// Ganons Castle Freestanding
+			"Ganons Castle Shadow Trial Recovery Heart 1",
+			"Ganons Castle Shadow Trial Recovery Heart 2",
+			"Ganons Castle Shadow Trial Recovery Heart 3",
+			"Ganons Castle Fire Trial Recovery Heart",
+			"Ganons Castle Spirit Trial Recovery Heart",
+
 			// MQ ONLY
 			//
 
@@ -6434,6 +8920,367 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Ganons Castle MQ Light Trial Recovery Heart 2",
 		],
 		pot : [
+			// OVERWORLD
+			//
+
+			// KF Pot
+			"KF Links House Pot",
+			"KF Know it All House Pot 1",
+			"KF Know it All House Pot 2",
+			"KF House of Twins Pot 1",
+			"KF House of Twins Pot 2",
+			// HF Pot
+			"HF Cow Grotto Pot 1",
+			"HF Cow Grotto Pot 2",
+			// Market Pot
+			"Market Guard House Child Pot 1",
+			"Market Guard House Child Pot 2",
+			"Market Guard House Child Pot 3",
+			"Market Guard House Child Pot 4",
+			"Market Guard House Child Pot 5",
+			"Market Guard House Child Pot 6",
+			"Market Guard House Child Pot 7",
+			"Market Guard House Child Pot 8",
+			"Market Guard House Child Pot 9",
+			"Market Guard House Child Pot 10",
+			"Market Guard House Child Pot 11",
+			"Market Guard House Child Pot 12",
+			"Market Guard House Child Pot 13",
+			"Market Guard House Child Pot 14",
+			"Market Guard House Child Pot 15",
+			"Market Guard House Child Pot 16",
+			"Market Guard House Child Pot 17",
+			"Market Guard House Child Pot 18",
+			"Market Guard House Child Pot 19",
+			"Market Guard House Child Pot 20",
+			"Market Guard House Child Pot 21",
+			"Market Guard House Child Pot 22",
+			"Market Guard House Child Pot 23",
+			"Market Guard House Child Pot 24",
+			"Market Guard House Child Pot 25",
+			"Market Guard House Child Pot 26",
+			"Market Guard House Child Pot 27",
+			"Market Guard House Child Pot 28",
+			"Market Guard House Child Pot 29",
+			"Market Guard House Child Pot 30",
+			"Market Guard House Child Pot 31",
+			"Market Guard House Child Pot 32",
+			"Market Guard House Child Pot 33",
+			"Market Guard House Child Pot 34",
+			"Market Guard House Child Pot 35",
+			"Market Guard House Child Pot 36",
+			"Market Guard House Child Pot 37",
+			"Market Guard House Child Pot 38",
+			"Market Guard House Child Pot 39",
+			"Market Guard House Child Pot 40",
+			"Market Guard House Child Pot 41",
+			"Market Guard House Child Pot 42",
+			"Market Guard House Child Pot 43",
+			"Market Guard House Child Pot 44",
+			"Market Guard House Adult Pot 1",
+			"Market Guard House Adult Pot 2",
+			"Market Guard House Adult Pot 3",
+			"Market Guard House Adult Pot 4",
+			"Market Guard House Adult Pot 5",
+			"Market Guard House Adult Pot 6",
+			"Market Guard House Adult Pot 7",
+			"Market Man in Green House Pot 1",
+			"Market Man in Green House Pot 2",
+			"Market Man in Green House Pot 3",
+			// HC Pot
+			"HC Storms Grotto Pot 1",
+			"HC Storms Grotto Pot 2",
+			"HC Storms Grotto Pot 3",
+			"HC Storms Grotto Pot 4",
+			// LLR Pot
+			"LLR Front Pot 1",
+			"LLR Front Pot 2",
+			"LLR Front Pot 3",
+			"LLR Front Pot 4",
+			"LLR Rain Shed Pot 1",
+			"LLR Rain Shed Pot 2",
+			"LLR Rain Shed Pot 3",
+			"LLR Talons House Pot 1",
+			"LLR Talons House Pot 2",
+			"LLR Talons House Pot 3",
+			// Kak Pot
+			"Kak Near Potion Shop Pot 1",
+			"Kak Near Potion Shop Pot 2",
+			"Kak Near Potion Shop Pot 3",
+			"Kak Near Impas House Pot 1",
+			"Kak Near Impas House Pot 2",
+			"Kak Near Impas House Pot 3",
+			"Kak Near Guards House Pot 1",
+			"Kak Near Guards House Pot 2",
+			"Kak Near Guards House Pot 3",
+			"Kak Near Odd Medicine Building Pot 1",
+			"Kak Near Odd Medicine Building Pot 2",
+			// Graveyard Pot
+			"Graveyard Dampe Pot 1",
+			"Graveyard Dampe Pot 2",
+			"Graveyard Dampe Pot 3",
+			"Graveyard Dampe Pot 4",
+			"Graveyard Dampe Pot 5",
+			"Graveyard Dampe Pot 6",
+			// GC Pot
+			"GC Darunia Pot 1",
+			"GC Darunia Pot 2",
+			"GC Darunia Pot 3",
+			"GC Medigoron Pot",
+			"GC Lower Staircase Pot 1",
+			"GC Lower Staircase Pot 2",
+			"GC Upper Staircase Pot 1",
+			"GC Upper Staircase Pot 2",
+			"GC Upper Staircase Pot 3",
+			// DMC Pot
+			"DMC Near GC Pot 1",
+			"DMC Near GC Pot 2",
+			"DMC Near GC Pot 3",
+			"DMC Near GC Pot 4",
+			// ZD Pot
+			"ZD Pot 1",
+			"ZD Pot 2",
+			"ZD Pot 3",
+			"ZD Pot 4",
+			"ZD Pot 5",
+			// ZF Pot
+			"ZF Hidden Cave Pot 1",
+			"ZF Hidden Cave Pot 2",
+			"ZF Hidden Cave Pot 3",
+			"ZF Near Jabu Pot 1",
+			"ZF Near Jabu Pot 2",
+			"ZF Near Jabu Pot 3",
+			"ZF Near Jabu Pot 4",
+			// Hideout Pot
+			"Hideout Break Room Pot 1",
+			"Hideout Break Room Pot 2",
+			"Hideout 1 Torch Jail Pot 1",
+			"Hideout 1 Torch Jail Pot 2",
+			"Hideout 1 Torch Jail Pot 3",
+			"Hideout Kitchen Pot 1",
+			"Hideout Kitchen Pot 2",
+			"Hideout 4 Torch Jail Pot 1",
+			"Hideout 4 Torch Jail Pot 2",
+			"Hideout 2 Torch Jail Pot 1",
+			"Hideout 2 Torch Jail Pot 2",
+			"Hideout 2 Torch Jail Pot 3",
+			"Hideout 2 Torch Jail In Cell Pot 1",
+			"Hideout 2 Torch Jail In Cell Pot 2",
+			"Hideout 2 Torch Jail In Cell Pot 3",
+			"Hideout 2 Torch Jail In Cell Pot 4",
+			// Wasteland Pot
+			"Wasteland Near GS Pot 1",
+			"Wasteland Near GS Pot 2",
+			"Wasteland Near GS Pot 3",
+
+			// DUNGEON
+			//
+
+			// Dodongos Cavern Pot
+			"Dodongos Cavern Right Side Pot 1",
+			"Dodongos Cavern Right Side Pot 2",
+			"Dodongos Cavern Right Side Pot 3",
+			"Dodongos Cavern Right Side Pot 4",
+			"Dodongos Cavern Right Side Pot 5",
+			"Dodongos Cavern Right Side Pot 6",
+			"Dodongos Cavern Lower Lizalfos Pot 1",
+			"Dodongos Cavern Lower Lizalfos Pot 2",
+			"Dodongos Cavern Lower Lizalfos Pot 3",
+			"Dodongos Cavern Lower Lizalfos Pot 4",
+			"Dodongos Cavern Torch Room Pot 1",
+			"Dodongos Cavern Torch Room Pot 2",
+			"Dodongos Cavern Torch Room Pot 3",
+			"Dodongos Cavern Torch Room Pot 4",
+			"Dodongos Cavern Staircase Pot 1",
+			"Dodongos Cavern Staircase Pot 2",
+			"Dodongos Cavern Staircase Pot 3",
+			"Dodongos Cavern Staircase Pot 4",
+			"Dodongos Cavern Last Block Pot 1",
+			"Dodongos Cavern Last Block Pot 2",
+			"Dodongos Cavern Last Block Pot 3",
+			"Dodongos Cavern Blade Room Pot 1",
+			"Dodongos Cavern Blade Room Pot 2",
+			"Dodongos Cavern Single Eye Switch Room Pot 1",
+			"Dodongos Cavern Single Eye Switch Room Pot 2",
+			"Dodongos Cavern Double Eye Switch Room Pot 1",
+			"Dodongos Cavern Double Eye Switch Room Pot 2",
+			// Jabu Jabus Belly Pot
+			"Jabu Jabus Belly Above Big Octo Pot 1",
+			"Jabu Jabus Belly Above Big Octo Pot 2",
+			"Jabu Jabus Belly Basement 2 Octoroks Pot 1",
+			"Jabu Jabus Belly Basement 2 Octoroks Pot 2",
+			"Jabu Jabus Belly Basement 2 Octoroks Pot 3",
+			"Jabu Jabus Belly Basement 2 Octoroks Pot 4",
+			"Jabu Jabus Belly Basement Switch Room Pot 1",
+			"Jabu Jabus Belly Basement Switch Room Pot 2",
+			"Jabu Jabus Belly Barinade Pot 1", // (shared with MQ)
+			"Jabu Jabus Belly Barinade Pot 2", // (shared with MQ)
+			"Jabu Jabus Belly Barinade Pot 3", // (shared with MQ)
+			"Jabu Jabus Belly Barinade Pot 4", // (shared with MQ)
+			"Jabu Jabus Belly Barinade Pot 5", // (shared with MQ)
+			"Jabu Jabus Belly Barinade Pot 6", // (shared with MQ)
+			// Bottom of the Well Pot
+			"Bottom of the Well Left Side Pot 1",
+			"Bottom of the Well Left Side Pot 2",
+			"Bottom of the Well Left Side Pot 3",
+			"Bottom of the Well Near Entrance Pot 1",
+			"Bottom of the Well Near Entrance Pot 2",
+			"Bottom of the Well Underwater Pot",
+			"Bottom of the Well Basement Pot 1",
+			"Bottom of the Well Basement Pot 2",
+			"Bottom of the Well Basement Pot 3",
+			"Bottom of the Well Basement Pot 4",
+			"Bottom of the Well Basement Pot 5",
+			"Bottom of the Well Basement Pot 6",
+			"Bottom of the Well Basement Pot 7",
+			"Bottom of the Well Basement Pot 8",
+			"Bottom of the Well Basement Pot 9",
+			"Bottom of the Well Basement Pot 10",
+			"Bottom of the Well Basement Pot 11",
+			"Bottom of the Well Basement Pot 12",
+			"Bottom of the Well Fire Keese Pot",
+			"Bottom of the Well West Inner Room Flying Pot 1",
+			"Bottom of the Well West Inner Room Flying Pot 2",
+			"Bottom of the Well West Inner Room Flying Pot 3",
+			// Forest Temple Pot
+			"Forest Temple Center Room Right Pot 1",
+			"Forest Temple Center Room Right Pot 2",
+			"Forest Temple Center Room Right Pot 3",
+			"Forest Temple Center Room Left Pot 1",
+			"Forest Temple Center Room Left Pot 2",
+			"Forest Temple Center Room Left Pot 3",
+			"Forest Temple Lower Stalfos Pot",
+			"Forest Temple Upper Stalfos Pot 1",
+			"Forest Temple Upper Stalfos Pot 2",
+			"Forest Temple Upper Stalfos Pot 3",
+			"Forest Temple Upper Stalfos Pot 4",
+			"Forest Temple Blue Poe Room Pot 1",
+			"Forest Temple Blue Poe Room Pot 2",
+			"Forest Temple Blue Poe Room Pot 3",
+			"Forest Temple Frozen Eye Switch Room Pot 1",
+			"Forest Temple Frozen Eye Switch Room Pot 2",
+			"Forest Temple Green Poe Room Pot 1",
+			"Forest Temple Green Poe Room Pot 2",
+			// Fire Temple Pot
+			"Fire Temple Big Lava Room Pot 1",
+			"Fire Temple Big Lava Room Pot 2",
+			"Fire Temple Big Lava Room Pot 3",
+			"Fire Temple Near Boss Pot 1",
+			"Fire Temple Near Boss Pot 2",
+			"Fire Temple Flame Maze Right Side Pot 1",
+			"Fire Temple Flame Maze Right Side Pot 2",
+			"Fire Temple Flame Maze Right Side Pot 3",
+			"Fire Temple Flame Maze Right Side Pot 4",
+			"Fire Temple Flame Maze Left Side Pot 1",
+			"Fire Temple Flame Maze Left Side Pot 2",
+			"Fire Temple Flame Maze Left Side Pot 3",
+			"Fire Temple Flame Maze Left Side Pot 4",
+			// Water Temple Pot
+			"Water Temple Main Room L2 Pot 1",
+			"Water Temple Main Room L2 Pot 2",
+			"Water Temple Behind Gate Pot 1",
+			"Water Temple Behind Gate Pot 2",
+			"Water Temple Behind Gate Pot 3",
+			"Water Temple Behind Gate Pot 4",
+			"Water Temple Near Compass Pot 1",
+			"Water Temple Near Compass Pot 2",
+			"Water Temple Near Compass Pot 3",
+			"Water Temple Like Like Pot 1",
+			"Water Temple Like Like Pot 2",
+			"Water Temple North Basement Block Puzzle Pot 1",
+			"Water Temple North Basement Block Puzzle Pot 2",
+			"Water Temple L1 Torch Pot 1",
+			"Water Temple L1 Torch Pot 2",
+			"Water Temple River Pot 1",
+			"Water Temple Central Bow Target Pot 1",
+			"Water Temple Central Bow Target Pot 2",
+			// Shadow Temple Pot
+			"Shadow Temple Whispering Walls Near Dead Hand Pot",
+			"Shadow Temple Whispering Walls Left Pot 1",
+			"Shadow Temple Whispering Walls Left Pot 2",
+			"Shadow Temple Whispering Walls Left Pot 3",
+			"Shadow Temple Whispering Walls Front Pot 1",
+			"Shadow Temple Whispering Walls Front Pot 2",
+			"Shadow Temple Whispering Walls Flying Pot",
+			"Shadow Temple Map Chest Room Pot 1",
+			"Shadow Temple Map Chest Room Pot 2",
+			"Shadow Temple Falling Spikes Lower Pot 2",
+			"Shadow Temple Falling Spikes Lower Pot 1",
+			"Shadow Temple Falling Spikes Upper Pot 1",
+			"Shadow Temple Falling Spikes Upper Pot 2",
+			"Shadow Temple Spike Walls Pot",
+			"Shadow Temple Invisible Floormaster Pot 1",
+			"Shadow Temple Invisible Floormaster Pot 2",
+			"Shadow Temple After Wind Pot 1",
+			"Shadow Temple After Wind Pot 2",
+			"Shadow Temple After Wind Flying Pot 1",
+			"Shadow Temple After Wind Flying Pot 2",
+			"Shadow Temple After Boat Pot",
+			"Shadow Temple Near Boss Pot 1",
+			"Shadow Temple Near Boss Pot 2",
+			// Spirit Temple Pot
+			"Spirit Temple Lobby Pot 1",
+			"Spirit Temple Lobby Pot 2",
+			"Spirit Temple Lobby Flying Pot 1",
+			"Spirit Temple Lobby Flying Pot 2",
+			"Spirit Temple Child Climb Pot",
+			"Spirit Temple Hall After Sun Block Room Pot 1",
+			"Spirit Temple Hall After Sun Block Room Pot 2",
+			"Spirit Temple Beamos Hall Pot",
+			"Spirit Temple Child Anubis Pot",
+			"Spirit Temple Child Bridge Flying Pot",
+			"Spirit Temple Central Chamber Flying Pot 1",
+			"Spirit Temple Central Chamber Flying Pot 2",
+			"Spirit Temple Adult Climb Flying Pot 1",
+			"Spirit Temple Adult Climb Flying Pot 2",
+			"Spirit Temple Big Mirror Flying Pot 1",
+			"Spirit Temple Big Mirror Flying Pot 2",
+			"Spirit Temple Big Mirror Flying Pot 3",
+			"Spirit Temple Big Mirror Flying Pot 4",
+			"Spirit Temple Big Mirror Flying Pot 5",
+			"Spirit Temple Big Mirror Flying Pot 6",
+			// Ice Cavern Pot
+			"Ice Cavern Hall Pot 1",
+			"Ice Cavern Hall Pot 2",
+			"Ice Cavern Spinning Blade Pot 1",
+			"Ice Cavern Spinning Blade Pot 2",
+			"Ice Cavern Spinning Blade Pot 3",
+			"Ice Cavern Spinning Blade Flying Pot",
+			"Ice Cavern Near End Pot 1",
+			"Ice Cavern Near End Pot 2",
+			"Ice Cavern Frozen Pot",
+			// Ganons Castle Pot
+			"Ganons Castle Water Trial Pot 1",
+			"Ganons Castle Water Trial Pot 2",
+			"Ganons Castle Forest Trial Pot 1",
+			"Ganons Castle Forest Trial Pot 2",
+			"Ganons Castle Light Trial Boulder Pot",
+			"Ganons Castle Light Trial Pot 1",
+			"Ganons Castle Light Trial Pot 2",
+			"Ganons Castle Shadow Trial Like Like Pot 1",
+			"Ganons Castle Shadow Trial Like Like Pot 2",
+			"Ganons Castle Shadow Trial Pot 1",
+			"Ganons Castle Shadow Trial Pot 2",
+			"Ganons Castle Fire Trial Pot 1",
+			"Ganons Castle Fire Trial Pot 2",
+			"Ganons Castle Spirit Trial Pot 1",
+			"Ganons Castle Spirit Trial Pot 2",
+			// Ganons Tower Pot
+			"Ganons Tower Pot 1",  // (shared with MQ)
+			"Ganons Tower Pot 2",  // (shared with MQ)
+			"Ganons Tower Pot 3",  // (shared with MQ)
+			"Ganons Tower Pot 4",  // (shared with MQ)
+			"Ganons Tower Pot 5",  // (shared with MQ)
+			"Ganons Tower Pot 6",  // (shared with MQ)
+			"Ganons Tower Pot 7",  // (shared with MQ)
+			"Ganons Tower Pot 8",  // (shared with MQ)
+			"Ganons Tower Pot 9",  // (shared with MQ)
+			"Ganons Tower Pot 10", // (shared with MQ)
+			"Ganons Tower Pot 11", // (shared with MQ)
+			"Ganons Tower Pot 12", // (shared with MQ)
+			"Ganons Tower Pot 13", // (shared with MQ)
+			"Ganons Tower Pot 14", // (shared with MQ)
+
 			// MQ ONLY
 			//
 
@@ -6635,6 +9482,58 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Ganons Castle MQ Spirit Trial Pot 2",
 		],
 		crate : [
+			// OVERWORLD
+			//
+
+			// Market Crate
+			"Market Night Red Rupee Crate",
+			"Market Night Green Rupee Crate 1",
+			"Market Night Green Rupee Crate 2",
+			"Market Night Green Rupee Crate 3",
+			"Market Dog Lady House Crate",
+			"Market Guard House Child Crate",
+			// LLR Crate
+			"LLR Child Crate",
+			// Kak Crate
+			"Kak Adult Red Rupee Crate",
+			"Kak Adult Arrows Crate",
+			// GC Crate
+			"GC Boulder Maze Crate",
+			// GV Crate
+			"GV Crate Near Cow",
+			"GV Freestanding PoH Crate",
+			// GF Crate
+			"GF Above Jail Crate",
+			// Hideout Crate
+			"Hideout Break Room Crate 1",
+			"Hideout Break Room Crate 2",
+			"Hideout Break Room Hallway Crate 1",
+			"Hideout Break Room Hallway Crate 2",
+			"Hideout 3 Torch Jail Crate",
+			"Hideout 1 Torch Jail Crate",
+			"Hideout Near Kitchen Crate 1",
+			"Hideout Near Kitchen Crate 2",
+			"Hideout Near Kitchen Crate 3",
+			"Hideout Near Kitchen Crate 4",
+			"Hideout Near Kitchen Crate 5",
+			"Hideout 2 Torch Jail Crate 1",
+			"Hideout 2 Torch Jail Crate 2",
+			// Wasteland Crate
+			"Wasteland Crate Before Quicksand",
+			"Wasteland Crate After Quicksand 1",
+			"Wasteland Crate After Quicksand 2",
+			"Wasteland Crate After Quicksand 3",
+			"Wasteland Crate Near Colossus",
+
+			// DUNGEON
+			//
+
+			// Jabu Jabus Belly Crate
+			"Jabu Jabus Belly Small Wooden Crate",
+			// Spirit Temple Crate
+			"Spirit Temple Before Child Climb Small Wooden Crate 1",
+			"Spirit Temple Before Child Climb Small Wooden Crate 2",
+
 			// MQ ONLY
 			//
 
@@ -6795,6 +9694,61 @@ window.RandoStuffs.OoT.core.Location.CONTEXT_SETS = [
 			"Gerudo Training Ground MQ Maze Crate",
 		],
 		beehive : [
+			// OVERWORLD
+			//
+
+			// KF Beehive
+			"KF Storms Grotto Beehive 1",
+			"KF Storms Grotto Beehive 2",
+			// LW Beehive
+			"LW Near Shortcuts Grotto Beehive 1",
+			"LW Near Shortcuts Grotto Beehive 2",
+			"LW Scrubs Grotto Beehive",
+			// SFM Beehive
+			"SFM Storms Grotto Beehive",
+			// HF Beehive
+			"HF Near Market Grotto Beehive 1",
+			"HF Near Market Grotto Beehive 2",
+			"HF Open Grotto Beehive 1",
+			"HF Open Grotto Beehive 2",
+			"HF Southeast Grotto Beehive 1",
+			"HF Southeast Grotto Beehive 2",
+			"HF Inside Fence Grotto Beehive",
+			// LLR Beehive
+			"LLR Grotto Beehive",
+			// Kak Beehive
+			"Kak Open Grotto Beehive 1",
+			"Kak Open Grotto Beehive 2",
+			// DMT Beehive
+			"DMT Cow Grotto Beehive",
+			"DMT Storms Grotto Beehive 1",
+			"DMT Storms Grotto Beehive 2",
+			// GC Beehive
+			"GC Grotto Beehive",
+			// DMC Beehive
+			"DMC Upper Grotto Beehive 1",
+			"DMC Upper Grotto Beehive 2",
+			"DMC Hammer Grotto Beehive",
+			// ZR Beehive
+			"ZR Open Grotto Beehive 1",
+			"ZR Open Grotto Beehive 2",
+			"ZR Storms Grotto Beehive",
+			// ZD Beehive
+			"ZD In Front of King Zora Beehive 1",
+			"ZD In Front of King Zora Beehive 2",
+			"ZD Behind King Zora Beehive",
+			// LH Beehive
+			"LH Grotto Beehive",
+			// GV Beehive
+			"GV Storms Grotto Beehive",
+			// Colossus Beehive
+			"Colossus Grotto Beehive",
+
+			// DUNGEON
+			//
+
+			// MQ ONLY
+			//
 
 		],
 	}
@@ -6885,6 +9839,11 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Sheik at Temple",
 			],
 		},
+		{	name : '// v7 : dungeon rewards & songs',
+			locs : [
+
+			],
+		},
 		{	name : '// KF & LW & SFM',
 			locs : [
 				// KF
@@ -6934,6 +9893,59 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"SFM Deku Scrub Grotto Rear",
 				// SFM GS
 				"SFM GS",
+			],
+		},
+		{	name : '// v7 : KF & LW & SFM',
+			locs : [
+				// KF Freestanding
+				"KF Behind Midos Blue Rupee",
+				"KF Boulder Maze Blue Rupee 1",
+				"KF Boulder Maze Blue Rupee 2",
+				"KF End of Bridge Blue Rupee",
+				"KF Top of Sarias Recovery Heart 1",
+				"KF Top of Sarias Recovery Heart 2",
+				"KF Top of Sarias Recovery Heart 3",
+				"KF Bean Platform Green Rupee 1",
+				"KF Bean Platform Green Rupee 2",
+				"KF Bean Platform Green Rupee 3",
+				"KF Bean Platform Green Rupee 4",
+				"KF Bean Platform Green Rupee 5",
+				"KF Bean Platform Green Rupee 6",
+				"KF Bean Platform Red Rupee",
+				"KF Grass Near Ramp Green Rupee 1",
+				"KF Grass Near Ramp Green Rupee 2",
+				"KF Grass Near Midos Green Rupee 1",
+				"KF Grass Near Midos Green Rupee 2",
+				"KF Sarias House Recovery Heart 1",
+				"KF Sarias House Recovery Heart 2",
+				"KF Sarias House Recovery Heart 3",
+				"KF Sarias House Recovery Heart 4",
+				"KF Shop Blue Rupee",
+				// KF Pot
+				"KF Links House Pot",
+				"KF Know it All House Pot 1",
+				"KF Know it All House Pot 2",
+				"KF House of Twins Pot 1",
+				"KF House of Twins Pot 2",
+				// KF Beehive
+				"KF Storms Grotto Beehive 1",
+				"KF Storms Grotto Beehive 2",
+				// LW Freestanding
+				"LW Under Boulder Blue Rupee",
+				"LW Underwater Green Rupee 1",
+				"LW Underwater Green Rupee 2",
+				"LW Underwater Shortcut Green Rupee",
+				"LW Underwater Green Rupee 3",
+				"LW Underwater Green Rupee 4",
+				"LW Underwater Green Rupee 5",
+				"LW Underwater Green Rupee 6",
+				"LW Underwater Green Rupee 7",
+				// LW Beehive
+				"LW Near Shortcuts Grotto Beehive 1",
+				"LW Near Shortcuts Grotto Beehive 2",
+				"LW Scrubs Grotto Beehive",
+				// SFM Beehive
+				"SFM Storms Grotto Beehive",
 			],
 		},
 		{	name : '// HF & Market & ToT & HC & OGC',
@@ -6999,6 +10011,88 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"OGC Great Fairy Reward",
 				// OGC GS
 				"OGC GS",
+			],
+		},
+		{	name : '// v7 : HF & Market & ToT & HC & OGC',
+			locs : [
+				// HF Pot
+				"HF Cow Grotto Pot 1",
+				"HF Cow Grotto Pot 2",
+				// HF Beehive
+				"HF Near Market Grotto Beehive 1",
+				"HF Near Market Grotto Beehive 2",
+				"HF Open Grotto Beehive 1",
+				"HF Open Grotto Beehive 2",
+				"HF Southeast Grotto Beehive 1",
+				"HF Southeast Grotto Beehive 2",
+				"HF Inside Fence Grotto Beehive",
+				// Market Crate
+				"Market Night Red Rupee Crate",
+				"Market Night Green Rupee Crate 1",
+				"Market Night Green Rupee Crate 2",
+				"Market Night Green Rupee Crate 3",
+				"Market Dog Lady House Crate",
+				"Market Guard House Child Crate",
+				// Market Pot
+				"Market Guard House Child Pot 1",
+				"Market Guard House Child Pot 2",
+				"Market Guard House Child Pot 3",
+				"Market Guard House Child Pot 4",
+				"Market Guard House Child Pot 5",
+				"Market Guard House Child Pot 6",
+				"Market Guard House Child Pot 7",
+				"Market Guard House Child Pot 8",
+				"Market Guard House Child Pot 9",
+				"Market Guard House Child Pot 10",
+				"Market Guard House Child Pot 11",
+				"Market Guard House Child Pot 12",
+				"Market Guard House Child Pot 13",
+				"Market Guard House Child Pot 14",
+				"Market Guard House Child Pot 15",
+				"Market Guard House Child Pot 16",
+				"Market Guard House Child Pot 17",
+				"Market Guard House Child Pot 18",
+				"Market Guard House Child Pot 19",
+				"Market Guard House Child Pot 20",
+				"Market Guard House Child Pot 21",
+				"Market Guard House Child Pot 22",
+				"Market Guard House Child Pot 23",
+				"Market Guard House Child Pot 24",
+				"Market Guard House Child Pot 25",
+				"Market Guard House Child Pot 26",
+				"Market Guard House Child Pot 27",
+				"Market Guard House Child Pot 28",
+				"Market Guard House Child Pot 29",
+				"Market Guard House Child Pot 30",
+				"Market Guard House Child Pot 31",
+				"Market Guard House Child Pot 32",
+				"Market Guard House Child Pot 33",
+				"Market Guard House Child Pot 34",
+				"Market Guard House Child Pot 35",
+				"Market Guard House Child Pot 36",
+				"Market Guard House Child Pot 37",
+				"Market Guard House Child Pot 38",
+				"Market Guard House Child Pot 39",
+				"Market Guard House Child Pot 40",
+				"Market Guard House Child Pot 41",
+				"Market Guard House Child Pot 42",
+				"Market Guard House Child Pot 43",
+				"Market Guard House Child Pot 44",
+				"Market Guard House Adult Pot 1",
+				"Market Guard House Adult Pot 2",
+				"Market Guard House Adult Pot 3",
+				"Market Guard House Adult Pot 4",
+				"Market Guard House Adult Pot 5",
+				"Market Guard House Adult Pot 6",
+				"Market Guard House Adult Pot 7",
+				"Market Man in Green House Pot 1",
+				"Market Man in Green House Pot 2",
+				"Market Man in Green House Pot 3",
+				// HC Pot
+				"HC Storms Grotto Pot 1",
+				"HC Storms Grotto Pot 2",
+				"HC Storms Grotto Pot 3",
+				"HC Storms Grotto Pot 4",
 			],
 		},
 		{	name : '// LLR & Kak & Graveyard',
@@ -7075,6 +10169,59 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Graveyard GS Wall",
 			],
 		},
+		{	name : '// v7 : LLR & Kak & Graveyard',
+			locs : [
+				// LLR Pot
+				"LLR Front Pot 1",
+				"LLR Front Pot 2",
+				"LLR Front Pot 3",
+				"LLR Front Pot 4",
+				"LLR Rain Shed Pot 1",
+				"LLR Rain Shed Pot 2",
+				"LLR Rain Shed Pot 3",
+				"LLR Talons House Pot 1",
+				"LLR Talons House Pot 2",
+				"LLR Talons House Pot 3",
+				// LLR Crate
+				"LLR Child Crate",
+				// LLR Beehive
+				"LLR Grotto Beehive",
+				// Kak Pot
+				"Kak Near Potion Shop Pot 1",
+				"Kak Near Potion Shop Pot 2",
+				"Kak Near Potion Shop Pot 3",
+				"Kak Near Impas House Pot 1",
+				"Kak Near Impas House Pot 2",
+				"Kak Near Impas House Pot 3",
+				"Kak Near Guards House Pot 1",
+				"Kak Near Guards House Pot 2",
+				"Kak Near Guards House Pot 3",
+				"Kak Near Odd Medicine Building Pot 1",
+				"Kak Near Odd Medicine Building Pot 2",
+				// Kak Crate
+				"Kak Adult Red Rupee Crate",
+				"Kak Adult Arrows Crate",
+				// Kak Beehive
+				"Kak Open Grotto Beehive 1",
+				"Kak Open Grotto Beehive 2",
+				// Graveyard Freestanding
+				"Graveyard Dampe Race Rupee 1",
+				"Graveyard Dampe Race Rupee 2",
+				"Graveyard Dampe Race Rupee 3",
+				"Graveyard Dampe Race Rupee 4",
+				"Graveyard Dampe Race Rupee 5",
+				"Graveyard Dampe Race Rupee 6",
+				"Graveyard Dampe Race Rupee 7",
+				"Graveyard Dampe Race Rupee 8",
+				// Graveyard Pot
+				"Graveyard Dampe Pot 1",
+				"Graveyard Dampe Pot 2",
+				"Graveyard Dampe Pot 3",
+				"Graveyard Dampe Pot 4",
+				"Graveyard Dampe Pot 5",
+				"Graveyard Dampe Pot 6",
+			],
+		},
 		{	name : '// DMT & GC & DMC',
 			locs : [
 				// DMT
@@ -7130,11 +10277,86 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"DMC GS Bean Patch",
 			],
 		},
+		{	name : '// v7 : DMT & GC & DMC',
+			locs : [
+				// DMT Freestanding
+				"DMT Rock Red Rupee",
+				"DMT Rock Blue Rupee",
+				"DMT Cow Grotto Green Rupee 1",
+				"DMT Cow Grotto Green Rupee 2",
+				"DMT Cow Grotto Green Rupee 3",
+				"DMT Cow Grotto Green Rupee 4",
+				"DMT Cow Grotto Green Rupee 5",
+				"DMT Cow Grotto Green Rupee 6",
+				"DMT Cow Grotto Red Rupee",
+				"DMT Cow Grotto Recovery Heart 1",
+				"DMT Cow Grotto Recovery Heart 2",
+				"DMT Cow Grotto Recovery Heart 3",
+				"DMT Cow Grotto Recovery Heart 4",
+				// DMT Beehive
+				"DMT Cow Grotto Beehive",
+				"DMT Storms Grotto Beehive 1",
+				"DMT Storms Grotto Beehive 2",
+				// GC Freestanding
+				"GC Spinning Pot Bomb Drop 1",
+				"GC Spinning Pot Bomb Drop 2",
+				"GC Spinning Pot Bomb Drop 3",
+				"GC Spinning Pot Rupee Drop 1",
+				"GC Spinning Pot Rupee Drop 2",
+				"GC Spinning Pot Rupee Drop 3",
+				"GC Spinning Pot PoH Drop Rupee 1",
+				"GC Spinning Pot PoH Drop Rupee 2",
+				// GC Pot
+				"GC Darunia Pot 1",
+				"GC Darunia Pot 2",
+				"GC Darunia Pot 3",
+				"GC Medigoron Pot",
+				"GC Lower Staircase Pot 1",
+				"GC Lower Staircase Pot 2",
+				"GC Upper Staircase Pot 1",
+				"GC Upper Staircase Pot 2",
+				"GC Upper Staircase Pot 3",
+				// GC Crate
+				"GC Boulder Maze Crate",
+				// GC Beehive
+				"GC Grotto Beehive",
+				// DMC Freestanding
+				"DMC Adult Green Rupee 1",
+				"DMC Adult Green Rupee 2",
+				"DMC Adult Green Rupee 3",
+				"DMC Adult Green Rupee 4",
+				"DMC Adult Green Rupee 5",
+				"DMC Adult Green Rupee 6",
+				"DMC Adult Red Rupee",
+				"DMC Child Red Rupee 1",
+				"DMC Child Red Rupee 2",
+				"DMC Child Blue Rupee 1",
+				"DMC Child Blue Rupee 2",
+				"DMC Child Blue Rupee 3",
+				"DMC Child Blue Rupee 4",
+				"DMC Child Blue Rupee 5",
+				"DMC Child Blue Rupee 6",
+				// DMC Pot
+				"DMC Near GC Pot 1",
+				"DMC Near GC Pot 2",
+				"DMC Near GC Pot 3",
+				"DMC Near GC Pot 4",
+				// DMC Beehive
+				"DMC Upper Grotto Beehive 1",
+				"DMC Upper Grotto Beehive 2",
+				"DMC Hammer Grotto Beehive",
+			],
+		},
 		{	name : '// ZR & ZD & ZF & LH',
 			locs : [
 				// ZR
 				"ZR Magic Bean Salesman",
 				"ZR Open Grotto Chest",
+				"ZR Frogs Zeldas Lullaby", // v7 (frogs)
+				"ZR Frogs Eponas Song",    // v7 (frogs)
+				"ZR Frogs Sarias Song",    // v7 (frogs)
+				"ZR Frogs Suns Song",      // v7 (frogs)
+				"ZR Frogs Song of Time",   // v7 (frogs)
 				"ZR Frogs in the Rain",
 				"ZR Frogs Ocarina Game", // minigame
 				"ZR Near Open Grotto Freestanding PoH",
@@ -7189,6 +10411,65 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"LH GS Tree",
 			],
 		},
+		{	name : '// v7 : ZR & ZD & ZF & LH',
+			locs : [
+				// ZR Freestanding
+				"ZR Waterfall Red Rupee 1",
+				"ZR Waterfall Red Rupee 2",
+				"ZR Waterfall Red Rupee 3",
+				"ZR Waterfall Red Rupee 4",
+				// ZR Beehive
+				"ZR Open Grotto Beehive 1",
+				"ZR Open Grotto Beehive 2",
+				"ZR Storms Grotto Beehive",
+				// ZD Pot
+				"ZD Pot 1",
+				"ZD Pot 2",
+				"ZD Pot 3",
+				"ZD Pot 4",
+				"ZD Pot 5",
+				// ZD Beehive
+				"ZD In Front of King Zora Beehive 1",
+				"ZD In Front of King Zora Beehive 2",
+				"ZD Behind King Zora Beehive",
+				// ZF Freestanding
+				"ZF Bottom Green Rupee 1",
+				"ZF Bottom Green Rupee 2",
+				"ZF Bottom Green Rupee 3",
+				"ZF Bottom Green Rupee 4",
+				"ZF Bottom Green Rupee 5",
+				"ZF Bottom Green Rupee 6",
+				"ZF Bottom Green Rupee 7",
+				"ZF Bottom Green Rupee 8",
+				"ZF Bottom Green Rupee 9",
+				"ZF Bottom Green Rupee 10",
+				"ZF Bottom Green Rupee 11",
+				"ZF Bottom Green Rupee 12",
+				"ZF Bottom Green Rupee 13",
+				"ZF Bottom Green Rupee 14",
+				"ZF Bottom Green Rupee 15",
+				"ZF Bottom Green Rupee 16",
+				"ZF Bottom Green Rupee 17",
+				"ZF Bottom Green Rupee 18",
+				// ZF Pot
+				"ZF Hidden Cave Pot 1",
+				"ZF Hidden Cave Pot 2",
+				"ZF Hidden Cave Pot 3",
+				"ZF Near Jabu Pot 1",
+				"ZF Near Jabu Pot 2",
+				"ZF Near Jabu Pot 3",
+				"ZF Near Jabu Pot 4",
+				// LH Freestanding
+				"LH Underwater Near Shore Green Rupee",
+				"LH Underwater Green Rupee 1",
+				"LH Underwater Green Rupee 2",
+				"LH Lab Dive Red Rupee 1",
+				"LH Lab Dive Red Rupee 2",
+				"LH Lab Dive Red Rupee 3",
+				// LH Beehive
+				"LH Grotto Beehive",
+			],
+		},
 		{	name : '// GV & GF & Wasteland & Colossus',
 			locs : [
 				// GV
@@ -7235,6 +10516,69 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Colossus GS Hill",
 			],
 		},
+		{	name : '// v7 : GV & GF & Wasteland & Colossus',
+			locs : [
+				// GV Freestanding
+				"GV Octorok Grotto Red Rupee",
+				"GV Octorok Grotto Blue Rupee 1",
+				"GV Octorok Grotto Blue Rupee 2",
+				"GV Octorok Grotto Blue Rupee 3",
+				"GV Octorok Grotto Green Rupee 1",
+				"GV Octorok Grotto Green Rupee 2",
+				"GV Octorok Grotto Green Rupee 3",
+				"GV Octorok Grotto Green Rupee 4",
+				// GV Crate
+				"GV Crate Near Cow",
+				"GV Freestanding PoH Crate",
+				// GV Beehive
+				"GV Storms Grotto Beehive",
+				// GF Crate
+				"GF Above Jail Crate",
+				// Hideout Pot
+				"Hideout Break Room Pot 1",
+				"Hideout Break Room Pot 2",
+				"Hideout 1 Torch Jail Pot 1",
+				"Hideout 1 Torch Jail Pot 2",
+				"Hideout 1 Torch Jail Pot 3",
+				"Hideout Kitchen Pot 1",
+				"Hideout Kitchen Pot 2",
+				"Hideout 4 Torch Jail Pot 1",
+				"Hideout 4 Torch Jail Pot 2",
+				"Hideout 2 Torch Jail Pot 1",
+				"Hideout 2 Torch Jail Pot 2",
+				"Hideout 2 Torch Jail Pot 3",
+				"Hideout 2 Torch Jail In Cell Pot 1",
+				"Hideout 2 Torch Jail In Cell Pot 2",
+				"Hideout 2 Torch Jail In Cell Pot 3",
+				"Hideout 2 Torch Jail In Cell Pot 4",
+				// Hideout Crate
+				"Hideout Break Room Crate 1",
+				"Hideout Break Room Crate 2",
+				"Hideout Break Room Hallway Crate 1",
+				"Hideout Break Room Hallway Crate 2",
+				"Hideout 3 Torch Jail Crate",
+				"Hideout 1 Torch Jail Crate",
+				"Hideout Near Kitchen Crate 1",
+				"Hideout Near Kitchen Crate 2",
+				"Hideout Near Kitchen Crate 3",
+				"Hideout Near Kitchen Crate 4",
+				"Hideout Near Kitchen Crate 5",
+				"Hideout 2 Torch Jail Crate 1",
+				"Hideout 2 Torch Jail Crate 2",
+				// Wasteland Pot
+				"Wasteland Near GS Pot 1",
+				"Wasteland Near GS Pot 2",
+				"Wasteland Near GS Pot 3",
+				// Wasteland Crate
+				"Wasteland Crate Before Quicksand",
+				"Wasteland Crate After Quicksand 1",
+				"Wasteland Crate After Quicksand 2",
+				"Wasteland Crate After Quicksand 3",
+				"Wasteland Crate Near Colossus",
+				// Colossus Beehive
+				"Colossus Grotto Beehive",
+			],
+		},
 
 		{	name : '// Deku',
 			locs : [
@@ -7252,6 +10596,16 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Deku Tree GS Basement Back Room",
 				// Deku Tree boss heart
 				"Deku Tree Queen Gohma Heart",
+			],
+		},
+		{	name : '// v7 : Deku',
+			locs : [
+				// Deku Tree Freestanding
+				"Deku Tree Lower Lobby Recovery Heart",
+				"Deku Tree Upper Lobby Recovery Heart",
+				"Deku Tree Basement Recovery Heart 1",
+				"Deku Tree Basement Recovery Heart 2",
+				"Deku Tree Basement Recovery Heart 3",
 			],
 		},
 		{	name : '// Dodongo',
@@ -7279,6 +10633,43 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Dodongos Cavern King Dodongo Heart",
 			],
 		},
+		{	name : '// v7 : Dodongo',
+			locs : [
+				// Dodongos Cavern Freestanding
+				"Dodongos Cavern Lizalfos Upper Recovery Heart 1",
+				"Dodongos Cavern Lizalfos Upper Recovery Heart 2",
+				"Dodongos Cavern Blade Room Behind Block Recovery Heart",
+				"Dodongos Cavern Lower Lizalfos Hidden Recovery Heart", // (shared with MQ)
+				// Dodongos Cavern Pot
+				"Dodongos Cavern Right Side Pot 1",
+				"Dodongos Cavern Right Side Pot 2",
+				"Dodongos Cavern Right Side Pot 3",
+				"Dodongos Cavern Right Side Pot 4",
+				"Dodongos Cavern Right Side Pot 5",
+				"Dodongos Cavern Right Side Pot 6",
+				"Dodongos Cavern Lower Lizalfos Pot 1",
+				"Dodongos Cavern Lower Lizalfos Pot 2",
+				"Dodongos Cavern Lower Lizalfos Pot 3",
+				"Dodongos Cavern Lower Lizalfos Pot 4",
+				"Dodongos Cavern Torch Room Pot 1",
+				"Dodongos Cavern Torch Room Pot 2",
+				"Dodongos Cavern Torch Room Pot 3",
+				"Dodongos Cavern Torch Room Pot 4",
+				"Dodongos Cavern Staircase Pot 1",
+				"Dodongos Cavern Staircase Pot 2",
+				"Dodongos Cavern Staircase Pot 3",
+				"Dodongos Cavern Staircase Pot 4",
+				"Dodongos Cavern Last Block Pot 1",
+				"Dodongos Cavern Last Block Pot 2",
+				"Dodongos Cavern Last Block Pot 3",
+				"Dodongos Cavern Blade Room Pot 1",
+				"Dodongos Cavern Blade Room Pot 2",
+				"Dodongos Cavern Single Eye Switch Room Pot 1",
+				"Dodongos Cavern Single Eye Switch Room Pot 2",
+				"Dodongos Cavern Double Eye Switch Room Pot 1",
+				"Dodongos Cavern Double Eye Switch Room Pot 2",
+			],
+		},
 		{	name : '// Jabu',
 			locs : [
 				// Jabu Jabus Belly
@@ -7294,6 +10685,27 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Jabu Jabus Belly GS Near Boss",
 				// Jabu Jabus Belly boss heart
 				"Jabu Jabus Belly Barinade Heart",
+			],
+		},
+		{	name : '// v7 : Jabu',
+			locs : [
+				// Jabu Jabus Belly Pot
+				"Jabu Jabus Belly Above Big Octo Pot 1",
+				"Jabu Jabus Belly Above Big Octo Pot 2",
+				"Jabu Jabus Belly Basement 2 Octoroks Pot 1",
+				"Jabu Jabus Belly Basement 2 Octoroks Pot 2",
+				"Jabu Jabus Belly Basement 2 Octoroks Pot 3",
+				"Jabu Jabus Belly Basement 2 Octoroks Pot 4",
+				"Jabu Jabus Belly Basement Switch Room Pot 1",
+				"Jabu Jabus Belly Basement Switch Room Pot 2",
+				"Jabu Jabus Belly Barinade Pot 1", // (shared with MQ)
+				"Jabu Jabus Belly Barinade Pot 2", // (shared with MQ)
+				"Jabu Jabus Belly Barinade Pot 3", // (shared with MQ)
+				"Jabu Jabus Belly Barinade Pot 4", // (shared with MQ)
+				"Jabu Jabus Belly Barinade Pot 5", // (shared with MQ)
+				"Jabu Jabus Belly Barinade Pot 6", // (shared with MQ)
+				// Jabu Jabus Belly Crate
+				"Jabu Jabus Belly Small Wooden Crate",
 			],
 		},
 		{	name : '// Well',
@@ -7317,6 +10729,41 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Bottom of the Well GS West Inner Room",
 				"Bottom of the Well GS East Inner Room",
 				"Bottom of the Well GS Like Like Cage",
+			],
+		},
+		{	name : '// v7 : Well',
+			locs : [
+				// Bottom of the Well Freestanding
+				"Bottom of the Well Center Room Pit Fall Blue Rupee 1",
+				"Bottom of the Well Center Room Pit Fall Blue Rupee 2",
+				"Bottom of the Well Center Room Pit Fall Blue Rupee 3",
+				"Bottom of the Well Center Room Pit Fall Blue Rupee 4",
+				"Bottom of the Well Center Room Pit Fall Blue Rupee 5",
+				"Bottom of the Well Coffin Recovery Heart 1",
+				"Bottom of the Well Coffin Recovery Heart 2",
+				// Bottom of the Well Pot
+				"Bottom of the Well Left Side Pot 1",
+				"Bottom of the Well Left Side Pot 2",
+				"Bottom of the Well Left Side Pot 3",
+				"Bottom of the Well Near Entrance Pot 1",
+				"Bottom of the Well Near Entrance Pot 2",
+				"Bottom of the Well Underwater Pot",
+				"Bottom of the Well Basement Pot 1",
+				"Bottom of the Well Basement Pot 2",
+				"Bottom of the Well Basement Pot 3",
+				"Bottom of the Well Basement Pot 4",
+				"Bottom of the Well Basement Pot 5",
+				"Bottom of the Well Basement Pot 6",
+				"Bottom of the Well Basement Pot 7",
+				"Bottom of the Well Basement Pot 8",
+				"Bottom of the Well Basement Pot 9",
+				"Bottom of the Well Basement Pot 10",
+				"Bottom of the Well Basement Pot 11",
+				"Bottom of the Well Basement Pot 12",
+				"Bottom of the Well Fire Keese Pot",
+				"Bottom of the Well West Inner Room Flying Pot 1",
+				"Bottom of the Well West Inner Room Flying Pot 2",
+				"Bottom of the Well West Inner Room Flying Pot 3",
 			],
 		},
 		{	name : '// Forest',
@@ -7343,6 +10790,34 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Forest Temple GS Basement",
 				// Forest Temple boss heart
 				"Forest Temple Phantom Ganon Heart",
+			],
+		},
+		{	name : '// v7 : Forest',
+			locs : [
+				// Forest Temple Freestanding
+				"Forest Temple Courtyard Recovery Heart 1",
+				"Forest Temple Courtyard Recovery Heart 2",
+				"Forest Temple Well Recovery Heart 1",
+				"Forest Temple Well Recovery Heart 2",
+				// Forest Temple Pot
+				"Forest Temple Center Room Right Pot 1",
+				"Forest Temple Center Room Right Pot 2",
+				"Forest Temple Center Room Right Pot 3",
+				"Forest Temple Center Room Left Pot 1",
+				"Forest Temple Center Room Left Pot 2",
+				"Forest Temple Center Room Left Pot 3",
+				"Forest Temple Lower Stalfos Pot",
+				"Forest Temple Upper Stalfos Pot 1",
+				"Forest Temple Upper Stalfos Pot 2",
+				"Forest Temple Upper Stalfos Pot 3",
+				"Forest Temple Upper Stalfos Pot 4",
+				"Forest Temple Blue Poe Room Pot 1",
+				"Forest Temple Blue Poe Room Pot 2",
+				"Forest Temple Blue Poe Room Pot 3",
+				"Forest Temple Frozen Eye Switch Room Pot 1",
+				"Forest Temple Frozen Eye Switch Room Pot 2",
+				"Forest Temple Green Poe Room Pot 1",
+				"Forest Temple Green Poe Room Pot 2",
 			],
 		},
 		{	name : '// Fire',
@@ -7372,6 +10847,34 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Fire Temple Volvagia Heart",
 			],
 		},
+		{	name : '// v7 : Fire',
+			locs : [
+				// Fire Temple Freestanding
+				"Fire Temple Elevator Room Recovery Heart 1",
+				"Fire Temple Elevator Room Recovery Heart 2",
+				"Fire Temple Elevator Room Recovery Heart 3",
+				"Fire Temple Narrow Path Room Recovery Heart 1",
+				"Fire Temple Narrow Path Room Recovery Heart 2",
+				"Fire Temple Narrow Path Room Recovery Heart 3",
+				"Fire Temple Moving Fire Room Recovery Heart 1",
+				"Fire Temple Moving Fire Room Recovery Heart 2",
+				"Fire Temple Moving Fire Room Recovery Heart 3",
+				// Fire Temple Pot
+				"Fire Temple Big Lava Room Pot 1",
+				"Fire Temple Big Lava Room Pot 2",
+				"Fire Temple Big Lava Room Pot 3",
+				"Fire Temple Near Boss Pot 1",
+				"Fire Temple Near Boss Pot 2",
+				"Fire Temple Flame Maze Right Side Pot 1",
+				"Fire Temple Flame Maze Right Side Pot 2",
+				"Fire Temple Flame Maze Right Side Pot 3",
+				"Fire Temple Flame Maze Right Side Pot 4",
+				"Fire Temple Flame Maze Left Side Pot 1",
+				"Fire Temple Flame Maze Left Side Pot 2",
+				"Fire Temple Flame Maze Left Side Pot 3",
+				"Fire Temple Flame Maze Left Side Pot 4",
+			],
+		},
 		{	name : '// Water',
 			locs : [
 				// Water Temple
@@ -7393,6 +10896,34 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Water Temple GS River",
 				// Water Temple boss heart
 				"Water Temple Morpha Heart",
+			],
+		},
+		{	name : '// v7 : Water',
+			locs : [
+				// Water Temple Freestanding
+				"Water Temple River Recovery Heart 1",
+				"Water Temple River Recovery Heart 2",
+				"Water Temple River Recovery Heart 3",
+				"Water Temple River Recovery Heart 4",
+				// Water Temple Pot
+				"Water Temple Main Room L2 Pot 1",
+				"Water Temple Main Room L2 Pot 2",
+				"Water Temple Behind Gate Pot 1",
+				"Water Temple Behind Gate Pot 2",
+				"Water Temple Behind Gate Pot 3",
+				"Water Temple Behind Gate Pot 4",
+				"Water Temple Near Compass Pot 1",
+				"Water Temple Near Compass Pot 2",
+				"Water Temple Near Compass Pot 3",
+				"Water Temple Like Like Pot 1",
+				"Water Temple Like Like Pot 2",
+				"Water Temple North Basement Block Puzzle Pot 1",
+				"Water Temple North Basement Block Puzzle Pot 2",
+				"Water Temple L1 Torch Pot 1",
+				"Water Temple L1 Torch Pot 2",
+				"Water Temple River Pot 1",
+				"Water Temple Central Bow Target Pot 1",
+				"Water Temple Central Bow Target Pot 2",
 			],
 		},
 		{	name : '// Shadow',
@@ -7423,6 +10954,51 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Shadow Temple GS Triple Giant Pot",
 				// Shadow Temple boss heart
 				"Shadow Temple Bongo Bongo Heart",
+			],
+		},
+		{	name : '// v7 : Shadow',
+			locs : [
+				// Shadow Temple Freestanding
+				"Shadow Temple Invisible Blades Recovery Heart 1",
+				"Shadow Temple Invisible Blades Recovery Heart 2",
+				"Shadow Temple Before Boat Recovery Heart 1",
+				"Shadow Temple Before Boat Recovery Heart 2",
+				"Shadow Temple After Boat Upper Recovery Heart 1",
+				"Shadow Temple After Boat Upper Recovery Heart 2",
+				"Shadow Temple After Boat Lower Recovery Heart",
+				"Shadow Temple 3 Spinning Pots Rupee 1",
+				"Shadow Temple 3 Spinning Pots Rupee 2",
+				"Shadow Temple 3 Spinning Pots Rupee 3",
+				"Shadow Temple 3 Spinning Pots Rupee 4",
+				"Shadow Temple 3 Spinning Pots Rupee 5",
+				"Shadow Temple 3 Spinning Pots Rupee 6",
+				"Shadow Temple 3 Spinning Pots Rupee 7",
+				"Shadow Temple 3 Spinning Pots Rupee 8",
+				"Shadow Temple 3 Spinning Pots Rupee 9",
+				// Shadow Temple Pot
+				"Shadow Temple Whispering Walls Near Dead Hand Pot",
+				"Shadow Temple Whispering Walls Left Pot 1",
+				"Shadow Temple Whispering Walls Left Pot 2",
+				"Shadow Temple Whispering Walls Left Pot 3",
+				"Shadow Temple Whispering Walls Front Pot 1",
+				"Shadow Temple Whispering Walls Front Pot 2",
+				"Shadow Temple Whispering Walls Flying Pot",
+				"Shadow Temple Map Chest Room Pot 1",
+				"Shadow Temple Map Chest Room Pot 2",
+				"Shadow Temple Falling Spikes Lower Pot 2",
+				"Shadow Temple Falling Spikes Lower Pot 1",
+				"Shadow Temple Falling Spikes Upper Pot 1",
+				"Shadow Temple Falling Spikes Upper Pot 2",
+				"Shadow Temple Spike Walls Pot",
+				"Shadow Temple Invisible Floormaster Pot 1",
+				"Shadow Temple Invisible Floormaster Pot 2",
+				"Shadow Temple After Wind Pot 1",
+				"Shadow Temple After Wind Pot 2",
+				"Shadow Temple After Wind Flying Pot 1",
+				"Shadow Temple After Wind Flying Pot 2",
+				"Shadow Temple After Boat Pot",
+				"Shadow Temple Near Boss Pot 1",
+				"Shadow Temple Near Boss Pot 2",
 			],
 		},
 		{	name : '// Spirit',
@@ -7457,6 +11033,37 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Spirit Temple Twinrova Heart",
 			],
 		},
+		{	name : '// v7 : Spirit',
+			locs : [
+				// Spirit Temple Freestanding
+				"Spirit Temple Shifting Wall Recovery Heart 1",
+				"Spirit Temple Shifting Wall Recovery Heart 2",
+				// Spirit Temple Pot
+				"Spirit Temple Lobby Pot 1",
+				"Spirit Temple Lobby Pot 2",
+				"Spirit Temple Lobby Flying Pot 1",
+				"Spirit Temple Lobby Flying Pot 2",
+				"Spirit Temple Child Climb Pot",
+				"Spirit Temple Hall After Sun Block Room Pot 1",
+				"Spirit Temple Hall After Sun Block Room Pot 2",
+				"Spirit Temple Beamos Hall Pot",
+				"Spirit Temple Child Anubis Pot",
+				"Spirit Temple Child Bridge Flying Pot",
+				"Spirit Temple Central Chamber Flying Pot 1",
+				"Spirit Temple Central Chamber Flying Pot 2",
+				"Spirit Temple Adult Climb Flying Pot 1",
+				"Spirit Temple Adult Climb Flying Pot 2",
+				"Spirit Temple Big Mirror Flying Pot 1",
+				"Spirit Temple Big Mirror Flying Pot 2",
+				"Spirit Temple Big Mirror Flying Pot 3",
+				"Spirit Temple Big Mirror Flying Pot 4",
+				"Spirit Temple Big Mirror Flying Pot 5",
+				"Spirit Temple Big Mirror Flying Pot 6",
+				// Spirit Temple Crate
+				"Spirit Temple Before Child Climb Small Wooden Crate 1",
+				"Spirit Temple Before Child Climb Small Wooden Crate 2",
+			],
+		},
 		{	name : '// Ice',
 			locs : [
 				// Ice Cavern
@@ -7468,6 +11075,28 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Ice Cavern GS Spinning Scythe Room",
 				"Ice Cavern GS Heart Piece Room",
 				"Ice Cavern GS Push Block Room",
+			],
+		},
+		{	name : '// v7 : Ice',
+			locs : [
+				// Ice Cavern Freestanding
+				"Ice Cavern Frozen Blue Rupee",
+				"Ice Cavern Map Room Recovery Heart 1",
+				"Ice Cavern Map Room Recovery Heart 2",
+				"Ice Cavern Map Room Recovery Heart 3",
+				"Ice Cavern Block Room Red Rupee 1",
+				"Ice Cavern Block Room Red Rupee 2",
+				"Ice Cavern Block Room Red Rupee 3",
+				// Ice Cavern Pot
+				"Ice Cavern Hall Pot 1",
+				"Ice Cavern Hall Pot 2",
+				"Ice Cavern Spinning Blade Pot 1",
+				"Ice Cavern Spinning Blade Pot 2",
+				"Ice Cavern Spinning Blade Pot 3",
+				"Ice Cavern Spinning Blade Flying Pot",
+				"Ice Cavern Near End Pot 1",
+				"Ice Cavern Near End Pot 2",
+				"Ice Cavern Frozen Pot",
 			],
 		},
 		{	name : '// GTG',
@@ -7497,6 +11126,13 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Gerudo Training Ground Maze Path Final Chest",
 			],
 		},
+		{	name : '// v7 : GTG',
+			locs : [
+				// Gerudo Training Ground Freestanding
+				"Gerudo Training Ground Beamos Recovery Heart 1",
+				"Gerudo Training Ground Beamos Recovery Heart 2",
+			],
+		},
 		{	name : '// Ganon',
 			locs : [
 				// Ganons Castle
@@ -7524,6 +11160,47 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Ganons Tower Boss Key Chest",
 			],
 		},
+		{	name : '// v7 : Ganon',
+			locs : [
+				// Ganons Castle Freestanding
+				"Ganons Castle Shadow Trial Recovery Heart 1",
+				"Ganons Castle Shadow Trial Recovery Heart 2",
+				"Ganons Castle Shadow Trial Recovery Heart 3",
+				"Ganons Castle Fire Trial Recovery Heart",
+				"Ganons Castle Spirit Trial Recovery Heart",
+				// Ganons Castle Pot
+				"Ganons Castle Water Trial Pot 1",
+				"Ganons Castle Water Trial Pot 2",
+				"Ganons Castle Forest Trial Pot 1",
+				"Ganons Castle Forest Trial Pot 2",
+				"Ganons Castle Light Trial Boulder Pot",
+				"Ganons Castle Light Trial Pot 1",
+				"Ganons Castle Light Trial Pot 2",
+				"Ganons Castle Shadow Trial Like Like Pot 1",
+				"Ganons Castle Shadow Trial Like Like Pot 2",
+				"Ganons Castle Shadow Trial Pot 1",
+				"Ganons Castle Shadow Trial Pot 2",
+				"Ganons Castle Fire Trial Pot 1",
+				"Ganons Castle Fire Trial Pot 2",
+				"Ganons Castle Spirit Trial Pot 1",
+				"Ganons Castle Spirit Trial Pot 2",
+				// Ganons Tower Pot
+				"Ganons Tower Pot 1",  // (shared with MQ)
+				"Ganons Tower Pot 2",  // (shared with MQ)
+				"Ganons Tower Pot 3",  // (shared with MQ)
+				"Ganons Tower Pot 4",  // (shared with MQ)
+				"Ganons Tower Pot 5",  // (shared with MQ)
+				"Ganons Tower Pot 6",  // (shared with MQ)
+				"Ganons Tower Pot 7",  // (shared with MQ)
+				"Ganons Tower Pot 8",  // (shared with MQ)
+				"Ganons Tower Pot 9",  // (shared with MQ)
+				"Ganons Tower Pot 10", // (shared with MQ)
+				"Ganons Tower Pot 11", // (shared with MQ)
+				"Ganons Tower Pot 12", // (shared with MQ)
+				"Ganons Tower Pot 13", // (shared with MQ)
+				"Ganons Tower Pot 14", // (shared with MQ)
+			],
+		},
 
 		{	name : '// MQ Deku',
 			locs : [
@@ -7542,7 +11219,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Deku Tree MQ GS Compass Room",
 				"Deku Tree MQ GS Basement Graves Room",
 				"Deku Tree MQ GS Basement Back Room",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Deku',
+			locs : [
 				// Deku Tree MQ Freestanding
 				"Deku Tree MQ Lower Lobby Recovery Heart",
 				"Deku Tree MQ Near Compass Room Recovery Heart",
@@ -7577,7 +11257,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Dodongos Cavern MQ GS Lizalfos Room",
 				"Dodongos Cavern MQ GS Song of Time Block Room",
 				"Dodongos Cavern MQ GS Back Area",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Dodongo',
+			locs : [
 				// Dodongos Cavern MQ Freestanding
 				"Dodongos Cavern MQ Torch Puzzle Room Recovery Heart",
 				// Dodongos Cavern MQ Pot
@@ -7656,7 +11339,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Jabu Jabus Belly MQ GS Tailpasaran Room",
 				"Jabu Jabus Belly MQ GS Invisible Enemies Room",
 				"Jabu Jabus Belly MQ GS Near Boss",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Jabu',
+			locs : [
 				// Jabu Jabus Belly MQ Freestanding
 				"Jabu Jabus Belly MQ Underwater Green Rupee 1",
 				"Jabu Jabus Belly MQ Underwater Green Rupee 2",
@@ -7686,7 +11372,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Bottom of the Well MQ GS Coffin Room",
 				"Bottom of the Well MQ GS West Inner Room",
 				"Bottom of the Well MQ GS Basement",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Well',
+			locs : [
 				// Bottom of the Well MQ Freestanding
 				"Bottom of the Well MQ Bombable Recovery Heart 1",
 				"Bottom of the Well MQ Bombable Recovery Heart 2",
@@ -7725,7 +11414,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Forest Temple MQ GS Level Island Courtyard",
 				"Forest Temple MQ GS Well",
 				"Forest Temple MQ GS Block Push Room",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Forest',
+			locs : [
 				// Forest Temple MQ Freestanding
 				"Forest Temple MQ Courtyard Recovery Heart 1",
 				"Forest Temple MQ Courtyard Recovery Heart 2",
@@ -7781,7 +11473,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Fire Temple MQ GS Flame Maze Center",
 				"Fire Temple MQ GS Flame Maze Side Room",
 				"Fire Temple MQ GS Above Flame Maze",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Fire',
+			locs : [
 				// Fire Temple MQ Freestanding
 				"Fire Temple MQ Elevator Room Recovery Heart 1",
 				"Fire Temple MQ Elevator Room Recovery Heart 2",
@@ -7849,7 +11544,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Water Temple MQ GS River",
 				"Water Temple MQ GS Freestanding Key Area",
 				"Water Temple MQ GS Triple Wall Torch",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Water',
+			locs : [
 				// Water Temple MQ Pot
 				"Water Temple MQ Triple Wall Torch Pot 1",
 				"Water Temple MQ Triple Wall Torch Pot 2",
@@ -7994,7 +11692,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Shadow Temple MQ GS After Wind",
 				"Shadow Temple MQ GS After Ship",
 				"Shadow Temple MQ GS Near Boss",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Shadow',
+			locs : [
 				// Shadow Temple MQ Freestanding
 				"Shadow Temple MQ Invisible Blades Recovery Heart 1",
 				"Shadow Temple MQ Invisible Blades Recovery Heart 2",
@@ -8072,7 +11773,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Spirit Temple MQ GS Symphony Room",
 				"Spirit Temple MQ GS Nine Thrones Room West",
 				"Spirit Temple MQ GS Nine Thrones Room North",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Spirit',
+			locs : [
 				// Spirit Temple MQ Freestanding
 				"Spirit Temple MQ Child Recovery Heart 1",
 				"Spirit Temple MQ Child Recovery Heart 2",
@@ -8125,7 +11829,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Ice Cavern MQ GS Red Ice",
 				"Ice Cavern MQ GS Ice Block",
 				"Ice Cavern MQ GS Scarecrow",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Ice',
+			locs : [
 				// Ice Cavern MQ Pot
 				"Ice Cavern MQ First Hall Pot",
 				"Ice Cavern MQ Tektite Room Pot 1",
@@ -8157,7 +11864,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Gerudo Training Ground MQ Maze Path First Chest",
 				"Gerudo Training Ground MQ Maze Path Third Chest",
 				"Gerudo Training Ground MQ Maze Path Second Chest",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ GTG',
+			locs : [
 				// Gerudo Training Ground MQ Pot
 				"Gerudo Training Ground MQ Lobby Left Pot 1",
 				"Gerudo Training Ground MQ Lobby Left Pot 2",
@@ -8189,7 +11899,10 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 				"Ganons Castle MQ Deku Scrub Center",
 				"Ganons Castle MQ Deku Scrub Center-Right",
 				"Ganons Castle MQ Deku Scrub Right",
-				// v7 sanities
+			],
+		},
+		{	name : '// v7 : MQ Ganon',
+			locs : [
 				// Ganons Castle MQ Freestanding
 				"Ganons Castle MQ Water Trial Recovery Heart",
 				"Ganons Castle MQ Light Trial Recovery Heart 1",
@@ -8286,6 +11999,12 @@ window.RandoStuffs.OoT.core.Location.buildback_CONTEXT_SETS = ()=>{
 
 	// add comments to locations
 	let commentLocList = [
+		// ZR
+		{ loc : `"ZR Frogs Zeldas Lullaby",\n`, comment : ` // v7 (frogs)\n`},
+		{ loc : `"ZR Frogs Eponas Song",\n`, comment : `    // v7 (frogs)\n`},
+		{ loc : `"ZR Frogs Sarias Song",\n`, comment : `    // v7 (frogs)\n`},
+		{ loc : `"ZR Frogs Suns Song",\n`, comment : `      // v7 (frogs)\n`},
+		{ loc : `"ZR Frogs Song of Time",\n`, comment : `   // v7 (frogs)\n`},
 		// GF Hideout
 		{ loc : `"Hideout 1 Torch Jail Gerudo Key",\n`, comment : `   // (RED)\n`},
 		{ loc : `"Hideout 2 Torches Jail Gerudo Key",\n`, comment : ` // (BLUE)\n`},

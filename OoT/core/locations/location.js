@@ -8,427 +8,965 @@ window.RandoStuffs.OoT.core.Location.list = [
 	
 	// OVERWORLD
 	[	
-		// boss reward
-		"Links Pocket",
-		"Queen Gohma",
-		"King Dodongo",
-		"Barinade",
-		"Phantom Ganon",
-		"Volvagia",
-		"Morpha",
-		"Bongo Bongo",
-		"Twinrova",
+		// Status Quest
+		[
+			// boss reward
+			"Links Pocket",
+			"Queen Gohma",
+			"King Dodongo",
+			"Barinade",
+			"Phantom Ganon",
+			"Volvagia",
+			"Morpha",
+			"Bongo Bongo",
+			"Twinrova",
+	
+			// song
+			"Song from Impa",
+			"Song from Malon",
+			"Song from Saria",
+			"Song from Royal Familys Tomb",
+			"Song from Ocarina of Time",
+			"Song from Windmill",
+	
+			// teleport song
+			"Sheik in Forest",
+			"Sheik in Crater",
+			"Sheik in Ice Cavern",
+			"Sheik at Colossus",
+			"Sheik in Kakariko",
+			"Sheik at Temple",
+		],
 
-		// song
-		"Song from Impa",
-		"Song from Malon",
-		"Song from Saria",
-		"Song from Royal Familys Tomb",
-		"Song from Ocarina of Time",
-		"Song from Windmill",
+		// Kokiri Forest
+		[
+			// KF
+			"KF Midos Top Left Chest",
+			"KF Midos Top Right Chest",
+			"KF Midos Bottom Left Chest",
+			"KF Midos Bottom Right Chest",
+			"KF Kokiri Sword Chest",
+			"KF Storms Grotto Chest",
+	
+			// KF cow
+			"KF Links House Cow",
+	
+			// KF GS
+			"KF GS Know It All House",
+			"KF GS Bean Patch",
+			"KF GS House of Twins",
+	
+			// KF shop
+			"KF Shop Item 1",
+			"KF Shop Item 2",
+			"KF Shop Item 3",
+			"KF Shop Item 4",
+			"KF Shop Item 5",
+			"KF Shop Item 6",
+			"KF Shop Item 7",
+			"KF Shop Item 8",
 
-		// teleport song
-		"Sheik in Forest",
-		"Sheik in Crater",
-		"Sheik in Ice Cavern",
-		"Sheik at Colossus",
-		"Sheik in Kakariko",
-		"Sheik at Temple",
+			// v7 sanities
+			[
+				// KF Freestanding
+				"KF Behind Midos Blue Rupee",
+				"KF Boulder Maze Blue Rupee 1",
+				"KF Boulder Maze Blue Rupee 2",
+				"KF End of Bridge Blue Rupee",
+				"KF Top of Sarias Recovery Heart 1",
+				"KF Top of Sarias Recovery Heart 2",
+				"KF Top of Sarias Recovery Heart 3",
+				"KF Bean Platform Green Rupee 1",
+				"KF Bean Platform Green Rupee 2",
+				"KF Bean Platform Green Rupee 3",
+				"KF Bean Platform Green Rupee 4",
+				"KF Bean Platform Green Rupee 5",
+				"KF Bean Platform Green Rupee 6",
+				"KF Bean Platform Red Rupee",
+				"KF Grass Near Ramp Green Rupee 1",
+				"KF Grass Near Ramp Green Rupee 2",
+				"KF Grass Near Midos Green Rupee 1",
+				"KF Grass Near Midos Green Rupee 2",
+				"KF Sarias House Recovery Heart 1",
+				"KF Sarias House Recovery Heart 2",
+				"KF Sarias House Recovery Heart 3",
+				"KF Sarias House Recovery Heart 4",
+				"KF Shop Blue Rupee",
 
-		// KF
-		"KF Midos Top Left Chest",
-		"KF Midos Top Right Chest",
-		"KF Midos Bottom Left Chest",
-		"KF Midos Bottom Right Chest",
-		"KF Kokiri Sword Chest",
-		"KF Storms Grotto Chest",
+				// KF Pot
+				"KF Links House Pot",
+				"KF Know it All House Pot 1",
+				"KF Know it All House Pot 2",
+				"KF House of Twins Pot 1",
+				"KF House of Twins Pot 2",
 
-		// KF cow
-		"KF Links House Cow",
+				// KF Beehive
+				"KF Storms Grotto Beehive 1",
+				"KF Storms Grotto Beehive 2",
+			],
+		],
 
-		// KF GS
-		"KF GS Know It All House",
-		"KF GS Bean Patch",
-		"KF GS House of Twins",
+		// Lost Woods
+		[
+			// LW
+			"LW Gift from Saria",
+			"LW Ocarina Memory Game", // minigame
+			"LW Target in Woods",
+			"LW Near Shortcuts Grotto Chest",
+			"Deku Theater Skull Mask",
+			"Deku Theater Mask of Truth",
+			"LW Skull Kid",
+	
+			// LW scrub
+			"LW Deku Scrub Near Bridge",
+			"LW Deku Scrub Near Deku Theater Left",
+			"LW Deku Scrub Near Deku Theater Right",
+			"LW Deku Scrub Grotto Front",
+			"LW Deku Scrub Grotto Rear",
+	
+			// LW GS
+			"LW GS Bean Patch Near Bridge",
+			"LW GS Bean Patch Near Theater",
+			"LW GS Above Theater",
 
-		// KF shop
-		"KF Shop Item 1",
-		"KF Shop Item 2",
-		"KF Shop Item 3",
-		"KF Shop Item 4",
-		"KF Shop Item 5",
-		"KF Shop Item 6",
-		"KF Shop Item 7",
-		"KF Shop Item 8",
+			// v7 sanities
+			[
+				// LW Freestanding
+				"LW Under Boulder Blue Rupee",
+				"LW Underwater Green Rupee 1",
+				"LW Underwater Green Rupee 2",
+				"LW Underwater Shortcut Green Rupee",
+				"LW Underwater Green Rupee 3",
+				"LW Underwater Green Rupee 4",
+				"LW Underwater Green Rupee 5",
+				"LW Underwater Green Rupee 6",
+				"LW Underwater Green Rupee 7",
 
-		// LW
-		"LW Gift from Saria",
-		"LW Ocarina Memory Game", // minigame
-		"LW Target in Woods",
-		"LW Near Shortcuts Grotto Chest",
-		"Deku Theater Skull Mask",
-		"Deku Theater Mask of Truth",
-		"LW Skull Kid",
+				// LW Beehive
+				"LW Near Shortcuts Grotto Beehive 1",
+				"LW Near Shortcuts Grotto Beehive 2",
+				"LW Scrubs Grotto Beehive",
+			],
+		],
 
-		// LW scrub
-		"LW Deku Scrub Near Bridge",
-		"LW Deku Scrub Near Deku Theater Left",
-		"LW Deku Scrub Near Deku Theater Right",
-		"LW Deku Scrub Grotto Front",
-		"LW Deku Scrub Grotto Rear",
+		// Sacred Forest Meadow
+		[
+			// SFM
+			"SFM Wolfos Grotto Chest",
+	
+			// SFM scrub
+			"SFM Deku Scrub Grotto Front",
+			"SFM Deku Scrub Grotto Rear",
+	
+			// SFM GS
+			"SFM GS",
 
-		// LW GS
-		"LW GS Bean Patch Near Bridge",
-		"LW GS Bean Patch Near Theater",
-		"LW GS Above Theater",
+			// v7 sanities
+			[
+				// SFM Beehive
+				"SFM Storms Grotto Beehive",
+			],
+		],
 
-		// SFM
-		"SFM Wolfos Grotto Chest",
+		// Hyrule Field
+		[
+			// HF
+			"HF Ocarina of Time Item",
+			"HF Near Market Grotto Chest",
+			"HF Tektite Grotto Freestanding PoH",
+			"HF Southeast Grotto Chest",
+			"HF Open Grotto Chest",
+	
+			// HF scrub
+			"HF Deku Scrub Grotto",
+	
+			// HF cow
+			"HF Cow Grotto Cow",
+	
+			// HF GS
+			"HF GS Cow Grotto",
+			"HF GS Near Kak Grotto",
 
-		// SFM scrub
-		"SFM Deku Scrub Grotto Front",
-		"SFM Deku Scrub Grotto Rear",
+			// v7 sanities
+			[
+				// HF Pot
+				"HF Cow Grotto Pot 1",
+				"HF Cow Grotto Pot 2",
 
-		// SFM GS
-		"SFM GS",
+				// HF Beehive
+				"HF Near Market Grotto Beehive 1",
+				"HF Near Market Grotto Beehive 2",
+				"HF Open Grotto Beehive 1",
+				"HF Open Grotto Beehive 2",
+				"HF Southeast Grotto Beehive 1",
+				"HF Southeast Grotto Beehive 2",
+				"HF Inside Fence Grotto Beehive",
+			],
+		],
 
-		// HF
-		"HF Ocarina of Time Item",
-		"HF Near Market Grotto Chest",
-		"HF Tektite Grotto Freestanding PoH",
-		"HF Southeast Grotto Chest",
-		"HF Open Grotto Chest",
+		// Market & Temple of Time
+		[
+			// Market
+			"Market Shooting Gallery Reward", // minigame
+			"Market Bombchu Bowling First Prize", // minigame
+			"Market Bombchu Bowling Second Prize", // minigame
+			"Market Lost Dog",
+			"Market Treasure Chest Game Reward", // minigame
+			"Market 10 Big Poes",
+			
+			// Market GS
+			"Market GS Guard House",
+			
+			// Market shop
+			"Market Bazaar Item 1",
+			"Market Bazaar Item 2",
+			"Market Bazaar Item 3",
+			"Market Bazaar Item 4",
+			"Market Bazaar Item 5",
+			"Market Bazaar Item 6",
+			"Market Bazaar Item 7",
+			"Market Bazaar Item 8",
+			
+			// Market shop
+			"Market Potion Shop Item 1",
+			"Market Potion Shop Item 2",
+			"Market Potion Shop Item 3",
+			"Market Potion Shop Item 4",
+			"Market Potion Shop Item 5",
+			"Market Potion Shop Item 6",
+			"Market Potion Shop Item 7",
+			"Market Potion Shop Item 8",
+			
+			// Market shop
+			"Market Bombchu Shop Item 1",
+			"Market Bombchu Shop Item 2",
+			"Market Bombchu Shop Item 3",
+			"Market Bombchu Shop Item 4",
+			"Market Bombchu Shop Item 5",
+			"Market Bombchu Shop Item 6",
+			"Market Bombchu Shop Item 7",
+			"Market Bombchu Shop Item 8",
+	
+			// ToT
+			"ToT Light Arrows Cutscene",
 
-		// HF scrub
-		"HF Deku Scrub Grotto",
+			// v7 sanities
+			[
+				// Market Crate
+				"Market Night Red Rupee Crate",
+				"Market Night Green Rupee Crate 1",
+				"Market Night Green Rupee Crate 2",
+				"Market Night Green Rupee Crate 3",
+				"Market Dog Lady House Crate",
+				"Market Guard House Child Crate",
 
-		// HF cow
-		"HF Cow Grotto Cow",
+				// Market Pot
+				"Market Guard House Child Pot 1",
+				"Market Guard House Child Pot 2",
+				"Market Guard House Child Pot 3",
+				"Market Guard House Child Pot 4",
+				"Market Guard House Child Pot 5",
+				"Market Guard House Child Pot 6",
+				"Market Guard House Child Pot 7",
+				"Market Guard House Child Pot 8",
+				"Market Guard House Child Pot 9",
+				"Market Guard House Child Pot 10",
+				"Market Guard House Child Pot 11",
+				"Market Guard House Child Pot 12",
+				"Market Guard House Child Pot 13",
+				"Market Guard House Child Pot 14",
+				"Market Guard House Child Pot 15",
+				"Market Guard House Child Pot 16",
+				"Market Guard House Child Pot 17",
+				"Market Guard House Child Pot 18",
+				"Market Guard House Child Pot 19",
+				"Market Guard House Child Pot 20",
+				"Market Guard House Child Pot 21",
+				"Market Guard House Child Pot 22",
+				"Market Guard House Child Pot 23",
+				"Market Guard House Child Pot 24",
+				"Market Guard House Child Pot 25",
+				"Market Guard House Child Pot 26",
+				"Market Guard House Child Pot 27",
+				"Market Guard House Child Pot 28",
+				"Market Guard House Child Pot 29",
+				"Market Guard House Child Pot 30",
+				"Market Guard House Child Pot 31",
+				"Market Guard House Child Pot 32",
+				"Market Guard House Child Pot 33",
+				"Market Guard House Child Pot 34",
+				"Market Guard House Child Pot 35",
+				"Market Guard House Child Pot 36",
+				"Market Guard House Child Pot 37",
+				"Market Guard House Child Pot 38",
+				"Market Guard House Child Pot 39",
+				"Market Guard House Child Pot 40",
+				"Market Guard House Child Pot 41",
+				"Market Guard House Child Pot 42",
+				"Market Guard House Child Pot 43",
+				"Market Guard House Child Pot 44",
+				"Market Guard House Adult Pot 1",
+				"Market Guard House Adult Pot 2",
+				"Market Guard House Adult Pot 3",
+				"Market Guard House Adult Pot 4",
+				"Market Guard House Adult Pot 5",
+				"Market Guard House Adult Pot 6",
+				"Market Guard House Adult Pot 7",
+				"Market Man in Green House Pot 1",
+				"Market Man in Green House Pot 2",
+				"Market Man in Green House Pot 3",
+			],
+		],
 
-		// HF GS
-		"HF GS Cow Grotto",
-		"HF GS Near Kak Grotto",
+		// Hyrule Castle
+		[
+			// HC
+			"HC Malon Egg",
+			"HC Great Fairy Reward",
+	
+			// HC GS
+			"HC GS Tree",
+			"HC GS Storms Grotto",
 
-		// Market
-		"Market Shooting Gallery Reward", // minigame
-		"Market Bombchu Bowling First Prize", // minigame
-		"Market Bombchu Bowling Second Prize", // minigame
-		"Market Lost Dog",
-		"Market Treasure Chest Game Reward", // minigame
-		"Market 10 Big Poes",
-		
-		// Market GS
-		"Market GS Guard House",
-		
-		// Market shop
-		"Market Bazaar Item 1",
-		"Market Bazaar Item 2",
-		"Market Bazaar Item 3",
-		"Market Bazaar Item 4",
-		"Market Bazaar Item 5",
-		"Market Bazaar Item 6",
-		"Market Bazaar Item 7",
-		"Market Bazaar Item 8",
-		
-		// Market shop
-		"Market Potion Shop Item 1",
-		"Market Potion Shop Item 2",
-		"Market Potion Shop Item 3",
-		"Market Potion Shop Item 4",
-		"Market Potion Shop Item 5",
-		"Market Potion Shop Item 6",
-		"Market Potion Shop Item 7",
-		"Market Potion Shop Item 8",
-		
-		// Market shop
-		"Market Bombchu Shop Item 1",
-		"Market Bombchu Shop Item 2",
-		"Market Bombchu Shop Item 3",
-		"Market Bombchu Shop Item 4",
-		"Market Bombchu Shop Item 5",
-		"Market Bombchu Shop Item 6",
-		"Market Bombchu Shop Item 7",
-		"Market Bombchu Shop Item 8",
+			// v7 sanities
+			[
+				// HC Pot
+				"HC Storms Grotto Pot 1",
+				"HC Storms Grotto Pot 2",
+				"HC Storms Grotto Pot 3",
+				"HC Storms Grotto Pot 4",
+			],
+		],
 
-		// ToT
-		"ToT Light Arrows Cutscene",
+		// Lon Lon Ranch
+		[
+			// LLR
+			"LLR Talons Chickens", // minigame
+			"LLR Freestanding PoH",
+	
+			// LLR scrub
+			"LLR Deku Scrub Grotto Left",
+			"LLR Deku Scrub Grotto Center",
+			"LLR Deku Scrub Grotto Right",
+	
+			// LLR cow
+			"LLR Stables Left Cow",
+			"LLR Stables Right Cow",
+			"LLR Tower Left Cow",
+			"LLR Tower Right Cow",
+			
+			// LLR GS
+			"LLR GS House Window",
+			"LLR GS Tree",
+			"LLR GS Rain Shed",
+			"LLR GS Back Wall",
 
-		// HC
-		"HC Malon Egg",
-		"HC Great Fairy Reward",
+			// v7 sanities
+			[
+				// LLR Pot
+				"LLR Front Pot 1",
+				"LLR Front Pot 2",
+				"LLR Front Pot 3",
+				"LLR Front Pot 4",
+				"LLR Rain Shed Pot 1",
+				"LLR Rain Shed Pot 2",
+				"LLR Rain Shed Pot 3",
+				"LLR Talons House Pot 1",
+				"LLR Talons House Pot 2",
+				"LLR Talons House Pot 3",
 
-		// HC GS
-		"HC GS Tree",
-		"HC GS Storms Grotto",
+				// LLR Crate
+				"LLR Child Crate",
 
-		// LLR
-		"LLR Talons Chickens", // minigame
-		"LLR Freestanding PoH",
+				// LLR Beehive
+				"LLR Grotto Beehive",
+			],
+		],
 
-		// LLR scrub
-		"LLR Deku Scrub Grotto Left",
-		"LLR Deku Scrub Grotto Center",
-		"LLR Deku Scrub Grotto Right",
+		// Kakariko
+		[
+			// Kak
+			"Kak Anju as Child",
+			"Kak Anju as Adult",
+			"Kak Impas House Freestanding PoH",
+			"Kak Windmill Freestanding PoH",
+			"Kak Man on Roof",
+			"Kak Open Grotto Chest",
+			"Kak Redead Grotto Chest",
+			"Kak Shooting Gallery Reward", // minigame
+	
+			// Kak GS reward
+			"Kak 10 Gold Skulltula Reward",
+			"Kak 20 Gold Skulltula Reward",
+			"Kak 30 Gold Skulltula Reward",
+			"Kak 40 Gold Skulltula Reward",
+			"Kak 50 Gold Skulltula Reward",
+	
+			// Kak cow
+			"Kak Impas House Cow",
+	
+			// Kak GS
+			"Kak GS Tree",
+			"Kak GS Near Gate Guard",
+			"Kak GS Watchtower",
+			"Kak GS Skulltula House",
+			"Kak GS House Under Construction",
+			"Kak GS Above Impas House",
+			
+			// Kak shop
+			"Kak Bazaar Item 1",
+			"Kak Bazaar Item 2",
+			"Kak Bazaar Item 3",
+			"Kak Bazaar Item 4",
+			"Kak Bazaar Item 5",
+			"Kak Bazaar Item 6",
+			"Kak Bazaar Item 7",
+			"Kak Bazaar Item 8",
+			
+			// Kak shop
+			"Kak Potion Shop Item 1",
+			"Kak Potion Shop Item 2",
+			"Kak Potion Shop Item 3",
+			"Kak Potion Shop Item 4",
+			"Kak Potion Shop Item 5",
+			"Kak Potion Shop Item 6",
+			"Kak Potion Shop Item 7",
+			"Kak Potion Shop Item 8",
+			
+			// v7 sanities
+			[
+				// Kak Pot
+				"Kak Near Potion Shop Pot 1",
+				"Kak Near Potion Shop Pot 2",
+				"Kak Near Potion Shop Pot 3",
+				"Kak Near Impas House Pot 1",
+				"Kak Near Impas House Pot 2",
+				"Kak Near Impas House Pot 3",
+				"Kak Near Guards House Pot 1",
+				"Kak Near Guards House Pot 2",
+				"Kak Near Guards House Pot 3",
+				"Kak Near Odd Medicine Building Pot 1",
+				"Kak Near Odd Medicine Building Pot 2",
 
-		// LLR cow
-		"LLR Stables Left Cow",
-		"LLR Stables Right Cow",
-		"LLR Tower Left Cow",
-		"LLR Tower Right Cow",
-		
-		// LLR GS
-		"LLR GS House Window",
-		"LLR GS Tree",
-		"LLR GS Rain Shed",
-		"LLR GS Back Wall",
+				// Kak Crate
+				"Kak Adult Red Rupee Crate",
+				"Kak Adult Arrows Crate",
 
-		// Kak
-		"Kak Anju as Child",
-		"Kak Anju as Adult",
-		"Kak Impas House Freestanding PoH",
-		"Kak Windmill Freestanding PoH",
-		"Kak Man on Roof",
-		"Kak Open Grotto Chest",
-		"Kak Redead Grotto Chest",
-		"Kak Shooting Gallery Reward", // minigame
-
-		// Kak GS reward
-		"Kak 10 Gold Skulltula Reward",
-		"Kak 20 Gold Skulltula Reward",
-		"Kak 30 Gold Skulltula Reward",
-		"Kak 40 Gold Skulltula Reward",
-		"Kak 50 Gold Skulltula Reward",
-
-		// Kak cow
-		"Kak Impas House Cow",
-
-		// Kak GS
-		"Kak GS Tree",
-		"Kak GS Near Gate Guard",
-		"Kak GS Watchtower",
-		"Kak GS Skulltula House",
-		"Kak GS House Under Construction",
-		"Kak GS Above Impas House",
-		
-		// Kak shop
-		"Kak Bazaar Item 1",
-		"Kak Bazaar Item 2",
-		"Kak Bazaar Item 3",
-		"Kak Bazaar Item 4",
-		"Kak Bazaar Item 5",
-		"Kak Bazaar Item 6",
-		"Kak Bazaar Item 7",
-		"Kak Bazaar Item 8",
-		
-		// Kak shop
-		"Kak Potion Shop Item 1",
-		"Kak Potion Shop Item 2",
-		"Kak Potion Shop Item 3",
-		"Kak Potion Shop Item 4",
-		"Kak Potion Shop Item 5",
-		"Kak Potion Shop Item 6",
-		"Kak Potion Shop Item 7",
-		"Kak Potion Shop Item 8",
+				// Kak Beehive
+				"Kak Open Grotto Beehive 1",
+				"Kak Open Grotto Beehive 2",
+			],
+		],
 
 		// Graveyard
-		"Graveyard Shield Grave Chest",
-		"Graveyard Heart Piece Grave Chest",
-		"Graveyard Royal Familys Tomb Chest",
-		"Graveyard Freestanding PoH",
-		"Graveyard Dampe Gravedigging Tour", // minigame
-		"Graveyard Dampe Race Hookshot Chest",
-		"Graveyard Dampe Race Freestanding PoH",
-		
-		// Graveyard GS
-		"Graveyard GS Bean Patch",
-		"Graveyard GS Wall",
+		[
+			// Graveyard
+			"Graveyard Shield Grave Chest",
+			"Graveyard Heart Piece Grave Chest",
+			"Graveyard Royal Familys Tomb Chest",
+			"Graveyard Freestanding PoH",
+			"Graveyard Dampe Gravedigging Tour", // minigame
+			"Graveyard Dampe Race Hookshot Chest",
+			"Graveyard Dampe Race Freestanding PoH",
+			
+			// Graveyard GS
+			"Graveyard GS Bean Patch",
+			"Graveyard GS Wall",
 
-		// DMT
-		"DMT Freestanding PoH",
-		"DMT Chest",
-		"DMT Storms Grotto Chest",
-		"DMT Great Fairy Reward",
-		"DMT Biggoron",
+			// v7 sanities
+			[
+				// Graveyard Freestanding
+				"Graveyard Dampe Race Rupee 1",
+				"Graveyard Dampe Race Rupee 2",
+				"Graveyard Dampe Race Rupee 3",
+				"Graveyard Dampe Race Rupee 4",
+				"Graveyard Dampe Race Rupee 5",
+				"Graveyard Dampe Race Rupee 6",
+				"Graveyard Dampe Race Rupee 7",
+				"Graveyard Dampe Race Rupee 8",
 
-		// DMT cow
-		"DMT Cow Grotto Cow",
+				// Graveyard Pot
+				"Graveyard Dampe Pot 1",
+				"Graveyard Dampe Pot 2",
+				"Graveyard Dampe Pot 3",
+				"Graveyard Dampe Pot 4",
+				"Graveyard Dampe Pot 5",
+				"Graveyard Dampe Pot 6",
+			],
+		],
 
-		// DMT GS
-		"DMT GS Near Kak",
-		"DMT GS Bean Patch",
-		"DMT GS Above Dodongos Cavern",
-		"DMT GS Falling Rocks Path",
+		// Death Mountain Trail
+		[
+			// DMT
+			"DMT Freestanding PoH",
+			"DMT Chest",
+			"DMT Storms Grotto Chest",
+			"DMT Great Fairy Reward",
+			"DMT Biggoron",
+	
+			// DMT cow
+			"DMT Cow Grotto Cow",
+	
+			// DMT GS
+			"DMT GS Near Kak",
+			"DMT GS Bean Patch",
+			"DMT GS Above Dodongos Cavern",
+			"DMT GS Falling Rocks Path",
 
-		// GC
-		"GC Darunias Joy",
-		"GC Pot Freestanding PoH",
-		"GC Rolling Goron as Child",
-		"GC Rolling Goron as Adult",
-		"GC Medigoron",
-		"GC Maze Left Chest",
-		"GC Maze Right Chest",
-		"GC Maze Center Chest",
-		
-		// GC scrub
-		"GC Deku Scrub Grotto Left",
-		"GC Deku Scrub Grotto Center",
-		"GC Deku Scrub Grotto Right",
-		
-		// GC GS
-		"GC GS Center Platform",
-		"GC GS Boulder Maze",
-		
-		// GC shop
-		"GC Shop Item 1",
-		"GC Shop Item 2",
-		"GC Shop Item 3",
-		"GC Shop Item 4",
-		"GC Shop Item 5",
-		"GC Shop Item 6",
-		"GC Shop Item 7",
-		"GC Shop Item 8",
+			// v7 sanities
+			[
+				// DMT Freestanding
+				"DMT Rock Red Rupee",
+				"DMT Rock Blue Rupee",
+				"DMT Cow Grotto Green Rupee 1",
+				"DMT Cow Grotto Green Rupee 2",
+				"DMT Cow Grotto Green Rupee 3",
+				"DMT Cow Grotto Green Rupee 4",
+				"DMT Cow Grotto Green Rupee 5",
+				"DMT Cow Grotto Green Rupee 6",
+				"DMT Cow Grotto Red Rupee",
+				"DMT Cow Grotto Recovery Heart 1",
+				"DMT Cow Grotto Recovery Heart 2",
+				"DMT Cow Grotto Recovery Heart 3",
+				"DMT Cow Grotto Recovery Heart 4",
 
-		// DMC
-		"DMC Volcano Freestanding PoH",
-		"DMC Wall Freestanding PoH",
-		"DMC Upper Grotto Chest",
-		"DMC Great Fairy Reward",
-		
-		// DMC scrub
-		"DMC Deku Scrub",
-		"DMC Deku Scrub Grotto Left",
-		"DMC Deku Scrub Grotto Center",
-		"DMC Deku Scrub Grotto Right",
-		
-		// DMC GS
-		"DMC GS Crate",
-		"DMC GS Bean Patch",
+				// DMT Beehive
+				"DMT Cow Grotto Beehive",
+				"DMT Storms Grotto Beehive 1",
+				"DMT Storms Grotto Beehive 2",
+			],
+		],
 
-		// ZR
-		"ZR Magic Bean Salesman",
-		"ZR Open Grotto Chest",
-		"ZR Frogs in the Rain",
-		"ZR Frogs Ocarina Game", // minigame
-		"ZR Near Open Grotto Freestanding PoH",
-		"ZR Near Domain Freestanding PoH",
-		
-		// ZR scrub
-		"ZR Deku Scrub Grotto Front",
-		"ZR Deku Scrub Grotto Rear",
-		
-		// ZR GS
-		"ZR GS Tree",
-		"ZR GS Ladder",
-		"ZR GS Near Raised Grottos",
-		"ZR GS Above Bridge",
+		// Goron City
+		[
+			// GC
+			"GC Darunias Joy",
+			"GC Pot Freestanding PoH",
+			"GC Rolling Goron as Child",
+			"GC Rolling Goron as Adult",
+			"GC Medigoron",
+			"GC Maze Left Chest",
+			"GC Maze Right Chest",
+			"GC Maze Center Chest",
+			
+			// GC scrub
+			"GC Deku Scrub Grotto Left",
+			"GC Deku Scrub Grotto Center",
+			"GC Deku Scrub Grotto Right",
+			
+			// GC GS
+			"GC GS Center Platform",
+			"GC GS Boulder Maze",
+			
+			// GC shop
+			"GC Shop Item 1",
+			"GC Shop Item 2",
+			"GC Shop Item 3",
+			"GC Shop Item 4",
+			"GC Shop Item 5",
+			"GC Shop Item 6",
+			"GC Shop Item 7",
+			"GC Shop Item 8",
 
-		// ZD
-		"ZD Diving Minigame", // minigame
-		"ZD Chest",
-		"ZD King Zora Thawed",
-		
-		// ZD GS
-		"ZD GS Frozen Waterfall",
+			// v7 sanities
+			[
+				// GC Freestanding
+				"GC Spinning Pot Bomb Drop 1",
+				"GC Spinning Pot Bomb Drop 2",
+				"GC Spinning Pot Bomb Drop 3",
+				"GC Spinning Pot Rupee Drop 1",
+				"GC Spinning Pot Rupee Drop 2",
+				"GC Spinning Pot Rupee Drop 3",
+				"GC Spinning Pot PoH Drop Rupee 1",
+				"GC Spinning Pot PoH Drop Rupee 2",
 
-		// ZD shop
-		"ZD Shop Item 1",
-		"ZD Shop Item 2",
-		"ZD Shop Item 3",
-		"ZD Shop Item 4",
-		"ZD Shop Item 5",
-		"ZD Shop Item 6",
-		"ZD Shop Item 7",
-		"ZD Shop Item 8",
+				// GC Pot
+				"GC Darunia Pot 1",
+				"GC Darunia Pot 2",
+				"GC Darunia Pot 3",
+				"GC Medigoron Pot",
+				"GC Lower Staircase Pot 1",
+				"GC Lower Staircase Pot 2",
+				"GC Upper Staircase Pot 1",
+				"GC Upper Staircase Pot 2",
+				"GC Upper Staircase Pot 3",
 
-		// ZF
-		"ZF Great Fairy Reward",
-		"ZF Iceberg Freestanding PoH",
-		"ZF Bottom Freestanding PoH",
+				// GC Crate
+				"GC Boulder Maze Crate",
 
-		// ZF GS
-		"ZF GS Above the Log",
-		"ZF GS Tree",
-		"ZF GS Hidden Cave",
+				// GC Beehive
+				"GC Grotto Beehive",
+			],
+		],
 
-		// LH
-		"LH Underwater Item",
-		"LH Child Fishing", // minigame
-		"LH Adult Fishing", // minigame
-		"LH Lab Dive",
-		"LH Freestanding PoH",
-		"LH Sun",
-		
-		// LH scrub
-		"LH Deku Scrub Grotto Left",
-		"LH Deku Scrub Grotto Center",
-		"LH Deku Scrub Grotto Right",
-		
-		// LH GS
-		"LH GS Bean Patch",
-		"LH GS Lab Wall",
-		"LH GS Small Island",
-		"LH GS Lab Crate",
-		"LH GS Tree",
+		// Death Mountain Crater
+		[
+			// DMC
+			"DMC Volcano Freestanding PoH",
+			"DMC Wall Freestanding PoH",
+			"DMC Upper Grotto Chest",
+			"DMC Great Fairy Reward",
+			
+			// DMC scrub
+			"DMC Deku Scrub",
+			"DMC Deku Scrub Grotto Left",
+			"DMC Deku Scrub Grotto Center",
+			"DMC Deku Scrub Grotto Right",
+			
+			// DMC GS
+			"DMC GS Crate",
+			"DMC GS Bean Patch",
 
-		// GV
-		"GV Crate Freestanding PoH",
-		"GV Waterfall Freestanding PoH",
-		"GV Chest",
-		
-		// GV scrub
-		"GV Deku Scrub Grotto Front",
-		"GV Deku Scrub Grotto Rear",
-		
-		// GV cow
-		"GV Cow",
-		
-		// GV GS
-		"GV GS Small Bridge",
-		"GV GS Bean Patch",
-		"GV GS Behind Tent",
-		"GV GS Pillar",
+			// v7 sanities
+			[
+				// DMC Freestanding
+				"DMC Adult Green Rupee 1",
+				"DMC Adult Green Rupee 2",
+				"DMC Adult Green Rupee 3",
+				"DMC Adult Green Rupee 4",
+				"DMC Adult Green Rupee 5",
+				"DMC Adult Green Rupee 6",
+				"DMC Adult Red Rupee",
+				"DMC Child Red Rupee 1",
+				"DMC Child Red Rupee 2",
+				"DMC Child Blue Rupee 1",
+				"DMC Child Blue Rupee 2",
+				"DMC Child Blue Rupee 3",
+				"DMC Child Blue Rupee 4",
+				"DMC Child Blue Rupee 5",
+				"DMC Child Blue Rupee 6",
 
-		// GF
-		"GF Chest",
-		"GF HBA 1000 Points", // minigame
-		"GF HBA 1500 Points", // minigame
-		
-		// GF GS
-		"GF GS Top Floor",
-		"GF GS Archery Range",
+				// DMC Pot
+				"DMC Near GC Pot 1",
+				"DMC Near GC Pot 2",
+				"DMC Near GC Pot 3",
+				"DMC Near GC Pot 4",
 
-		// Hideout
-		"Hideout 1 Torch Jail Gerudo Key",   // (RED)    (1trch)
-		"Hideout 2 Torches Jail Gerudo Key", // (BLUE)   (2trch)
-		"Hideout 3 Torches Jail Gerudo Key", // (GREEN)  (3trch)
-		"Hideout 4 Torches Jail Gerudo Key", // (YELLOW) (4trch)
-		"Hideout Gerudo Membership Card",
+				// DMC Beehive
+				"DMC Upper Grotto Beehive 1",
+				"DMC Upper Grotto Beehive 2",
+				"DMC Hammer Grotto Beehive",
+			],
+		],
 
-		// Wasteland
-		"Wasteland Bombchu Salesman",
-		"Wasteland Chest",
-		
-		// Wasteland GS
-		"Wasteland GS",
+		// Zora's River
+		[
+			// ZR
+			"ZR Magic Bean Salesman",
+			"ZR Open Grotto Chest",
+			"ZR Frogs Zeldas Lullaby", // v7 (frogs)
+			"ZR Frogs Eponas Song",    // v7 (frogs)
+			"ZR Frogs Sarias Song",    // v7 (frogs)
+			"ZR Frogs Suns Song",      // v7 (frogs)
+			"ZR Frogs Song of Time",   // v7 (frogs)
+			"ZR Frogs in the Rain",
+			"ZR Frogs Ocarina Game", // minigame
+			"ZR Near Open Grotto Freestanding PoH",
+			"ZR Near Domain Freestanding PoH",
+			
+			// ZR scrub
+			"ZR Deku Scrub Grotto Front",
+			"ZR Deku Scrub Grotto Rear",
+			
+			// ZR GS
+			"ZR GS Tree",
+			"ZR GS Ladder",
+			"ZR GS Near Raised Grottos",
+			"ZR GS Above Bridge",
 
-		// Colossus
-		"Colossus Great Fairy Reward",
-		"Colossus Freestanding PoH",
-		
-		// Colossus scrub
-		"Colossus Deku Scrub Grotto Front",
-		"Colossus Deku Scrub Grotto Rear",
-		
-		// Colossus GS
-		"Colossus GS Bean Patch",
-		"Colossus GS Tree",
-		"Colossus GS Hill",
+			// v7 sanities
+			[
+				// ZR Freestanding
+				"ZR Waterfall Red Rupee 1",
+				"ZR Waterfall Red Rupee 2",
+				"ZR Waterfall Red Rupee 3",
+				"ZR Waterfall Red Rupee 4",
 
-		// OGC
-		"OGC Great Fairy Reward",
+				// ZR Beehive
+				"ZR Open Grotto Beehive 1",
+				"ZR Open Grotto Beehive 2",
+				"ZR Storms Grotto Beehive",
+			],
+		],
 
-		// OGC GS
-		"OGC GS",
+		// Zora's Domain
+		[
+			// ZD
+			"ZD Diving Minigame", // minigame
+			"ZD Chest",
+			"ZD King Zora Thawed",
+			
+			// ZD GS
+			"ZD GS Frozen Waterfall",
+	
+			// ZD shop
+			"ZD Shop Item 1",
+			"ZD Shop Item 2",
+			"ZD Shop Item 3",
+			"ZD Shop Item 4",
+			"ZD Shop Item 5",
+			"ZD Shop Item 6",
+			"ZD Shop Item 7",
+			"ZD Shop Item 8",
+
+			// v7 sanities
+			[
+				// ZD Pot
+				"ZD Pot 1",
+				"ZD Pot 2",
+				"ZD Pot 3",
+				"ZD Pot 4",
+				"ZD Pot 5",
+
+				// ZD Beehive
+				"ZD In Front of King Zora Beehive 1",
+				"ZD In Front of King Zora Beehive 2",
+				"ZD Behind King Zora Beehive",
+			],
+		],
+
+		// Zora's Fountain
+		[
+			// ZF
+			"ZF Great Fairy Reward",
+			"ZF Iceberg Freestanding PoH",
+			"ZF Bottom Freestanding PoH",
+	
+			// ZF GS
+			"ZF GS Above the Log",
+			"ZF GS Tree",
+			"ZF GS Hidden Cave",
+
+			// v7 sanities
+			[
+				// ZF Freestanding
+				"ZF Bottom Green Rupee 1",
+				"ZF Bottom Green Rupee 2",
+				"ZF Bottom Green Rupee 3",
+				"ZF Bottom Green Rupee 4",
+				"ZF Bottom Green Rupee 5",
+				"ZF Bottom Green Rupee 6",
+				"ZF Bottom Green Rupee 7",
+				"ZF Bottom Green Rupee 8",
+				"ZF Bottom Green Rupee 9",
+				"ZF Bottom Green Rupee 10",
+				"ZF Bottom Green Rupee 11",
+				"ZF Bottom Green Rupee 12",
+				"ZF Bottom Green Rupee 13",
+				"ZF Bottom Green Rupee 14",
+				"ZF Bottom Green Rupee 15",
+				"ZF Bottom Green Rupee 16",
+				"ZF Bottom Green Rupee 17",
+				"ZF Bottom Green Rupee 18",
+
+				// ZF Pot
+				"ZF Hidden Cave Pot 1",
+				"ZF Hidden Cave Pot 2",
+				"ZF Hidden Cave Pot 3",
+				"ZF Near Jabu Pot 1",
+				"ZF Near Jabu Pot 2",
+				"ZF Near Jabu Pot 3",
+				"ZF Near Jabu Pot 4",
+			],
+		],
+
+		// Lake Hylia
+		[
+			// LH
+			"LH Underwater Item",
+			"LH Child Fishing", // minigame
+			"LH Adult Fishing", // minigame
+			"LH Lab Dive",
+			"LH Freestanding PoH",
+			"LH Sun",
+			
+			// LH scrub
+			"LH Deku Scrub Grotto Left",
+			"LH Deku Scrub Grotto Center",
+			"LH Deku Scrub Grotto Right",
+			
+			// LH GS
+			"LH GS Bean Patch",
+			"LH GS Lab Wall",
+			"LH GS Small Island",
+			"LH GS Lab Crate",
+			"LH GS Tree",
+
+			// v7 sanities
+			[
+				// LH Freestanding
+				"LH Underwater Near Shore Green Rupee",
+				"LH Underwater Green Rupee 1",
+				"LH Underwater Green Rupee 2",
+				"LH Lab Dive Red Rupee 1",
+				"LH Lab Dive Red Rupee 2",
+				"LH Lab Dive Red Rupee 3",
+
+				// LH Beehive
+				"LH Grotto Beehive",
+			],
+		],
+
+		// Gerudo Valley
+		[
+			// GV
+			"GV Crate Freestanding PoH",
+			"GV Waterfall Freestanding PoH",
+			"GV Chest",
+			
+			// GV scrub
+			"GV Deku Scrub Grotto Front",
+			"GV Deku Scrub Grotto Rear",
+			
+			// GV cow
+			"GV Cow",
+			
+			// GV GS
+			"GV GS Small Bridge",
+			"GV GS Bean Patch",
+			"GV GS Behind Tent",
+			"GV GS Pillar",
+
+			// v7 sanities
+			[
+				// GV Freestanding
+				"GV Octorok Grotto Red Rupee",
+				"GV Octorok Grotto Blue Rupee 1",
+				"GV Octorok Grotto Blue Rupee 2",
+				"GV Octorok Grotto Blue Rupee 3",
+				"GV Octorok Grotto Green Rupee 1",
+				"GV Octorok Grotto Green Rupee 2",
+				"GV Octorok Grotto Green Rupee 3",
+				"GV Octorok Grotto Green Rupee 4",
+
+				// GV Crate
+				"GV Crate Near Cow",
+				"GV Freestanding PoH Crate",
+
+				// GV Beehive
+				"GV Storms Grotto Beehive",
+			],
+		],
+
+		// Gerudo's Fortress
+		[
+			// GF
+			"GF Chest",
+			"GF HBA 1000 Points", // minigame
+			"GF HBA 1500 Points", // minigame
+			
+			// GF GS
+			"GF GS Top Floor",
+			"GF GS Archery Range",
+
+			// v7 sanities
+			[
+				// GF Crate
+				"GF Above Jail Crate",
+			],
+		],
+
+		// Thieves' Hideout
+		[
+			// Hideout
+			"Hideout 1 Torch Jail Gerudo Key",   // (RED)    (1trch)
+			"Hideout 2 Torches Jail Gerudo Key", // (BLUE)   (2trch)
+			"Hideout 3 Torches Jail Gerudo Key", // (GREEN)  (3trch)
+			"Hideout 4 Torches Jail Gerudo Key", // (YELLOW) (4trch)
+			"Hideout Gerudo Membership Card",
+
+			// v7 sanities
+			[
+				// Hideout Pot
+				"Hideout Break Room Pot 1",
+				"Hideout Break Room Pot 2",
+				"Hideout 1 Torch Jail Pot 1",
+				"Hideout 1 Torch Jail Pot 2",
+				"Hideout 1 Torch Jail Pot 3",
+				"Hideout Kitchen Pot 1",
+				"Hideout Kitchen Pot 2",
+				"Hideout 4 Torch Jail Pot 1",
+				"Hideout 4 Torch Jail Pot 2",
+				"Hideout 2 Torch Jail Pot 1",
+				"Hideout 2 Torch Jail Pot 2",
+				"Hideout 2 Torch Jail Pot 3",
+				"Hideout 2 Torch Jail In Cell Pot 1",
+				"Hideout 2 Torch Jail In Cell Pot 2",
+				"Hideout 2 Torch Jail In Cell Pot 3",
+				"Hideout 2 Torch Jail In Cell Pot 4",
+
+				// Hideout Crate
+				"Hideout Break Room Crate 1",
+				"Hideout Break Room Crate 2",
+				"Hideout Break Room Hallway Crate 1",
+				"Hideout Break Room Hallway Crate 2",
+				"Hideout 3 Torch Jail Crate",
+				"Hideout 1 Torch Jail Crate",
+				"Hideout Near Kitchen Crate 1",
+				"Hideout Near Kitchen Crate 2",
+				"Hideout Near Kitchen Crate 3",
+				"Hideout Near Kitchen Crate 4",
+				"Hideout Near Kitchen Crate 5",
+				"Hideout 2 Torch Jail Crate 1",
+				"Hideout 2 Torch Jail Crate 2",
+			],
+		],
+
+		// Haunted Wasteland
+		[
+			// Wasteland
+			"Wasteland Bombchu Salesman",
+			"Wasteland Chest",
+			
+			// Wasteland GS
+			"Wasteland GS",
+
+			// v7 sanities
+			[
+				// Wasteland Pot
+				"Wasteland Near GS Pot 1",
+				"Wasteland Near GS Pot 2",
+				"Wasteland Near GS Pot 3",
+
+				// Wasteland Crate
+				"Wasteland Crate Before Quicksand",
+				"Wasteland Crate After Quicksand 1",
+				"Wasteland Crate After Quicksand 2",
+				"Wasteland Crate After Quicksand 3",
+				"Wasteland Crate Near Colossus",
+			],
+		],
+
+		// Desert Colossus
+		[
+			// Colossus
+			"Colossus Great Fairy Reward",
+			"Colossus Freestanding PoH",
+			
+			// Colossus scrub
+			"Colossus Deku Scrub Grotto Front",
+			"Colossus Deku Scrub Grotto Rear",
+			
+			// Colossus GS
+			"Colossus GS Bean Patch",
+			"Colossus GS Tree",
+			"Colossus GS Hill",
+
+			// v7 sanities
+			[
+				// Colossus Beehive
+				"Colossus Grotto Beehive",
+			],
+		],
+
+		// Outside Ganon's Castle
+		[
+			// OGC
+			"OGC Great Fairy Reward",
+	
+			// OGC GS
+			"OGC GS",
+		],
 	],
 
 	// DUNGEON
@@ -449,8 +987,18 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Deku Tree GS Basement Gate",
 			"Deku Tree GS Basement Back Room",
 
+			// v7 sanities
+			[
+				// Deku Tree Freestanding
+				"Deku Tree Lower Lobby Recovery Heart",
+				"Deku Tree Upper Lobby Recovery Heart",
+				"Deku Tree Basement Recovery Heart 1",
+				"Deku Tree Basement Recovery Heart 2",
+				"Deku Tree Basement Recovery Heart 3",
+			],
+
 			// Deku Tree boss heart
-			"Deku Tree Queen Gohma Heart",
+			"Deku Tree Queen Gohma Heart", // (shared with MQ)
 		],
 
 		// Deku Tree MQ ONLY
@@ -512,12 +1060,50 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Dodongos Cavern GS Alcove Above Stairs",
 			"Dodongos Cavern GS Vines Above Stairs",
 			"Dodongos Cavern GS Back Room",
-			
+
+			// v7 sanities
+			[
+				// Dodongos Cavern Freestanding
+				"Dodongos Cavern Lizalfos Upper Recovery Heart 1",
+				"Dodongos Cavern Lizalfos Upper Recovery Heart 2",
+				"Dodongos Cavern Blade Room Behind Block Recovery Heart",
+				"Dodongos Cavern Lower Lizalfos Hidden Recovery Heart", // (shared with MQ)
+
+				// Dodongos Cavern Pot
+				"Dodongos Cavern Right Side Pot 1",
+				"Dodongos Cavern Right Side Pot 2",
+				"Dodongos Cavern Right Side Pot 3",
+				"Dodongos Cavern Right Side Pot 4",
+				"Dodongos Cavern Right Side Pot 5",
+				"Dodongos Cavern Right Side Pot 6",
+				"Dodongos Cavern Lower Lizalfos Pot 1",
+				"Dodongos Cavern Lower Lizalfos Pot 2",
+				"Dodongos Cavern Lower Lizalfos Pot 3",
+				"Dodongos Cavern Lower Lizalfos Pot 4",
+				"Dodongos Cavern Torch Room Pot 1",
+				"Dodongos Cavern Torch Room Pot 2",
+				"Dodongos Cavern Torch Room Pot 3",
+				"Dodongos Cavern Torch Room Pot 4",
+				"Dodongos Cavern Staircase Pot 1",
+				"Dodongos Cavern Staircase Pot 2",
+				"Dodongos Cavern Staircase Pot 3",
+				"Dodongos Cavern Staircase Pot 4",
+				"Dodongos Cavern Last Block Pot 1",
+				"Dodongos Cavern Last Block Pot 2",
+				"Dodongos Cavern Last Block Pot 3",
+				"Dodongos Cavern Blade Room Pot 1",
+				"Dodongos Cavern Blade Room Pot 2",
+				"Dodongos Cavern Single Eye Switch Room Pot 1",
+				"Dodongos Cavern Single Eye Switch Room Pot 2",
+				"Dodongos Cavern Double Eye Switch Room Pot 1",
+				"Dodongos Cavern Double Eye Switch Room Pot 2",
+			],
+
 			// Dodongos Cavern boss room
-			"Dodongos Cavern Boss Room Chest",
+			"Dodongos Cavern Boss Room Chest", // (shared with MQ)
 			
 			// Dodongos Cavern boss heart
-			"Dodongos Cavern King Dodongo Heart",
+			"Dodongos Cavern King Dodongo Heart", // (shared with MQ)
 		],
 
 		// Dodongos Cavern MQ ONLY
@@ -620,9 +1206,31 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Jabu Jabus Belly GS Lobby Basement Lower",
 			"Jabu Jabus Belly GS Lobby Basement Upper",
 			"Jabu Jabus Belly GS Near Boss",
-			
+
+			// v7 sanities
+			[
+				// Jabu Jabus Belly Pot
+				"Jabu Jabus Belly Above Big Octo Pot 1",
+				"Jabu Jabus Belly Above Big Octo Pot 2",
+				"Jabu Jabus Belly Basement 2 Octoroks Pot 1",
+				"Jabu Jabus Belly Basement 2 Octoroks Pot 2",
+				"Jabu Jabus Belly Basement 2 Octoroks Pot 3",
+				"Jabu Jabus Belly Basement 2 Octoroks Pot 4",
+				"Jabu Jabus Belly Basement Switch Room Pot 1",
+				"Jabu Jabus Belly Basement Switch Room Pot 2",
+				"Jabu Jabus Belly Barinade Pot 1", // (shared with MQ)
+				"Jabu Jabus Belly Barinade Pot 2", // (shared with MQ)
+				"Jabu Jabus Belly Barinade Pot 3", // (shared with MQ)
+				"Jabu Jabus Belly Barinade Pot 4", // (shared with MQ)
+				"Jabu Jabus Belly Barinade Pot 5", // (shared with MQ)
+				"Jabu Jabus Belly Barinade Pot 6", // (shared with MQ)
+
+				// Jabu Jabus Belly Crate
+				"Jabu Jabus Belly Small Wooden Crate",
+			],
+
 			// Jabu Jabus Belly boss heart
-			"Jabu Jabus Belly Barinade Heart",
+			"Jabu Jabus Belly Barinade Heart", // (shared with MQ)
 		],
 
 		// Jabu Jabus Belly MQ ONLY
@@ -692,6 +1300,42 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Bottom of the Well GS West Inner Room",
 			"Bottom of the Well GS East Inner Room",
 			"Bottom of the Well GS Like Like Cage",
+
+			// v7 sanities
+			[
+				// Bottom of the Well Freestanding
+				"Bottom of the Well Center Room Pit Fall Blue Rupee 1",
+				"Bottom of the Well Center Room Pit Fall Blue Rupee 2",
+				"Bottom of the Well Center Room Pit Fall Blue Rupee 3",
+				"Bottom of the Well Center Room Pit Fall Blue Rupee 4",
+				"Bottom of the Well Center Room Pit Fall Blue Rupee 5",
+				"Bottom of the Well Coffin Recovery Heart 1",
+				"Bottom of the Well Coffin Recovery Heart 2",
+
+				// Bottom of the Well Pot
+				"Bottom of the Well Left Side Pot 1",
+				"Bottom of the Well Left Side Pot 2",
+				"Bottom of the Well Left Side Pot 3",
+				"Bottom of the Well Near Entrance Pot 1",
+				"Bottom of the Well Near Entrance Pot 2",
+				"Bottom of the Well Underwater Pot",
+				"Bottom of the Well Basement Pot 1",
+				"Bottom of the Well Basement Pot 2",
+				"Bottom of the Well Basement Pot 3",
+				"Bottom of the Well Basement Pot 4",
+				"Bottom of the Well Basement Pot 5",
+				"Bottom of the Well Basement Pot 6",
+				"Bottom of the Well Basement Pot 7",
+				"Bottom of the Well Basement Pot 8",
+				"Bottom of the Well Basement Pot 9",
+				"Bottom of the Well Basement Pot 10",
+				"Bottom of the Well Basement Pot 11",
+				"Bottom of the Well Basement Pot 12",
+				"Bottom of the Well Fire Keese Pot",
+				"Bottom of the Well West Inner Room Flying Pot 1",
+				"Bottom of the Well West Inner Room Flying Pot 2",
+				"Bottom of the Well West Inner Room Flying Pot 3",
+			],
 		],
 
 		// Bottom of the Well MQ ONLY
@@ -753,8 +1397,37 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Forest Temple GS Level Island Courtyard",
 			"Forest Temple GS Basement",
 
+			// v7 sanities
+			[
+				// Forest Temple Freestanding
+				"Forest Temple Courtyard Recovery Heart 1",
+				"Forest Temple Courtyard Recovery Heart 2",
+				"Forest Temple Well Recovery Heart 1",
+				"Forest Temple Well Recovery Heart 2",
+
+				// Forest Temple Pot
+				"Forest Temple Center Room Right Pot 1",
+				"Forest Temple Center Room Right Pot 2",
+				"Forest Temple Center Room Right Pot 3",
+				"Forest Temple Center Room Left Pot 1",
+				"Forest Temple Center Room Left Pot 2",
+				"Forest Temple Center Room Left Pot 3",
+				"Forest Temple Lower Stalfos Pot",
+				"Forest Temple Upper Stalfos Pot 1",
+				"Forest Temple Upper Stalfos Pot 2",
+				"Forest Temple Upper Stalfos Pot 3",
+				"Forest Temple Upper Stalfos Pot 4",
+				"Forest Temple Blue Poe Room Pot 1",
+				"Forest Temple Blue Poe Room Pot 2",
+				"Forest Temple Blue Poe Room Pot 3",
+				"Forest Temple Frozen Eye Switch Room Pot 1",
+				"Forest Temple Frozen Eye Switch Room Pot 2",
+				"Forest Temple Green Poe Room Pot 1",
+				"Forest Temple Green Poe Room Pot 2",
+			],
+
 			// Forest Temple boss heart
-			"Forest Temple Phantom Ganon Heart",
+			"Forest Temple Phantom Ganon Heart", // (shared with MQ)
 		],
 
 		// Forest Temple MQ ONLY
@@ -843,9 +1516,38 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Fire Temple GS Boulder Maze",
 			"Fire Temple GS Scarecrow Climb",
 			"Fire Temple GS Scarecrow Top",
-			
+
+			// v7 sanities
+			[
+				// Fire Temple Freestanding
+				"Fire Temple Elevator Room Recovery Heart 1",
+				"Fire Temple Elevator Room Recovery Heart 2",
+				"Fire Temple Elevator Room Recovery Heart 3",
+				"Fire Temple Narrow Path Room Recovery Heart 1",
+				"Fire Temple Narrow Path Room Recovery Heart 2",
+				"Fire Temple Narrow Path Room Recovery Heart 3",
+				"Fire Temple Moving Fire Room Recovery Heart 1",
+				"Fire Temple Moving Fire Room Recovery Heart 2",
+				"Fire Temple Moving Fire Room Recovery Heart 3",
+
+				// Fire Temple Pot
+				"Fire Temple Big Lava Room Pot 1",
+				"Fire Temple Big Lava Room Pot 2",
+				"Fire Temple Big Lava Room Pot 3",
+				"Fire Temple Near Boss Pot 1",
+				"Fire Temple Near Boss Pot 2",
+				"Fire Temple Flame Maze Right Side Pot 1",
+				"Fire Temple Flame Maze Right Side Pot 2",
+				"Fire Temple Flame Maze Right Side Pot 3",
+				"Fire Temple Flame Maze Right Side Pot 4",
+				"Fire Temple Flame Maze Left Side Pot 1",
+				"Fire Temple Flame Maze Left Side Pot 2",
+				"Fire Temple Flame Maze Left Side Pot 3",
+				"Fire Temple Flame Maze Left Side Pot 4",
+			],
+
 			// Fire Temple boss heart
-			"Fire Temple Volvagia Heart",
+			"Fire Temple Volvagia Heart", // (shared with MQ)
 		],
 
 		// Fire Temple MQ ONLY
@@ -948,9 +1650,38 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Water Temple GS Central Pillar",
 			"Water Temple GS Falling Platform Room",
 			"Water Temple GS River",
-			
+
+			// v7 sanities
+			[
+				// Water Temple Freestanding
+				"Water Temple River Recovery Heart 1",
+				"Water Temple River Recovery Heart 2",
+				"Water Temple River Recovery Heart 3",
+				"Water Temple River Recovery Heart 4",
+
+				// Water Temple Pot
+				"Water Temple Main Room L2 Pot 1",
+				"Water Temple Main Room L2 Pot 2",
+				"Water Temple Behind Gate Pot 1",
+				"Water Temple Behind Gate Pot 2",
+				"Water Temple Behind Gate Pot 3",
+				"Water Temple Behind Gate Pot 4",
+				"Water Temple Near Compass Pot 1",
+				"Water Temple Near Compass Pot 2",
+				"Water Temple Near Compass Pot 3",
+				"Water Temple Like Like Pot 1",
+				"Water Temple Like Like Pot 2",
+				"Water Temple North Basement Block Puzzle Pot 1",
+				"Water Temple North Basement Block Puzzle Pot 2",
+				"Water Temple L1 Torch Pot 1",
+				"Water Temple L1 Torch Pot 2",
+				"Water Temple River Pot 1",
+				"Water Temple Central Bow Target Pot 1",
+				"Water Temple Central Bow Target Pot 2",
+			],
+
 			// Water Temple boss heart
-			"Water Temple Morpha Heart",
+			"Water Temple Morpha Heart", // (shared with MQ)
 		],
 
 		// Water Temple MQ ONLY
@@ -1117,8 +1848,54 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Shadow Temple GS Near Ship",
 			"Shadow Temple GS Triple Giant Pot",
 
+			// v7 sanities
+			[
+				// Shadow Temple Freestanding
+				"Shadow Temple Invisible Blades Recovery Heart 1",
+				"Shadow Temple Invisible Blades Recovery Heart 2",
+				"Shadow Temple Before Boat Recovery Heart 1",
+				"Shadow Temple Before Boat Recovery Heart 2",
+				"Shadow Temple After Boat Upper Recovery Heart 1",
+				"Shadow Temple After Boat Upper Recovery Heart 2",
+				"Shadow Temple After Boat Lower Recovery Heart",
+				"Shadow Temple 3 Spinning Pots Rupee 1",
+				"Shadow Temple 3 Spinning Pots Rupee 2",
+				"Shadow Temple 3 Spinning Pots Rupee 3",
+				"Shadow Temple 3 Spinning Pots Rupee 4",
+				"Shadow Temple 3 Spinning Pots Rupee 5",
+				"Shadow Temple 3 Spinning Pots Rupee 6",
+				"Shadow Temple 3 Spinning Pots Rupee 7",
+				"Shadow Temple 3 Spinning Pots Rupee 8",
+				"Shadow Temple 3 Spinning Pots Rupee 9",
+
+				// Shadow Temple Pot
+				"Shadow Temple Whispering Walls Near Dead Hand Pot",
+				"Shadow Temple Whispering Walls Left Pot 1",
+				"Shadow Temple Whispering Walls Left Pot 2",
+				"Shadow Temple Whispering Walls Left Pot 3",
+				"Shadow Temple Whispering Walls Front Pot 1",
+				"Shadow Temple Whispering Walls Front Pot 2",
+				"Shadow Temple Whispering Walls Flying Pot",
+				"Shadow Temple Map Chest Room Pot 1",
+				"Shadow Temple Map Chest Room Pot 2",
+				"Shadow Temple Falling Spikes Lower Pot 2",
+				"Shadow Temple Falling Spikes Lower Pot 1",
+				"Shadow Temple Falling Spikes Upper Pot 1",
+				"Shadow Temple Falling Spikes Upper Pot 2",
+				"Shadow Temple Spike Walls Pot",
+				"Shadow Temple Invisible Floormaster Pot 1",
+				"Shadow Temple Invisible Floormaster Pot 2",
+				"Shadow Temple After Wind Pot 1",
+				"Shadow Temple After Wind Pot 2",
+				"Shadow Temple After Wind Flying Pot 1",
+				"Shadow Temple After Wind Flying Pot 2",
+				"Shadow Temple After Boat Pot",
+				"Shadow Temple Near Boss Pot 1",
+				"Shadow Temple Near Boss Pot 2",
+			],
+
 			// Shadow Temple boss heart
-			"Shadow Temple Bongo Bongo Heart",
+			"Shadow Temple Bongo Bongo Heart", // (shared with MQ)
 		],
 
 		// Shadow Temple MQ ONLY
@@ -1234,9 +2011,42 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Spirit Temple GS Hall After Sun Block Room",
 			"Spirit Temple GS Lobby",
 			"Spirit Temple GS Boulder Room",
-			
+
+			// v7 sanities
+			[
+				// Spirit Temple Freestanding
+				"Spirit Temple Shifting Wall Recovery Heart 1",
+				"Spirit Temple Shifting Wall Recovery Heart 2",
+
+				// Spirit Temple Pot
+				"Spirit Temple Lobby Pot 1",
+				"Spirit Temple Lobby Pot 2",
+				"Spirit Temple Lobby Flying Pot 1",
+				"Spirit Temple Lobby Flying Pot 2",
+				"Spirit Temple Child Climb Pot",
+				"Spirit Temple Hall After Sun Block Room Pot 1",
+				"Spirit Temple Hall After Sun Block Room Pot 2",
+				"Spirit Temple Beamos Hall Pot",
+				"Spirit Temple Child Anubis Pot",
+				"Spirit Temple Child Bridge Flying Pot",
+				"Spirit Temple Central Chamber Flying Pot 1",
+				"Spirit Temple Central Chamber Flying Pot 2",
+				"Spirit Temple Adult Climb Flying Pot 1",
+				"Spirit Temple Adult Climb Flying Pot 2",
+				"Spirit Temple Big Mirror Flying Pot 1",
+				"Spirit Temple Big Mirror Flying Pot 2",
+				"Spirit Temple Big Mirror Flying Pot 3",
+				"Spirit Temple Big Mirror Flying Pot 4",
+				"Spirit Temple Big Mirror Flying Pot 5",
+				"Spirit Temple Big Mirror Flying Pot 6",
+				
+				// Spirit Temple Crate
+				"Spirit Temple Before Child Climb Small Wooden Crate 1",
+				"Spirit Temple Before Child Climb Small Wooden Crate 2",
+			],
+
 			// Spirit Temple boss heart
-			"Spirit Temple Twinrova Heart",
+			"Spirit Temple Twinrova Heart", // (shared with MQ)
 		],
 
 		// Spirit Temple MQ ONLY
@@ -1328,6 +2138,29 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Ice Cavern GS Spinning Scythe Room",
 			"Ice Cavern GS Heart Piece Room",
 			"Ice Cavern GS Push Block Room",
+
+			// v7 sanities
+			[
+				// Ice Cavern Freestanding
+				"Ice Cavern Frozen Blue Rupee",
+				"Ice Cavern Map Room Recovery Heart 1",
+				"Ice Cavern Map Room Recovery Heart 2",
+				"Ice Cavern Map Room Recovery Heart 3",
+				"Ice Cavern Block Room Red Rupee 1",
+				"Ice Cavern Block Room Red Rupee 2",
+				"Ice Cavern Block Room Red Rupee 3",
+
+				// Ice Cavern Pot
+				"Ice Cavern Hall Pot 1",
+				"Ice Cavern Hall Pot 2",
+				"Ice Cavern Spinning Blade Pot 1",
+				"Ice Cavern Spinning Blade Pot 2",
+				"Ice Cavern Spinning Blade Pot 3",
+				"Ice Cavern Spinning Blade Flying Pot",
+				"Ice Cavern Near End Pot 1",
+				"Ice Cavern Near End Pot 2",
+				"Ice Cavern Frozen Pot",
+			],
 		],
 
 		// Ice Cavern MQ ONLY
@@ -1382,6 +2215,13 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Gerudo Training Ground Maze Path Second Chest",
 			"Gerudo Training Ground Maze Path Third Chest",
 			"Gerudo Training Ground Maze Path Final Chest",
+
+			// v7 sanities
+			[
+				// Gerudo Training Ground Freestanding
+				"Gerudo Training Ground Beamos Recovery Heart 1",
+				"Gerudo Training Ground Beamos Recovery Heart 2",
+			],
 		],
 
 		// Gerudo Training Ground MQ ONLY
@@ -1442,9 +2282,52 @@ window.RandoStuffs.OoT.core.Location.list = [
 			"Ganons Castle Deku Scrub Center-Left",
 			"Ganons Castle Deku Scrub Center-Right",
 			"Ganons Castle Deku Scrub Right",
-	
+
+			// v7 sanities
+			[
+				// Ganons Castle Freestanding
+				"Ganons Castle Shadow Trial Recovery Heart 1",
+				"Ganons Castle Shadow Trial Recovery Heart 2",
+				"Ganons Castle Shadow Trial Recovery Heart 3",
+				"Ganons Castle Fire Trial Recovery Heart",
+				"Ganons Castle Spirit Trial Recovery Heart",
+
+				// Ganons Castle Pot
+				"Ganons Castle Water Trial Pot 1",
+				"Ganons Castle Water Trial Pot 2",
+				"Ganons Castle Forest Trial Pot 1",
+				"Ganons Castle Forest Trial Pot 2",
+				"Ganons Castle Light Trial Boulder Pot",
+				"Ganons Castle Light Trial Pot 1",
+				"Ganons Castle Light Trial Pot 2",
+				"Ganons Castle Shadow Trial Like Like Pot 1",
+				"Ganons Castle Shadow Trial Like Like Pot 2",
+				"Ganons Castle Shadow Trial Pot 1",
+				"Ganons Castle Shadow Trial Pot 2",
+				"Ganons Castle Fire Trial Pot 1",
+				"Ganons Castle Fire Trial Pot 2",
+				"Ganons Castle Spirit Trial Pot 1",
+				"Ganons Castle Spirit Trial Pot 2",
+
+				// Ganons Tower Pot
+				"Ganons Tower Pot 1",  // (shared with MQ)
+				"Ganons Tower Pot 2",  // (shared with MQ)
+				"Ganons Tower Pot 3",  // (shared with MQ)
+				"Ganons Tower Pot 4",  // (shared with MQ)
+				"Ganons Tower Pot 5",  // (shared with MQ)
+				"Ganons Tower Pot 6",  // (shared with MQ)
+				"Ganons Tower Pot 7",  // (shared with MQ)
+				"Ganons Tower Pot 8",  // (shared with MQ)
+				"Ganons Tower Pot 9",  // (shared with MQ)
+				"Ganons Tower Pot 10", // (shared with MQ)
+				"Ganons Tower Pot 11", // (shared with MQ)
+				"Ganons Tower Pot 12", // (shared with MQ)
+				"Ganons Tower Pot 13", // (shared with MQ)
+				"Ganons Tower Pot 14", // (shared with MQ)
+			],
+
 			// Ganons Tower
-			"Ganons Tower Boss Key Chest",
+			"Ganons Tower Boss Key Chest", // (shared with MQ)
 		],
 
 		// Ganons Castle MQ ONLY
