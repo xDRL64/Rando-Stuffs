@@ -1,67 +1,67 @@
 
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OoT Rabdo-Stuffs</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: stretch;
-            align-items: stretch;
-            /* FIREFOX IS SHIT */
-                position: absolute;
-                inset: 0;
-            /* FIREFOX IS SHIT (END) */
-        }
-        #page {
-            position: relative;
-            flex-grow: 1;
-            display: grid;
-            grid-template-columns: auto 1fr;
-            grid-template-rows:    auto 1fr;
-            background-color: #b3b3b3;
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OoT Rabdo-Stuffs</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: stretch;
+			align-items: stretch;
+			/* FIREFOX IS SHIT */
+				position: absolute;
+				inset: 0;
+			/* FIREFOX IS SHIT (END) */
+		}
+		#page {
+			position: relative;
+			flex-grow: 1;
+			display: grid;
+			grid-template-columns: auto 1fr;
+			grid-template-rows:    auto 1fr;
+			background-color: #b3b3b3;
+		}
 
-        #fileArea {
-            grid-column: 1 / 3;
-            grid-row: 1 / 2;
-            background-color: rgb(110, 175, 250);
-            display: flex;
-            justify-content: space-evenly;
-            white-space: pre;
-        }
-        .file-slot {
-            border-radius: 8px;
-            border-style: dashed;
-            border-width: 2px;
-            margin: 16;
-            padding: 8;
-            user-select: none;
-        }
+		#fileArea {
+			grid-column: 1 / 3;
+			grid-row: 1 / 2;
+			background-color: rgb(110, 175, 250);
+			display: flex;
+			justify-content: space-evenly;
+			white-space: pre;
+		}
+		.file-slot {
+			border-radius: 8px;
+			border-style: dashed;
+			border-width: 2px;
+			margin: 16;
+			padding: 8;
+			user-select: none;
+		}
 
-        #modeArea {
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
-            background-color: rgb(197, 255, 236);
-            display: flex;
-            flex-direction: column;
-        }
-        #mainArea {
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-            background-color: rgb(208, 240, 255);
-            position: relative;
-        }
-    </style>
+		#modeArea {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+			background-color: rgb(197, 255, 236);
+			display: flex;
+			flex-direction: column;
+		}
+		#mainArea {
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+			background-color: rgb(208, 240, 255);
+			position: relative;
+		}
+	</style>
 </head>
 <body>
-    <div id="page">
-        <div id="fileArea"></div>
-        <div id="modeArea"></div>
-        <div id="mainArea">
-        </div>
-    </div>
+	<div id="page">
+		<div id="fileArea"></div>
+		<div id="modeArea"></div>
+		<div id="mainArea">
+		</div>
+	</div>
 </body>
 
 
@@ -87,240 +87,268 @@
 <script src="./core/items/item.js"></script>
 
 <script>
-    (()=>{
-        let slots = window.RandoStuffs.OoT.fileSlots;
+	(()=>{
+		let slots = window.RandoStuffs.OoT.fileSlots;
 
-        // init file area
-        (()=>{
+		// init file area
+		(()=>{
 
-            // file slots
-            /////////////
-            let enable_dropEffect = function(e){
-                e.stopPropagation();
-                e.preventDefault();
-                e.dataTransfer.dropEffect = 'copy';
-            };
-            let drop_file = function(e, slot, htmlElem){
-                e.stopPropagation();
-                e.preventDefault();
-                var reader = new FileReader();
-                reader.addEventListener("load", function(){
-                    try{
-                        // store raw data (in slot.data as "json/js" object)
-                        slot.data = JSON.parse(reader.result);
-                        slot.check_data(); // throw error if something goes wrong
-                        // get warning message
-                        let warnMsg = slot.warning ?? '';
-                        slot.warning = null;
-                        // (prepare) OoTR file hash (item icons)
-                        let fileHash = slot.display_fileHash ? getHtmlTxt_fileHashDisplay(slot.data.file_hash) : '';
-                        // display (file hash) + file name
-                        htmlElem.innerHTML = `${slot.name} : ${fileHash}\n${file.name}\n${warnMsg}`;
-                        slot.originalFileName = file.name;
-                        // refresh data (build all from raw data)
-                        if(slot.update_core){
-                            //window.RandoStuffs.OoT.core.setFromFile(slot.data.core);
-                            //window.RandoStuffs.OoT.core.buildAll();
-                        }
-                        if(slot.update_view){
-                            window.RandoStuffs.OoT.viewModes.resetViews(mainArea);
-                        }
-                    }catch{
-                        slot.data = null;
-                        htmlElem.innerHTML = `${slot.name} :\nError JSON parsing\n${slot.errMsg||''}`;
-                        slot.errMsg = null;
-                    }
-                });
-                let file = e.dataTransfer.files[0];
-                if(file) reader.readAsText(file);
-            };
-            let getHtmlTxt_fileHashDisplay = (fileHash)=>{
-                let output = '';
-                let imgStyle = 'width:16px; height:16px; pointer-events:none;';
-                let icons = window.RandoStuffs.OoT.core.Item.hashIcons;
-                fileHash.forEach(e=>{output+=`<img src="${icons[e]}" style="${imgStyle}"/>`});
-                return output;
-            };
-            for(let k in slots){
-                let slot = slots[k];
-                let div = document.createElement('div');
-                div.classList.add('file-slot');
-                div.innerHTML = `${slot.name} :\nDrag and drop your file here`;
-                div.addEventListener("dragover", (function(e){enable_dropEffect(e);}) );
-                div.addEventListener("drop", (function(e){drop_file(e, slot, div);}) );
-                fileArea.appendChild(div);
-                slot.htmlElem = div;
-            }
+			// file slots
+			/////////////
+			let enable_dropEffect = function(e){
+				e.stopPropagation();
+				e.preventDefault();
+				e.dataTransfer.dropEffect = 'copy';
+			};
+			let drop_file = function(e, slot, htmlElem){
+				e.stopPropagation();
+				e.preventDefault();
+				var reader = new FileReader();
+				reader.addEventListener("load", function(){
+					try{
+						// store raw data (in slot.data as "json/js" object)
+						slot.errMsg = slot.msgList.err_notJson(); // before parsing : prepare error msg
+						slot.data = JSON.parse(reader.result); // throw error if something goes wrong
+						slot.errMsg = null; // JSON parsing success : cancel error msg
 
-            // export button
-            ////////////////
-            /* let exportBtn_allSettings = document.createElement('a');
-            exportBtn_allSettings.textContent = 'Export All_Settings.json';
-            exportBtn_allSettings.href = '';
-            exportBtn_allSettings.style.margin = 16;
-            exportBtn_allSettings.style.padding = 4;
-            exportBtn_allSettings.style.border = '2px outset lightgrey';
-            exportBtn_allSettings.style.backgroundColor = '#aeaeae'; */
-            let exportBtn_allSettings = document.createElement('input');
-            exportBtn_allSettings.type = 'button';
-            exportBtn_allSettings.value = 'Export All_Settings.json';
-            exportBtn_allSettings.style.alignSelf = 'center';
-            exportBtn_allSettings.style.padding = 8;
+						slot.check_data(); // throw error if something goes wrong
+						// get warning message
+						let warnMsg = slot.warning ?? '';
+						slot.warning = null;
 
-            exportBtn_allSettings.onclick = function(e){
-                e.preventDefault();
-                open_savePrompt();
-            };
+						// (prepare) OoTR file hash (item icons)
+						let fileHash = slot.display_fileHash || '';
 
-            fileArea.appendChild(exportBtn_allSettings);
+						// display (file hash) + (file name) + (warning messages)
+						htmlElem.innerHTML = `${slot.name} : ${fileHash}\n${file.name}\n${warnMsg}`;
+						slot.originalFileName = file.name;
 
-            // 'save as' prompt
-            ///////////////////
-            let open_savePrompt = (parent=page)=>{
-                let zIndexLevel = 1;
+						if(slot.update_view){
+							window.RandoStuffs.OoT.viewModes.resetViews(mainArea);
+						}
+					}catch{
+						slot.data = null;
+						htmlElem.innerHTML = `${slot.name} :\nError JSON parsing\n${slot.errMsg||''}`;
+						slot.errMsg = null;
+					}
+				});
 
-                let lockAppPanel = document.createElement('div');
-                lockAppPanel.style.opacity = 0.5;
-                lockAppPanel.style.backgroundColor = 'black';
-                lockAppPanel.style.position = 'absolute';
-                lockAppPanel.style.inset = 0;
-                lockAppPanel.style.zIndex = zIndexLevel;
+				//let file = e.dataTransfer.files[0];
+				//if(file) reader.readAsText(file);
 
-                let savePromptPanel = document.createElement('div');
-                savePromptPanel.style.backgroundColor = 'antiquewhite';
-                savePromptPanel.style.border = '1px solid black';
-                savePromptPanel.style.position = 'absolute';
-                savePromptPanel.style.inset = '40% 25%';
-                savePromptPanel.style.zIndex = zIndexLevel;
-                savePromptPanel.style.display = 'flex';
-                savePromptPanel.style.flexDirection = 'column';
-                savePromptPanel.style.justifyContent = 'space-evenly';
-                savePromptPanel.style.alignItems = 'center';
-                savePromptPanel.addEventListener('keypress',
-                    (e)=>{if(e.code==='Enter')saveFileButton.focus();},
-                {capture:true});
+				let file = e.dataTransfer.files[0];
+				let start_loading = ()=>{ if(file) reader.readAsText(file); };
 
-                    let nameFileInput = document.createElement('input');
-                    nameFileInput.type = 'text';
-                    nameFileInput.placeholder = 'default file name : '+slots.allSettings.originalFileName;
-                    nameFileInput.style.width = '80%';
-                    
-                    let saveFileButton = document.createElement('input');
-                    saveFileButton.type = 'button';
-                    saveFileButton.value = 'Save File (download)';
-                    saveFileButton.onclick = ()=>{
-                        try{
-                            // make file to download
-                            let data = window.RandoStuffs.OoT.core.make_AllSettingsJson();
-                            let json = JSON.stringify(data, null, '\t');
-                            let binData = [];
-                            for(let c of json) binData.push(c.charCodeAt(0));
-                            let fileUrl = URL.createObjectURL( new Blob([new Uint8Array( binData )], {type: 'application/json'}));
-                            // make tmp hidden html link to trigger download with custom file name
-                            let htmlLink = document.createElement('a');
-                            htmlLink.href = fileUrl;
-                            htmlLink.download = nameFileInput.value || slots.allSettings.originalFileName;
-                            htmlLink.onclick = (e)=>{e.preventDefault};
-                            htmlLink.click();
-                            // free mem
-                            window.URL.revokeObjectURL(fileUrl);
-                        }
-                        catch{
-                            console.warn('RandoStuffs.OoT : something happened wrong during last download file');
-                        }
-                        // unlock app normal using
-                        close_savePromt();
-                    };
+				if(slot.onLoadPrompt) slot.onLoadPrompt( start_loading );
+				else                  start_loading();
+				
+			};
 
-                    let cancelButton = document.createElement('input');
-                    cancelButton.type = 'button';
-                    cancelButton.value = 'X';
-                    cancelButton.style.position = 'absolute';
-                    cancelButton.style.top = 8;
-                    cancelButton.style.right = 8;
-                    cancelButton.onclick = ()=>{close_savePromt();};
-                    
-                let close_savePromt = ()=>{
-                    parent.removeChild(lockAppPanel);
-                    parent.removeChild(savePromptPanel);
-                };
+			for(let k in slots){
+				let slot = slots[k];
+				let div = document.createElement('div');
+				div.classList.add('file-slot');
+				div.innerHTML = `${slot.name} :\nDrag and drop your file here`;
+				div.addEventListener("dragover", (function(e){enable_dropEffect(e);}) );
+				div.addEventListener("drop", (function(e){drop_file(e, slot, div);}) );
+				fileArea.appendChild(div);
+				slot.htmlElem = div;
+				slot.get_msgList();
+			}
 
-                savePromptPanel.appendChild(nameFileInput);
-                savePromptPanel.appendChild(saveFileButton);
-                savePromptPanel.appendChild(cancelButton);
+			// export button
+			////////////////
+			let exportBtn_allSettings = document.createElement('input');
+			exportBtn_allSettings.type = 'button';
+			exportBtn_allSettings.value = 'Export All_Settings.json';
+			exportBtn_allSettings.style.alignSelf = 'center';
+			exportBtn_allSettings.style.padding = 8;
 
-                parent.appendChild(lockAppPanel);
-                parent.appendChild(savePromptPanel);
+			exportBtn_allSettings.onclick = function(e){
+				e.preventDefault();
+				open_savePrompt();
+			};
 
-                nameFileInput.focus();
-            };
-        })();
-    
-        // init mode area
-        (()=>{
-            /* let ctrlKey = false;
-            let shiftKey = false;
-            let update_keys = (e)=>{ shiftKey=e.shiftKey; ctrlKey=e.ctrlKey; };
-            modeArea.onkeydown = (e)=>{update_keys(e)};
-		    modeArea.onkeyup = (e)=>{update_keys(e)}; */
+			fileArea.appendChild(exportBtn_allSettings);
 
-            let modes = window.RandoStuffs.OoT.viewModes;
-            let list = modes.displayLinkList;
-            for(let c of list){
-                let mode  = modes[c];
-                let link = document.createElement('a');
-                link.textContent = mode.name;
-                link.style.margin = 16;
-                link.style.padding = 16;
-                link.style.backgroundColor = '#8ef8b6';
-                link.style.borderRadius = '5px';
-                link.style.border = '2px solid white'
-                link.style.textDecoration = 'none';
-                link.style.cursor = 'pointer';
-                link.style.userSelect = 'none';
-                link.style.color = 'black';
-                link.style.fontSize = 19;
-                link.style.boxShadow = 'blue 2px 2px 6px 0px';
-                link.onpointerover = ()=>{
-                    link.style.backgroundColor = '#9ed8f6';
-                    link.style.borderColor = 'black';
-                    link.style.boxShadow = 'white 2px 2px 12px 0px';
-                };
-                link.onpointerleave = ()=>{
-                    link.style.backgroundColor = '#8ef8b6';
-                    link.style.borderColor = 'white';
-                    link.style.boxShadow = 'blue 2px 2px 6px 0px';
-                };
-                link.onclick = function(e){
-                    e.preventDefault(); // cancel : ctrl+click || shift+click
-                    mode.init(mainArea);
-                    modes.current = c;
-                };
-                link.oncontextmenu = function(e){
-                    e.preventDefault();
-                };
-                modeArea.appendChild(link);
-            }
-        })();
-    
-        // init main area
-        (()=>{
-            let divStyle = 'white-space:pre-wrap; font-size:24px; display:flex; justify-content:center; align-items:center;'
-                         + 'position:absolute; inset:0px; padding:64px;';
-            let devMessage = 'Use this app with Google Chrome, to enjoy user experience as designed by its creator.'
-            mainArea.innerHTML = `<div style="${divStyle}">${devMessage}</div>`;
-        })();
+			// 'save as' prompt
+			///////////////////
+			let open_savePrompt = (parent=page)=>{
 
-        let disable_dropEffect = function(e){
+				let zIndexLevel = 2;
+
+				let lockAppPanel = document.createElement('div');
+				lockAppPanel.style.opacity = 0.5;
+				lockAppPanel.style.backgroundColor = 'black';
+				lockAppPanel.style.position = 'fixed';
+				lockAppPanel.style.inset = 0;
+				lockAppPanel.style.zIndex = zIndexLevel;
+
+				let savePromptPanel = document.createElement('div');
+				savePromptPanel.style.backgroundColor = 'antiquewhite';
+				savePromptPanel.style.border = '1px solid black';
+				savePromptPanel.style.position = 'fixed';
+				savePromptPanel.style.zIndex = zIndexLevel;
+				savePromptPanel.style.display = 'flex';
+				savePromptPanel.style.flexDirection = 'column';
+				savePromptPanel.style.justifyContent = 'space-evenly';
+				savePromptPanel.style.alignItems = 'center';
+				let resize_savePrompt = (event, w=768, h=384)=>{
+					w = (window.innerWidth>>1)-(w/2);
+					h = (window.innerHeight>>1)-(h/2);
+					savePromptPanel.style.inset = `${h}px ${w}px`;
+				};
+				resize_savePrompt();
+				window.addEventListener('resize', resize_savePrompt);
+
+				savePromptPanel.addEventListener('keypress',
+					(e)=>{if(e.code==='Enter')saveFileButton.focus();},
+					{capture:true}
+				);
+
+					let nameFileInput = document.createElement('input');
+					nameFileInput.type = 'text';
+					nameFileInput.placeholder = 'default file name : '+slots.allSettings.originalFileName;
+					nameFileInput.style.width = '80%';
+					
+					let saveFileButton = document.createElement('input');
+					saveFileButton.type = 'button';
+					saveFileButton.value = 'Save File (download)';
+					saveFileButton.onclick = ()=>{
+						try{
+							// make file to download
+							let data = window.RandoStuffs.OoT.core.make_AllSettingsJson();
+							let json = JSON.stringify(data, null, '\t');
+							let binData = [];
+							for(let c of json) binData.push(c.charCodeAt(0));
+							let fileUrl = URL.createObjectURL( new Blob([new Uint8Array( binData )], {type: 'application/json'}));
+							// make tmp hidden html link to trigger download with custom file name
+							let htmlLink = document.createElement('a');
+							htmlLink.href = fileUrl;
+							htmlLink.download = nameFileInput.value || slots.allSettings.originalFileName;
+							htmlLink.onclick = (e)=>{e.preventDefault};
+							htmlLink.click();
+							// free mem
+							window.URL.revokeObjectURL(fileUrl);
+						}
+						catch{
+							console.warn('RandoStuffs.OoT : something happened wrong during last download file');
+						}
+						// unlock app normal using
+						close_savePromt();
+					};
+
+					let expOptionList = document.createElement('div');
+					expOptionList.style.height = 128;
+					expOptionList.style.overflowY = 'auto';
+					expOptionList.style.border = '1px solid black';
+					expOptionList.style.userSelect = 'none';
+					expOptionList.innerHTML = '<span><b>Export Options :</b></span>';
+					(()=>{
+						let {portOptions} = window.RandoStuffs.OoT.core;
+						let {create_checkbox} = window.RandoStuffs.OoT.viewModes.mainLib.createElems;
+						Object.keys(portOptions).forEach(e=>{
+							e = portOptions[e];
+							if(e.exp.dev){
+								let cbx = create_checkbox(e.label, function(){e.exp.usr=this.checked}, e.exp.usr);
+								cbx.style.display = 'block';
+								cbx.querySelector('input[type=checkbox]').style.margin = 4;
+								expOptionList.appendChild( cbx );
+							}
+						});
+					})();
+
+					let cancelButton = document.createElement('input');
+					cancelButton.type = 'button';
+					cancelButton.value = 'X';
+					cancelButton.style.position = 'absolute';
+					cancelButton.style.top = 8;
+					cancelButton.style.right = 8;
+					cancelButton.onclick = ()=>{close_savePromt();};
+					
+				let close_savePromt = ()=>{
+					parent.removeChild(lockAppPanel);
+					parent.removeChild(savePromptPanel);
+					window.removeEventListener('resize', resize_savePrompt);
+				};
+
+				savePromptPanel.appendChild(nameFileInput);
+				savePromptPanel.appendChild(saveFileButton);
+				savePromptPanel.appendChild(expOptionList);
+				savePromptPanel.appendChild(cancelButton);
+
+				parent.appendChild(lockAppPanel);
+				parent.appendChild(savePromptPanel);
+
+				nameFileInput.focus();
+			};
+		})();
+	
+		// init mode area
+		(()=>{
+			/* let ctrlKey = false;
+			let shiftKey = false;
+			let update_keys = (e)=>{ shiftKey=e.shiftKey; ctrlKey=e.ctrlKey; };
+			modeArea.onkeydown = (e)=>{update_keys(e)};
+			modeArea.onkeyup = (e)=>{update_keys(e)}; */
+
+			let modes = window.RandoStuffs.OoT.viewModes;
+			let list = modes.displayLinkList;
+			for(let c of list){
+				let mode  = modes[c];
+				let link = document.createElement('a');
+				link.textContent = mode.name;
+				link.style.margin = 16;
+				link.style.padding = 16;
+				link.style.backgroundColor = '#8ef8b6';
+				link.style.borderRadius = '5px';
+				link.style.border = '2px solid white'
+				link.style.textDecoration = 'none';
+				link.style.cursor = 'pointer';
+				link.style.userSelect = 'none';
+				link.style.color = 'black';
+				link.style.fontSize = 19;
+				link.style.boxShadow = 'blue 2px 2px 6px 0px';
+				link.onpointerover = ()=>{
+					link.style.backgroundColor = '#9ed8f6';
+					link.style.borderColor = 'black';
+					link.style.boxShadow = 'white 2px 2px 12px 0px';
+				};
+				link.onpointerleave = ()=>{
+					link.style.backgroundColor = '#8ef8b6';
+					link.style.borderColor = 'white';
+					link.style.boxShadow = 'blue 2px 2px 6px 0px';
+				};
+				link.onclick = function(e){
+					e.preventDefault(); // cancel : ctrl+click || shift+click
+					mode.init(mainArea);
+					modes.current = c;
+				};
+				link.oncontextmenu = function(e){
+					e.preventDefault();
+				};
+				modeArea.appendChild(link);
+			}
+		})();
+	
+		// init main area
+		(()=>{
+			let divStyle = 'white-space:pre-wrap; font-size:24px; display:flex; justify-content:center; align-items:center;'
+						 + 'position:absolute; inset:0px; padding:64px;';
+			let devMessage = 'Use this app with Google Chrome, to enjoy user experience as designed by its creator.'
+			mainArea.innerHTML = `<div style="${divStyle}">${devMessage}</div>`;
+		})();
+
+		let disable_dropEffect = function(e){
 			e.stopPropagation();
 			e.preventDefault();
 		};
-        document.addEventListener("dragover", disable_dropEffect);
+		document.addEventListener("dragover", disable_dropEffect);
 		document.addEventListener("drop", disable_dropEffect);
 
-        // first build all (when app is initialisating)
-        window.RandoStuffs.OoT.core.buildAll();
+		// first build all (when app is initialisating)
+		window.RandoStuffs.OoT.core.buildAll();
 
-    })();
+	})();
 </script>
 </html>

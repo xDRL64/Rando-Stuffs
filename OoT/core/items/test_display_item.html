@@ -1,9 +1,14 @@
+<script>window.RandoStuffs={OoT:{core:{}}};</script>
 <script src="./itemGFX.js"></script>
 <script src="./item.js"></script>
 
 <div></div>
 
 <script>
+    let itemGFX = window.RandoStuffs.OoT.core.Item.gfx;
+    let item = window.RandoStuffs.OoT.core.Item.list;
+
+    document.body.innerHTML += '<h1>ITEM GFX :</h1>';
 
     // display itemGFX
     for(let k in itemGFX){
@@ -14,8 +19,10 @@
         img.src = itemGFX[k];
 
         div.appendChild(img);
-    //    document.body.appendChild(div);
+        document.body.appendChild(div);
     }
+
+    document.body.innerHTML += '<h1>ITEM LIST :</h1>';
 
     // display pool item
     for(let k in item){

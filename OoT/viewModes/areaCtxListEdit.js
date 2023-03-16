@@ -22,6 +22,9 @@ window.RandoStuffs.OoT.viewModes.areaCtxListEdit.init = function(workspace){
 
 	let core = window.RandoStuffs.OoT.core;
 
+	let dict_cdntLstIndx = core.dict_itemReqView.conditionDroplistIndexes; // get item request view conditions ref
+	let {conditionGroups} = window.RandoStuffs.OoT.viewModes.itemReqView?.sessionInstance?.data || {};
+
 	let areaCtxList = core.Area.context;
 
 	let areaByCtx = core.Area.byContext;
@@ -31,6 +34,8 @@ window.RandoStuffs.OoT.viewModes.areaCtxListEdit.init = function(workspace){
 	let create_boardItem = window.RandoStuffs.OoT.viewModes.mainLib.editContext.create_boardItem;
 
 	let clean_itemBoard = window.RandoStuffs.OoT.viewModes.mainLib.editContext.clean_itemBoard;
+
+	let {sync_conditionsWithContextList} = window.RandoStuffs.OoT.viewModes.mainLib;
 
 	(()=>{
 
@@ -67,6 +72,11 @@ window.RandoStuffs.OoT.viewModes.areaCtxListEdit.init = function(workspace){
 			/////////////////////////////////
 			clean_itemBoard(mainBoard);
 			
+			// sync with item request view conditions (step 1)
+			/////////////////////////////////////////
+			// keep tmp save copy of areaCtxList
+			let tmp_areaCtxList = structuredClone(areaCtxList);
+
 			// rebuild area context list
 			////////////////////////////
 
@@ -96,6 +106,10 @@ window.RandoStuffs.OoT.viewModes.areaCtxListEdit.init = function(workspace){
 			// rebuild internal area Data and location Data
 			///////////////////////////////////////////////
 			coreBuildAll();
+
+			// sync with item request view conditions (step 2)
+			/////////////////////////////////////////
+			sync_conditionsWithContextList(conditionGroups, dict_cdntLstIndx.areaCtx('i'), tmp_areaCtxList, areaCtxList);
 
 		};
 

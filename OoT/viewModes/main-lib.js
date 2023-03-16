@@ -728,7 +728,7 @@ if(!window.RandoStuffs.OoT.viewModes){
 			// general [checkbox]
 			groupElem.children[1].firstElementChild.checked = groupObj.general;
 
-				let conditionsDiv = groupElem.children[2]
+				let conditionsDiv = groupElem.children[2];
 				// group conditions loop
 				groupObj.forEach( ({selectedIndex:{operator, property, comparator, value}}, index)=>{
 					let conditionElem = null;
@@ -750,6 +750,32 @@ if(!window.RandoStuffs.OoT.viewModes){
 	};
 
 
+	window.RandoStuffs.OoT.viewModes.mainLib.sync_conditionsWithContextList = (cndtGroup, cndtPropRef, oldCtxList, newCtxList)=>{
+		let cndtGroupNames = Object.keys(cndtGroup||{});
+		if(cndtGroup && cndtGroupNames.length){
+
+			oldCtxList = Object.keys(oldCtxList);
+			newCtxList = Object.keys(newCtxList);
+
+			let val, indexes;
+
+			cndtGroupNames.forEach( g=>{
+				cndtGroup[g].forEach( cndt=>{
+					
+					indexes = cndt.selectedIndex;
+
+					if(indexes.property === cndtPropRef){
+						val = indexes.value;
+						val = newCtxList.indexOf( oldCtxList[val] );
+						// update
+						indexes.value = val;
+					}
+
+				} );
+			} );
+
+		}
+	};
 
 
 	window.RandoStuffs.OoT.viewModes.mainLib.createElems = {};
